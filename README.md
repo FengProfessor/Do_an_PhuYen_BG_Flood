@@ -10,7 +10,7 @@
 
 ## 📌 Giới Thiệu (Overview)
 
-Repository này chứa toàn bộ tài liệu thuyết minh đồ án tốt nghiệp, báo cáo tiến độ, hệ thống mã nguồn tự động hóa biên soạn văn bản, các kịch bản phân tích - xử lý địa hình số (Hydro-conditioning DEM), kịch bản hiệu chỉnh và kiểm chứng kết quả mô phỏng ngập lụt cho vùng hạ lưu sông Ba, tỉnh Phú Yên (sự kiện lũ lụt lịch sử tháng 11 - 12 năm 2021).
+Repository này chứa toàn bộ tài liệu thuyết minh đồ án tốt nghiệp, báo cáo tiến độ, hệ thống mã nguồn tự động hóa biên soạn văn bản, thư viện hình ảnh bản đồ mô phỏng khoa học, các kịch bản phân tích - xử lý địa hình số (Hydro-conditioning DEM), kịch bản hiệu chỉnh và kiểm chứng kết quả mô phỏng ngập lụt cho vùng hạ lưu sông Ba, tỉnh Phú Yên (sự kiện lũ lụt lịch sử tháng 11 - 12 năm 2021).
 
 - **Cán bộ hướng dẫn:** TS. Hà Minh Cường (Viện Công nghệ Hàng không Vũ trụ, Trường Đại học Công nghệ – ĐHQGHN)
 - **Điểm đánh giá GVHD:** 9.5 / 10
@@ -35,9 +35,33 @@ Repository này chứa toàn bộ tài liệu thuyết minh đồ án tốt nghi
 
 ---
 
+## 🖼️ Thư Viện Hình Ảnh & Bản Đồ Kết Quả (Key Figures & Simulation Maps)
+
+Thư mục [`figures/`](figures/) chứa toàn bộ các bản đồ khoa học chất lượng cao phục vụ đồ án:
+
+| Hạng mục | Hình ảnh tiêu biểu | Mô tả khoa học |
+| :--- | :--- | :--- |
+| **Kiểm chứng Viễn thám SAR** | [`Multisource_Validation_Comparison.png`](figures/validation/Multisource_Validation_Comparison.png) | Đối sánh kiểm chứng đa nguồn giữa ảnh vệ tinh Sentinel-1 SAR, mô hình BG_Flood và trạm thủy văn |
+| **Ma trận Sai số Không gian** | [`SAR_vs_V48_BASE_frame_33_contingency.png`](figures/validation/SAR_vs_V48_BASE_frame_33_contingency.png) | Bản đồ phân loại Contingency (True Positive, False Positive, False Negative) tại đỉnh lũ |
+| **Đối sánh Toàn cảnh** | [`SAR_vs_V48_BASE_frame_33_legacy_full.png`](figures/validation/SAR_vs_V48_BASE_frame_33_legacy_full.png) | Đối sánh không gian toàn miền tính 63km x 63km giữa vệ tinh và mô phỏng |
+| **Hiệu chỉnh Đê kè** | [`PhuYen_V44_Breached_Levees_Map.png`](figures/hydro_conditioning/PhuYen_V44_Breached_Levees_Map.png) | Bản đồ vị trí Levee Breaching và kênh dẫn nhân tạo khắc phục vật cản dòng ảo trên DEM |
+| **Bản đồ Độ sâu Ngập** | [`flood_depth_map_latest.png`](figures/flood_simulation/flood_depth_map_latest.png) | Phân bố trường độ sâu ngập lụt cực đại trên lưới 30m toàn vùng hạ lưu Phú Yên |
+| **Bản đồ Vận tốc Dòng chảy** | [`flow_velocity_map_latest.png`](figures/flood_simulation/flow_velocity_map_latest.png) | Phân bố trường vector vận tốc dòng lũ từ Sông Ba Hạ đổ ra cửa biển Đà Diễn |
+| **Tiến trình Lan truyền Lũ** | [`flood_evolution_progression.png`](figures/flood_simulation/flood_evolution_progression.png) | Chuỗi thời gian diễn biến ngập lụt qua các pha lũ |
+| **Mô hình Máy học & Thủy lực** | [`compare_r2_models.png`](figures/machine_learning/compare_r2_models.png) | Đánh giá độ chính xác $R^2$ giữa các mô hình ANN, LSTM và Random Forest |
+
+---
+
 ## 📂 Cấu Trúc Repository
 
 ```text
+├── figures/                                              # Thư viện hình ảnh và bản đồ mô phỏng khoa học
+│   ├── validation/                                       # Bản đồ đối sánh Sentinel-1 SAR vs BG_Flood (Contingency, Multisource)
+│   ├── flood_simulation/                                 # Bản đồ độ sâu ngập, vận tốc dòng chảy, tiến trình lan truyền
+│   ├── hydro_conditioning/                               # Bản đồ Levee Breaching, DEM Carving, mặt cắt lòng dẫn
+│   ├── machine_learning/                                 # Biểu đồ đánh giá các mô hình ANN, LSTM, Random Forest
+│   └── diagrams/                                         # Sơ đồ quy trình, chuỗi xử lý đầu vào/đầu ra
+│
 ├── Do_an_tot_nghiep_PhuYen_BG_Flood_SAR.docx             # Bản thuyết minh đồ án tốt nghiệp chính thức
 ├── Do_an_tot_nghiep_PhuYen_BG_Flood_SAR_da_kiem_chung.docx  # Thuyết minh bản đã kiểm chứng
 ├── Do_an_tot_nghiep_PhuYen_BG_Flood_SAR_V48_bo_sung_20261002.docx # Thuyết minh bản cập nhật V48
