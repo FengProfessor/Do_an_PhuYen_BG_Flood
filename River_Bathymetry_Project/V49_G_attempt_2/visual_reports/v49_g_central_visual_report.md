@@ -1,42 +1,48 @@
-# Báo cáo Trực quan hóa Diễn biến Thủy lực V49-G (CENTRAL) tại mốc t = 57.0h
+# Báo cáo Bản đồ Độ sâu Mô phỏng Thủy lực V49-G (CENTRAL) - Mốc 60.0h (50% Chặng đường)
 
-Bộ mô phỏng thủy lực 2D **V49-G (CENTRAL)** trên card **NVIDIA RTX A4000** đã tính toán liên tục suốt **57 giờ 18 phút GPU** và xuất thành công **19 khung dữ liệu không gian 3D NetCDF** ($t = 3.0\text{h} \rightarrow 57.0\text{h}$).
+Mô hình thủy lực 2D **V49-G (CENTRAL)** trên card **NVIDIA RTX A4000** đã chính thức vượt qua mốc một nửa chặng đường (**$t = 60.0\text{h} / 120.0\text{h}$**, đạt **50.0%**), xuất thành công **20 khung dữ liệu không gian 3D NetCDF** (dung lượng gần 1 GB).
 
-Dưới đây là các hình ảnh cập nhật mới nhất kết xuất từ tệp dữ liệu gốc [V49_G_CENTRAL.nc](file:///D:/VTP/River_Bathymetry_Project/V49_G_attempt_2/results/V49_G_CENTRAL.nc).
+Dưới đây là bản đồ độ sâu ngập lũ và các phân tích thủy lực trực quan kết xuất từ tệp gốc [V49_G_CENTRAL.nc](file:///D:/VTP/River_Bathymetry_Project/V49_G_attempt_2/results/V49_G_CENTRAL.nc).
 
 ---
 
-## 1. Bộ sưu tập hình ảnh cập nhật (Image Carousel)
+## 1. Bộ sưu tập hình ảnh trực quan (Image Carousel)
 
 ````carousel
-![Bản đồ độ sâu ngập lũ mới nhất t = 57h](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flood_depth_map_latest.png)
+![Bản đồ độ sâu ngập lũ tại mốc 60h](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flood_depth_map_t60h.png)
 <!-- slide -->
-![Chuỗi diễn biến lan truyền sóng lũ 4 giai đoạn](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flood_evolution_progression.png)
+![Chuỗi so sánh tiến trình sóng lũ 4 giai đoạn](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flood_evolution_progression.png)
 <!-- slide -->
-![Đồ thị diện tích ngập lụt theo thời gian (3h - 57h)](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/inundation_area_time_series.png)
+![Đồ thị diện tích ngập lũ theo thời gian (0h - 60h)](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/inundation_area_time_series.png)
 <!-- slide -->
-![Trường vận tốc dòng lũ t = 57h](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flow_velocity_map_latest.png)
+![Bản đồ trường vận tốc dòng lũ](C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flow_velocity_map_latest.png)
 ````
 
 ---
 
-## 2. Diễn biến thủy lực nổi bật tại mốc t = 57.0h (47.5% tiến độ)
+## 2. Thống kê thủy lực chi tiết tại mốc t = 60.0h (Frame 20)
 
-### 2.1. Bản đồ độ sâu ngập lũ diện rộng ($t = 57.0\text{h}$)
-* **Tệp ảnh**: [flood_depth_map_latest.png](file:///C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flood_depth_map_latest.png)
-* **Nhận xét**:
-  - Diện tích ngập sâu ($h \ge 0.3\text{m}$) tiếp tục mở rộng vững chắc trên toàn bộ châu thổ hạ lưu sông Ba và bãi trũng Tuy An.
-  - Vùng hạ lưu chân đập Đồng Cam và hợp lưu sông Hinh ghi nhận mức dâng cao độ mặt nước ổn định, không có xung đột số học hay tạo xoáy bất thường.
+| Chỉ số ngập lụt | Diện tích ghi nhận | Ý nghĩa thủy văn |
+| :--- | :---: | :--- |
+| **Tổng diện tích có nước ($h \ge 0.1\text{m}$)** | **`1,475.37 km²`** | Toàn bộ ranh giới vùng trũng và mạng lưới sông suối |
+| **Diện tích ngập đáng kể ($h \ge 0.3\text{m}$)** | **`1,313.26 km²`** | **Tiêu chuẩn nhận diện mặt nước viễn thám Sentinel-1 SAR** |
+| **Diện tích ngập sâu ($h \ge 1.0\text{m}$)** | **`1,073.06 km²`** | Vùng ngập nguy hiểm đe dọa khu dân cư và đồng ruộng |
+| **Độ sâu ngập cực đại ($h_{\max}$)** | **`32.11 m`** | Tập trung tại hẻm vực thượng lưu chân đập sông Ba Hạ, sông Hinh |
 
-### 2.2. Chuỗi so sánh 4 giai đoạn lũ ($t = 6\text{h} \rightarrow 21\text{h} \rightarrow 36\text{h} \rightarrow 57\text{h}$)
-* **Tệp ảnh**: [flood_evolution_progression.png](file:///C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/flood_evolution_progression.png)
-* Cho thấy rõ sự dịch chuyển của sóng lũ từ vùng thắt hẹp thượng nguồn lan tỏa dần ra toàn bộ vùng đồng bằng ven biển. Mốc $57\text{h}$ thể hiện diện ngập liên tục, nối kết hoàn chỉnh giữa hệ thống sông và các vùng đầm trũng ven biển.
+---
 
-### 2.3. Đồ thị diện tích ngập theo thời gian (19 Frames)
-* **Tệp ảnh**: [inundation_area_time_series.png](file:///C:/Users/CuongHM/.gemini/antigravity/brain/303aa3cb-1e89-49b2-8549-ccb345e3d166/inundation_area_time_series.png)
-* Đường cong ngập lụt tiếp tục dâng đều đặn và bắt đầu tiến vào giai đoạn lũ bão hòa, chuẩn bị đón nhận đỉnh lũ lớn trước khi đạt mốc vệ tinh Sentinel-1 SAR ($t = 101.61\text{h}$).
+## 3. Đặc điểm phân bố ngập lụt trên bản đồ
+
+1. **Vùng hạ lưu sông Ba (Đồng bằng Tuy Hòa)**:
+   - Sóng lũ đã tràn qua các bờ đê thấp, tạo thành một dải ngập mênh mông kéo dài từ sau đập Đồng Cam qua huyện Phú Hòa, thành phố Tuy Hòa và đổ ra cửa biển Đà Diễn.
+   - Độ sâu ngập phổ biến trên các cánh đồng bãi bồi đạt từ **$1.0\text{m} - 2.5\text{m}$**.
+2. **Khu vực hạ lưu sông Kỳ Lộ (Tuy An)**:
+   - Toàn bộ vùng trũng thấp ven sông Kỳ Lộ và đầm Ô Loan ghi nhận diện ngập mở rộng, độ sâu nước từ **$0.5\text{m} - 2.0\text{m}$**.
+3. **Khu vực hạ lưu sông Bàn Thạch (Đông Hòa)**:
+   - Nước lũ từ thượng nguồn dâng cao và thoát qua cửa Đà Nông, tạo vùng ngập liên kết với châu thổ Tuy Hòa.
 
 ---
 
 > [!NOTE]
-> GPU đang tiến rất gần mốc 50% (còn 3 giờ mô phỏng nữa sẽ chạm mốc 60.0h). Bước tích phân $dt \approx 0.34\text{s}$ được duy trì tối ưu.
+> Mọi tệp ảnh gốc chất lượng cao và báo cáo đã được lưu trữ an toàn tại thư mục trên ổ D:
+> 👉 [`D:\VTP\River_Bathymetry_Project\V49_G_attempt_2\visual_reports`](file:///D:/VTP/River_Bathymetry_Project/V49_G_attempt_2/visual_reports)

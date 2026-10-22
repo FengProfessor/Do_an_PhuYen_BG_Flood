@@ -43,8 +43,12 @@ DxDiag.txt
 *.cog
 *.npz
 
+# Allow essential DEM file for thesis
+!05-Du-lieu-GIS/PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif
+
 # Heavy Simulation Folders & Raw GIS
 05-Du-lieu-GIS/
+!05-Du-lieu-GIS/PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif
 BG_Flood/
 BG_Flood_Project/
 V45_runs/
