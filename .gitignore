@@ -13,6 +13,8 @@ __pycache__/
 *.log
 temp/
 *AutoRecovered*
+*EXECUTION_STATE.json
+*supervisor_live_console*
 
 # Local utility / UI automation scripts
 auto_accept*
