@@ -43,12 +43,13 @@ DxDiag.txt
 *.cog
 *.npz
 
-# Allow essential DEM file for thesis
-!05-Du-lieu-GIS/PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif
+# Allow essential DEM file and V49 Method 1 carved hydraulic bed rasters for thesis
+!05-Du-lieu-GIS/PhuYen_DEM_30m_*.tif
+!River_Bathymetry_Project/V49_Method1_DHG_Clamped/rasters/*.tif
 
 # Heavy Simulation Folders & Raw GIS
-05-Du-lieu-GIS/
-!05-Du-lieu-GIS/PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif
+05-Du-lieu-GIS/*
+!05-Du-lieu-GIS/PhuYen_DEM_30m_*.tif
 BG_Flood/
 BG_Flood_Project/
 V45_runs/
