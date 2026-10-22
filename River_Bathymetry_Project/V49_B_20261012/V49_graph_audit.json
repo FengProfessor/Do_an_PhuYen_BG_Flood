@@ -1,0 +1,83 @@
+{
+  "schema_version": "V49-B-1",
+  "reach_count": 370,
+  "hydrorivers_reach_count": 368,
+  "legacy_canal_candidate_count": 2,
+  "node_count": 396,
+  "structure_count": 1,
+  "confluence_count": 168,
+  "terminal_type_counts": {
+    "OCEAN_OUTLET": 13,
+    "DOMAIN_EXIT": 9,
+    "WATERBODY_TERMINAL_REVIEW": 2,
+    "CANAL_TERMINUS": 2
+  },
+  "major_reach_count": 53,
+  "orphan_major_reach_count": 0,
+  "orphan_major_reach_ids": [],
+  "directed_cycle_count": 0,
+  "directed_cycles": [],
+  "unresolved_terminal_count": 0,
+  "unresolved_terminal_reach_ids": [],
+  "endpoint_gap_over_120m_count": 0,
+  "endpoint_gap_reach_ids": [],
+  "linear_water_object_count": 44,
+  "linear_water_object_without_graph_support_count": 2,
+  "linear_water_object_without_graph_support_ids": [
+    "W20_0011",
+    "W20_0062"
+  ],
+  "dem_downhill_qa_flag_count": 26,
+  "review_required_reach_count": 86,
+  "issue_count": 3,
+  "issue_type_counts": {
+    "LEGACY_CANAL_CANDIDATE": 2,
+    "STRUCTURE_SNAP": 1
+  },
+  "dong_cam_explicit": true,
+  "osm_vector_files": [
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_waterways_pre_event_20211125.json",
+      "exists": true,
+      "size_bytes": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_waterways_lowerba_pre_event_20211125.json",
+      "exists": true,
+      "size_bytes": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_waterways_lowerba_current.json",
+      "exists": true,
+      "size_bytes": 0
+    }
+  ],
+  "usable_osm_vector_available": false,
+  "topology_gate_pass": true,
+  "bed_elevation_ordering_gate": "DEFERRED_TO_V49_D_E_BY_DESIGN",
+  "gate_b_pass": true,
+  "gate_b_reason": "Gate B certifies directed hydrographic topology only: no orphan major reaches, no unexplained directed cycles, all reaches have a downstream target or explicit terminal type, confluences are represented as explicit junction nodes, and known structures are explicit. Physical bed-elevation ordering is deferred by design to V49-D/E.",
+  "dem_path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+  "dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "hydrorivers_path": "D:\\VTP\\V46_inputs\\HydroRIVERS_as\\HydroRIVERS_v10_as_shp\\HydroRIVERS_v10_as.shp",
+  "hydrorivers_buffered_feature_count": 464,
+  "hydrorivers_in_domain_native_feature_count": 367,
+  "inventory_path": "D:\\VTP\\River_Bathymetry_Project\\V49_A_20261012\\V49_master_water_inventory.gpkg",
+  "network_npz_path": "D:\\VTP\\River_Bathymetry_Project\\river_network_data.npz",
+  "config": {
+    "source_buffer_m": 5000.0,
+    "endpoint_snap_tolerance_m": 120.0,
+    "terminal_boundary_tolerance_m": 75.0,
+    "ocean_outlet_tolerance_m": 750.0,
+    "evidence_buffer_m": 90.0,
+    "sample_spacing_m": 60.0,
+    "major_strahler_min": 4,
+    "major_upland_skm_min": 500.0,
+    "dong_cam_row": 1278,
+    "dong_cam_col": 1217,
+    "dong_cam_max_snap_m": 180.0,
+    "dem_downhill_qa_tolerance_m": 2.0
+  },
+  "dem_unchanged": true
+}

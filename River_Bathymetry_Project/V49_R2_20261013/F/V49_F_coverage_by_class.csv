@@ -1,0 +1,6 @@
+﻿water_class,object_count,area_km2,c1_confirmed_persistent_object_count,c1_confirmed_persistent_area_km2,v49e_represented_object_count,v49e_represented_object_count_pct,v49e_represented_object_area_km2,v49e_represented_object_area_pct,v49e_actual_modified_area_km2,v49e_actual_modified_area_pct_of_class
+ESTUARY_TIDAL_RIVER,4,54.150299999999994,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+LAKE_RESERVOIR,17,54.4491,11,53.1144,0,0.0,0.0,0.0,0.0,0.0
+OCEAN,1,764.3754,1,764.3754,0,0.0,0.0,0.0,0.0,0.0
+RIVER_STREAM,27,2.1428999999999996,16,1.6731,3,11.11111111111111,0.1638,7.64384712305754,0.0648,3.0239395212095763
+UNKNOWN_REVIEW_REQUIRED,32,3.1149,0,0.0,0,0.0,0.0,0.0,0.0,0.0

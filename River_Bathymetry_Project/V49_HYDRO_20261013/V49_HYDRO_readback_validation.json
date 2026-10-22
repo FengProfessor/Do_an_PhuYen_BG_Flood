@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "output_sha256_match": true,
+    "same_source_grid": true,
+    "drainage_only_role_tags": true,
+    "conditioned_float64_preserved": true,
+    "zero_directed_cycles": true,
+    "zero_internal_unresolved_cells": true,
+    "all_cells_accounted_for_at_outlets": true,
+    "saved_accumulation_matches_recomputed_graph": true,
+    "no_lowering": true,
+    "delta_roundtrip": true,
+    "source_dem_unchanged": true
+  },
+  "pass": true,
+  "valid_cells": 4410000,
+  "outlet_cells": 3593,
+  "usable_as_hydraulic_bed": false
+}

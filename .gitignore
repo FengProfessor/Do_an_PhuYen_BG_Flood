@@ -37,12 +37,14 @@ DxDiag.txt
 *.tiff
 *.asc
 *.dem
+*.pbf
+*.cog
+*.npz
 
 # Heavy Simulation Folders & Raw GIS
 05-Du-lieu-GIS/
 BG_Flood/
 BG_Flood_Project/
-River_Bathymetry_Project/
 V45_runs/
 V48_runs/
 V49_C1_sources_20261012/
@@ -71,6 +73,11 @@ Bao_cao_tien_do_20261009/
 codex-chatgpt-web/
 Do_an_research_20261005/
 
+# Heavy subfolders in River Bathymetry Project
+River_Bathymetry_Project/**/RAW/
+River_Bathymetry_Project/**/results/
+River_Bathymetry_Project/**/TT25_review/
+
 # Executables & Binaries
 *.exe
 *.dll
@@ -80,3 +87,6 @@ Do_an_research_20261005/
 
 # Large Reference PDFs > 10MB
 V45_ThienTaiVietNam2021.pdf
+TT25_2015_PhuYen_geographic_names.pdf
+Gov_PhuSen_DaRang_sand_EIA_2026.pdf
+Gov_SonHoa_Ba_sand_EIA_2026.pdf

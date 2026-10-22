@@ -1,0 +1,16 @@
+{
+  "observed_at_utc": "2026-10-13T07:10:12.525900+00:00",
+  "gpu_name": "NVIDIA RTX A4000",
+  "temperature_c": 93.0,
+  "gpu_utilization_pct": 89.0,
+  "memory_used_mib": 5747.0,
+  "power_draw_w": 127.89,
+  "power_limit_w": 140.0,
+  "prior_detailed_driver_snapshot": "SW Thermal Slowdown Active; maximum operating temperature 98 C; shutdown temperature 103 C",
+  "attempted_power_limit_w": 110,
+  "power_limit_change_applied": false,
+  "power_limit_change_failure": "NVIDIA driver: Insufficient Permissions",
+  "simulation_interrupted": false,
+  "model_inputs_changed": false,
+  "recommended_operational_action": "Inspect physical cooling and ventilation; power-cap adjustment needs host administrator permissions. No hardware setting was changed."
+}

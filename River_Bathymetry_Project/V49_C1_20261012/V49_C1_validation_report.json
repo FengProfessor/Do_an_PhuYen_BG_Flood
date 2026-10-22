@@ -1,0 +1,27 @@
+{
+  "phase": "V49-C.1",
+  "gate_c1_pass": true,
+  "object_count": 81,
+  "reach_count": 370,
+  "v49d_authorized_count": 3,
+  "c1_authorized_count": 2,
+  "c1_authorized_reach_ids": [
+    "HR_41349822",
+    "HR_41352752"
+  ],
+  "promoted_beyond_v49d": [],
+  "authorized_with_nonpersistent_object": [],
+  "missing_object_fields": [],
+  "invalid_statuses": [],
+  "duplicate_objects": [],
+  "blank_reasons": [],
+  "dem_integrity_ok": true,
+  "geofabrik_md5_ok": true,
+  "review_queue_count": 58,
+  "missing_review_fields": [],
+  "missing_review_objects": [],
+  "extra_review_objects": [],
+  "duplicate_review_objects": [],
+  "review_rows_block_v49e": true,
+  "missing_files": []
+}

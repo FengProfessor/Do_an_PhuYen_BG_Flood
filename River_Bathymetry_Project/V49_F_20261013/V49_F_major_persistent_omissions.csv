@@ -1,0 +1,6 @@
+﻿object_id,final_class,area_km2,graph_major_reach_count,fixed_water_status,treatment_code,future_channel_geometry_eligible,decision_reason
+W20_0059,LAKE_RESERVOIR,42.7806,9,CONFIRMED_PERSISTENT,STAGE_AREA_VOLUME_OR_BATHYMETRY,False,Broad inland persistent water is more consistent with standing storage than a channel polygon.
+W20_0026,RIVER_STREAM,0.2934,1,CONFIRMED_PERSISTENT,REACH_SCALE_BATHYMETRY,True,Mapped hydrography and object morphology support a flowing natural channel representation.
+W20_0068,RIVER_STREAM,0.0702,1,CONFIRMED_PERSISTENT,REACH_SCALE_BATHYMETRY,True,Mapped hydrography and object morphology support a flowing natural channel representation.
+W20_0066,RIVER_STREAM,0.0576,1,CONFIRMED_PERSISTENT,REACH_SCALE_BATHYMETRY,True,Mapped hydrography and object morphology support a flowing natural channel representation.
+W20_0041,RIVER_STREAM,0.0297,1,CONFIRMED_PERSISTENT,REACH_SCALE_BATHYMETRY,True,Mapped hydrography and object morphology support a flowing natural channel representation.

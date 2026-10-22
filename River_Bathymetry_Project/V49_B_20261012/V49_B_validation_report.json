@@ -1,0 +1,22 @@
+{
+  "schema_version": "V49-B-validation-1",
+  "reach_count": 370,
+  "node_count": 396,
+  "structure_count": 1,
+  "duplicate_reach_ids": [],
+  "duplicate_node_ids": [],
+  "missing_from_nodes": [],
+  "missing_to_nodes": [],
+  "directed_cycle_count": 0,
+  "terminal_without_type_count": 0,
+  "dong_cam_structure_count": 1,
+  "dong_cam_node_count": 1,
+  "orphan_major_reach_count": 0,
+  "unresolved_terminal_count": 0,
+  "endpoint_gap_over_120m_count": 0,
+  "dem_unchanged": true,
+  "topology_validation_pass": true,
+  "bed_elevation_ordering_gate": "DEFERRED_TO_V49_D_E_BY_DESIGN",
+  "gate_b_pass": true,
+  "gate_b_note": "Gate B certifies directed hydrographic topology only: no orphan major reaches, no unexplained directed cycles, all reaches have a downstream target or explicit terminal type, confluences are represented as explicit junction nodes, and known structures are explicit. Physical bed-elevation ordering is deferred by design to V49-D/E."
+}

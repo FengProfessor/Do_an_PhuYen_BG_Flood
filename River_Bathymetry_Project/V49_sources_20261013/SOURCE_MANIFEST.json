@@ -1,0 +1,58 @@
+[
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD878_2018_SongBa.pdf",
+    "source_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2018/07/878-qd-ttg.signed.pdf",
+    "sha256": "618b34beabc213ca495b61330a90e7abecaaa9c2f94178ecc873325efa1b26d2",
+    "bytes": 3245096,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  },
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\DakLak_environment_2021_2025_2026.pdf",
+    "source_url": "https://vpubnd.daklak.gov.vn/CMS/Content/VanBan/2026/4.2026/1123_QD-UBND%20BC.pdf",
+    "sha256": "c29c63ed68cd1e7e0afd4818f2890cde81f3e9528da93672097e437f2cef4c29",
+    "bytes": 3421575,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  },
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1757_2010_ZFW.pdf",
+    "source_url": "https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-1757-qd-ttg-3387/1435.htm",
+    "sha256": "7acbf83a34117efbaa85293e597e65e6ce5b7437bbc3afbe23b82d300d7a524c",
+    "bytes": 1653232,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  },
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IMH_HECRAS_PhuYen_2024.pdf",
+    "source_url": "https://imh.ac.vn/wp-content/uploads/2024/07/30.bai-6.pdf",
+    "sha256": "3108d28a3941ae654b3239a556dcefbd88bc1be4110a158b18ecf98017ca588f",
+    "bytes": 3437990,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  },
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\TT25_2015_PhuYen_geographic_names.pdf",
+    "source_url": "https://vupc.mae.gov.vn/Data/files/25-2015-tt-btnmt.PDF",
+    "sha256": "3785c61a37e0a1fb3448dc5276d73ead76b9e8433e7408431455863ddc75c631",
+    "bytes": 29121145,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  },
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+    "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+    "sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+    "bytes": 766584,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  },
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IWRP_storage_bulletin_20220930.pdf",
+    "source_url": "https://vanhanhtt.thuyloivietnam.gov.vn/resource/32f93d85-61e5-eddf-54fd-1fede2d4b613/Ban%20tin%20tich%20%20nuoc%20ho%20chua%20vung%20NTB.%20T10.pdf",
+    "sha256": "0d8d900136daa8e226ea30712e73534983d10031d07d356da35a9ff879fcb7fa",
+    "bytes": 499755,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  },
+  {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IWRP_weekly_20211008.pdf",
+    "source_url": "https://vanhanhtt.thuyloivietnam.gov.vn/resource/32f93d85-61e5-eddf-54fd-1fede2d4b613/Nam%20Trung%20Bo_Ban%20tin%20Tuan_08.10.2021.pdf",
+    "sha256": "8bab2629b265e57e0f889a44ab3151f6da8470cf7f5f4c661ddb665e6b81172c",
+    "bytes": 407863,
+    "download_transport": "Windows Invoke-WebRequest with certificate verification"
+  }
+]

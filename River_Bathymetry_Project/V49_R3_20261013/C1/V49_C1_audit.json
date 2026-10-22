@@ -1,0 +1,44 @@
+{
+  "phase": "V49-C.1",
+  "object_count": 81,
+  "status_counts": {
+    "INSUFFICIENT_EVIDENCE": 37,
+    "CONFIRMED_PERSISTENT": 28,
+    "SEASONAL_DYNAMIC": 10,
+    "CONFLICT_REVIEW_REQUIRED": 6
+  },
+  "current_geofabrik_waterway_features": 284,
+  "current_geofabrik_water_polygons": 82,
+  "geofabrik_snapshot": "2026-10-11",
+  "geofabrik_md5_expected": "b60a6365bffe82cd391e2b6a3bc94e78",
+  "geofabrik_md5_actual": "b60a6365bffe82cd391e2b6a3bc94e78",
+  "geofabrik_md5_match": true,
+  "jrc_version": "GSW v1.5 / 2024 release",
+  "jrc_long_term_period": "1984-2024 for aggregated occurrence/recurrence/transitions",
+  "jrc_seasonality_scope_note": "Downloaded seasonality_..._2024 layer is recent-year context and is not treated as a 1984-2024 aggregate.",
+  "jrc_absence_rule": "Lack of JRC detection alone never proves absence of a river; narrow/obscured channels require OSM/topology corroboration.",
+  "v49d_authorized_count": 2,
+  "c1_authorized_for_v49e_count": 2,
+  "c1_authorized_reach_ids": [
+    "HR_41349822",
+    "HR_41352752"
+  ],
+  "c1_never_promotes_v49d_review_rows": true,
+  "review_queue_count": 43,
+  "review_priority_counts": {
+    "2": 6,
+    "3": 10,
+    "4": 27
+  },
+  "dem_modified_pixels_in_c1": 0,
+  "dem_unchanged": true,
+  "source_hashes": {
+    "occurrence": "ccaf03cafb1cb8e07ecd975515c715466352e0bac5f7887a0e96353147a9a813",
+    "recurrence": "6c5d201347b12968320dd323ca21d7bf662476d999adeae2a474fab77ac74f79",
+    "seasonality": "7392edea95eedce6e56b083dc52479d15a04da5b3b22bc21dd66bb93fcd57236",
+    "transitions": "da632c42618dd187ed927c8496395cc3e300b5fc78037f38d730a14dae737d41",
+    "geofabrik_pbf_sha256": "d954e09b891079520bf13799377a9cf783cb1d9fe2745ef11864cb8d2a5b2048",
+    "dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+  }
+}

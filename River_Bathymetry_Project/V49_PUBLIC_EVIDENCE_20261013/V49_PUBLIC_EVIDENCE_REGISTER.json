@@ -1,0 +1,274 @@
+{
+  "schema_version": "V49-public-evidence-1",
+  "sources": [
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD878_2018_SongBa.pdf",
+      "source_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2018/07/878-qd-ttg.signed.pdf",
+      "sha256": "618b34beabc213ca495b61330a90e7abecaaa9c2f94178ecc873325efa1b26d2",
+      "bytes": 3245096,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\DakLak_environment_2021_2025_2026.pdf",
+      "source_url": "https://vpubnd.daklak.gov.vn/CMS/Content/VanBan/2026/4.2026/1123_QD-UBND%20BC.pdf",
+      "sha256": "c29c63ed68cd1e7e0afd4818f2890cde81f3e9528da93672097e437f2cef4c29",
+      "bytes": 3421575,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1757_2010_ZFW.pdf",
+      "source_url": "https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-1757-qd-ttg-3387/1435.htm",
+      "sha256": "7acbf83a34117efbaa85293e597e65e6ce5b7437bbc3afbe23b82d300d7a524c",
+      "bytes": 1653232,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IMH_HECRAS_PhuYen_2024.pdf",
+      "source_url": "https://imh.ac.vn/wp-content/uploads/2024/07/30.bai-6.pdf",
+      "sha256": "3108d28a3941ae654b3239a556dcefbd88bc1be4110a158b18ecf98017ca588f",
+      "bytes": 3437990,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\TT25_2015_PhuYen_geographic_names.pdf",
+      "source_url": "https://vupc.mae.gov.vn/Data/files/25-2015-tt-btnmt.PDF",
+      "sha256": "3785c61a37e0a1fb3448dc5276d73ead76b9e8433e7408431455863ddc75c631",
+      "bytes": 29121145,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+      "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+      "sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+      "bytes": 766584,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IWRP_storage_bulletin_20220930.pdf",
+      "source_url": "https://vanhanhtt.thuyloivietnam.gov.vn/resource/32f93d85-61e5-eddf-54fd-1fede2d4b613/Ban%20tin%20tich%20%20nuoc%20ho%20chua%20vung%20NTB.%20T10.pdf",
+      "sha256": "0d8d900136daa8e226ea30712e73534983d10031d07d356da35a9ff879fcb7fa",
+      "bytes": 499755,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IWRP_weekly_20211008.pdf",
+      "source_url": "https://vanhanhtt.thuyloivietnam.gov.vn/resource/32f93d85-61e5-eddf-54fd-1fede2d4b613/Nam%20Trung%20Bo_Ban%20tin%20Tuan_08.10.2021.pdf",
+      "sha256": "8bab2629b265e57e0f889a44ab3151f6da8470cf7f5f4c661ddb665e6b81172c",
+      "bytes": 407863,
+      "download_transport": "Windows Invoke-WebRequest with certificate verification"
+    }
+  ],
+  "reservoir_curves": {
+    "SONG_BA_HA": {
+      "published_rows": 22,
+      "inventory_object_id": "W20_0028",
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD878_2018_SongBa.pdf",
+      "source_sha256": "618b34beabc213ca495b61330a90e7abecaaa9c2f94178ecc873325efa1b26d2",
+      "source_pdf_page_1_based": 45,
+      "source_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2018/07/878-qd-ttg.signed.pdf",
+      "extraction": "Printed numeric table transcribed and visually checked against original PDF; not graph digitization",
+      "reference_status": "VERIFIED_PUBLISHED_STORAGE_CURVE",
+      "vertical_datum_transform_to_model": null,
+      "spatial_bathymetry_certified": false,
+      "limitations": "Engineering reference predates 2021; survey date/sedimentation, full reservoir footprint and vertical datum transformation remain to be established."
+    },
+    "SONG_HINH": {
+      "published_rows": 8,
+      "inventory_object_id": "W20_0059",
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD878_2018_SongBa.pdf",
+      "source_sha256": "618b34beabc213ca495b61330a90e7abecaaa9c2f94178ecc873325efa1b26d2",
+      "source_pdf_page_1_based": 47,
+      "source_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2018/07/878-qd-ttg.signed.pdf",
+      "extraction": "Printed numeric table transcribed and visually checked against original PDF; not graph digitization",
+      "reference_status": "VERIFIED_PUBLISHED_STORAGE_CURVE",
+      "vertical_datum_transform_to_model": null,
+      "spatial_bathymetry_certified": false,
+      "limitations": "Engineering reference predates 2021; survey date/sedimentation, full reservoir footprint and vertical datum transformation remain to be established."
+    }
+  },
+  "output_tables": [
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\SONG_BA_HA_published_ZFW.csv",
+      "sha256": "e39a0eef82fea11c6da12f3bc468d4d86a411ef448fe75d733db7fe72a5d1ad9",
+      "row_count": 22
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\SONG_HINH_published_ZFW.csv",
+      "sha256": "ee3006b2324c661ef37e9f49870d0aab43b6e5bd0eeb2e62f671bdcdb81a87ee",
+      "row_count": 8
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\2021_official_reported_flood_peaks.csv",
+      "sha256": "87895038916793b559d935657c75c8773721ca814fa6ee710c7f56a4cf85eaba",
+      "row_count": 3
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\published_minor_reservoir_capacity_references.csv",
+      "sha256": "35ff774febb84282deae8960ccef02f09cf610462a0bca3b53b61f183f3124e9",
+      "row_count": 6
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\2021_published_high_water_marks_coarse_coordinates.csv",
+      "sha256": "5be701d5f4dc7adf93b6ca9289ef5530ef308223955eb7a542ccee95ed566063",
+      "row_count": 20
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\published_relative_geographic_locations.csv",
+      "sha256": "9767d3ab68ce1109dcfd20108cf7255dd21e0b00372ffdb5ba44414cf7a380c4",
+      "row_count": 8
+    }
+  ],
+  "published_reservoir_curve_count": 2,
+  "published_curve_rows": 30,
+  "official_reported_peak_count": 3,
+  "minor_reservoir_capacity_reference_count": 6,
+  "minor_reservoir_capacity_references": [
+    {
+      "reservoir": "Phú Xuân",
+      "locality_as_published": "Xuân Phước, Đồng Xuân",
+      "inventory_object_id_candidate": "W20_0012",
+      "useful_volume_million_m3": 8.59,
+      "total_volume_million_m3": 11.22,
+      "dam_crest_elevation_m": 39.7,
+      "maximum_dam_height_m": 23.8,
+      "source_pdf_page_1_based": 2,
+      "identity_match_status": "NAME_AND_LOCALITY_CANDIDATE_REQUIRES_FOOTPRINT_CHECK",
+      "full_zfw_curve_available": false,
+      "spatial_bathymetry_certified": false,
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+      "source_sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+      "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+      "reference_year": 2020,
+      "total_volume_m3": 11220000.0
+    },
+    {
+      "reservoir": "Đồng Tròn",
+      "locality_as_published": "An Nghiệp, Tuy An",
+      "inventory_object_id_candidate": "W20_0014",
+      "useful_volume_million_m3": 18.31,
+      "total_volume_million_m3": 19.55,
+      "dam_crest_elevation_m": 38.0,
+      "maximum_dam_height_m": 29.0,
+      "source_pdf_page_1_based": 2,
+      "identity_match_status": "NAME_AND_LOCALITY_CANDIDATE_REQUIRES_FOOTPRINT_CHECK",
+      "full_zfw_curve_available": false,
+      "spatial_bathymetry_certified": false,
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+      "source_sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+      "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+      "reference_year": 2020,
+      "total_volume_m3": 19550000.0
+    },
+    {
+      "reservoir": "Suối Vực",
+      "locality_as_published": "Suối Bạc, Sơn Hòa",
+      "inventory_object_id_candidate": "W20_0020",
+      "useful_volume_million_m3": 9.94,
+      "total_volume_million_m3": 10.51,
+      "dam_crest_elevation_m": 91.7,
+      "maximum_dam_height_m": 26.59,
+      "source_pdf_page_1_based": 2,
+      "identity_match_status": "NAME_AND_LOCALITY_CANDIDATE_REQUIRES_FOOTPRINT_CHECK",
+      "full_zfw_curve_available": false,
+      "spatial_bathymetry_certified": false,
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+      "source_sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+      "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+      "reference_year": 2020,
+      "total_volume_m3": 10510000.0
+    },
+    {
+      "reservoir": "Đồng Khôn",
+      "locality_as_published": "Hòa Xuân Tây, Đông Hòa",
+      "inventory_object_id_candidate": "W20_0069",
+      "useful_volume_million_m3": 2.61,
+      "total_volume_million_m3": 2.716,
+      "dam_crest_elevation_m": 26.2,
+      "maximum_dam_height_m": 16.2,
+      "source_pdf_page_1_based": 2,
+      "identity_match_status": "NAME_AND_LOCALITY_CANDIDATE_REQUIRES_FOOTPRINT_CHECK",
+      "full_zfw_curve_available": false,
+      "spatial_bathymetry_certified": false,
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+      "source_sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+      "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+      "reference_year": 2020,
+      "total_volume_m3": 2716000.0
+    },
+    {
+      "reservoir": "Buôn Đức",
+      "locality_as_published": "EaTrol, Sông Hinh",
+      "inventory_object_id_candidate": "W20_0071",
+      "useful_volume_million_m3": null,
+      "total_volume_million_m3": 4.276,
+      "dam_crest_elevation_m": 203.8,
+      "maximum_dam_height_m": 19.6,
+      "source_pdf_page_1_based": 2,
+      "identity_match_status": "NAME_AND_LOCALITY_CANDIDATE_REQUIRES_FOOTPRINT_CHECK",
+      "full_zfw_curve_available": false,
+      "spatial_bathymetry_certified": false,
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+      "source_sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+      "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+      "reference_year": 2020,
+      "total_volume_m3": 4276000.0
+    },
+    {
+      "reservoir": "Hóc Răm",
+      "locality_as_published": "Hòa Tân Tây, Tây Hòa",
+      "inventory_object_id_candidate": "W20_0064",
+      "useful_volume_million_m3": 2.6,
+      "total_volume_million_m3": 2.91,
+      "dam_crest_elevation_m": 25.8,
+      "maximum_dam_height_m": 17.8,
+      "source_pdf_page_1_based": 3,
+      "identity_match_status": "NAME_AND_LOCALITY_CANDIDATE_REQUIRES_FOOTPRINT_CHECK",
+      "full_zfw_curve_available": false,
+      "spatial_bathymetry_certified": false,
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+      "source_sha256": "2c3c36531b306ea7d43e089e46e6a0a0ea58ae4e7fe028051c4a03a6b7d24205",
+      "source_url": "https://congbao.daklak.gov.vn/FileCongBao/upload/2001592/convertPDFFile/61e0de92582d7c018305328d.pdf",
+      "reference_year": 2020,
+      "total_volume_m3": 2910000.0
+    }
+  ],
+  "relative_geographic_location_count": 8,
+  "relative_geographic_location_limitations": "Feature centres from the 2015 VN-2000 1:25000 geographic-name catalogue; not hydrometric stations or survey coordinates. Original PDF pages, not unverified OCR, supply the transcription.",
+  "published_high_water_mark_count": 20,
+  "high_water_mark_limitations": "Coordinates are rounded to 0.01 degrees (roughly 1 km) and vertical datum is unspecified; do not substitute them for exact 30 m survey points. Event window also extends beyond the frozen 120 h simulation.",
+  "observation_conflicts": [
+    {
+      "station": "PHU_LAM",
+      "official_retrospective_peak": "4.63 m at 2021-11-30 23:00 +07",
+      "previous_official_rapid_report": "4.62 m at 2021-12-01 01:00 +07",
+      "action": "Retain separate source claims; resolve 0.01 m / 2 h discrepancy before choosing a single timing target"
+    },
+    {
+      "reservoir": "SONG_BA_HA",
+      "official_2018_reference": "349.70 million m3 total in technical table; ZFW row at 105 m is 349.69 million m3",
+      "owner_website_reference": "394.70 million m3 total",
+      "owner_website_url": "https://beta.sbh.vn/c3/gioi-thieu-c/Linh-vuc-hoat-dong-2-224",
+      "action": "Use the printed 2018 ZFW rows as a versioned reference; do not silently scale to the conflicting summary"
+    },
+    {
+      "reservoir": "SONG_HINH",
+      "official_2018_normal_level_m": 209.0,
+      "official_2018_total_volume_m3": 357000000.0,
+      "coarse_table_piecewise_linear_volume_at_normal_level_m3": 362592000.0,
+      "action": "Retain the published technical value separately; 5 m row spacing makes linear interpolation approximate, not a measured volume at 209 m"
+    },
+    {
+      "reservoir": "HOA_SON",
+      "source_path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IWRP_storage_bulletin_20220930.pdf",
+      "source_sha256": "0d8d900136daa8e226ea30712e73534983d10031d07d356da35a9ff879fcb7fa",
+      "published_region": "Vạn Ninh, Khánh Hòa",
+      "technical_table_normal_level_m": 27.0,
+      "operational_table_normal_level_m": 26.5,
+      "technical_table_pdf_page": 5,
+      "operational_table_pdf_page": 6,
+      "action": "Do not merge competing normal levels or force a Phú Yên administrative match"
+    }
+  ],
+  "external_validation_complete": false,
+  "hydraulic_promotion_ready": false
+}

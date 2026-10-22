@@ -1,0 +1,32 @@
+{
+  "schema_version": "V49-connected-parent-support-1",
+  "inputs": {
+    "classification": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R2_20261013\\C\\V49_waterbody_classification.gpkg",
+      "sha256": "02c30f44c850b82b9a69891c29f9a5cbbd9e337825c31ccaed8ec763eb84afe6"
+    },
+    "evidence": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R2_20261013\\C1\\V49_C1_fixed_water_evidence.gpkg",
+      "sha256": "c3697eaa5b3cc135ab22e6f1464f1a60b78702eaf64ca45aa846dbf3029912f6"
+    },
+    "graph": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_B_20261012\\V49_hydrograph.gpkg",
+      "sha256": "35b0d86ea5e6340cc607dfc057c9450ebd690aa49eeeffb859a68117e4532968"
+    }
+  },
+  "minimum_same_component_graph_m": 300.0,
+  "minimum_object_overlap": 0.6,
+  "changed_object_ids": [
+    "W20_0034",
+    "W20_0050",
+    "W20_0052"
+  ],
+  "object_count": 81,
+  "source_osm_epoch": "2026-10-11",
+  "authorizes_geometry": false,
+  "verifies_2021_persistence": false,
+  "output": {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\PARENT_SUPPORT\\V49_parent_channel_support.csv",
+    "sha256": "17f4c8be112982152da249898516b40e2d6b2a2c2cf5b468f564d9425a92a995"
+  }
+}

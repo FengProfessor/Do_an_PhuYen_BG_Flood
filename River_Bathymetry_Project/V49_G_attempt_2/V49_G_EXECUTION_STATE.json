@@ -1,0 +1,33 @@
+{
+  "schema_version": "V49-G-execution-1",
+  "status": "RUNNING",
+  "queue": [
+    "LOW",
+    "HIGH",
+    "BASE"
+  ],
+  "runs": {
+    "CENTRAL": {
+      "status": "RUNNING",
+      "started_at_utc": "2026-10-19T16:49:03.968911+00:00",
+      "log": "D:\\VTP\\River_Bathymetry_Project\\V49_G_attempt_2\\results\\V49_G_CENTRAL_run.log",
+      "result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_attempt_2\\results\\V49_G_CENTRAL.nc",
+      "config_sha256": "83491afde4cdd2fdedae5e525057805056051f0090d63236dabf8e2dd2fb47bf",
+      "vram_start_gb": 14.886,
+      "progress": {
+        "simulated_time_s": 211948.49,
+        "endtime_s": 432000.0,
+        "progress_pct": 49.06215046296296,
+        "dt_s": 0.3335,
+        "engine_elapsed_s": 216904.6
+      }
+    }
+  },
+  "execution_policy": "One CUDA run at a time on GPU Device 0; CENTRAL -> LOW -> HIGH -> BASE (120h each)",
+  "hydraulic_promotion_ready": false,
+  "active_arm": "CENTRAL",
+  "started_at_utc": "2026-10-19T16:48:58.832991+00:00",
+  "supervisor_pid": 6336,
+  "worker_pid": 17648,
+  "updated_at_utc": "2026-10-22T05:08:11.111025+00:00"
+}

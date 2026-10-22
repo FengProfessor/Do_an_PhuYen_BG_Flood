@@ -1,0 +1,98 @@
+[
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL.nc",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL.nc",
+    "bytes": 511564869,
+    "sha256": "ab4fe8ea2ae35b71b201d088c40102ce5834d2971064da53652534a1ae26ac64"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_run.log",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_run.log",
+    "bytes": 13050247,
+    "sha256": "0f87f08709797a6e958b12584ec318582def732406d5ca2b56e7d3f699c1fb3f"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_discrete_budget.json",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_discrete_budget.json",
+    "bytes": 1001,
+    "sha256": "1fb0318a7a4dbecdd074c7d656dddaa8bcccf6e03799a9b412f3b8ccecc33c0b"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_EXECUTION_STATE.json",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_EXECUTION_STATE.json",
+    "bytes": 1089,
+    "sha256": "c2cb30fbb3eeec5433c4b12afec444bc642bb2b02bad36c8ebb53a6d6058950c"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_PREPARATION_MANIFEST.json",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_PREPARATION_MANIFEST.json",
+    "bytes": 24041,
+    "sha256": "9a7d95e00147d89e8be6eaf47f5c1f766baea2b0f936aa85c0619a2141cbd76e"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_0.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_0.png",
+    "bytes": 175040,
+    "sha256": "4dfd9d4c97f1ef7c807e260d28a96e581027702a508ba838a54598c8000d9555"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_1.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_1.png",
+    "bytes": 181084,
+    "sha256": "67409a13e0ba82c3f1f9bfabacbdefd7179810c09bfa82cdc6945c98115846e0"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_10.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_10.png",
+    "bytes": 336094,
+    "sha256": "11a2e52159cb8d47570a64553a2d357acbfe4a493aad1c6d13317b3a8f2abebc"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_2.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_2.png",
+    "bytes": 187173,
+    "sha256": "f0a0a3f2bc9970311018c55d149da7963fd52371859fe10275fbed43d2965b1e"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_3.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_3.png",
+    "bytes": 192942,
+    "sha256": "2dc08ec1d16af4bf838d9e76e82c1a91101156d9f18e5b27f635d769dd6bbcc0"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_4.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_4.png",
+    "bytes": 218536,
+    "sha256": "0e8fce74081476bb8bf65748cb5e992851336fc6ceb8d38e44565ec0f2a7b59d"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_5.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_5.png",
+    "bytes": 260588,
+    "sha256": "120a28b00de7ba900ac0d2523a7a1d19db8ff241aa5e0ccf21af31622fc20625"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_6.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_6.png",
+    "bytes": 284838,
+    "sha256": "290bfe97c13558531f7b942fe3ece4ced3808fa27337175211a1a7ab4d440d35"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_7.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_7.png",
+    "bytes": 292060,
+    "sha256": "50404e5f660845f4a91065fecce90410862a0afe088ba3d7a76879741cfd9c2c"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_8.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_8.png",
+    "bytes": 294706,
+    "sha256": "060254f9be3699b4631c92e5ae92ea429a09386b0b60b7be8837218c2e6f673b"
+  },
+  {
+    "source": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_frame_9.png",
+    "copy": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\RAW\\V49_G_CENTRAL_frame_9.png",
+    "bytes": 303567,
+    "sha256": "e596e21622f1525ce084c20b14db6496fd7c0610d32eab001ba9fb6450031c61"
+  }
+]

@@ -1,0 +1,98 @@
+{
+  "schema": "V49-offline-forcing-research-1",
+  "created_at_utc": "2026-10-13T22:56:05.476408+00:00",
+  "integrity_audit_pass": true,
+  "scientific_validation_complete": false,
+  "hydraulic_promotion_ready": false,
+  "scope": "Offline inputs and atomic JSON only; no active NetCDF, no new hydraulic run",
+  "epoch_utc": "2021-11-25T17:00:00+00:00",
+  "rain_scaling_max_error_m_s": 0.0,
+  "v23_native_linear_120h_mm": 197.33688,
+  "v34_native_linear_120h_mm": 394.67376,
+  "archived_reference_mean_120h_mm": 256.29375,
+  "v34_minus_archived_reference_pct": 53.99273684980614,
+  "archived_reference_identity": "Open-Meteo ERA5 derivative retrieved 2026-09-28; not original V23 response, raw CDS or station truth",
+  "requested_point_centers_in_model_domain": 1,
+  "returned_point_centers_in_model_domain": 1,
+  "reference_point_count": 16,
+  "grid": {
+    "crs": "EPSG:32649",
+    "cell_area_m2": 900.0,
+    "valid_cells": 4410000,
+    "valid_area_km2": 3969.0,
+    "ocean_inventory_cells": 849306,
+    "ocean_inventory_area_km2": 764.3754,
+    "outside_ocean_area_km2": 3204.6246,
+    "cold_start_total_m3": 794467315.7705971,
+    "cold_start_ocean_m3": 762447737.4371428,
+    "cold_start_outside_ocean_m3": 32019578.33345424,
+    "cold_start_central_minus_base_m3": -2.1609594114124775e-06,
+    "accepted_e_changed_terrain_cells": 72,
+    "ascii_changed_cells_above_1micrometre": 72,
+    "ascii_nonidentical_float_cells": 186,
+    "ascii_minus_accepted_max_abs_m": 9.313225746154785e-10,
+    "lowering_volume_m3": 8008.209228515625,
+    "note": "Ocean partition uses existing R3 inventory pixel centers; outside-ocean includes inland water and coastal cells, not solely dry land."
+  },
+  "river_input_integrals": {
+    "xa_lu_BaHa_Nov2021_V40_sync.txt": {
+      "rows": 10,
+      "q_min_m3_s": 400.0,
+      "q_max_m3_s": 11000.0,
+      "input_integral_120h_m3": 970200000.0
+    },
+    "xa_lu_BanThach_V43.txt": {
+      "rows": 33,
+      "q_min_m3_s": 675.0,
+      "q_max_m3_s": 4007.14,
+      "input_integral_120h_m3": 916157088.0
+    },
+    "xa_lu_KyLo_V40_sync.txt": {
+      "rows": 9,
+      "q_min_m3_s": 150.0,
+      "q_max_m3_s": 5000.0,
+      "input_integral_120h_m3": 359550000.0
+    },
+    "xa_lu_TuyAn_V40_sync.txt": {
+      "rows": 6,
+      "q_min_m3_s": 200.0,
+      "q_max_m3_s": 2000.0,
+      "input_integral_120h_m3": 207360000.0
+    }
+  },
+  "live_budget_diagnostics": {
+    "simulated_time_s": 109488.59868809716,
+    "all_domain_analytic_rain_m3": 133294190.76450093,
+    "runtime_rain_m3": 133292550.77961731,
+    "rain_relative_discrete_minus_linear": -1.230349855620338e-05,
+    "initial_budget_minus_static_m3": -1.1801719665527344e-05,
+    "clamp_added_over_positive_rain_river_pct": 0.01745244114022888,
+    "infiltration_over_rain_pct": 0.048222883172071095,
+    "note": "Infiltration ratio includes marine rainfall and is diagnostic only; cell-step negative counts are not unique cells."
+  },
+  "static_input_hashes": {
+    "D:\\VTP\\Scenarios\\rain_v23_era5_spatial.txt": "6b9fb0a6bdfc177f139f2fdab47cac965c4929e8f5e870d964670be00208ef2b",
+    "D:\\VTP\\Scenarios\\rain_v34_era5_x2.txt": "02e569860a840fdccc3f36efbd4fa3096bed11acedb1be480252f0d8b6f5184e",
+    "D:\\VTP\\V45_runs\\20260928_engine_r1\\work\\V45_openmeteo_era5_16point_20211125_20211203_v21_raw.json": "47a2f7418a29450c8a2c88b72d02cb7c6fe27827f251247433349ef5b21543e1",
+    "D:\\VTP\\V45_runs\\20260928_engine_r1\\results\\V45_openmeteo_era5_16point_20211125_20211203_v21_manifest.json": "013f117c00b9a0ad7a3a416b1e42023b90ba73bd91bb8c0969b271a6dcc48e27",
+    "D:\\VTP\\V48_RUN_EPOCH_PROVENANCE_20261002.json": "9c1ab1246cd7c1fd28d7b7a0f297dc570c1f057f75737bff4cfaba7849cd4d57",
+    "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\C\\V49_waterbody_classification.gpkg": "5256a721a61d08916cd8a744e9394697d2e44b1d35fd5e244b44e53c41d1be72",
+    "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_CENTRAL_hydraulic_bed.asc": "1abe6da9fd82f2a468a02fda74ca640a3156d7773db2dfc670ee83afb4ba65c1",
+    "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\E\\V49_E_hydraulic_bed.tif": "181115942dc88a95503a1e193b2f90149e918b6f8354a262085b293e11df2552",
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "D:\\VTP\\BG_Flood_Project\\BG_Flood\\prep_v34.py": "f0d7cc09dbf7fdd2ff5d9badea9a9ac4960f50dbe9b0a9e95798dfaf745b1c6a",
+    "D:\\VTP\\River_Bathymetry_Project\\v49_runtime_observer.py": "a3fa00369beb839c31c27c2a74ec6d3956967c5949847626f64033b8766eb124",
+    "D:\\VTP\\River_Bathymetry_Project\\v49_validate_hydraulic_validation.py": "b7ebe43aca43c0dac5a6f4198f70f729c67b91a1eae459ee9463da468f94f93a",
+    "D:\\VTP\\River_Bathymetry_Project\\v49_evaluate_hydraulic_validation.py": "ff2a15601d585e5fcf837eafbd993abcb6e000409b8612e49d3fa762d0909bd9",
+    "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\updateforcing.py": "b5a67ef98e281c539f507973388d4bf80941ec0cc4326bc4fd6fba7422a86311",
+    "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_BASE.txt": "78219a157e23b771f8960090d41c15cc076e64190013601d383c873d7c956a4d",
+    "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_CENTRAL.txt": "50cad104e5d5134d665e052c82bf7b876971105de2d295c5eb67abacc7555892",
+    "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_LOW.txt": "bfcff0c28b342c6bdd0fc2ede0fee77a48e2953a4fc50054fe245ce577721276",
+    "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_HIGH.txt": "f0900b8d413a278d07d1ae3d7d6e61c3f99faf8535e7e09e9131b4613c555812",
+    "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_BaHa_Nov2021_V40_sync.txt": "c756075697ab44ca5341fc45b1dd892e680e2360fea1247351ad953028cfaede",
+    "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_BanThach_V43.txt": "bb81bfbda9deb4fad66f81d357c00ac22bff513fd40b08fb892c8d6cf5da6a88",
+    "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_KyLo_V40_sync.txt": "c53c460fda3d97ee839b6f95f891854f7d4d4e88e179e9fd30006fec3f5a7bb5",
+    "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_TuyAn_V40_sync.txt": "07a8fd949965e35ec682acdd652b13e436bbd24539367facb9a030794c72e61e"
+  },
+  "static_input_hashes_unchanged_after": true
+}

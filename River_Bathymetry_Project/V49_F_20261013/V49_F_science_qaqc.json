@@ -1,0 +1,113 @@
+{
+  "schema_version": "V49-F-science-qaqc-1",
+  "phase": "V49-F",
+  "scope": "coverage/science QA-QC aggregation; no DEM modification and no hydraulic model run",
+  "lineage": {
+    "v49a_object_count": 81,
+    "v49c_object_count": 81,
+    "v49d_reach_count": 370,
+    "v49e_authorized_reach_count": 2,
+    "source_dem_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "source_dem_matches_expected": true
+  },
+  "coverage": {
+    "qualifying_inland_object_count": 80,
+    "qualifying_inland_area_km2": 113.85719999999999,
+    "v49e_represented_inland_object_count": 3,
+    "v49e_represented_inland_object_count_pct": 3.75,
+    "v49e_represented_inland_object_area_km2": 0.1638,
+    "v49e_represented_inland_object_area_pct": 0.1438644196414456,
+    "v49e_actual_modified_area_km2": 0.0648,
+    "coverage_table": "V49_F_coverage_by_class.csv"
+  },
+  "major_persistent_omissions": {
+    "definition": "C.1 CONFIRMED_PERSISTENT inland object with area >= 1.0 km2 or at least one associated major graph reach; omitted means no object association with an accepted V49-E reach.",
+    "count": 5,
+    "object_ids": [
+      "W20_0059",
+      "W20_0026",
+      "W20_0068",
+      "W20_0066",
+      "W20_0041"
+    ],
+    "table": "V49_F_major_persistent_omissions.csv"
+  },
+  "topology": {
+    "orphan_major_reach_count": 0,
+    "directed_cycle_count": 0,
+    "directed_cycle_explanations": [],
+    "linear_water_object_without_graph_support_count": 2
+  },
+  "confluence": {
+    "v49d_confluence_count": 168,
+    "v49d_unresolved_authorized_inversion_count": 0,
+    "v49e_confluence_check_count": 2,
+    "v49e_unresolved_confluence_count": 0
+  },
+  "geometry": {
+    "v49c_eligible_reach_count": 95,
+    "v49e_reach_count": 2,
+    "width_depth_by_strahler_table": "V49_F_geometry_by_strahler.csv",
+    "source_fraction_table": "V49_F_geometry_source_fractions.csv",
+    "source_group_counts_v49c_eligible_scope": {
+      "EMPIRICAL_FALLBACK": 86,
+      "HYDRAULIC_INVERSION": 7,
+      "UNRESOLVED": 2
+    },
+    "v49e_uncertainty_class_counts": {
+      "HIGH": 1,
+      "VERY_HIGH": 1
+    },
+    "survey_geometry_fraction_pct_v49c_eligible_scope": 0.0,
+    "hydraulic_inversion_fraction_pct_v49c_eligible_scope": 7.368421052631579,
+    "empirical_fallback_fraction_pct_v49c_eligible_scope": 90.52631578947368
+  },
+  "incision_and_storage": {
+    "incision_table": "V49_F_incision_by_reach.csv",
+    "storage_table": "V49_F_added_storage_by_reach.csv",
+    "total_added_storage_m3": 8008.209228515626,
+    "maximum_effective_incision_m": 0.37420654296875,
+    "storage_is_acceptance_target": false
+  },
+  "conditioning_adjustment": {
+    "forced_longitudinal_adjustment_count": 0,
+    "sum_absolute_forced_adjustment_m": 0.0,
+    "global_monotonic_filter_used": false
+  },
+  "hydraulic_sensitivity": {
+    "status": "PENDING_V49_G_MATCHED_BG_FLOOD_RUNS",
+    "metrics_available": false,
+    "required_scenarios": [
+      "V48_BASE",
+      "LEGACY_FIVE_BRANCH_DIAGNOSTIC",
+      "V49_CENTRAL",
+      "V49_LOW",
+      "V49_HIGH"
+    ],
+    "required_metrics": [
+      "flood_extent_CSI_F1_precision_recall",
+      "WSE_bias_MAE_RMSE",
+      "velocity_sanity",
+      "arrival_time_error",
+      "peak_timing_error",
+      "mass_balance_error"
+    ],
+    "note": "V49-F does not infer flood sensitivity from DEM geometry. Matched BG_Flood runs and independent observations are required in V49-G."
+  },
+  "scientific_guardrails": {
+    "uses_minimum_storage_target": false,
+    "certifies_depth_by_raster_self_reproduction_only": false,
+    "reports_uncertainty_with_geometry": true,
+    "reports_coverage_with_geometry": true,
+    "source_dem_modified_by_v49f": false
+  },
+  "promotion": {
+    "hydraulic_promotion_ready": false,
+    "blockers": [
+      "Matched V49 LOW/CENTRAL/HIGH BG_Flood sensitivity runs have not yet been executed and validated against independent observations.",
+      "5 major CONFIRMED_PERSISTENT inland-water objects remain without accepted V49-E hydraulic representation.",
+      "V49-E currently represents only the strict evidence-authorized subset; review-only river/tidal/reservoir/wetland objects remain unresolved."
+    ],
+    "next_phase": "V49-G — matched BG_Flood hydraulic validation and bathymetry sensitivity"
+  }
+}

@@ -1,0 +1,30 @@
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+71
+nhỏ chỉ dưới 0,06 m, hệ số Nash cũng đạt cao 
+năm 2016 đạt 0,92, năm 2009 đạt 0,91, hình 
+dạng quá trình lũ thực đo khá tương đồng về 
+pha và độ lớn. 
+Sau khi đã thiết lập được mô hình HEC-RAS 
+1D mô phỏng tốt quá trình thủy lực trong sông 
+sẽ xây dựng và thiết lập kết nối mô hình HEC-
+RAS 1-2D để mô phỏng đánh giá quá trình ngập 
+lụt hạ lưu sông Ba. Do không có đo đạc được vết 
+lũ năm 2016 nên sẽ sử dụng vết lũ năm 2021 
+khảo sát đo đạc tại 46 điểm để hiệu chỉnh mô 
+hình ngập lụt, sau đó sẽ kiểm định cho trận lũ 
+năm 2009 để đánh giá mô phỏng về diện ngập. 
+Kết quả hiệu chỉnh cho trận lũ năm 2021 tại các 
+vết lũ được đánh giá dựa trên tương quan cao 
+độ vết lũ tính toán và thực đo (Hình 13) và sai số 
+tính toán giữa mực nước tính toán và thực đo 
+tại Bảng 1.
+Hình 8. Kết quả hiệu chỉnh lưu lượng 
+tại trạm Củng Sơn
+Hình 9. Kết quả Kiểm định lưu lượng 
+tại trạm Củng Sơn
+Hình 10. Kết quả hiệu chỉnh mực nước tại trạm Phú Lâm trận lũ 2021 cho mô hình HEC-RAS
+Hình 11. Kết quả kiểm định mực nước tại trạm Phú 
+Lâm trận lũ năm 2016 mô hình HEC-RAS
+Hình 12. Kết quả kiểm định mực nước trạm Phú 
+Lâm trận lũ 2009 mô hình HEC-RAS

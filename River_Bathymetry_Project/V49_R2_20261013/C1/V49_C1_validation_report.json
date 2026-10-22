@@ -1,0 +1,63 @@
+{
+  "phase": "V49-C.1",
+  "gate_c1_pass": true,
+  "object_count": 81,
+  "reach_count": 370,
+  "v49d_authorized_count": 2,
+  "c1_authorized_count": 2,
+  "c1_authorized_reach_ids": [
+    "HR_41349822",
+    "HR_41352752"
+  ],
+  "promoted_beyond_v49d": [],
+  "authorized_with_nonpersistent_object": [],
+  "missing_object_fields": [],
+  "invalid_statuses": [],
+  "duplicate_objects": [],
+  "blank_reasons": [],
+  "dem_integrity_ok": true,
+  "geofabrik_md5_ok": true,
+  "source_integrity": {
+    "checks": {
+      "occurrence": {
+        "path": "D:\\VTP\\V49_C1_sources_20261012\\JRC_occurrence_100E_20N_v1_5_2024.tif",
+        "actual_sha256": "ccaf03cafb1cb8e07ecd975515c715466352e0bac5f7887a0e96353147a9a813",
+        "expected_sha256": "ccaf03cafb1cb8e07ecd975515c715466352e0bac5f7887a0e96353147a9a813",
+        "pass": true
+      },
+      "recurrence": {
+        "path": "D:\\VTP\\V49_C1_sources_20261012\\JRC_recurrence_100E_20N_v1_5_2024.tif",
+        "actual_sha256": "6c5d201347b12968320dd323ca21d7bf662476d999adeae2a474fab77ac74f79",
+        "expected_sha256": "6c5d201347b12968320dd323ca21d7bf662476d999adeae2a474fab77ac74f79",
+        "pass": true
+      },
+      "seasonality": {
+        "path": "D:\\VTP\\V49_C1_sources_20261012\\JRC_seasonality_100E_20N_v1_5_2024.tif",
+        "actual_sha256": "7392edea95eedce6e56b083dc52479d15a04da5b3b22bc21dd66bb93fcd57236",
+        "expected_sha256": "7392edea95eedce6e56b083dc52479d15a04da5b3b22bc21dd66bb93fcd57236",
+        "pass": true
+      },
+      "transitions": {
+        "path": "D:\\VTP\\V49_C1_sources_20261012\\JRC_transitions_100E_20N_v1_5_2024.tif",
+        "actual_sha256": "da632c42618dd187ed927c8496395cc3e300b5fc78037f38d730a14dae737d41",
+        "expected_sha256": "da632c42618dd187ed927c8496395cc3e300b5fc78037f38d730a14dae737d41",
+        "pass": true
+      },
+      "geofabrik_pbf_sha256": {
+        "path": "D:\\VTP\\V49_C1_sources_20261012\\geofabrik_vietnam_20261011.osm.pbf",
+        "actual_sha256": "d954e09b891079520bf13799377a9cf783cb1d9fe2745ef11864cb8d2a5b2048",
+        "expected_sha256": "d954e09b891079520bf13799377a9cf783cb1d9fe2745ef11864cb8d2a5b2048",
+        "pass": true
+      }
+    },
+    "geofabrik_md5_ok": true,
+    "pass": true
+  },
+  "review_queue_count": 43,
+  "missing_review_fields": [],
+  "missing_review_objects": [],
+  "extra_review_objects": [],
+  "duplicate_review_objects": [],
+  "review_rows_block_v49e": true,
+  "missing_files": []
+}

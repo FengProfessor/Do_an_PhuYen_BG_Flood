@@ -1,0 +1,37 @@
+{
+  "schema_version": "V49-hydro-conditioned-1",
+  "status": "PASS_DRAINAGE_TOPOLOGY",
+  "purpose": "DRAINAGE_ANALYSIS_ONLY",
+  "usable_as_hydraulic_bed": false,
+  "method": "Eight-neighbor priority flood with nextafter flat resolution; pysheds D8; independent cycle/accumulation audit",
+  "pysheds_version": "0.5",
+  "flat_resolution": "max(nextafter(parent, +inf), parent + 1e-9 m), stored as float64",
+  "source_dem": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+  "source_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "source_unchanged": true,
+  "valid_cells": 4410000,
+  "changed_cells": 1177695,
+  "raised_cells": 1177695,
+  "lowered_cells": 0,
+  "maximum_raise_m": 30.04724121393747,
+  "minimum_delta_m": 0.0,
+  "outputs_sha256": {
+    "V49_DEM_HYDRO_CONDITIONED.tif": "233194275a57c6fbc912180466ce45263039f10b55788bfac822bb722c6eecd0",
+    "V49_HYDRO_D8.tif": "236417795ca8a3f69b090098dc235b447eaa7bed2917b431656ab2d058eaf6be",
+    "V49_HYDRO_ACCUMULATION_CELLS.tif": "050fd4323a7b2680c8d0ac68472c054e3010d493e07b718b99f6bec1a09bdcad",
+    "V49_HYDRO_DELTA_Z.tif": "4fff7d95430bba802cc25b97c90272f2542fa4be2273b95dc75ed0223b1363fb"
+  },
+  "drainage_checks": {
+    "internal_unresolved_cells": 0,
+    "cyclic_or_cycle_dependent_cells": 0,
+    "outlet_cells": 3593,
+    "outlet_accumulation_sum_cells": 4410000.0,
+    "every_valid_cell_drains_to_an_explicit_outlet": true
+  },
+  "limitations": "Drainage topology is algorithmic; no surveyed channel bed, reservoir storage, or agreement with all mapped reaches is certified.",
+  "method_sources": [
+    "https://arxiv.org/abs/1511.04463",
+    "https://github.com/pysheds/pysheds"
+  ],
+  "runtime_note": "Local priority-flood implementation avoids the installed pysheds/Numba generator compilation failure; dependency installations are unchanged."
+}

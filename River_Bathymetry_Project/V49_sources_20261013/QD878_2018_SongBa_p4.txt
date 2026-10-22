@@ -1,0 +1,58 @@
+105,00 m;
+101,00 m;
+105,96 m;
+108,05 m;
+349,70 tri~u m3;
+165,90 tri~u m3•
+209,00 m;
+196,00 m;
+211,85 m;
+212,35 m;
+357,00 tri~u m3;
+323,00 tri~u m3•
+255,00 m;
+242,50 m;
+255,85 m;
+258,38 m;
+165,78 tri~u m3;
+108,50 tri~u m3•
+204,00 m;
+195,00 m;
+209,92 m;
+253,00 tri~u m3;
+201,00 tri~u m3•
+- Dung tich toan bQ:
+- Dung tich hilu ich:
+2. H6 Song Hinh:
+- Cao trinh mvc nuac dang binh thuemg:
+- Cao trinh mvc nuac chSt:
+- Cao trinh mvc nuac Iii thiSt kS:
+- Cao trinh mvc nuac Iii kiSm tra:
+- Dung tich toan bQ:
+- Dung tich hiiu ich:
+3. H6 KIong H'Nang:
+- Cao trinh mvc nuac dang binh thuemg:
+- Cao trinh mvc nuac chSt:
+- Cao trinh mvc nuac Iii thiSt kS:
+- Cao trinh mvc nuac Iii kiSm tra:
+- Dung tich toan bQ:
+- Dung tich hiiu ich:
+4. H6 Ayun H~:
+- Cao trinh mvc nuac dang binh thuemg:
+- Cao trinh mvc nuac chSt:
+- Cao trinh mvc nuac Iii thiSt kS:
+- Dung tich toan bQ:
+- Dung tich hiiu ich:
+Di~u 2. Mua Iil, mua qm trong Quy trinh mly dugc quy dinh nhu sau:
+1. Mua Iil: til ngay 01 thang 9 dSn ngay 15 thang 12.
+2. Mua c~n: til ngay 16 thang 12 dSn ngay 31 thang 8 nam sau.
+Di~u 3. Vi~c v~ hanh cac cong trinh xa cua cac h6 chua phai thvc hi~n,
+theo dUng quy trinh v~ hanh cong trinh xa da:dugc ban hanh, nh~m dam bao 6n,
+dinh cho h~ th6ng cong trinh dfiu m6i.
+Di~u 4. Cac thong s6 leYthu~t cO'ban cua cac h6 chua
+1. H6 Song Ba H~:
+- Cao trinh mvc nuac dang binh thuemg:
+- Cao trinh mvc nuac chSt:
+- Cao trinh mvc nuac Iii thiSt kS:
+- Cao trinh mvc nuac Iii kiSm tra:
+2

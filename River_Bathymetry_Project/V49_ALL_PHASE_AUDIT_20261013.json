@@ -1,0 +1,307 @@
+{
+  "schema_version": "V49-all-phase-remediation-audit-1",
+  "updated_at_utc": "2026-10-13T11:49:19.316941+00:00",
+  "revision_dir": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013",
+  "water_history_2021": {
+    "checks": {
+      "source_and_output_checksums": true,
+      "source_geometry_readback": true,
+      "complete_12_months": true,
+      "no_observation_is_not_dry": true,
+      "source_period_is_2021": true,
+      "no_geometry_or_daily_WSE_promotion": true
+    },
+    "pass_": true,
+    "monthly_rows": 972,
+    "object_count": 81
+  },
+  "survey_context": {
+    "source_and_output_sha256_match": true,
+    "coordinate_and_height_transcription_readback": true,
+    "paired_crs_verified": true,
+    "saved_spatial_geometry_verified": true,
+    "no_unverified_vertical_or_2021_bed_promotion": true,
+    "pass_": true,
+    "corner_count": 7,
+    "collar_count": 11,
+    "surveyed_bathymetry_accepted_count": 0,
+    "overlap_objects": []
+  },
+  "new_primary_research_sources": {
+    "schema_version": "V49-R3-primary-research-readback-1",
+    "sources": [
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\Gov_PhuSen_DaRang_sand_EIA_2026.pdf",
+        "source_url": "https://snnmt.daklak.gov.vn/uploads/sonnmt/ccbvmt/0%20.DTM%20Phu%20Sen%20Binh%20An.pdf",
+        "expected_sha256": "a1287f66384d07e10ebbf7fe3380974d7041bb23e568a474eb4f342e07404440",
+        "actual_sha256": "a1287f66384d07e10ebbf7fe3380974d7041bb23e568a474eb4f342e07404440",
+        "expected_pdf_pages": 219,
+        "actual_pdf_pages": 219,
+        "pass_": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\Gov_SonHoa_Ba_sand_EIA_2026.rar",
+        "source_url": "https://drive.google.com/file/d/1GALFlawuQxrntwYQx6Hq8X_ptd7MMLrL/view?usp=sharing",
+        "expected_sha256": "8995e49d57a61770e67f94f404b78a9d75684a6b7462488b28cd9b468f5ac4cd",
+        "actual_sha256": "8995e49d57a61770e67f94f404b78a9d75684a6b7462488b28cd9b468f5ac4cd",
+        "expected_pdf_pages": null,
+        "actual_pdf_pages": null,
+        "pass_": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\Gov_SonHoa_Ba_sand_EIA_2026.pdf",
+        "source_url": "https://drive.google.com/file/d/1GALFlawuQxrntwYQx6Hq8X_ptd7MMLrL/view?usp=sharing",
+        "expected_sha256": "96ff57c726e17f82578ee631d071ea675e739076b8826d04a614085c1766c748",
+        "actual_sha256": "96ff57c726e17f82578ee631d071ea675e739076b8826d04a614085c1766c748",
+        "expected_pdf_pages": 173,
+        "actual_pdf_pages": 173,
+        "pass_": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\VNU_KyLo_flood_2021.pdf",
+        "source_url": "https://js.vnu.edu.vn/EES/article/download/4695/4078",
+        "expected_sha256": "4c423a5e52be639eec1f6a91f00d47659584a751743787c25cc98831afb575f6",
+        "actual_sha256": "4c423a5e52be639eec1f6a91f00d47659584a751743787c25cc98831afb575f6",
+        "expected_pdf_pages": 10,
+        "actual_pdf_pages": 10,
+        "pass_": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\VNJHM_CungSon_coordinate_Bayes_2021.pdf",
+        "source_url": "http://tapchikttv.vn/article-file-download/1791",
+        "expected_sha256": "2d62ea1beb47bbfd704a593e07bdba2ab01a93f6fc2a4e8cf08d905c5e3833e9",
+        "actual_sha256": "2d62ea1beb47bbfd704a593e07bdba2ab01a93f6fc2a4e8cf08d905c5e3833e9",
+        "expected_pdf_pages": 13,
+        "actual_pdf_pages": 13,
+        "pass_": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\VNJHM_HaBang_survey_2021.pdf",
+        "source_url": "http://tapchikttv.vn/article-file-download/1780",
+        "expected_sha256": "3fa16c49ccbe6e892d09c32dee172806b1f11e2eb1cfd959415fb0350ccdb3ad",
+        "actual_sha256": "3fa16c49ccbe6e892d09c32dee172806b1f11e2eb1cfd959415fb0350ccdb3ad",
+        "expected_pdf_pages": 9,
+        "actual_pdf_pages": 9,
+        "pass_": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\NCHMF_hydro_station_map_20261013.html",
+        "source_url": "https://www.nchmf.gov.vn/kttv/vi-VN/1/index.html",
+        "expected_sha256": "1f6fe3ab2666c6c21723a8d2f23891ac8196ecea743dfb9a4b998e1ca64e221f",
+        "actual_sha256": "1f6fe3ab2666c6c21723a8d2f23891ac8196ecea743dfb9a4b998e1ca64e221f",
+        "expected_pdf_pages": null,
+        "actual_pdf_pages": null,
+        "pass_": true
+      }
+    ],
+    "source_count": 7,
+    "pass_": true,
+    "2021_hourly_samples_obtained": 0
+  },
+  "implementation_gate_checks": {
+    "A": true,
+    "B": true,
+    "C_R3": true,
+    "D_R3": true,
+    "C1_R3": true,
+    "E_R3": true,
+    "F_R3": true,
+    "G_preparation": true,
+    "hydro_readback": true,
+    "published_evidence_integrity": true,
+    "published_location_context": true,
+    "water_history_2021_readback": true,
+    "same_connected_parent_channel_support": true,
+    "survey_context_primary_source_readback": true,
+    "new_primary_research_sources_integrity": true
+  },
+  "all_implementation_checks_pass": true,
+  "all_phases_scientifically_complete": false,
+  "gate_g_pass": false,
+  "hydraulic_promotion_ready": false,
+  "unknown_object_count": 29,
+  "fixed_water_review_count": 43,
+  "major_persistent_omission_count": 9,
+  "current_graph_support": {
+    "no_graph_within_90m_object_ids": [
+      "W20_0004",
+      "W20_0008",
+      "W20_0011",
+      "W20_0034",
+      "W20_0050",
+      "W20_0052",
+      "W20_0062"
+    ],
+    "alignment_review_object_ids": [
+      "W20_0032"
+    ],
+    "historical_v49b_missing_object_ids": [
+      "W20_0011",
+      "W20_0062"
+    ]
+  },
+  "published_location_context": {
+    "readback_pass": true,
+    "location_count": 8,
+    "geometry_authorized": 0,
+    "edge_intersecting_object_ids": [
+      "W20_0028"
+    ]
+  },
+  "hydro_readback": {
+    "checks": {
+      "output_sha256_match": true,
+      "same_source_grid": true,
+      "drainage_only_role_tags": true,
+      "conditioned_float64_preserved": true,
+      "zero_directed_cycles": true,
+      "zero_internal_unresolved_cells": true,
+      "all_cells_accounted_for_at_outlets": true,
+      "saved_accumulation_matches_recomputed_graph": true,
+      "no_lowering": true,
+      "delta_roundtrip": true,
+      "source_dem_unchanged": true
+    },
+    "pass": true,
+    "valid_cells": 4410000,
+    "outlet_cells": 3593,
+    "usable_as_hydraulic_bed": false
+  },
+  "published_evidence": {
+    "available": true,
+    "register_path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\V49_PUBLIC_EVIDENCE_REGISTER.json",
+    "integrity_checks": [
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD878_2018_SongBa.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\DakLak_environment_2021_2025_2026.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1757_2010_ZFW.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IMH_HECRAS_PhuYen_2024.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\TT25_2015_PhuYen_geographic_names.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\QD1136_2020_reservoir_inventory.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IWRP_storage_bulletin_20220930.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_20261013\\IWRP_weekly_20211008.pdf",
+        "sha256_matches": true,
+        "row_count": null,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\SONG_BA_HA_published_ZFW.csv",
+        "sha256_matches": true,
+        "row_count": 22,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\SONG_HINH_published_ZFW.csv",
+        "sha256_matches": true,
+        "row_count": 8,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\2021_official_reported_flood_peaks.csv",
+        "sha256_matches": true,
+        "row_count": 3,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\published_minor_reservoir_capacity_references.csv",
+        "sha256_matches": true,
+        "row_count": 6,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\2021_published_high_water_marks_coarse_coordinates.csv",
+        "sha256_matches": true,
+        "row_count": 20,
+        "pass": true
+      },
+      {
+        "path": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\published_relative_geographic_locations.csv",
+        "sha256_matches": true,
+        "row_count": 8,
+        "pass": true
+      }
+    ],
+    "reported_reservoir_curve_count": 2,
+    "reported_minor_reservoir_reference_count": 6,
+    "reported_peak_count": 3,
+    "reported_coarse_high_water_mark_count": 20,
+    "qualifies_for_exact_wse_acceptance": false,
+    "interpretation": "Published reference tables and coarse diagnostics are available; exact station/survey coordinates, vertical datum reconciliation, observation conflicts and full event window remain unresolved."
+  },
+  "execution": {
+    "schema_version": "V49-G-execution-1",
+    "status": "RUNNING",
+    "started_at_utc": "2026-10-13T00:37:09.123131+00:00",
+    "supervisor_pid": 12616,
+    "worker_pid": 4040,
+    "queue": [
+      "LOW",
+      "HIGH",
+      "BASE"
+    ],
+    "runs": {
+      "CENTRAL": {
+        "status": "RUNNING",
+        "started_at_utc": "2026-10-13T00:37:13.984873+00:00",
+        "log": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_run.log",
+        "result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL.nc",
+        "config_sha256": "50cad104e5d5134d665e052c82bf7b876971105de2d295c5eb67abacc7555892",
+        "progress": {
+          "simulated_time_s": 66721.13,
+          "endtime_s": 432000.0,
+          "progress_pct": 15.444706018518518,
+          "dt_s": 0.6991,
+          "engine_elapsed_s": 40068.7
+        }
+      }
+    },
+    "execution_policy": "One CUDA run at a time; original 105h BASE retained; new BASE completes 120h",
+    "hydraulic_promotion_ready": false,
+    "active_arm": "CENTRAL",
+    "updated_at_utc": "2026-10-13T11:49:02.309455+00:00",
+    "supervisor_alive": true,
+    "worker_alive": true
+  },
+  "remaining_conditions": [
+    "Complete CENTRAL/LOW/HIGH and the 120 h BASE; evaluate matched SAR, velocity and observed numerical budget",
+    "Resolve object type, persistence, current 30/90 m graph-support gaps and alignment, and evidence-authorized geometry coverage",
+    "Reconcile reservoir footprint, vertical datum, spatial bed and dated operating state with published storage references",
+    "Verify gauge/survey coordinates, vertical datum, observation conflicts and event-window coverage before WSE/timing acceptance",
+    "Record the explicit scientific acceptance decision; implementation PASS cannot substitute for measured accuracy"
+  ]
+}

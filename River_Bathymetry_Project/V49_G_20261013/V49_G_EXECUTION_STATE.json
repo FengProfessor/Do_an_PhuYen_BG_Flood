@@ -1,0 +1,49 @@
+{
+  "schema_version": "V49-G-execution-1",
+  "status": "INTERRUPTED_POWER_LOSS",
+  "started_at_utc": "2026-10-13T00:37:09.123131+00:00",
+  "supervisor_pid": null,
+  "worker_pid": null,
+  "queue": [
+    "LOW",
+    "HIGH",
+    "BASE"
+  ],
+  "runs": {
+    "CENTRAL": {
+      "status": "INTERRUPTED_POWER_LOSS",
+      "started_at_utc": "2026-10-13T00:37:13.984873+00:00",
+      "log": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_run.log",
+      "result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL.nc",
+      "config_sha256": "50cad104e5d5134d665e052c82bf7b876971105de2d295c5eb67abacc7555892",
+      "progress": {
+        "simulated_time_s": 127438.83,
+        "endtime_s": 432000.0,
+        "progress_pct": 29.49972916666667,
+        "dt_s": 0.483,
+        "engine_elapsed_s": 98925.5
+      },
+      "last_saved_time_s": 118800.4453125,
+      "last_logged_time_s": 127444.14,
+      "verified_saved_frame_count": 11,
+      "recovery_status": "PARTIAL_FRAMES_RECOVERED_NOT_GATE_G"
+    },
+    "LOW": {
+      "status": "NOT_STARTED"
+    },
+    "HIGH": {
+      "status": "NOT_STARTED"
+    },
+    "BASE": {
+      "status": "NOT_STARTED"
+    }
+  },
+  "execution_policy": "One CUDA run at a time; original 105h BASE retained; new BASE completes 120h",
+  "hydraulic_promotion_ready": false,
+  "active_arm": "CENTRAL",
+  "updated_at_utc": "2026-10-14T05:44:40.012006+00:00",
+  "interrupted_supervisor_pid": 12616,
+  "interrupted_worker_pid": 4040,
+  "power_loss_reported_by_user": true,
+  "recovery_report": "D:\\VTP\\River_Bathymetry_Project\\V49_G_POWERLOSS_RECOVERY_20261014\\V49_POWERLOSS_SALVAGE_REPORT.json"
+}

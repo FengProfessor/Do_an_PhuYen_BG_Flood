@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "source_and_output_checksums": true,
+    "source_geometry_readback": true,
+    "complete_12_months": true,
+    "no_observation_is_not_dry": true,
+    "source_period_is_2021": true,
+    "no_geometry_or_daily_WSE_promotion": true
+  },
+  "pass_": true,
+  "monthly_rows": 972,
+  "object_count": 81
+}

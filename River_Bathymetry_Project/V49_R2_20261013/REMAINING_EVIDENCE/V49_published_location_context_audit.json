@@ -1,0 +1,20 @@
+{
+  "schema_version": "V49-relative-location-context-1",
+  "location_count": 8,
+  "source_register": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\V49_PUBLIC_EVIDENCE_REGISTER.json",
+  "source_register_sha256": "950a93f14e894e1cce81751b023d606eba30ffd9dc5ec79eba61fbf0b3450597",
+  "object_source": "D:\\VTP\\River_Bathymetry_Project\\V49_R2_20261013\\C1\\V49_C1_fixed_water_evidence.gpkg",
+  "object_source_sha256": "c3697eaa5b3cc135ab22e6f1464f1a60b78702eaf64ca45aa846dbf3029912f6",
+  "table_path": "D:\\VTP\\River_Bathymetry_Project\\V49_R2_20261013\\REMAINING_EVIDENCE\\V49_published_location_and_footprint_context.csv",
+  "table_sha256": "fe1ab21a465ac5691f9ee68039a283d6c3674e8848a3d565841073128fe0d232",
+  "spatial_path": "D:\\VTP\\River_Bathymetry_Project\\V49_R2_20261013\\REMAINING_EVIDENCE\\V49_published_relative_locations.gpkg",
+  "spatial_sha256": "77544d47fd9ce22a09e4f24deef55f165aebf75b43a525ae8fd6741d36ac3bbe",
+  "horizontal_transform": "axis order change (2D) + VN-2000 to WGS 84 (2) + UTM zone 49N",
+  "horizontal_transform_pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=push +v_3 +step +proj=cart +ellps=WGS84 +step +proj=helmert +x=-191.90441429 +y=-39.30318279 +z=-111.45032835 +rx=-0.00928836 +ry=0.01975479 +rz=-0.00427372 +s=0.252906278 +convention=coordinate_frame +step +inv +proj=cart +ellps=WGS84 +step +proj=pop +v_3 +step +proj=utm +zone=49 +ellps=WGS84",
+  "epsg_operation_accuracy_m": 1.0,
+  "catalogue_location_accuracy_m": null,
+  "limitations": "1:25000 relative feature centres are not gauge or survey positions. Area at a design level is not a completeness test for a polygon from another date/level. Boundary intersection flags domain context; full reservoir footprint, datum, sedimentation and operation remain unverified.",
+  "storage_constraint_authorized_count": 0,
+  "hydraulic_bed_geometry_authorized_count": 0,
+  "hydraulic_promotion_ready": false
+}

@@ -1,0 +1,65 @@
+{
+  "max_abs_wse_difference_m": 0.5465087890625,
+  "mean_abs_wse_difference_m": 3.7625817471350675e-05,
+  "speed_max_wet_m_s": 20.45220514052004,
+  "wet_cells_speed_gt_10m_s": 454,
+  "wet_cells_speed_gt_5m_s": 5615,
+  "max_speed_point": {
+    "row": 986,
+    "col": 650,
+    "x": 289515.0,
+    "y": 1448405.0,
+    "lon": 109.05859471435275,
+    "lat": 13.094596720362754,
+    "h_central": 1.453008770942688,
+    "h_base": 1.4532579183578491,
+    "zs_central": 225.0197296142578,
+    "zs_base": 225.01998901367188,
+    "zb_central": 223.5667266845703,
+    "zb_base": 223.5667266845703,
+    "speed_central_m_s": 20.45220514052004,
+    "distance_to_authorized_reaches_m": {
+      "HR_41349822": 19948.76101366001,
+      "HR_41352752": 36449.09477252443
+    },
+    "froude_from_h_and_speed": 5.4171581978861
+  },
+  "max_wse_difference_point": {
+    "row": 1915,
+    "col": 654,
+    "x": 289635.0,
+    "y": 1420535.0,
+    "lon": 109.06165269248356,
+    "lat": 12.842729153897691,
+    "h_central": 0.5545486807823181,
+    "h_base": 0.008072824217379093,
+    "zs_central": 573.1764526367188,
+    "zs_base": 572.6299438476562,
+    "zb_central": 572.6218872070312,
+    "zb_base": 572.6218872070312,
+    "speed_central_m_s": 0.7891800220120605
+  },
+  "max_depth_difference_point": {
+    "row": 1915,
+    "col": 654,
+    "x": 289635.0,
+    "y": 1420535.0,
+    "lon": 109.06165269248356,
+    "lat": 12.842729153897691,
+    "h_central": 0.5545486807823181,
+    "h_base": 0.008072824217379093,
+    "zs_central": 573.1764526367188,
+    "zs_base": 572.6299438476562,
+    "zb_central": 572.6218872070312,
+    "zb_base": 572.6218872070312,
+    "speed_central_m_s": 0.7891800220120605,
+    "distance_to_authorized_reaches_m": {
+      "HR_41349822": 19569.002674546937,
+      "HR_41352752": 16721.863676884008
+    },
+    "froude_from_h_and_speed": 0.33835433160138295
+  },
+  "dh_minus_dzs_minus_dzb_max_abs_m": 0.0001261383295059204,
+  "edited_bed_cells_gt_1um": 72,
+  "note": "All-domain last-frame diagnostic; maxima are not evidence of accuracy or acceptance."
+}

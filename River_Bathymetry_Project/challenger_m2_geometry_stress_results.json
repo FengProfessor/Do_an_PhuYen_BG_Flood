@@ -1,0 +1,358 @@
+{
+  "audit_timestamp": "2026-10-10T20:11:53Z",
+  "overall_verdict": "APPROVE",
+  "all_passed": true,
+  "total_execution_time_s": 14.345915794372559,
+  "challenges": {
+    "challenge_1_p8_perimeter_cliff_drops": {
+      "passed": true,
+      "verdict": "PASS",
+      "total_p8_cells": 18721,
+      "max_cliff_drop_m": 0.04761314392089844,
+      "mean_cliff_drop_m": 0.006656440906226635,
+      "median_cliff_drop_m": 1.5739397690402162e-32,
+      "p95_cliff_drop_m": 0.04500000178813934,
+      "p99_cliff_drop_m": 0.04500000178813934,
+      "p999_cliff_drop_m": 0.04500000178813934,
+      "violations_ge_0_05m": 0,
+      "violations_gt_0_045m": 1,
+      "p4_perimeter_cells": 13681,
+      "max_p4_cliff_m": 0.04500000178813934,
+      "violations_p4": 0,
+      "branch_breakdown": {
+        "S\u00f4ng Ba": {
+          "cell_count": 7567,
+          "max_drop_m": 0.04761314392089844,
+          "mean_drop_m": 0.0030736629851162434,
+          "violations_ge_0_05m": 0
+        },
+        "S\u00f4ng B\u00e0n Th\u1ea1ch": {
+          "cell_count": 6469,
+          "max_drop_m": 0.04500000178813934,
+          "mean_drop_m": 0.006460028700530529,
+          "violations_ge_0_05m": 0
+        },
+        "S\u00f4ng K\u1ef3 L\u1ed9": {
+          "cell_count": 3505,
+          "max_drop_m": 0.04500000178813934,
+          "mean_drop_m": 0.003661725902929902,
+          "violations_ge_0_05m": 0
+        },
+        "K\u00eanh B\u1eafc": {
+          "cell_count": 139,
+          "max_drop_m": 0.04500000178813934,
+          "mean_drop_m": 0.04500000551342964,
+          "violations_ge_0_05m": 0
+        },
+        "K\u00eanh Nam": {
+          "cell_count": 140,
+          "max_drop_m": 0.04500000178813934,
+          "mean_drop_m": 0.04500000551342964,
+          "violations_ge_0_05m": 0
+        }
+      },
+      "top10_highest_drops": [
+        {
+          "row": 1286,
+          "col": 1204,
+          "utm_x": 306135.0,
+          "utm_y": 1439405.0,
+          "drop_m": 0.04761314392089844
+        },
+        {
+          "row": 1567,
+          "col": 2009,
+          "utm_x": 330285.0,
+          "utm_y": 1430975.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1430,
+          "col": 1019,
+          "utm_x": 300585.0,
+          "utm_y": 1435085.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1568,
+          "col": 2010,
+          "utm_x": 330315.0,
+          "utm_y": 1430945.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1010,
+          "col": 1429,
+          "utm_x": 312885.0,
+          "utm_y": 1447685.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1569,
+          "col": 2011,
+          "utm_x": 330345.0,
+          "utm_y": 1430915.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1569,
+          "col": 2030,
+          "utm_x": 330915.0,
+          "utm_y": 1430915.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1010,
+          "col": 1434,
+          "utm_x": 313035.0,
+          "utm_y": 1447685.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1010,
+          "col": 1435,
+          "utm_x": 313065.0,
+          "utm_y": 1447685.0,
+          "drop_m": 0.04500000178813934
+        },
+        {
+          "row": 1570,
+          "col": 2012,
+          "utm_x": 330375.0,
+          "utm_y": 1430885.0,
+          "drop_m": 0.04500000178813934
+        }
+      ]
+    },
+    "challenge_2_c1_bank_tangency": {
+      "passed": true,
+      "verdict": "PASS",
+      "max_normal_slope_m_per_m": 0.001500000013038516,
+      "mean_normal_slope_m_per_m": 0.0001752350653987378,
+      "median_normal_slope_m_per_m": 5.246465927412553e-34,
+      "p95_normal_slope_m_per_m": 0.0010606602299958467,
+      "p99_normal_slope_m_per_m": 0.001500000013038516,
+      "p999_normal_slope_m_per_m": 0.001500000013038516,
+      "violations_gt_0_005m_per_m": 0,
+      "crevice_inversions": 0,
+      "top10_highest_normal_slopes": [
+        {
+          "row": 978,
+          "col": 1409,
+          "utm_x": 312285.0,
+          "utm_y": 1448645.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1425,
+          "col": 1217,
+          "utm_x": 306525.0,
+          "utm_y": 1435235.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1014,
+          "col": 1493,
+          "utm_x": 314805.0,
+          "utm_y": 1447565.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1014,
+          "col": 1474,
+          "utm_x": 314235.0,
+          "utm_y": 1447565.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1014,
+          "col": 1473,
+          "utm_x": 314205.0,
+          "utm_y": 1447565.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1014,
+          "col": 1436,
+          "utm_x": 313095.0,
+          "utm_y": 1447565.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1014,
+          "col": 1435,
+          "utm_x": 313065.0,
+          "utm_y": 1447565.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1014,
+          "col": 1434,
+          "utm_x": 313035.0,
+          "utm_y": 1447565.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1013,
+          "col": 1500,
+          "utm_x": 315015.0,
+          "utm_y": 1447595.0,
+          "slope_m_per_m": 0.001500000013038516
+        },
+        {
+          "row": 1425,
+          "col": 1206,
+          "utm_x": 306195.0,
+          "utm_y": 1435235.0,
+          "slope_m_per_m": 0.001500000013038516
+        }
+      ]
+    },
+    "challenge_3_discrete_laplacian_curvature": {
+      "passed": true,
+      "verdict": "PASS",
+      "max_laplacian_curvature_m_inv": 0.01715695485472679,
+      "mean_laplacian_curvature_m_inv": 0.00023211684310808778,
+      "median_curvature_m_inv": 0.00010087237023981288,
+      "p95_curvature_m_inv": 0.0008076654048636556,
+      "p99_curvature_m_inv": 0.0027133296127431106,
+      "p999_curvature_m_inv": 0.006221566705498852,
+      "fatal_spikes_gt_0_025m_inv": 0,
+      "monitored_spikes_gt_0_010m_inv": 17,
+      "max_5point_curvature_m_inv": 0.019777240231633186,
+      "fatal_spikes_5point": 0,
+      "top10_curvature_spikes": [
+        {
+          "row": 1506,
+          "col": 1335,
+          "utm_x": 310065.0,
+          "utm_y": 1432805.0,
+          "curvature_m_inv": 0.01715695485472679,
+          "delta_z": 7.91295862197876,
+          "carved_z": 0.6046624183654785
+        },
+        {
+          "row": 1016,
+          "col": 1499,
+          "utm_x": 314985.0,
+          "utm_y": 1447505.0,
+          "curvature_m_inv": 0.01703008823096752,
+          "delta_z": 7.981587886810303,
+          "carved_z": -1.1151022911071777
+        },
+        {
+          "row": 1050,
+          "col": 1518,
+          "utm_x": 315555.0,
+          "utm_y": 1446485.0,
+          "curvature_m_inv": 0.016341792419552803,
+          "delta_z": 5.798953056335449,
+          "carved_z": -0.8518819808959961
+        },
+        {
+          "row": 1013,
+          "col": 1498,
+          "utm_x": 314955.0,
+          "utm_y": 1447595.0,
+          "curvature_m_inv": 0.014865323901176453,
+          "delta_z": 7.119779109954834,
+          "carved_z": -1.1355876922607422
+        },
+        {
+          "row": 1401,
+          "col": 1614,
+          "utm_x": 318435.0,
+          "utm_y": 1435955.0,
+          "curvature_m_inv": 0.013493825681507587,
+          "delta_z": 7.301976203918457,
+          "carved_z": -2.230055332183838
+        },
+        {
+          "row": 1018,
+          "col": 1499,
+          "utm_x": 314985.0,
+          "utm_y": 1447445.0,
+          "curvature_m_inv": 0.013300265185534954,
+          "delta_z": 7.047092437744141,
+          "carved_z": -1.103102207183838
+        },
+        {
+          "row": 1418,
+          "col": 939,
+          "utm_x": 298185.0,
+          "utm_y": 1435445.0,
+          "curvature_m_inv": 0.013241204433143139,
+          "delta_z": 8.672184944152832,
+          "carved_z": 15.624157905578613
+        },
+        {
+          "row": 1366,
+          "col": 1207,
+          "utm_x": 306225.0,
+          "utm_y": 1437005.0,
+          "curvature_m_inv": 0.012293809093534946,
+          "delta_z": 7.121530532836914,
+          "carved_z": 8.70977783203125
+        },
+        {
+          "row": 1418,
+          "col": 940,
+          "utm_x": 298215.0,
+          "utm_y": 1435445.0,
+          "curvature_m_inv": 0.01167282834649086,
+          "delta_z": 8.304130554199219,
+          "carved_z": 14.47962760925293
+        },
+        {
+          "row": 1507,
+          "col": 1358,
+          "utm_x": 310755.0,
+          "utm_y": 1432775.0,
+          "curvature_m_inv": 0.011546003632247448,
+          "delta_z": 6.808049201965332,
+          "carved_z": 0.3114776611328125
+        }
+      ]
+    },
+    "challenge_4_swe_gpu_simulation_stability": {
+      "passed": true,
+      "verdict": "PASS",
+      "gpu_hardware": "NVIDIA RTX A4000",
+      "test_a_timesteps": 350,
+      "test_a_wall_time_s": 7.304601669311523,
+      "test_a_min_dt": 0.8,
+      "test_a_max_dt": 1.8,
+      "test_a_mean_dt": 0.9793817047077974,
+      "test_a_nans": 0,
+      "test_a_infs": 0,
+      "test_b_stress_timesteps": 200,
+      "test_b_wall_time_s": 4.135549783706665,
+      "test_b_min_dt": 0.6,
+      "test_b_max_dt": 1.4763503824116704,
+      "test_b_mean_dt": 0.6079430115800919,
+      "test_b_nans": 0,
+      "test_b_infs": 0
+    },
+    "challenge_5_floodplain_invariance_and_integrity": {
+      "passed": true,
+      "verdict": "PASS",
+      "base_dem_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+      "hash_matched": true,
+      "authorized_corridor_cells": 143611,
+      "floodplain_outside_corridor_cells": 4266389,
+      "leaked_cells_outside_corridor": 0,
+      "max_leak_outside_m": 0.0,
+      "domain_wide_raised_cells": 0,
+      "domain_wide_negative_delta_z": 0,
+      "max_algebraic_diff_m": 1.4781951904296875e-05,
+      "algebraic_inconsistent_cells": 0,
+      "weir_crest_cells": 187,
+      "weir_crest_max_dz": 0.0,
+      "weir_crest_violations": 0,
+      "crossing_node_1278_1217_dz": 0.0,
+      "crossing_node_elevation_msl": 5.5,
+      "off_channel_natural_neg_cells": 367,
+      "off_channel_natural_neg_leaks": 0
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "arm": "HIGH",
+  "depth_field": "depth_high_m",
+  "authorized_reach_ids": [
+    "HR_41349822",
+    "HR_41352752"
+  ],
+  "modified_pixel_count": 72,
+  "authorized_mask_pixel_count": 73,
+  "outside_authorized_mask_modified_pixel_count": 0,
+  "protected_structure_modified_pixel_count": 0,
+  "raised_pixel_count": 0,
+  "lowering_volume_m3": 14020.669555664062,
+  "max_lowering_m": 0.636138916015625,
+  "source_dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "source_dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "output_dem_sha256": "d5f7be85466a3015c32f8a8232e548588ae905e26e2012f480971968f8195fcf",
+  "delta_sha256": "36b3b1b8bc0004290c22c1766ba013b582d8cc53cc72cf45ce7ee96d6d1f660b",
+  "reach_trace": [
+    {
+      "reach_id": "HR_41349822",
+      "water_class": "RIVER_STREAM",
+      "width_m": 60.00198740206605,
+      "depth_est_m": 0.37420133002409695,
+      "depth_low_m": 0.18710066501204847,
+      "depth_high_m": 0.6361422610409648,
+      "selected_depth_field": "depth_high_m",
+      "selected_depth_m": 0.6361422610409648,
+      "bed_upstream_m": 163.6257986699759,
+      "bed_downstream_m": 144.00464388481964,
+      "corridor_and_class_pixel_count": 23,
+      "class_mask_pixel_count": 97,
+      "thalweg_pixel_count": 10,
+      "modified_pixel_count_premerge": 23,
+      "max_lowering_m_premerge": 0.6361422538757324,
+      "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+      "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+    },
+    {
+      "reach_id": "HR_41352752",
+      "water_class": "RIVER_STREAM",
+      "width_m": 141.4115125641347,
+      "depth_est_m": 0.1753025639069543,
+      "depth_low_m": 0.07012102556278173,
+      "depth_high_m": 0.3155446150325178,
+      "selected_depth_field": "depth_high_m",
+      "selected_depth_m": 0.3155446150325178,
+      "bed_upstream_m": 270.32564348101494,
+      "bed_downstream_m": 257.3836879146087,
+      "corridor_and_class_pixel_count": 50,
+      "class_mask_pixel_count": 85,
+      "thalweg_pixel_count": 15,
+      "modified_pixel_count_premerge": 50,
+      "max_lowering_m_premerge": 0.31554460525512695,
+      "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+      "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+    }
+  ],
+  "variant_invariance_pass": true
+}

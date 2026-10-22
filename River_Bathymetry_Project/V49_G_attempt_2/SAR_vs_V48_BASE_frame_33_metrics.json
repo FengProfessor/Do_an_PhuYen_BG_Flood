@@ -1,0 +1,25 @@
+{
+  "arm": "BASE",
+  "evaluated_frame": 33,
+  "sim_time_sec": 367200.125,
+  "sim_time_hours": 102.00003472222222,
+  "contingency": {
+    "TP": 314637,
+    "FP": 241912,
+    "FN": 259630,
+    "TN": 2032081,
+    "total_evaluated_cells": 2848260
+  },
+  "precision": 0.5653356667606986,
+  "recall": 0.5478932273663645,
+  "csi_iou": 0.38549999448650357,
+  "f1": 0.5564778001018734,
+  "observed_area_km2": 516.8403,
+  "simulated_area_km2": 500.8941,
+  "area_bias": -0.030853244222635072,
+  "hand_floodplain_ratio_le_3_5m": 0.6992309456755826,
+  "depth_threshold_m": 0.3,
+  "water_density_threshold": 0.5,
+  "hand_floodplain_threshold_m": 3.5,
+  "preregistration": "V48_SAR_preregistration_R1.json"
+}

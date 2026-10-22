@@ -1,0 +1,11 @@
+{
+  "schema_version": "V49-extra-evidence-preregistration-1",
+  "registered_at_utc": "2026-10-13T01:07:15.203150+00:00",
+  "evidence_table": "D:\\VTP\\River_Bathymetry_Project\\V49_PUBLIC_EVIDENCE_20261013\\2021_published_high_water_marks_coarse_coordinates.csv",
+  "sha256": "5be701d5f4dc7adf93b6ca9289ef5530ef308223955eb7a542ccee95ed566063",
+  "method": "Compare max modeled depth over available times in each published coordinate rounding envelope",
+  "horizontal_crs_assumption": "Geographic WGS84 inferred from regional source context; exact survey CRS remains unverified",
+  "wet_threshold_m": 0.3,
+  "frozen_SAR_experiment_changed": false,
+  "absolute_wse_or_pointwise_acceptance_authorized": false
+}

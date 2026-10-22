@@ -1,0 +1,81 @@
+{
+  "created_at_utc": "2026-10-13T23:02:57.180918+00:00",
+  "data_acquisition_pass": true,
+  "sources": [
+    {
+      "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/pentads/global/cogs/chirps-v3.0.2021.11.6.cog",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_RESEARCH_20261014\\CHIRPS_CONTEXT\\chirps-v3.0.2021.11.6.cog",
+      "bytes": 21165500,
+      "sha256": "1d6d3f01f115eb0c8b91eb5393a92f8e6f3923be2399caa4653aab34297a765e",
+      "http_last_modified": "Tue, 25 Feb 2025 21:04:41 GMT",
+      "http_etag": "\"67be3069-142f5bc\""
+    },
+    {
+      "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/README-CHIRPSv3.0.txt",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_RESEARCH_20261014\\CHIRPS_CONTEXT\\README-CHIRPSv3.0.txt",
+      "bytes": 7585,
+      "sha256": "8957c7b9136be9ad40595515d0444c63e39c55a3ad36ad9b9eebfdac8eb1d495",
+      "http_last_modified": "Wed, 22 Jul 2026 23:42:13 GMT",
+      "http_etag": "\"6a615555-1da1\""
+    }
+  ],
+  "product": "CHIRPS v3.0 final pentad",
+  "date_labels": "2021-11-26 through 2021-11-30",
+  "units": "mm per pentad",
+  "native_grid": {
+    "crs": "EPSG:4326",
+    "resolution_deg": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "global_shape": [
+      2400,
+      7200
+    ],
+    "source_declared_nodata": null,
+    "observed_missing_sentinel": -9999,
+    "crop_declared_nodata": -9999,
+    "tags": {
+      "TIFFTAG_DOCUMENTNAME": "/home/CHIRPS/v3.0/pentads/finalfinal/chirps-v3.0.2021.11.6.tif",
+      "TIFFTAG_IMAGEDESCRIPTION": "IDL TIFF file",
+      "TIFFTAG_SOFTWARE": "IDL 8.9.0, L3Harris Geospatial Solutions, Inc.",
+      "TIFFTAG_DATETIME": "2024:11:30 10:12:55",
+      "TIFFTAG_XRESOLUTION": "100",
+      "TIFFTAG_YRESOLUTION": "100",
+      "TIFFTAG_RESOLUTIONUNIT": "2 (pixels/inch)",
+      "AREA_OR_POINT": "Area"
+    },
+    "crop_shape": [
+      13,
+      13
+    ],
+    "crop_transform": [
+      0.05000000074505806,
+      0.0,
+      108.85000430420041,
+      0.0,
+      -0.05000000074505806,
+      13.399999305605888
+    ]
+  },
+  "crop_path": "D:\\VTP\\River_Bathymetry_Project\\V49_RESEARCH_20261014\\CHIRPS_CONTEXT\\V49_CHIRPS_v3_202111_pentad6_native_crop.tif",
+  "crop_sha256": "362624790220057944bfcce92fa07132d5746ebacc90420a78a77cb919a2a24f",
+  "sampling": "Native CHIRPS cell values weighted by projected footprint overlap with V49 rectangle minus R3 OCEAN inventory; no resampling",
+  "intersecting_valid_native_cells": 141,
+  "covered_area_km2": 3204.6246,
+  "outside_inventory_ocean_area_km2": 3204.6246,
+  "coverage_fraction": 1.0,
+  "area_weighted_pentad_mean_mm": 277.17292216655665,
+  "native_cell_min_mm": 215.83860778808594,
+  "native_cell_max_mm": 350.1313171386719,
+  "exact_model_120h_window_match": false,
+  "scientific_validation_complete": false,
+  "active_forcing_modified": false,
+  "hydraulic_promotion_ready": false,
+  "limitations": [
+    "Pentad date labels are not proven to represent the exact V49 2021-11-25T17Z to 2021-11-30T17Z window.",
+    "CHIRPS combines satellite and stations; local station membership and ERA5 gap-fill influence are not checked here.",
+    "Outside the inventory ocean polygon is not a surveyed land mask; coastal CHIRPS NoData remains excluded.",
+    "This gridded rainfall context supplies no hourly gauge, WSE, discharge or surveyed bathymetry."
+  ]
+}

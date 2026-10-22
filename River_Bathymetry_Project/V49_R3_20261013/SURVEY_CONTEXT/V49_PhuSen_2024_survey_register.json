@@ -1,0 +1,46 @@
+{
+  "schema_version": "V49-PhuSen-survey-context-1",
+  "horizontal_source_crs": "EPSG:9218",
+  "alternate_printed_crs": "EPSG:3406",
+  "model_crs": "EPSG:32649",
+  "horizontal_transform": "Inverse of Vietnam TM-3 108-30 + VN-2000 to WGS 84 (2) + UTM zone 49N",
+  "transform_accuracy_m": 1.0,
+  "maximum_paired_coordinate_residual_m": 0.006070277209346531,
+  "footprint_source_area_m2": 91418.11519998817,
+  "overlap_objects": [],
+  "source_conflicts": [
+    "Narrative p31 states 108 degrees 30 for its 6-degree table; signed drawing p208 specifies 111 degrees, verified by paired reprojection.",
+    "Narrative p31 rounds corner A northing to 1437932.00; drawing p208 gives 1437932.48, which agrees with the paired 6-degree coordinate."
+  ],
+  "geometry_accepted_reach_count": 0,
+  "collar_height_count": 11,
+  "geological_transect_count": 4,
+  "vertical_datum_verified": false,
+  "bank_to_bank_bathymetry": false,
+  "usable_for_2021_bed_modification": false,
+  "source": {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\Gov_PhuSen_DaRang_sand_EIA_2026.pdf",
+    "sha256": "a1287f66384d07e10ebbf7fe3380974d7041bb23e568a474eb4f342e07404440",
+    "url": "https://snnmt.daklak.gov.vn/uploads/sonnmt/ccbvmt/0%20.DTM%20Phu%20Sen%20Binh%20An.pdf"
+  },
+  "classification": {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\C\\V49_waterbody_classification.gpkg",
+    "sha256": "5256a721a61d08916cd8a744e9394697d2e44b1d35fd5e244b44e53c41d1be72"
+  },
+  "tables": [
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\SURVEY_CONTEXT\\V49_PhuSen_2024_survey_corners.csv",
+      "sha256": "0c99d2afb3dd90f50718f18a531ce07b19cc9b84a9de3aaaa82670b0354b1c31",
+      "row_count": 7
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\SURVEY_CONTEXT\\V49_PhuSen_2024_collar_heights.csv",
+      "sha256": "844c5ff967688694ac79ed13c899df9bdb1c857eb37f477a8a1690694da2a7ec",
+      "row_count": 11
+    }
+  ],
+  "spatial_output": {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\SURVEY_CONTEXT\\V49_PhuSen_2024_survey_context.gpkg",
+    "sha256": "2e5b450de1ee97161bec8ea1e6778c034babb13c7a37baa35dcf6eac7fcaf508"
+  }
+}

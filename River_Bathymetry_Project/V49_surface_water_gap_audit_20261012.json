@@ -1,0 +1,76 @@
+{
+  "paths": {
+    "base": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+    "jrc": "D:\\VTP\\V48_research_20261002\\hydro_evidence_raw\\V46_JRC_GSW1_3_occurrence_1984_2020.tif",
+    "dz": "D:\\VTP\\River_Bathymetry_Project\\delta_z_full_bathymetry.tif",
+    "net": "D:\\VTP\\River_Bathymetry_Project\\river_network_data.npz"
+  },
+  "thresholds": {
+    "5": {
+      "water_cells": 1022106,
+      "water_area_km2": 919.8954,
+      "carved_water_cells": 72989,
+      "carved_fraction_pct": 7.141040166088449,
+      "union_corridor_water_cells": 78368,
+      "union_corridor_fraction_pct": 7.667306522024134,
+      "components_total": 1146,
+      "components_ge4cells": 470,
+      "components_ge25cells": 131,
+      "components_ge100cells": 51,
+      "components_touched_by_carving": 131,
+      "untouched_components_ge25cells": 107,
+      "untouched_ge25_area_km2": 19.3536
+    },
+    "20": {
+      "water_cells": 978331,
+      "water_area_km2": 880.4979,
+      "carved_water_cells": 63564,
+      "carved_fraction_pct": 6.497187557176456,
+      "union_corridor_water_cells": 68167,
+      "union_corridor_fraction_pct": 6.967682716790125,
+      "components_total": 697,
+      "components_ge4cells": 271,
+      "components_ge25cells": 76,
+      "components_ge100cells": 26,
+      "components_touched_by_carving": 148,
+      "untouched_components_ge25cells": 55,
+      "untouched_ge25_area_km2": 9.5742
+    },
+    "50": {
+      "water_cells": 937426,
+      "water_area_km2": 843.6834,
+      "carved_water_cells": 49641,
+      "carved_fraction_pct": 5.295457988150531,
+      "union_corridor_water_cells": 53165,
+      "union_corridor_fraction_pct": 5.6713809943398195,
+      "components_total": 437,
+      "components_ge4cells": 177,
+      "components_ge25cells": 63,
+      "components_ge100cells": 32,
+      "components_touched_by_carving": 151,
+      "untouched_components_ge25cells": 27,
+      "untouched_ge25_area_km2": 8.0352
+    },
+    "90": {
+      "water_cells": 871916,
+      "water_area_km2": 784.7244,
+      "carved_water_cells": 32496,
+      "carved_fraction_pct": 3.726964524105533,
+      "union_corridor_water_cells": 35176,
+      "union_corridor_fraction_pct": 4.034333582592819,
+      "components_total": 297,
+      "components_ge4cells": 129,
+      "components_ge25cells": 33,
+      "components_ge100cells": 14,
+      "components_touched_by_carving": 127,
+      "untouched_components_ge25cells": 9,
+      "untouched_ge25_area_km2": 3.1193999999999997
+    }
+  },
+  "actual_carving": {
+    "cells": 129608,
+    "area_km2": 116.6472,
+    "union_channel_cells": 141977,
+    "union_channel_area_km2": 127.77929999999999
+  }
+}

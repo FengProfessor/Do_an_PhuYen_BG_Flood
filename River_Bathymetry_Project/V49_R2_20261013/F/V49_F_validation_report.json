@@ -1,0 +1,43 @@
+{
+  "schema_version": "V49-F-validation-1",
+  "checks": {
+    "source_dem_unchanged": true,
+    "coverage_reported_by_class": true,
+    "coverage_has_representation_and_actual_footprint": true,
+    "topology_orphans_zero": true,
+    "topology_directed_cycles_zero": true,
+    "authorized_confluence_inconsistency_zero": true,
+    "geometry_percentiles_reported_by_strahler": true,
+    "incision_percentiles_reported_by_reach": true,
+    "storage_reported_by_reach_and_class": true,
+    "geometry_source_fractions_reported": true,
+    "no_storage_acceptance_target": true,
+    "no_circular_depth_certification": true,
+    "uncertainty_reported": true,
+    "sensitivity_status_explicit": true,
+    "promotion_not_claimed_before_v49g": true,
+    "current_graph_support_consistent": true,
+    "current_graph_support_source_integrity": true
+  },
+  "major_persistent_omission_count": 9,
+  "v49e_represented_inland_object_count_pct": 3.75,
+  "v49e_represented_inland_object_area_pct": 0.1438644196414456,
+  "hydraulic_promotion_ready": false,
+  "gate_f_interpretation": "Gate F PASS means the science/coverage QA is complete and honestly reports unresolved coverage and uncertainty. It does not promote the hydraulic DEM; V49-G matched BG_Flood validation remains mandatory.",
+  "gate_f_pass": true,
+  "current_graph_support": {
+    "no_graph_within_90m_object_ids": [
+      "W20_0004",
+      "W20_0008",
+      "W20_0011",
+      "W20_0062"
+    ],
+    "alignment_review_object_ids": [
+      "W20_0032"
+    ],
+    "historical_v49b_missing_object_ids": [
+      "W20_0011",
+      "W20_0062"
+    ]
+  }
+}

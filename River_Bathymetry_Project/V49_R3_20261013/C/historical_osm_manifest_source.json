@@ -1,0 +1,310 @@
+{
+  "status": "HISTORICAL_OSM_SNAPSHOT",
+  "snapshot_utc": "2021-11-25T00:00:00Z",
+  "source": "OpenStreetMap via Overpass attic/date query",
+  "license": "ODbL; OpenStreetMap contributors",
+  "dem": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V41.asc",
+  "dem_sha256": "9fb70773a96fc2d52521aa803c3aa08537a5e379d9592754541365ad32e15488",
+  "dem_bounds_wgs84": [
+    108.87636686631413,
+    12.79131435880066,
+    109.4614162470463,
+    13.36482050540311
+  ],
+  "base_tile_grid": [
+    4,
+    4
+  ],
+  "max_split_depth": 2,
+  "files": [
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_00.osm",
+      "sha256": "73d751e5954e58506efa8709746dd57cc893311ef03b3c3875c53fec5a46ce59",
+      "bytes": 48883,
+      "way_elements": 14,
+      "endpoint": "RESUMED_EXISTING",
+      "bbox": [
+        12.79131435880066,
+        108.87636686631413,
+        12.934690895451272,
+        109.02262921149718
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.79131436,108.87636687,12.93469090,109.02262921);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_01.osm",
+      "sha256": "bf338c9ee591a8a5be4fb3b72afd5ec4f8d1b47b71dddb101884a3a2bd1090fe",
+      "bytes": 35709,
+      "way_elements": 13,
+      "endpoint": "RESUMED_EXISTING",
+      "bbox": [
+        12.79131435880066,
+        109.02262921149718,
+        12.934690895451272,
+        109.16889155668022
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.79131436,109.02262921,12.93469090,109.16889156);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_02.osm",
+      "sha256": "a99b10929389c39e335117cbdebb8e7f3f35e3ce773604d1a334b1418ba934b9",
+      "bytes": 36466,
+      "way_elements": 5,
+      "endpoint": "RESUMED_EXISTING",
+      "bbox": [
+        12.79131435880066,
+        109.16889155668022,
+        12.934690895451272,
+        109.31515390186325
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.79131436,109.16889156,12.93469090,109.31515390);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_03.osm",
+      "sha256": "ef1c179effc71f0597591951d4caa732112227cec678c817ae11df65c6a71aa1",
+      "bytes": 13754,
+      "way_elements": 5,
+      "endpoint": "RESUMED_EXISTING",
+      "bbox": [
+        12.79131435880066,
+        109.31515390186325,
+        12.934690895451272,
+        109.4614162470463
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.79131436,109.31515390,12.93469090,109.46141625);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_10.osm",
+      "sha256": "9d9976eb81e8b7a1c02bf77d1d90c31a5bcb14d715ca203a22cbd4461a509305",
+      "bytes": 33948,
+      "way_elements": 11,
+      "endpoint": "RESUMED_EXISTING",
+      "bbox": [
+        12.934690895451272,
+        108.87636686631413,
+        13.078067432101886,
+        109.02262921149718
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.93469090,108.87636687,13.07806743,109.02262921);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_11.osm",
+      "sha256": "614275b6de59d10c0c1276331f429e8d857192139c926eaf38239397dc4103e0",
+      "bytes": 56197,
+      "way_elements": 15,
+      "endpoint": "RESUMED_EXISTING",
+      "bbox": [
+        12.934690895451272,
+        109.02262921149718,
+        13.078067432101886,
+        109.16889155668022
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.93469090,109.02262921,13.07806743,109.16889156);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_12.osm",
+      "sha256": "f151775297035f0427e083730c5fe0d8cfb6a1a182d8b71fcedabed390fd9cd9",
+      "bytes": 94074,
+      "way_elements": 15,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        12.934690895451272,
+        109.16889155668022,
+        13.078067432101886,
+        109.31515390186325
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.93469090,109.16889156,13.07806743,109.31515390);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_13.osm",
+      "sha256": "fa5aeddd21453c0f33bbf5aa61fdcaf0453e3704439d42b25eb35e317bb5bafb",
+      "bytes": 26310,
+      "way_elements": 10,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        12.934690895451272,
+        109.31515390186325,
+        13.078067432101886,
+        109.4614162470463
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](12.93469090,109.31515390,13.07806743,109.46141625);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_20.osm",
+      "sha256": "96260a790e74cd726e34b906b908c3a2632f4729f94b43d734a4e8d3344e18bc",
+      "bytes": 49678,
+      "way_elements": 5,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.078067432101886,
+        108.87636686631413,
+        13.221443968752498,
+        109.02262921149718
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.07806743,108.87636687,13.22144397,109.02262921);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_21.osm",
+      "sha256": "b51f883231311e1d92e6dc92efa11e5f855cee8d28f63bdeb997e8c192c8e91b",
+      "bytes": 4092,
+      "way_elements": 1,
+      "endpoint": "https://overpass.private.coffee/api/interpreter",
+      "bbox": [
+        13.078067432101886,
+        109.02262921149718,
+        13.221443968752498,
+        109.16889155668022
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.07806743,109.02262921,13.22144397,109.16889156);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_22.osm",
+      "sha256": "1a4502280e0e48dcece79bf58ccc0d85976e083220b48ae6e8ce18db30ce368a",
+      "bytes": 52267,
+      "way_elements": 9,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.078067432101886,
+        109.16889155668022,
+        13.221443968752498,
+        109.31515390186325
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.07806743,109.16889156,13.22144397,109.31515390);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_23s0.osm",
+      "sha256": "b2745465fa6925052ed00750f2ecfe64fbb1d34417297f2e90fa3432cc548b26",
+      "bytes": 7757,
+      "way_elements": 3,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.078067432101886,
+        109.31515390186325,
+        13.149755700427193,
+        109.38828507445479
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.07806743,109.31515390,13.14975570,109.38828507);out geom meta;",
+      "depth": 1
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_23s1.osm",
+      "sha256": "3316c27fb25de881f32cd822b9a53ffde82a74d4a94ddc11bdf93072aca8438b",
+      "bytes": 270,
+      "way_elements": 0,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.078067432101886,
+        109.38828507445479,
+        13.149755700427193,
+        109.4614162470463
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.07806743,109.38828507,13.14975570,109.46141625);out geom meta;",
+      "depth": 1
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_23s2.osm",
+      "sha256": "3316c27fb25de881f32cd822b9a53ffde82a74d4a94ddc11bdf93072aca8438b",
+      "bytes": 270,
+      "way_elements": 0,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.149755700427193,
+        109.31515390186325,
+        13.221443968752498,
+        109.38828507445479
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.14975570,109.31515390,13.22144397,109.38828507);out geom meta;",
+      "depth": 1
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_23s3.osm",
+      "sha256": "881f20a021691edb0e5c268cfe994c9a29bfcbfc47239bfa026f4490a43095fa",
+      "bytes": 270,
+      "way_elements": 0,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.149755700427193,
+        109.38828507445479,
+        13.221443968752498,
+        109.4614162470463
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.14975570,109.38828507,13.22144397,109.46141625);out geom meta;",
+      "depth": 1
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_30.osm",
+      "sha256": "6cb284f5e1109acda5588f83bca0469062add3a0a0a827910119c33511df1461",
+      "bytes": 59232,
+      "way_elements": 6,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.221443968752498,
+        108.87636686631413,
+        13.36482050540311,
+        109.02262921149718
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.22144397,108.87636687,13.36482051,109.02262921);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_31.osm",
+      "sha256": "06a0bf8215eb04126e67771cc0e0da3efd69c78b16b487851b711bf5130687e0",
+      "bytes": 57990,
+      "way_elements": 9,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.221443968752498,
+        109.02262921149718,
+        13.36482050540311,
+        109.16889155668022
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.22144397,109.02262921,13.36482051,109.16889156);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_32.osm",
+      "sha256": "de20f3411ac136f6676288f6f68f958b224753deaf157db55ec32733736b5aee",
+      "bytes": 34492,
+      "way_elements": 8,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bbox": [
+        13.221443968752498,
+        109.16889155668022,
+        13.36482050540311,
+        109.31515390186325
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.22144397,109.16889156,13.36482051,109.31515390);out geom meta;",
+      "depth": 0
+    },
+    {
+      "path": "D:\\VTP\\V46_inputs\\osm_historical_20211125\\osm_hist_20211125_tile_33.osm",
+      "sha256": "2ce84006369ccddaa3af456393e74bfd0cf28cea2dbae1c41e93708e3e252672",
+      "bytes": 270,
+      "way_elements": 0,
+      "endpoint": "https://overpass.private.coffee/api/interpreter",
+      "bbox": [
+        13.221443968752498,
+        109.31515390186325,
+        13.36482050540311,
+        109.4614162470463
+      ],
+      "query": "[out:xml][timeout:60][date:\"2021-11-25T00:00:00Z\"];way[\"waterway\"~\"^(river|stream|canal|drain)$\"](13.22144397,109.31515390,13.36482051,109.46141625);out geom meta;",
+      "depth": 0
+    }
+  ],
+  "unique_way_ids": 99,
+  "returned_way_timestamp_min": "2012-02-21T20:03:41Z",
+  "returned_way_timestamp_max": "2021-06-15T22:12:49Z",
+  "acquired_at_utc": "2026-09-30T09:00:06Z"
+}

@@ -1,0 +1,12 @@
+{
+  "source_and_output_sha256_match": true,
+  "coordinate_and_height_transcription_readback": true,
+  "paired_crs_verified": true,
+  "saved_spatial_geometry_verified": true,
+  "no_unverified_vertical_or_2021_bed_promotion": true,
+  "pass_": true,
+  "corner_count": 7,
+  "collar_count": 11,
+  "surveyed_bathymetry_accepted_count": 0,
+  "overlap_objects": []
+}

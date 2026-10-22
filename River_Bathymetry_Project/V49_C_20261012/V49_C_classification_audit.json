@@ -1,0 +1,139 @@
+{
+  "schema_version": "V49-C-audit-1",
+  "phase": "V49-C",
+  "purpose": "Conservative water-body classification and treatment assignment; no DEM modification.",
+  "classification_config": {
+    "evidence_buffer_m": 30.0,
+    "estuary_distance_m": 750.0,
+    "coastal_ambiguity_distance_m": 5000.0,
+    "minimum_line_support_m": 200.0,
+    "minimum_graph_support_m": 300.0,
+    "lake_min_area_km2": 1.0,
+    "lake_min_worldcover_water_fraction": 0.4,
+    "lake_max_flow_line_density_km_per_km2": 0.85,
+    "wetland_min_fraction": 0.2,
+    "wetland_max_flow_support_m": 500.0,
+    "canal_min_osm_m": 150.0,
+    "canal_dominance_ratio": 2.0,
+    "river_min_elongation": 1.8,
+    "river_dense_line_km_per_km2": 1.2,
+    "broad_water_area_km2": 2.0
+  },
+  "source_paths": {
+    "inventory": "D:\\VTP\\River_Bathymetry_Project\\V49_A_20261012\\V49_master_water_inventory.gpkg",
+    "hydrograph": "D:\\VTP\\River_Bathymetry_Project\\V49_B_20261012\\V49_hydrograph.gpkg",
+    "historical_osm_directory": "D:\\VTP\\V46_inputs\\osm_historical_20211125",
+    "worldcover_raw_class_raster": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_manning_30m.tif",
+    "source_dem": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif"
+  },
+  "source_hashes": {
+    "inventory_gpkg_sha256": "438e500c39df9aa74ea1138ee82ef297f5ed0fd116fdb3ef0b260fb03577b070",
+    "hydrograph_gpkg_sha256": "35b0d86ea5e6340cc607dfc057c9450ebd690aa49eeeffb859a68117e4532968",
+    "worldcover_raster_sha256": "bfd83bc3e735938d010e9e86f37dd0b843f3e62b9ca5b4e14f6a134e80c24faf",
+    "historical_osm_manifest_sha256": "da152750960e504c544c0b2d205e593ecc163ec910bbdd90622bdc02389c6e82",
+    "dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+  },
+  "historical_osm": {
+    "status": "HISTORICAL_OSM_SNAPSHOT",
+    "snapshot_utc": "2021-11-25T00:00:00Z",
+    "source": "OpenStreetMap via Overpass attic/date query",
+    "license": "ODbL; OpenStreetMap contributors",
+    "unique_waterway_count": 99,
+    "waterway_counts": {
+      "canal": 8,
+      "river": 59,
+      "stream": 32
+    },
+    "fresh_network_refresh_used": false,
+    "note": "V49-C uses the locally preserved 2021-11-25 historical OSM snapshot; no fresh network OSM download is required for this gate."
+  },
+  "inventory_object_count": 81,
+  "classified_object_count": 81,
+  "class_counts": {
+    "ESTUARY_TIDAL_RIVER": 3,
+    "LAKE_RESERVOIR": 1,
+    "OCEAN": 1,
+    "RIVER_STREAM": 33,
+    "UNKNOWN_REVIEW_REQUIRED": 42,
+    "WETLAND_FLOODPLAIN_WATER": 1
+  },
+  "class_area_km2": {
+    "ESTUARY_TIDAL_RIVER": 49.5567,
+    "LAKE_RESERVOIR": 42.7806,
+    "OCEAN": 764.3754,
+    "RIVER_STREAM": 12.2301,
+    "UNKNOWN_REVIEW_REQUIRED": 9.206100000000001,
+    "WETLAND_FLOODPLAIN_WATER": 0.0837
+  },
+  "unknown_review_count": 42,
+  "unknown_review_area_km2": 9.2061,
+  "review_required_total": 42,
+  "dem_expected_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "dem_unchanged": true,
+  "dem_modified_in_v49_c": false,
+  "safety_invariants": {
+    "unknown_no_automatic_carving": true,
+    "ocean_never_river_formula": true,
+    "wetland_never_river_trench": true,
+    "lake_never_reach_scale_river_treatment": true
+  },
+  "key_object_summary": {
+    "W20_0002": {
+      "final_class": "UNKNOWN_REVIEW_REQUIRED",
+      "confidence": "LOW",
+      "review_required": true,
+      "treatment_code": "NO_AUTOMATIC_CARVING",
+      "evidence_summary": "area=4.5936 km2; ocean_dist=2384.4 m; graph=6.35 km (7 reaches, 4 major); OSM river/stream/canal=15.15/0.12/0.00 km; WC water/wetland=0.860/0.001; elongation=2.67; names=Sông Kỷ Lộ"
+    },
+    "W20_0009": {
+      "final_class": "ESTUARY_TIDAL_RIVER",
+      "confidence": "MEDIUM",
+      "review_required": false,
+      "treatment_code": "TIDAL_RIVER_WITH_MARINE_BOUNDARY",
+      "evidence_summary": "area=18.7938 km2; ocean_dist=30.0 m; graph=13.26 km (7 reaches, 0 major); OSM river/stream/canal=0.32/0.00/0.00 km; WC water/wetland=0.963/0.000; elongation=2.17; names=none"
+    },
+    "W20_0022": {
+      "final_class": "ESTUARY_TIDAL_RIVER",
+      "confidence": "HIGH",
+      "review_required": false,
+      "treatment_code": "TIDAL_RIVER_WITH_MARINE_BOUNDARY",
+      "evidence_summary": "area=21.1887 km2; ocean_dist=30.0 m; graph=62.83 km (48 reaches, 26 major); OSM river/stream/canal=67.01/0.19/0.81 km; WC water/wetland=0.592/0.000; elongation=4.02; names=Hồ Sông Hinh | Sông Đà Rằng"
+    },
+    "W20_0046": {
+      "final_class": "ESTUARY_TIDAL_RIVER",
+      "confidence": "HIGH",
+      "review_required": false,
+      "treatment_code": "TIDAL_RIVER_WITH_MARINE_BOUNDARY",
+      "evidence_summary": "area=9.5742 km2; ocean_dist=30.0 m; graph=23.28 km (9 reaches, 0 major); OSM river/stream/canal=13.51/0.00/0.00 km; WC water/wetland=0.911/0.002; elongation=1.99; names=Sông Bàn Thạch"
+    },
+    "W20_0059": {
+      "final_class": "LAKE_RESERVOIR",
+      "confidence": "HIGH",
+      "review_required": false,
+      "treatment_code": "STAGE_AREA_VOLUME_OR_BATHYMETRY",
+      "evidence_summary": "area=42.7806 km2; ocean_dist=37212.1 m; graph=31.74 km (19 reaches, 9 major); OSM river/stream/canal=24.25/0.00/0.00 km; WC water/wetland=0.645/0.000; elongation=2.03; names=Hồ Sông Hinh"
+    },
+    "W20_0070": {
+      "final_class": "WETLAND_FLOODPLAIN_WATER",
+      "confidence": "MEDIUM",
+      "review_required": false,
+      "treatment_code": "PRESERVE_STORAGE_NO_RIVER_TRENCH",
+      "evidence_summary": "area=0.0837 km2; ocean_dist=8787.3 m; graph=0.00 km (0 reaches, 0 major); OSM river/stream/canal=0.00/0.00/0.00 km; WC water/wetland=0.376/0.269; elongation=1.18; names=none"
+    },
+    "W20_0072": {
+      "final_class": "UNKNOWN_REVIEW_REQUIRED",
+      "confidence": "LOW",
+      "review_required": true,
+      "treatment_code": "NO_AUTOMATIC_CARVING",
+      "evidence_summary": "area=0.5337 km2; ocean_dist=3203.4 m; graph=1.28 km (3 reaches, 0 major); OSM river/stream/canal=0.00/0.00/0.00 km; WC water/wetland=0.263/0.105; elongation=1.10; names=none"
+    },
+    "W20_0080": {
+      "final_class": "UNKNOWN_REVIEW_REQUIRED",
+      "confidence": "LOW",
+      "review_required": true,
+      "treatment_code": "NO_AUTOMATIC_CARVING",
+      "evidence_summary": "area=1.3293 km2; ocean_dist=360.0 m; graph=0.00 km (0 reaches, 0 major); OSM river/stream/canal=0.00/0.00/0.00 km; WC water/wetland=0.984/0.000; elongation=3.84; names=none"
+    }
+  }
+}

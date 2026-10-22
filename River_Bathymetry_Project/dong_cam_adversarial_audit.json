@@ -1,0 +1,51 @@
+{
+  "test_1_geometry": {
+    "pass": false,
+    "cell_count": 187,
+    "row_min": 1272,
+    "row_max": 1288,
+    "col_min": 1212,
+    "col_max": 1222,
+    "is_solid_rectangle": true,
+    "num_connected_components": 1
+  },
+  "test_2_elevation": {
+    "z_min": 5.5,
+    "z_max": 8.121676445007324,
+    "z_mean": 5.8978095054626465,
+    "z_median": 5.5,
+    "dispatch_range_match": false,
+    "spec_range_match": false
+  },
+  "test_3_hydrology": {
+    "mask_jrc_max": 77,
+    "mask_jrc_mean": 46.93048128342246,
+    "mask_osm_dist_min": 0.0,
+    "mask_osm_dist_mean": 110.95841979980469,
+    "true_river_row_1278": {
+      "dem": 5.5,
+      "jrc": 70,
+      "osm_dist": 0.0
+    }
+  },
+  "test_4_barrier": {
+    "overlap_corridor_cells": 187,
+    "overlap_thalweg_cells": 11,
+    "min_dist_to_thalweg_m": 0.0,
+    "flow_bypasses_mask": true,
+    "is_effective_cross_river_barrier": false
+  },
+  "test_5_canals": {
+    "kn_inflow": [
+      1270,
+      1217
+    ],
+    "ks_inflow": [
+      1360,
+      1207
+    ],
+    "dist_kn_to_true_north_abutment_m": 0.0,
+    "dist_ks_to_true_south_abutment_m": 2121.3203435596424,
+    "kn_dry_forced_cells": 0
+  }
+}

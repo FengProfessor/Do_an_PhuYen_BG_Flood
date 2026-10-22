@@ -1,0 +1,17 @@
+{
+  "version": "V49-A",
+  "checks": {
+    "csv_and_gpkg_row_count_match": true,
+    "object_ids_unique": true,
+    "expected_inland_object_count_matches": true,
+    "all_inland_objects_have_class": true,
+    "all_review_candidates_are_flagged": true,
+    "ocean_object_present": true,
+    "ocean_excluded_from_inland_statistics": true,
+    "dem_sha256_still_matches": true,
+    "coverage_map_exists": true,
+    "evidence_raster_exists": true,
+    "ocean_mask_exists": true
+  },
+  "pass": true
+}

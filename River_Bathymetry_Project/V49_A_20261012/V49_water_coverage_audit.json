@@ -1,0 +1,146 @@
+{
+  "version": "V49-A",
+  "inputs": {
+    "dem": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+    "jrc_occurrence": "D:\\VTP\\V48_research_20261002\\hydro_evidence_raw\\V46_JRC_GSW1_3_occurrence_1984_2020.tif",
+    "hydrorivers_distance": "D:\\VTP\\V46_dryrun_20260930\\V46_distance_to_hydrorivers_m.tif",
+    "osm_waterway_distance": "D:\\VTP\\V46_dryrun_20260930\\V46_distance_to_osm_waterway_m.tif",
+    "hydrorivers_vector": "D:\\VTP\\V46_inputs\\HydroRIVERS_as\\HydroRIVERS_v10_as_shp\\HydroRIVERS_v10_as.shp",
+    "legacy_delta_z": "D:\\VTP\\River_Bathymetry_Project\\delta_z_full_bathymetry.tif",
+    "legacy_network_npz": "D:\\VTP\\River_Bathymetry_Project\\river_network_data.npz"
+  },
+  "config": {
+    "occurrence_threshold": 20,
+    "minimum_object_pixels": 25,
+    "ocean_core_radius_pixels": 5,
+    "ocean_restore_radius_pixels": 5,
+    "ocean_seed_east_columns": 12,
+    "hydro_near_m": 90.0,
+    "thresholds_for_audit": [
+      5,
+      20,
+      50,
+      90
+    ]
+  },
+  "grid": {
+    "shape": [
+      2100,
+      2100
+    ],
+    "crs": "EPSG:32649",
+    "transform": [
+      30.0,
+      0.0,
+      270000.0,
+      0.0,
+      -30.0,
+      1478000.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bounds": [
+      270000.0,
+      1415000.0,
+      333000.0,
+      1478000.0
+    ],
+    "pixel_area_m2": 900.0,
+    "hydrorivers_features_in_domain": 373
+  },
+  "threshold_audit": {
+    "5": {
+      "raw_water_cells": 1022106,
+      "raw_water_area_km2": 919.8954,
+      "ocean_cells": 866751,
+      "ocean_area_km2": 780.0759,
+      "inland_water_cells_all": 155355,
+      "inland_water_area_km2_all": 139.8195,
+      "qualifying_object_count": 146,
+      "qualifying_inland_cells": 151017,
+      "qualifying_inland_area_km2": 135.9153,
+      "qualifying_legacy_corridor_cells": 38115,
+      "qualifying_legacy_carved_cells": 35841
+    },
+    "20": {
+      "raw_water_cells": 978331,
+      "raw_water_area_km2": 880.4979,
+      "ocean_cells": 849306,
+      "ocean_area_km2": 764.3754,
+      "inland_water_cells_all": 129025,
+      "inland_water_area_km2_all": 116.1225,
+      "qualifying_object_count": 80,
+      "qualifying_inland_cells": 126508,
+      "qualifying_inland_area_km2": 113.8572,
+      "qualifying_legacy_corridor_cells": 36528,
+      "qualifying_legacy_carved_cells": 34487
+    },
+    "50": {
+      "raw_water_cells": 937426,
+      "raw_water_area_km2": 843.6834,
+      "ocean_cells": 847473,
+      "ocean_area_km2": 762.7257,
+      "inland_water_cells_all": 89953,
+      "inland_water_area_km2_all": 80.9577,
+      "qualifying_object_count": 71,
+      "qualifying_inland_cells": 88432,
+      "qualifying_inland_area_km2": 79.5888,
+      "qualifying_legacy_corridor_cells": 22029,
+      "qualifying_legacy_carved_cells": 20968
+    },
+    "90": {
+      "raw_water_cells": 871916,
+      "raw_water_area_km2": 784.7244,
+      "ocean_cells": 842278,
+      "ocean_area_km2": 758.0502,
+      "inland_water_cells_all": 29638,
+      "inland_water_area_km2_all": 26.6742,
+      "qualifying_object_count": 34,
+      "qualifying_inland_cells": 28377,
+      "qualifying_inland_area_km2": 25.5393,
+      "qualifying_legacy_corridor_cells": 6863,
+      "qualifying_legacy_carved_cells": 6527
+    }
+  },
+  "inventory": {
+    "object_count_including_ocean": 81,
+    "inland_object_count": 80,
+    "fully_covered_by_legacy_count": 14,
+    "partially_covered_by_legacy_count": 9,
+    "missing_from_legacy_count": 57,
+    "objects_not_fully_covered_count": 66,
+    "fully_covered_object_area_km2": 22.426199999999998,
+    "partially_covered_object_area_km2": 81.5454,
+    "zero_overlap_object_area_km2": 9.8856,
+    "qualifying_inland_area_km2": 113.8572,
+    "legacy_corridor_covered_water_area_km2": 32.8752,
+    "legacy_corridor_uncovered_water_area_km2": 80.982,
+    "legacy_corridor_cell_coverage_pct": 28.87406330034464,
+    "class_counts": {
+      "RIVER_CANDIDATE": 37,
+      "OPEN_WATER_REVIEW_REQUIRED": 36,
+      "ESTUARY_REVIEW_REQUIRED": 3,
+      "OSM_WATERWAY_CANDIDATE": 4
+    },
+    "class_areas_km2": {
+      "ESTUARY_REVIEW_REQUIRED": 49.5567,
+      "OPEN_WATER_REVIEW_REQUIRED": 46.5714,
+      "OSM_WATERWAY_CANDIDATE": 0.1206,
+      "RIVER_CANDIDATE": 17.6085
+    },
+    "review_required_count": 80
+  },
+  "dem_integrity": {
+    "sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "unchanged": true
+  },
+  "gate_A": {
+    "all_minimum_size_objects_accounted": true,
+    "all_objects_classified_or_review_required": true,
+    "ocean_excluded_from_inland_statistics": true,
+    "dem_unchanged": true,
+    "pass": true
+  }
+}

@@ -1,0 +1,49 @@
+# ==============================================================================
+# BG_Flood Configuration - Phu Yen 30 m V48 frozen input contract (pre-SAR)
+# Runtime fix release 2026-10-04 R1; preserve the original 2026-10-02 inputs.
+# ==============================================================================
+
+# Formal V48 BASE terrain input
+bathy = D:/VTP/River_Bathymetry_Project/V49_G_attempt_2/V49_G_CENTRAL_hydraulic_bed.asc;
+dx = 30;
+dy = 30;
+
+# Mask policy: V48 valid minimum is -3.0 m. Keep all real negative terrain.
+# BG_Flood read_input.py masks bathy <= minmask and converts ASC NoData to mask.
+mask = 9999.0;
+minmask = -4.0;
+
+# Manning roughness map inherited from the evidenced V45 hydrodynamic setup
+frictionmodel = -1;
+roughnessmap = ../../05-Du-lieu-GIS/PhuYen_manning_30m_V43.asc;
+
+# River forcings inherited from the evidenced V45 hydrodynamic setup
+river = xa_lu_BaHa_Nov2021_V40_sync.txt, 270030, 270630, 1441000, 1443000;
+river = xa_lu_BanThach_V43.txt, 276000, 277000, 1424500, 1425500;
+river = xa_lu_KyLo_V40_sync.txt, 289000, 290000, 1476500, 1477500;
+river = xa_lu_TuyAn_V40_sync.txt, 301000, 302000, 1473500, 1474500;
+
+# Rainfall and infiltration inherited from the evidenced V45 hydrodynamic setup
+rainfile = ../../Scenarios/rain_v34_era5_x2.txt;
+rainunits = m/s;
+il = ../../05-Du-lieu-GIS/il_30m_V36.asc;
+cl = ../../05-Du-lieu-GIS/cl_30m_V36.asc;
+
+# Cold-start water-surface policy. In current BG_Flood code this is a global WSE,
+# not a water depth: zs=max(zsinit+zsoffset, zb), h=max(zs-zb, 0).
+zsinit = 1.0;
+zsoffset = 0.0;
+
+# Boundary conditions inherited from V45
+left = 0;
+right = 2;
+top = 2;
+bottom = 2;
+
+# Simulation window inherited from V45: 120 h, output every 3 h
+endtime = 432000;
+outputtimestep = 10800;
+
+# Formal run output; inputs are frozen by V48_FORMAL_RUN_PAIR_PREP_20261002.json
+outfile = D:/VTP/River_Bathymetry_Project/V49_G_attempt_2/results/V49_G_CENTRAL.nc;
+outvars = zs, h, zb, u, v;

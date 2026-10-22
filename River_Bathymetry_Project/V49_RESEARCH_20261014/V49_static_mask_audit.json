@@ -1,0 +1,35 @@
+{
+  "scope": "Static raster/mask audit only; no SAR classification accuracy claim or active NetCDF read",
+  "sources": {
+    "sar": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.tif",
+      "sha256": "9c1ad68908c220456c82a2459380e14193242a3daa32c0001989c4ffd8292db6",
+      "native_nodata": 255.0
+    },
+    "water": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\water_density_30m.tif",
+      "sha256": "fb353f257db606fac5d4470a16ce494da4597e288f5e64832536c0f0305aa39d",
+      "native_nodata": -9999.0
+    },
+    "hand": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\Teamwork_Validation\\PhuYen_HAND_30m.tif",
+      "sha256": "2e19b6f669717d310fc4c1af96dffdd0df8037786faf3f55d6b8d08f73cfecfd",
+      "native_nodata": -9999.0
+    }
+  },
+  "sar_aligned_class_counts": {
+    "0": 2330567,
+    "1": 1345926,
+    "255": 733507
+  },
+  "primary_mask_cells": 2848260,
+  "primary_mask_area_km2": 2563.434,
+  "observed_wet_cells_in_primary_mask": 574267,
+  "observed_wet_area_km2": 516.8403,
+  "water_missing_cells_on_grid": 0,
+  "water_missing_cells_in_primary_mask": 0,
+  "hand_missing_cells_in_primary_mask": 0,
+  "sar_unknown_cells_on_grid": 733507,
+  "physical_SAR_observability_verified": false,
+  "hydraulic_promotion_ready": false
+}

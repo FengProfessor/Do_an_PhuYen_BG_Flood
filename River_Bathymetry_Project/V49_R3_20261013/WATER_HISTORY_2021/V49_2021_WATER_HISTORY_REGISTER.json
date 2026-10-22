@@ -1,0 +1,227 @@
+{
+  "schema_version": "V49-2021-monthly-history-audit-1",
+  "generated_at_utc": "2026-10-13T07:39:22.145100+00:00",
+  "dataset": "GSW v1.4 MonthlyHistory 2021; JRC FTP archive VER5-0, 2022 publication",
+  "sources": [
+    {
+      "year": 2021,
+      "month": 1,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_01/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_01_100E_20N_FTP_VER5_0.tif",
+      "sha256": "77c4324938ad110d4492f702f435882c373aaa06456054c422044ed8017f161b",
+      "bytes": 26715831
+    },
+    {
+      "year": 2021,
+      "month": 2,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_02/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_02_100E_20N_FTP_VER5_0.tif",
+      "sha256": "764e727c5c608164f6faa149339f05abd3031f687adf9d086c406a4251a4abfc",
+      "bytes": 26565063
+    },
+    {
+      "year": 2021,
+      "month": 3,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_03/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_03_100E_20N_FTP_VER5_0.tif",
+      "sha256": "bc0b35c3437bdc1c330e75e83ba445fc1097c60d8c19bff40961671b94426733",
+      "bytes": 21434632
+    },
+    {
+      "year": 2021,
+      "month": 4,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_04/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_04_100E_20N_FTP_VER5_0.tif",
+      "sha256": "890e9cc1c5ee6703520cd03a7695fabf437bbfedf2d1d0984f5cd9d8c189f659",
+      "bytes": 39680287
+    },
+    {
+      "year": 2021,
+      "month": 5,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_05/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_05_100E_20N_FTP_VER5_0.tif",
+      "sha256": "55fc0603fb66c44f73d1df58e9cd867e64903e458a04716db1575574d53ffb93",
+      "bytes": 31735843
+    },
+    {
+      "year": 2021,
+      "month": 6,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_06/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_06_100E_20N_FTP_VER5_0.tif",
+      "sha256": "fc0ca470d0725412627372f82883204299e30559886a3e56c340841c769b0873",
+      "bytes": 40266736
+    },
+    {
+      "year": 2021,
+      "month": 7,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_07/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_07_100E_20N_FTP_VER5_0.tif",
+      "sha256": "ce969ab498775b592b51c6690e56f2a7dc9aac641f0f28912693b8d356a3c68f",
+      "bytes": 36679156
+    },
+    {
+      "year": 2021,
+      "month": 8,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_08/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_08_100E_20N_FTP_VER5_0.tif",
+      "sha256": "e21dffadacb90d8bc37e375afef4bce7e0b99692070b6efb1ecc85fa1cee04d5",
+      "bytes": 44882615
+    },
+    {
+      "year": 2021,
+      "month": 9,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_09/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_09_100E_20N_FTP_VER5_0.tif",
+      "sha256": "279fce7714229db1a34bd89a325364cfbac60ef803b5bae5f3a139d822c510ef",
+      "bytes": 52221918
+    },
+    {
+      "year": 2021,
+      "month": 10,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_10/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_10_100E_20N_FTP_VER5_0.tif",
+      "sha256": "0d2ddc8b32984476c28cff8cf7ababf26ade2b94f6ef4c2ae48bc63b9efe38c5",
+      "bytes": 43298595
+    },
+    {
+      "year": 2021,
+      "month": 11,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_11/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_11_100E_20N_FTP_VER5_0.tif",
+      "sha256": "0cbfe8cb585cd1dccc4ab2d82952ad8d1072179f42849154c0cce7801f1256e4",
+      "bytes": 39101699
+    },
+    {
+      "year": 2021,
+      "month": 12,
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GSWE/MonthlyHistory/VER5-0/tiles/2021/2021_12/0000240000-0001120000.tif",
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_sources_R3_20261013\\JRC_monthly_2021_12_100E_20N_FTP_VER5_0.tif",
+      "sha256": "687def3f228538d9c5b6258fc8f638046d45667e6a728246ce9df7dbd729eb4d",
+      "bytes": 29597653
+    }
+  ],
+  "classification": {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\C\\V49_waterbody_classification.gpkg",
+    "sha256": "5256a721a61d08916cd8a744e9394697d2e44b1d35fd5e244b44e53c41d1be72"
+  },
+  "outputs": [
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\WATER_HISTORY_2021\\V49_2021_monthly_water_observations.csv",
+      "sha256": "c7203d2623ee6cafa901cfd754435f678bff24bbd4c78b5c02eac88d5a1b7779",
+      "row_count": 972
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\WATER_HISTORY_2021\\V49_2021_annual_observation_coverage.csv",
+      "sha256": "d755bb8e8d7c479bc406cb614cacee617446d70e2f0eb700fcaba1fb020f7846",
+      "row_count": 81
+    },
+    {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_R3_20261013\\WATER_HISTORY_2021\\V49_2021_November_water_observations.csv",
+      "sha256": "db37c44de367a8ffa7b319a8b830fde98794e0b2bb3dafcc76792c1624f3c0da",
+      "row_count": 81
+    }
+  ],
+  "native_grid_no_resampling": true,
+  "object_mask": "native pixel centers; all_touched=False",
+  "no_observation_code": 0,
+  "dry_code": 1,
+  "water_code": 2,
+  "november_inland_object_count": 80,
+  "november_inland_objects_with_zero_observation": [
+    "W20_0001",
+    "W20_0003",
+    "W20_0016",
+    "W20_0017",
+    "W20_0019",
+    "W20_0021",
+    "W20_0024",
+    "W20_0029",
+    "W20_0030",
+    "W20_0033",
+    "W20_0036",
+    "W20_0037",
+    "W20_0038",
+    "W20_0040",
+    "W20_0041",
+    "W20_0042",
+    "W20_0045",
+    "W20_0049",
+    "W20_0051",
+    "W20_0061",
+    "W20_0064",
+    "W20_0065",
+    "W20_0067",
+    "W20_0077"
+  ],
+  "november_inland_objects_with_water_observation": [
+    "W20_0002",
+    "W20_0004",
+    "W20_0006",
+    "W20_0007",
+    "W20_0008",
+    "W20_0009",
+    "W20_0010",
+    "W20_0011",
+    "W20_0012",
+    "W20_0013",
+    "W20_0014",
+    "W20_0015",
+    "W20_0018",
+    "W20_0020",
+    "W20_0022",
+    "W20_0023",
+    "W20_0025",
+    "W20_0026",
+    "W20_0027",
+    "W20_0028",
+    "W20_0031",
+    "W20_0032",
+    "W20_0034",
+    "W20_0035",
+    "W20_0039",
+    "W20_0043",
+    "W20_0044",
+    "W20_0046",
+    "W20_0047",
+    "W20_0048",
+    "W20_0050",
+    "W20_0052",
+    "W20_0053",
+    "W20_0054",
+    "W20_0055",
+    "W20_0056",
+    "W20_0057",
+    "W20_0058",
+    "W20_0059",
+    "W20_0060",
+    "W20_0062",
+    "W20_0063",
+    "W20_0066",
+    "W20_0068",
+    "W20_0069",
+    "W20_0071",
+    "W20_0072",
+    "W20_0073",
+    "W20_0074",
+    "W20_0075",
+    "W20_0076",
+    "W20_0078",
+    "W20_0079",
+    "W20_0080"
+  ],
+  "daily_event_shoreline_available": false,
+  "field_bathymetry_available": false,
+  "authorizes_geometry": false,
+  "changes_frozen_G_inputs": false,
+  "citations": [
+    "https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_MonthlyHistory",
+    "https://global-surface-water.appspot.com/download",
+    "https://doi.org/10.1038/nature20584"
+  ],
+  "limitations": [
+    "Monthly water detection is not a daily November 2021 flood extent or water level.",
+    "Zero denotes absent usable observation, not observed dry land.",
+    "Old yearly Seasonality/YearlyHistory products are not used: JRC reports a corrected 2016-2021 release.",
+    "Current object footprints and archive observations may differ in shoreline and geolocation."
+  ]
+}

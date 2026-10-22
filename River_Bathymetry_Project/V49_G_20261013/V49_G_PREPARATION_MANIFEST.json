@@ -1,0 +1,544 @@
+{
+  "schema_version": "V49-G-preparation-1",
+  "status": "PREPARED_PENDING_MATCHED_BG_FLOOD_RUNS",
+  "gate_g_pass": false,
+  "hydraulic_promotion_ready": false,
+  "comparable_arms": [
+    "BASE",
+    "CENTRAL",
+    "LOW",
+    "HIGH"
+  ],
+  "diagnostic_only_arm": "LEGACY_FIVE_BRANCH",
+  "mask_policy": {
+    "canonical_minmask": -4.0,
+    "comparable_arms_policy": "Use the unchanged V48 R1 minmask=-4.0 for BASE/CENTRAL/LOW/HIGH.",
+    "legacy_policy": "Diagnostic/non-comparable only. The five-branch terrain contains valid cells <= -4.0 m; running it with the canonical minmask would mask real terrain and violate matched-domain fairness.",
+    "legacy_valid_cells_le_minmask": 10740
+  },
+  "terrain": {
+    "BASE": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+      "sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+      "grid": {
+        "width": 2100,
+        "height": 2100,
+        "crs": "EPSG:32649",
+        "transform": [
+          30.0,
+          0.0,
+          270000.0,
+          0.0,
+          -30.0,
+          1478000.0
+        ],
+        "nodata": -9999.0,
+        "valid_min_m": -3.0,
+        "valid_max_m": 1449.032470703125,
+        "valid_cells_le_canonical_minmask": 0
+      }
+    },
+    "CENTRAL": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_E_20261012\\V49_E_hydraulic_bed.tif",
+      "sha256": "181115942dc88a95503a1e193b2f90149e918b6f8354a262085b293e11df2552",
+      "grid": {
+        "width": 2100,
+        "height": 2100,
+        "crs": "EPSG:32649",
+        "transform": [
+          30.0,
+          0.0,
+          270000.0,
+          0.0,
+          -30.0,
+          1478000.0
+        ],
+        "nodata": -9999.0,
+        "valid_min_m": -3.0,
+        "valid_max_m": 1449.032470703125,
+        "valid_cells_le_canonical_minmask": 0
+      }
+    },
+    "LOW": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_LOW_hydraulic_bed.tif",
+      "sha256": "92dfb617de29c25734c47fb5ced2327b5fd31e831dc747d48295a00c0c401a8a",
+      "grid": {
+        "width": 2100,
+        "height": 2100,
+        "crs": "EPSG:32649",
+        "transform": [
+          30.0,
+          0.0,
+          270000.0,
+          0.0,
+          -30.0,
+          1478000.0
+        ],
+        "nodata": -9999.0,
+        "valid_min_m": -3.0,
+        "valid_max_m": 1449.032470703125,
+        "valid_cells_le_canonical_minmask": 0
+      }
+    },
+    "HIGH": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_HIGH_hydraulic_bed.tif",
+      "sha256": "d5f7be85466a3015c32f8a8232e548588ae905e26e2012f480971968f8195fcf",
+      "grid": {
+        "width": 2100,
+        "height": 2100,
+        "crs": "EPSG:32649",
+        "transform": [
+          30.0,
+          0.0,
+          270000.0,
+          0.0,
+          -30.0,
+          1478000.0
+        ],
+        "nodata": -9999.0,
+        "valid_min_m": -3.0,
+        "valid_max_m": 1449.032470703125,
+        "valid_cells_le_canonical_minmask": 0
+      }
+    },
+    "LEGACY_FIVE_BRANCH": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\PhuYen_DEM_30m_with_Full_River_Bathymetry.tif",
+      "sha256": "0f4b9de6e9849e1cd3f5fa8dd060b37433238506a027eb5a91f4c836c3852476",
+      "grid": {
+        "width": 2100,
+        "height": 2100,
+        "crs": "EPSG:32649",
+        "transform": [
+          30.0,
+          0.0,
+          270000.0,
+          0.0,
+          -30.0,
+          1478000.0
+        ],
+        "nodata": -9999.0,
+        "valid_min_m": -8.390331268310547,
+        "valid_max_m": 1449.032470703125,
+        "valid_cells_le_canonical_minmask": 10740
+      }
+    }
+  },
+  "variant_audits": {
+    "LOW": {
+      "arm": "LOW",
+      "depth_field": "depth_low_m",
+      "authorized_reach_ids": [
+        "HR_41349822",
+        "HR_41352752"
+      ],
+      "modified_pixel_count": 72,
+      "authorized_mask_pixel_count": 73,
+      "outside_authorized_mask_modified_pixel_count": 0,
+      "protected_structure_modified_pixel_count": 0,
+      "raised_pixel_count": 0,
+      "lowering_volume_m3": 3597.857666015625,
+      "max_lowering_m": 0.187103271484375,
+      "source_dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+      "source_dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+      "output_dem_sha256": "92dfb617de29c25734c47fb5ced2327b5fd31e831dc747d48295a00c0c401a8a",
+      "delta_sha256": "db8e95f13695fdba3ff39d7ab0afe5f111473c6790deb1c5e29e45b2dd31af06",
+      "reach_trace": [
+        {
+          "reach_id": "HR_41349822",
+          "water_class": "RIVER_STREAM",
+          "width_m": 60.00198740206605,
+          "depth_est_m": 0.37420133002409695,
+          "depth_low_m": 0.18710066501204847,
+          "depth_high_m": 0.6361422610409648,
+          "selected_depth_field": "depth_low_m",
+          "selected_depth_m": 0.18710066501204847,
+          "bed_upstream_m": 163.6257986699759,
+          "bed_downstream_m": 144.00464388481964,
+          "corridor_and_class_pixel_count": 23,
+          "class_mask_pixel_count": 97,
+          "thalweg_pixel_count": 10,
+          "modified_pixel_count_premerge": 23,
+          "max_lowering_m_premerge": 0.18710066378116608,
+          "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+          "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+        },
+        {
+          "reach_id": "HR_41352752",
+          "water_class": "RIVER_STREAM",
+          "width_m": 141.4115125641347,
+          "depth_est_m": 0.1753025639069543,
+          "depth_low_m": 0.07012102556278173,
+          "depth_high_m": 0.3155446150325178,
+          "selected_depth_field": "depth_low_m",
+          "selected_depth_m": 0.07012102556278173,
+          "bed_upstream_m": 270.32564348101494,
+          "bed_downstream_m": 257.3836879146087,
+          "corridor_and_class_pixel_count": 50,
+          "class_mask_pixel_count": 85,
+          "thalweg_pixel_count": 15,
+          "modified_pixel_count_premerge": 50,
+          "max_lowering_m_premerge": 0.07012102752923965,
+          "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+          "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+        }
+      ],
+      "variant_invariance_pass": true
+    },
+    "HIGH": {
+      "arm": "HIGH",
+      "depth_field": "depth_high_m",
+      "authorized_reach_ids": [
+        "HR_41349822",
+        "HR_41352752"
+      ],
+      "modified_pixel_count": 72,
+      "authorized_mask_pixel_count": 73,
+      "outside_authorized_mask_modified_pixel_count": 0,
+      "protected_structure_modified_pixel_count": 0,
+      "raised_pixel_count": 0,
+      "lowering_volume_m3": 14020.669555664062,
+      "max_lowering_m": 0.636138916015625,
+      "source_dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+      "source_dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+      "output_dem_sha256": "d5f7be85466a3015c32f8a8232e548588ae905e26e2012f480971968f8195fcf",
+      "delta_sha256": "36b3b1b8bc0004290c22c1766ba013b582d8cc53cc72cf45ce7ee96d6d1f660b",
+      "reach_trace": [
+        {
+          "reach_id": "HR_41349822",
+          "water_class": "RIVER_STREAM",
+          "width_m": 60.00198740206605,
+          "depth_est_m": 0.37420133002409695,
+          "depth_low_m": 0.18710066501204847,
+          "depth_high_m": 0.6361422610409648,
+          "selected_depth_field": "depth_high_m",
+          "selected_depth_m": 0.6361422610409648,
+          "bed_upstream_m": 163.6257986699759,
+          "bed_downstream_m": 144.00464388481964,
+          "corridor_and_class_pixel_count": 23,
+          "class_mask_pixel_count": 97,
+          "thalweg_pixel_count": 10,
+          "modified_pixel_count_premerge": 23,
+          "max_lowering_m_premerge": 0.6361422538757324,
+          "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+          "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+        },
+        {
+          "reach_id": "HR_41352752",
+          "water_class": "RIVER_STREAM",
+          "width_m": 141.4115125641347,
+          "depth_est_m": 0.1753025639069543,
+          "depth_low_m": 0.07012102556278173,
+          "depth_high_m": 0.3155446150325178,
+          "selected_depth_field": "depth_high_m",
+          "selected_depth_m": 0.3155446150325178,
+          "bed_upstream_m": 270.32564348101494,
+          "bed_downstream_m": 257.3836879146087,
+          "corridor_and_class_pixel_count": 50,
+          "class_mask_pixel_count": 85,
+          "thalweg_pixel_count": 15,
+          "modified_pixel_count_premerge": 50,
+          "max_lowering_m_premerge": 0.31554460525512695,
+          "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+          "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+        }
+      ],
+      "variant_invariance_pass": true
+    }
+  },
+  "sensitivity_ordering": {
+    "low_le_central_violation_pixels": 0,
+    "central_le_high_violation_pixels": 0,
+    "pass": true
+  },
+  "comparable_grids_match": true,
+  "ascii_outputs": {
+    "BASE": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS_FORMAL.asc",
+      "sha256": "d9eac9b33d7781ce26e65e7cf24155360bd0e6bffd22f1227fd38b59fc24f62b",
+      "reused_frozen_v48_r1_ascii": true
+    },
+    "CENTRAL": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_CENTRAL_hydraulic_bed.asc",
+      "sha256": "1abe6da9fd82f2a468a02fda74ca640a3156d7773db2dfc670ee83afb4ba65c1",
+      "grid_roundtrip_ok": true,
+      "max_value_roundtrip_error_m": 9.313225746154785e-10
+    },
+    "LOW": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_LOW_hydraulic_bed.asc",
+      "sha256": "d52b15d0060a8ec894e2766e13fe54c49d3b475c84c0c077a409272a16af85cf",
+      "grid_roundtrip_ok": true,
+      "max_value_roundtrip_error_m": 9.313225746154785e-10
+    },
+    "HIGH": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_HIGH_hydraulic_bed.asc",
+      "sha256": "88f748f6ee7a72080aebde95a5f6dd439cc92f90ccd9b78adf70e6b070ea2452",
+      "grid_roundtrip_ok": true,
+      "max_value_roundtrip_error_m": 9.313225746154785e-10
+    }
+  },
+  "configs": {
+    "BASE": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_BASE.txt",
+      "sha256": "78219a157e23b771f8960090d41c15cc076e64190013601d383c873d7c956a4d",
+      "normalized_sha256": "0414cfd0c3baa7445a518a71814daafaf153439ef985764b722df78768c04229",
+      "terrain_asc": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS_FORMAL.asc",
+      "planned_result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_BASE.nc"
+    },
+    "CENTRAL": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_CENTRAL.txt",
+      "sha256": "50cad104e5d5134d665e052c82bf7b876971105de2d295c5eb67abacc7555892",
+      "normalized_sha256": "0414cfd0c3baa7445a518a71814daafaf153439ef985764b722df78768c04229",
+      "terrain_asc": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_CENTRAL_hydraulic_bed.asc",
+      "planned_result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL.nc"
+    },
+    "LOW": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_LOW.txt",
+      "sha256": "bfcff0c28b342c6bdd0fc2ede0fee77a48e2953a4fc50054fe245ce577721276",
+      "normalized_sha256": "0414cfd0c3baa7445a518a71814daafaf153439ef985764b722df78768c04229",
+      "terrain_asc": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_LOW_hydraulic_bed.asc",
+      "planned_result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_LOW.nc"
+    },
+    "HIGH": {
+      "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\BG_param_V49_G_HIGH.txt",
+      "sha256": "f0900b8d413a278d07d1ae3d7d6e61c3f99faf8535e7e09e9131b4613c555812",
+      "normalized_sha256": "0414cfd0c3baa7445a518a71814daafaf153439ef985764b722df78768c04229",
+      "terrain_asc": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\V49_G_HIGH_hydraulic_bed.asc",
+      "planned_result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_HIGH.nc"
+    }
+  },
+  "normalized_comparable_configs_identical_except_terrain_and_output": true,
+  "v48_r1_contract": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_BG_Flood_contract_R1.json",
+    "sha256": "12c2e0bf5774f20f33a130dbeb248cb1125e9286919c3d634cf537945c860db4"
+  },
+  "engine_semantics": {
+    "bg_flood\\__init__.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\__init__.py",
+      "sha256": "07c2bee11b5b2f8207fcf008959744de79ad55c5bc43dcca56fd9024cb4345a0"
+    },
+    "bg_flood\\advection.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\advection.py",
+      "sha256": "25170d9edf7e10667fad21ec3c62b615533cec74d99ce8501b46a02c6ac11904"
+    },
+    "bg_flood\\block_index.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\block_index.py",
+      "sha256": "c91ca624bca90a19f80f81ad210a9a32e22a7595455c9b185d9027e96108412f"
+    },
+    "bg_flood\\boundary.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\boundary.py",
+      "sha256": "332f5ff187b13daca1abec360552758a9d9fad0ac9a2762aa9731a1bd69e8149"
+    },
+    "bg_flood\\deform.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\deform.py",
+      "sha256": "ac39e1cea08771878e0df31cb3135f11c93c781fd05936664a5d8de1b25877a9"
+    },
+    "bg_flood\\flow_cpu.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\flow_cpu.py",
+      "sha256": "e643e0f9f3cddd8745be57b5fbcd3277dec3caa10f09e1a764741604dc7507b5"
+    },
+    "bg_flood\\flow_gpu.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\flow_gpu.py",
+      "sha256": "e4e46bd6547a03e89bae0d802c2d1122f0d1faf8b11cd298df6a7f57354e73c7"
+    },
+    "bg_flood\\forcing.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\forcing.py",
+      "sha256": "8b97f09228e1f8c1cea16121e2e192d26447e04eeea646d6d7e141865a2da3bd"
+    },
+    "bg_flood\\forcing_update.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\forcing_update.py",
+      "sha256": "49b3dd4cc0c0f2c3226c00618ae819dc0052e830ef985e03a2ba1703b466c50c"
+    },
+    "bg_flood\\friction.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\friction.py",
+      "sha256": "3ea77e55ff1d4cace8c619677fd69ee7c31543ab6b9ec6d81811c9d2871da037"
+    },
+    "bg_flood\\gpu_backend.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\gpu_backend.py",
+      "sha256": "18cfa0815627f7d98e8aea6e0559a930a0e897d4bd7c033e386bd733ac870c96"
+    },
+    "bg_flood\\gradients.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\gradients.py",
+      "sha256": "10bc8a96b2c527a8fc0bbea84edc7adffd3b0ed9c869bcc449039d6944b0348c"
+    },
+    "bg_flood\\halo.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\halo.py",
+      "sha256": "443b134a23ab99cb6e016fb4262cfb45b4cd225c8fefc8c30f6aaadef3a4851e"
+    },
+    "bg_flood\\init_evolv.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\init_evolv.py",
+      "sha256": "fa7f83a42fcf2824addb453706d763af4e967c99befd1005d02a9f0da888a35f"
+    },
+    "bg_flood\\initial_conditions.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\initial_conditions.py",
+      "sha256": "c99babc083cfa98611591de434ecf9eaff6bf2b99008c56c2c90b17de83c244c"
+    },
+    "bg_flood\\input.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\input.py",
+      "sha256": "3ba7f9a57b44cdc4571690a8c882b12b580816a3a6471bef1655698d6ef8187d"
+    },
+    "bg_flood\\kurganov.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\kurganov.py",
+      "sha256": "c2979e79ec2de264c3d3204d48a560f283a8eb9a1e7ad32df16aeb904a9bf725"
+    },
+    "bg_flood\\mainloop.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\mainloop.py",
+      "sha256": "14799c096b00c97c9842707f8e932a74844931c9f8482a3a00b348d94e2313e5"
+    },
+    "bg_flood\\meanmax.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\meanmax.py",
+      "sha256": "34fbf1c74e0dd25242e18cb6a9a521fbfa9be22999cc02d5e74f0e6cbf019712"
+    },
+    "bg_flood\\mesh.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\mesh.py",
+      "sha256": "df5c4c1c3961812ec17bc11afb696771137dcdec290eb7c6758b88e376328351"
+    },
+    "bg_flood\\model.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\model.py",
+      "sha256": "8f56ebc845e38158e6eb0352f70e94f3ac8b13c5e98cfade580576a7fe61fce9"
+    },
+    "bg_flood\\param.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\param.py",
+      "sha256": "60fcfd45b25a57ab509497e03d30fadda472b444297cf80d5fa7b63032681307"
+    },
+    "bg_flood\\read_forcing.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\read_forcing.py",
+      "sha256": "0758f81fec8e9b100418c302277eb235f5996768b88ddd6af32db5c33bde71a7"
+    },
+    "bg_flood\\read_input.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\read_input.py",
+      "sha256": "7f4563c2b53d3af3ff0a9c00b4313a94c7aa41907cceebe12ffa29f5672e4651"
+    },
+    "bg_flood\\updateforcing.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\updateforcing.py",
+      "sha256": "b5a67ef98e281c539f507973388d4bf80941ec0cc4326bc4fd6fba7422a86311"
+    },
+    "bg_flood\\utils.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\utils.py",
+      "sha256": "b341301767d39feeb63e25b09a1ff8a91cdb940ed9abae7208bc3a68bbbe46b2"
+    },
+    "bg_flood\\write_output.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\write_output.py",
+      "sha256": "8d33463448a4b346cfac8bc5e3d17e1f556d6afae58cff9d59d96682147cc662"
+    },
+    "bg_flood\\write_txtlog.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\write_txtlog.py",
+      "sha256": "f114f7077e193cf2abd4606fba3b735ab09185aafcd34becfc829ec0d7d0e8e3"
+    },
+    "run_bgflood.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\run_bgflood.py",
+      "sha256": "4d599a53bbb04c02b05726b0353bc83900400c097c4886afba0db60f7fa3c2e2"
+    }
+  },
+  "forcing": {
+    "river_ba_ha": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_BaHa_Nov2021_V40_sync.txt",
+      "sha256": "c756075697ab44ca5341fc45b1dd892e680e2360fea1247351ad953028cfaede"
+    },
+    "river_ban_thach": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_BanThach_V43.txt",
+      "sha256": "bb81bfbda9deb4fad66f81d357c00ac22bff513fd40b08fb892c8d6cf5da6a88"
+    },
+    "river_ky_lo": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_KyLo_V40_sync.txt",
+      "sha256": "c53c460fda3d97ee839b6f95f891854f7d4d4e88e179e9fd30006fec3f5a7bb5"
+    },
+    "river_tuy_an": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_TuyAn_V40_sync.txt",
+      "sha256": "07a8fd949965e35ec682acdd652b13e436bbd24539367facb9a030794c72e61e"
+    },
+    "rainfall": {
+      "path": "D:\\VTP\\Scenarios\\rain_v34_era5_x2.txt",
+      "sha256": "02e569860a840fdccc3f36efbd4fa3096bed11acedb1be480252f0d8b6f5184e"
+    },
+    "initial_loss": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\il_30m_V36.asc",
+      "sha256": "3f7f0d59f09b69efdb7bf928e0075104e5357ad183a882f83de854184a95083f"
+    },
+    "continuous_loss": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\cl_30m_V36.asc",
+      "sha256": "8ac18cdd54dc36c6b0c9c1745ccf1cac9d9baf1b5ba5096551f9ded5df46002b"
+    },
+    "manning": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_manning_30m_V43.asc",
+      "sha256": "d2ecf20017cb70d747ba2820075edc1dc0229bbc98dfa1eb4d2922113a34aab3"
+    }
+  },
+  "parameters": {
+    "dx_m": 30,
+    "dy_m": 30,
+    "frictionmodel": -1,
+    "boundaries": {
+      "left": 0,
+      "right": 2,
+      "top": 2,
+      "bottom": 2
+    },
+    "endtime_s": 432000,
+    "outputtimestep_s": 10800,
+    "outvars": [
+      "zs",
+      "h",
+      "zb",
+      "u",
+      "v"
+    ],
+    "rainunits": "m/s"
+  },
+  "run_epoch_utc": "2021-11-25T17:00:00Z",
+  "run_epoch_local": "2021-11-26T00:00:00+07:00",
+  "sentinel1": {
+    "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.tif",
+    "sha256": "9c1ad68908c220456c82a2459380e14193242a3daa32c0001989c4ffd8292db6",
+    "acquisition_midpoint_utc": "2021-11-29T22:36:51.298763Z",
+    "interpretation": "Held out from the V48 conditioning pipeline / retrospective confirmatory comparison. This preregistration does not claim fully independent external validation because the 2021 SAR event was viewed in earlier V39-V45 work.",
+    "wet_depth_threshold_m": 0.3,
+    "permanent_water_threshold": 0.5,
+    "hand_validity_rule": "HAND >= 0.0 m",
+    "frame_selection_rule": {
+      "observation_time": "Use the midpoint of the lineage-verified Sentinel acquisition start/stop times in UTC.",
+      "elapsed_time": "t_obs_s = observation_midpoint_utc - frozen_bg_flood_run_epoch_utc.",
+      "frame_choice": "Choose the available model output frame minimizing abs(t_frame_s - t_obs_s). On an exact tie, choose the earlier frame.",
+      "maximum_allowed_offset_s": 5400,
+      "block_if_offset_exceeds_limit": true,
+      "preselected_frame_index": null,
+      "preselected_elapsed_s": null
+    },
+    "metrics": {
+      "contingency": [
+        "TP",
+        "FP",
+        "FN",
+        "TN"
+      ],
+      "precision": "TP / (TP + FP)",
+      "recall": "TP / (TP + FN)",
+      "csi_iou": "TP / (TP + FP + FN)",
+      "f1": "2 * precision * recall / (precision + recall)",
+      "observed_area_km2": "(TP + FN) * 0.0009",
+      "simulated_area_km2": "(TP + FP) * 0.0009",
+      "area_bias": "(simulated_area_km2 - observed_area_km2) / observed_area_km2"
+    }
+  },
+  "existing_base_result": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\results\\V48_FORMAL_BASE_R1.nc",
+    "exists": true,
+    "sha256": "4d28b9db6379563b281f42411f4da7c0ac09b2ed02344e85a43e5fbdb20b5a5d",
+    "frame_count": 35,
+    "first_time_s": 10800.5732421875,
+    "last_time_s": 378000.03125,
+    "last_time_h": 105.00000868055555,
+    "frame_33_available": true,
+    "frame_33_time_s": 367200.125,
+    "complete_to_120h": false
+  },
+  "metric_availability": {
+    "sentinel1_extent": "AVAILABLE_FOR_BASE_NOW; PENDING_NEW_RUNS_FOR_CENTRAL_LOW_HIGH",
+    "gauge_wse_timing": "UNAVAILABLE_NO_VERIFIED_SERIES_WITH_DATUM_AND_LINEAGE",
+    "surveyed_high_water_marks": "UNAVAILABLE_NO_VERIFIED_LOCAL_DATASET",
+    "known_wet_dry_points": "UNAVAILABLE_NO_FROZEN_OBSERVATION_SET",
+    "velocity_sanity": "PENDING_MATCHED_RUNS",
+    "mass_balance": "PENDING_MATCHED_RUNS"
+  },
+  "execution_note": "Preparation does not launch CENTRAL/LOW/HIGH BG_Flood simulations. The existing BASE result reaches about 105 h and contains the preregistered Sentinel-1 comparison frame, but is not a complete 120 h formal run.",
+  "preparation_pass": true
+}

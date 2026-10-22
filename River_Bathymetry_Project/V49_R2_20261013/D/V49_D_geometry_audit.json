@@ -1,0 +1,113 @@
+{
+  "schema_version": "V49-D-geometry-1",
+  "config": {
+    "width_sample_count": 9,
+    "profile_sample_count": 21,
+    "tangent_half_window_m": 45.0,
+    "cross_section_half_length_m": 2500.0,
+    "max_cross_section_distance_m": 75.0,
+    "bank_outward_offset_m": 30.0,
+    "min_width_m": 5.0,
+    "max_width_m": 4000.0,
+    "min_slope": 1e-05,
+    "max_slope": 0.02,
+    "confluence_bed_tolerance_m": 0.75,
+    "structure_context_distance_m": 300.0,
+    "manning_uncertainty_low_factor": 0.5,
+    "manning_uncertainty_high_factor": 1.7,
+    "powerlaw_uncertainty_low_factor": 0.4,
+    "powerlaw_uncertainty_high_factor": 1.8,
+    "tidal_uncertainty_low_factor": 0.35,
+    "tidal_uncertainty_high_factor": 2.0
+  },
+  "inputs": {
+    "hydrograph": "D:\\VTP\\River_Bathymetry_Project\\V49_B_20261012\\V49_hydrograph.gpkg",
+    "classification": "D:\\VTP\\River_Bathymetry_Project\\V49_R2_20261013\\C\\V49_waterbody_classification.gpkg",
+    "dem": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif"
+  },
+  "source_hashes": {
+    "dem_expected_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+  },
+  "dem_unchanged": true,
+  "dem_modified_pixel_count_in_v49_d": 0,
+  "reach_count": 370,
+  "hydrorivers_reach_count": 368,
+  "v49c_eligible_reach_count": 91,
+  "geometry_authorized_for_v49e_count": 2,
+  "review_queue_count": 89,
+  "tidal_review_only_reach_count": 71,
+  "legacy_canal_review_only_count": 2,
+  "width_evidence_quality_counts_eligible": {
+    "INDIRECT_VERY_LOW": 43,
+    "DIRECT_BUT_MORPHOLOGY_AMBIGUOUS": 46,
+    "DIRECT_LOW": 2
+  },
+  "authorization_reason_counts_eligible": {
+    "WIDTH_EVIDENCE_NOT_DIRECT_ENOUGH_FOR_AUTOMATIC_V49E_INPUT": 18,
+    "TIDAL_BACKWATER_REQUIRES_GVF_OR_MARINE_CONTROL": 69,
+    "V49C_RIVER + traceable width/depth evidence; candidate input for V49-E": 2,
+    "V49C_NO_ACCEPTED_CANAL; legacy canal candidate remains review-only": 2
+  },
+  "depth_method_counts_all": {
+    "POWERLAW_HYDROMT_QMEAN_QA_PRIOR_ONLY": 279,
+    "POWERLAW_HYDROMT_QMEAN_PROXY": 5,
+    "POWERLAW_HYDROMT_QMEAN_TIDAL_PRIOR_ONLY": 69,
+    "MANNING_RECTANGULAR_QMEAN_PROXY": 7,
+    "POWERLAW_HYDROMT_QMEAN_PROXY_MANNING_REJECTED": 8,
+    "UNRESOLVED_LEGACY_CANAL_REQUIRES_INDEPENDENT_GEOMETRY": 2
+  },
+  "depth_method_counts_authorized": {
+    "MANNING_RECTANGULAR_QMEAN_PROXY": 1,
+    "POWERLAW_HYDROMT_QMEAN_PROXY_MANNING_REJECTED": 1
+  },
+  "uncertainty_class_counts_authorized": {
+    "HIGH": 1,
+    "VERY_HIGH": 1
+  },
+  "authorized_width_percentiles_m": {
+    "p01": 60.816082653686735,
+    "p05": 64.07246366016949,
+    "p25": 80.35436869258322,
+    "p50": 100.70674998310038,
+    "p75": 121.05913127361754,
+    "p95": 137.34103630603127,
+    "p99": 140.597417312514
+  },
+  "authorized_depth_percentiles_m": {
+    "p01": 0.17729155156812573,
+    "p05": 0.18524750221281144,
+    "p25": 0.22502725543623997,
+    "p50": 0.27475194696552563,
+    "p75": 0.3244766384948113,
+    "p95": 0.3642563917182398,
+    "p99": 0.3722123423629255
+  },
+  "authorized_q_proxy_percentiles_cms": {
+    "p01": 0.5062800000000001,
+    "p05": 1.5834000000000001,
+    "p25": 6.969,
+    "p50": 13.700999999999999,
+    "p75": 20.433,
+    "p95": 25.818599999999996,
+    "p99": 26.895719999999997
+  },
+  "distribution_outlier_reach_ids": [],
+  "confluence_count": 168,
+  "confluence_state_counts": {
+    "OUTSIDE_FULL_V49D_CARVING_SCOPE": 124,
+    "CONTROL_CONTEXT_TIDAL_REVIEW": 44
+  },
+  "unresolved_authorized_confluence_inversion_count": 0,
+  "unresolved_authorized_confluence_node_ids": [],
+  "scientific_limits": [
+    "No surveyed cross-section or bathymetric dataset was available in the V49 input bundle.",
+    "HydroRIVERS DIS_AV_CMS is mean discharge and is not bankfull discharge.",
+    "Copernicus DEM provides surface/terrain elevation proxy over water and is not river-bed elevation.",
+    "Generic Manning n is a prior and is not site-calibrated.",
+    "Tidal/backwater reaches require GVF/marine boundary evidence before V49-E carving."
+  ],
+  "legacy_fixed_depths_used": false,
+  "gate_d_preliminary_status": "PASS"
+}

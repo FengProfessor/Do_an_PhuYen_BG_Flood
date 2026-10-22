@@ -1,0 +1,155 @@
+{
+  "schema": "V49-interrupted-result-salvage-1",
+  "analysis_created_utc": "2026-10-14T05:39:40.563107+00:00",
+  "status": "PARTIAL_FRAMES_RECOVERED_NOT_GATE_G",
+  "power_loss_reported_by_user": true,
+  "preservation_files": 16,
+  "all_preserved_hashes_verified": true,
+  "frozen_input_files_verified": 22,
+  "original_central_sha256": "ab4fe8ea2ae35b71b201d088c40102ce5834d2971064da53652534a1ae26ac64",
+  "historical_base_sha256": "4d28b9db6379563b281f42411f4da7c0ac09b2ed02344e85a43e5fbdb20b5a5d",
+  "normalized_historical_base_and_central_configs_match": true,
+  "available_frame_count": 11,
+  "verified_frame_count": 11,
+  "failed_frame_checks": [],
+  "last_saved_time_s": 118800.4453125,
+  "last_saved_time_h": 33.00012369791666,
+  "last_saved_event_time_UTC7": "2021-11-27T09:00:00.445312+07:00",
+  "last_logged_time_s": 127444.14,
+  "last_logged_time_h": 35.40115,
+  "unsaved_tail_s": 8643.6946875,
+  "unsaved_tail_h": 2.4010263020833333,
+  "log_end_progress_pct": 29.500958333333333,
+  "saved_end_progress_pct": 27.50010308159722,
+  "sar_required_time_s": 365811.298763,
+  "sar_required_time_h": 101.61424965638889,
+  "sar_frame_available": false,
+  "complete_to_120h": false,
+  "LOW_HIGH_new_BASE_status": "NOT_STARTED",
+  "exact_restart_checkpoint_available": false,
+  "variable_inventory": {
+    "time": {
+      "dtype": "float32",
+      "dimensions": [
+        "time"
+      ]
+    },
+    "x": {
+      "dtype": "float64",
+      "dimensions": [
+        "x"
+      ]
+    },
+    "y": {
+      "dtype": "float64",
+      "dimensions": [
+        "y"
+      ]
+    },
+    "spatial_ref": {
+      "dtype": "int32",
+      "dimensions": []
+    },
+    "zs": {
+      "dtype": "float32",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ]
+    },
+    "h": {
+      "dtype": "float32",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ]
+    },
+    "zb": {
+      "dtype": "float32",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ]
+    },
+    "u": {
+      "dtype": "float32",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ]
+    },
+    "v": {
+      "dtype": "float32",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ]
+    }
+  },
+  "recomputed_budget_unexplained_residual_m3": 7.501512300223112e-06,
+  "budget_snapshot_time_h": 35.39954113326463,
+  "budget_snapshot_is_at_last_saved_frame": false,
+  "last_saved_metrics": {
+    "frame": 10,
+    "time_s": 118800.4453125,
+    "time_h": 33.00012369791666,
+    "base_frame": 10,
+    "base_time_s": 118800.3984375,
+    "pair_offset_s": 0.046875,
+    "all_variables_finite_on_domain": true,
+    "negative_depth_cells": 0,
+    "depth_at_100m_cap_cells": 0,
+    "wse_bed_depth_max_abs_error_m": 6.103515625e-05,
+    "central_volume_all_m3": 1456479061.7808988,
+    "central_volume_outside_ocean_m3": 642120609.4064248,
+    "central_wet_area_outside_ocean_km2": 337.9788,
+    "central_temporary_water_candidate_km2": 269.4096,
+    "base_temporary_water_candidate_km2": 269.4132,
+    "wet_status_changed_candidate_km2": 0.0882,
+    "central_max_depth_outside_ocean_m": 12.191717147827148,
+    "speed_max_m_s": 20.452205657958984,
+    "speed_p99_wet_m_s": 3.845006847381578,
+    "depth_difference_max_abs_m": 0.546475856564939,
+    "depth_difference_mean_abs_outside_ocean_m": 4.616035399976143e-05,
+    "depth_difference_gt_1mm_outside_ocean_cells": 18286,
+    "depth_difference_gt_1cm_outside_ocean_cells": 2603
+  },
+  "max_frame_pair_offset_s": 0.0546875,
+  "last_frame_local_metrics": [
+    {
+      "frame": 10,
+      "time_h": 33.00012369791666,
+      "reach_id": "HR_41349822",
+      "aoi_cells": 5483,
+      "aoi_area_km2": 4.9347,
+      "central_wet_area_km2": 1.179,
+      "base_wet_area_km2": 1.1799,
+      "central_max_depth_m": 9.833624839782715,
+      "depth_difference_max_abs_m": 0.47453927993774414,
+      "depth_difference_mean_abs_m": 0.0017117861463190975,
+      "depth_difference_gt_1mm_cells": 341
+    },
+    {
+      "frame": 10,
+      "time_h": 33.00012369791666,
+      "reach_id": "HR_41352752",
+      "aoi_cells": 1858,
+      "aoi_area_km2": 1.6722,
+      "central_wet_area_km2": 0.1026,
+      "base_wet_area_km2": 0.1017,
+      "central_max_depth_m": 1.635054111480713,
+      "depth_difference_max_abs_m": 0.1300739124417305,
+      "depth_difference_mean_abs_m": 0.0023338513231761825,
+      "depth_difference_gt_1mm_cells": 157
+    }
+  ],
+  "analysis_mask_area_km2": 3130.803,
+  "scope": "Exploratory early-event numerical and terrain sensitivity; no Sentinel score or surveyed bathymetry validation",
+  "gate_g_pass": false,
+  "hydraulic_promotion_ready": false
+}

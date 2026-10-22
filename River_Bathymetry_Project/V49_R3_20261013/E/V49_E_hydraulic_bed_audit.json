@@ -1,0 +1,113 @@
+{
+  "schema_version": "V49-E-hydraulic-bed-1",
+  "inputs": {
+    "geometry": "V49_R3_20261013\\D\\V49_reach_geometry.gpkg",
+    "c1_gate": "V49_R3_20261013\\C1\\V49_C1_v49e_reach_gate.csv",
+    "c1_evidence": "V49_R3_20261013\\C1\\V49_C1_fixed_water_evidence.gpkg",
+    "graph": "D:\\VTP\\River_Bathymetry_Project\\V49_B_20261012\\V49_hydrograph.gpkg",
+    "source_dem": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+    "legacy_network_for_protected_mask": "D:\\VTP\\River_Bathymetry_Project\\river_network_data.npz"
+  },
+  "source_hashes": {
+    "dem_expected_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "dem_sha256_before": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "dem_sha256_after": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "output_dem_sha256": "181115942dc88a95503a1e193b2f90149e918b6f8354a262085b293e11df2552",
+    "delta_z_sha256": "a9402641059853cd574deda213440e88fb0a84f32928da880590fcc175898980"
+  },
+  "source_dem_unchanged": true,
+  "authorized_reach_ids": [
+    "HR_41349822",
+    "HR_41352752"
+  ],
+  "authorized_reach_count": 2,
+  "modified_pixel_count": 72,
+  "authorized_mask_pixel_count": 73,
+  "outside_authorized_mask_modified_pixel_count": 0,
+  "protected_structure_pixel_count": 187,
+  "protected_structure_modified_pixel_count": 0,
+  "total_lowering_volume_m3": 8008.209228515625,
+  "max_lowering_m": 0.37420654296875,
+  "modification_by_reach": [
+    {
+      "reach_id": "HR_41349822",
+      "water_class": "RIVER_STREAM",
+      "modified_pixel_count": 23,
+      "modified_area_m2": 20700.0,
+      "lowering_volume_m3": 3944.1192626953125,
+      "max_lowering_m": 0.37420654296875,
+      "mean_lowering_modified_m": 0.19053716957569122,
+      "depth_est_m": 0.37420133002409695,
+      "uncertainty_class": "HIGH",
+      "v49c_object_ids": "W20_0055 | W20_0061"
+    },
+    {
+      "reach_id": "HR_41352752",
+      "water_class": "RIVER_STREAM",
+      "modified_pixel_count": 49,
+      "modified_area_m2": 44100.0,
+      "lowering_volume_m3": 4064.0899658203125,
+      "max_lowering_m": 0.17529296875,
+      "mean_lowering_modified_m": 0.09215623140335083,
+      "depth_est_m": 0.1753025639069543,
+      "uncertainty_class": "VERY_HIGH",
+      "v49c_object_ids": "W20_0079"
+    }
+  ],
+  "reach_trace": [
+    {
+      "reach_id": "HR_41349822",
+      "water_class": "RIVER_STREAM",
+      "width_m": 60.00198740206605,
+      "depth_est_m": 0.37420133002409695,
+      "depth_low_m": 0.18710066501204847,
+      "depth_high_m": 0.6361422610409648,
+      "selected_depth_field": "depth_est_m",
+      "selected_depth_m": 0.37420133002409695,
+      "bed_upstream_m": 163.6257986699759,
+      "bed_downstream_m": 144.00464388481964,
+      "corridor_and_class_pixel_count": 23,
+      "class_mask_pixel_count": 97,
+      "thalweg_pixel_count": 10,
+      "modified_pixel_count_premerge": 23,
+      "max_lowering_m_premerge": 0.37420132756233215,
+      "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+      "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+    },
+    {
+      "reach_id": "HR_41352752",
+      "water_class": "RIVER_STREAM",
+      "width_m": 141.4115125641347,
+      "depth_est_m": 0.1753025639069543,
+      "depth_low_m": 0.07012102556278173,
+      "depth_high_m": 0.3155446150325178,
+      "selected_depth_field": "depth_est_m",
+      "selected_depth_m": 0.1753025639069543,
+      "bed_upstream_m": 270.32564348101494,
+      "bed_downstream_m": 257.3836879146087,
+      "corridor_and_class_pixel_count": 50,
+      "class_mask_pixel_count": 85,
+      "thalweg_pixel_count": 15,
+      "modified_pixel_count_premerge": 50,
+      "max_lowering_m_premerge": 0.17530256509780884,
+      "longitudinal_method": "LOCAL_DEM_SURFACE_MINUS_V49D_REACH_DEPTH_NO_GLOBAL_MONOTONIC_FILTER",
+      "lateral_method": "RAISED_COSINE_CENTRAL_WIDTH"
+    }
+  ],
+  "forced_longitudinal_adjustment_count": 0,
+  "global_monotonic_filter_used": false,
+  "legacy_named_branch_depth_used": false,
+  "confluence_check_count": 2,
+  "confluence_state_counts": {
+    "PASS_NO_UNEXPLAINED_BED_INVERSION": 2
+  },
+  "unresolved_confluence_count": 0,
+  "gate_e_preliminary_status": "PASS",
+  "scientific_limits": [
+    "V49-E modifies only the two reaches currently admitted by C.1 ∩ D; all other reaches remain unchanged.",
+    "Within an admitted reach, V49-E modifies only cells that also lie inside its associated C.1 CONFIRMED_PERSISTENT water-object polygons.",
+    "V49-D bed inputs are inferred from surface/terrain and discharge proxies, not surveyed bathymetry.",
+    "The 30 m raster limits representation of narrow lateral tapers; the continuous raised-cosine function is sampled at cell centers.",
+    "No global monotonic correction is applied; documented hydraulic controls and pre-existing lower terrain are not erased."
+  ]
+}

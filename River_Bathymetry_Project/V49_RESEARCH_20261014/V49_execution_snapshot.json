@@ -1,0 +1,32 @@
+{
+  "schema_version": "V49-G-execution-1",
+  "status": "RUNNING",
+  "started_at_utc": "2026-10-13T00:37:09.123131+00:00",
+  "supervisor_pid": 12616,
+  "worker_pid": 4040,
+  "queue": [
+    "LOW",
+    "HIGH",
+    "BASE"
+  ],
+  "runs": {
+    "CENTRAL": {
+      "status": "RUNNING",
+      "started_at_utc": "2026-10-13T00:37:13.984873+00:00",
+      "log": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL_run.log",
+      "result": "D:\\VTP\\River_Bathymetry_Project\\V49_G_20261013\\results\\V49_G_CENTRAL.nc",
+      "config_sha256": "50cad104e5d5134d665e052c82bf7b876971105de2d295c5eb67abacc7555892",
+      "progress": {
+        "simulated_time_s": 109503.74,
+        "endtime_s": 432000.0,
+        "progress_pct": 25.348087962962964,
+        "dt_s": 0.5049,
+        "engine_elapsed_s": 80076.7
+      }
+    }
+  },
+  "execution_policy": "One CUDA run at a time; original 105h BASE retained; new BASE completes 120h",
+  "hydraulic_promotion_ready": false,
+  "active_arm": "CENTRAL",
+  "updated_at_utc": "2026-10-13T22:55:50.351088+00:00"
+}

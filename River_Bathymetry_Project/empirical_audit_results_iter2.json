@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "checks": {
+    "base_dem_sha256": {
+      "pass": true,
+      "actual": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+      "expected": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+    },
+    "dong_cam_weir": {
+      "cell_count": 187,
+      "rows": [
+        1272,
+        1288
+      ],
+      "cols": [
+        1212,
+        1222
+      ],
+      "overlap_corridor_cells": 187,
+      "overlap_thalweg_cells": 11,
+      "crossing_node": [
+        1278,
+        1217
+      ],
+      "crossing_z": 5.5,
+      "crossing_jrc": 70,
+      "crossing_osm": 0.0,
+      "z_min": 5.5,
+      "z_max": 8.121676445007324,
+      "z_mean": 5.8978095054626465,
+      "z_median": 5.5,
+      "pass": true
+    },
+    "8_connectivity": {
+      "song_ba": {
+        "node_count": 2517,
+        "step_count": 2516,
+        "min_step": 1,
+        "max_step": 1,
+        "gaps": 0,
+        "zero_steps": 0,
+        "duplicates": 0,
+        "uncontained_branch": 0,
+        "pass": true
+      },
+      "song_ban_thach": {
+        "node_count": 2195,
+        "step_count": 2194,
+        "min_step": 1,
+        "max_step": 1,
+        "gaps": 0,
+        "zero_steps": 0,
+        "duplicates": 0,
+        "uncontained_branch": 0,
+        "pass": true
+      },
+      "song_ky_lo": {
+        "node_count": 1475,
+        "step_count": 1474,
+        "min_step": 1,
+        "max_step": 1,
+        "gaps": 0,
+        "zero_steps": 0,
+        "duplicates": 0,
+        "uncontained_branch": 0,
+        "pass": true
+      },
+      "kenh_chinh_bac": {
+        "node_count": 560,
+        "step_count": 559,
+        "min_step": 1,
+        "max_step": 1,
+        "gaps": 0,
+        "zero_steps": 0,
+        "duplicates": 0,
+        "uncontained_branch": 0,
+        "pass": true
+      },
+      "kenh_chinh_nam": {
+        "node_count": 995,
+        "step_count": 994,
+        "min_step": 1,
+        "max_step": 1,
+        "gaps": 0,
+        "zero_steps": 0,
+        "duplicates": 0,
+        "uncontained_branch": 0,
+        "pass": true
+      }
+    },
+    "ban_thach_corridor": {
+      "mask_cells": 34372,
+      "mask_area_km2": 30.9348,
+      "diff_from_34372": 0,
+      "num_connected_components": 1,
+      "thalweg_components": [
+        1
+      ],
+      "upstream_cells_col_lt_600": 8280,
+      "pass": true
+    },
+    "kenh_chinh_bac": {
+      "inflow": [
+        1270,
+        1217
+      ],
+      "outlet": [
+        975,
+        1402
+      ],
+      "dry_cells_count": 0,
+      "mean_osm_dist": 2.2274645532880513,
+      "max_osm_dist": 161.55494689941406,
+      "pass": true
+    }
+  },
+  "verdict": "APPROVE"
+}

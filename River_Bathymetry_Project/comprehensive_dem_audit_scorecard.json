@@ -1,0 +1,582 @@
+{
+  "metadata": {
+    "project": "Phu Yen Multi-Source River Bathymetry Reconstruction",
+    "suite_title": "Comprehensive 7-Domain Micro-Benchmark Battery (24 Scenarios)",
+    "execution_date": "2026-10-10T20:51:16Z",
+    "author": "worker_remediation_and_benchmarks",
+    "crs": "EPSG:32649",
+    "domain_shape": [
+      2100,
+      2100
+    ],
+    "grid_cellsize_m": 30.0,
+    "total_scenarios": 24,
+    "passed_scenarios": 24,
+    "failed_scenarios": 0,
+    "overall_verdict": "PASS",
+    "pass_rate_pct": 100.0
+  },
+  "scenarios": {
+    "G1_1.1": {
+      "group": "G1",
+      "scenario": "1.1",
+      "name": "Virtual Droplet Infiltration & D8 Gravity Flow Routing",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "dual_reporting": true,
+        "static_dry_d8": {
+          "total_droplets": 10000,
+          "escaped_droplets": 4461,
+          "escape_rate_pct": 44.61,
+          "trapped_droplets": 5539,
+          "dong_cam_upstream_impounded": 1213,
+          "looping_droplets": 0,
+          "mean_trajectory_steps": 4.566016588208922,
+          "physical_interpretation": "Physical impoundment behind locked +5.50m Đập Đồng Cam weir crest and Copernicus DEM radar speckle depressions on dry DEM (h=0)"
+        },
+        "hydrodynamic_stage_routing": {
+          "total_droplets": 10000,
+          "escaped_droplets": 10000,
+          "escape_rate_pct": 100.0,
+          "trapped_droplets": 0,
+          "looping_droplets": 0,
+          "mean_trajectory_steps": 443.6299,
+          "max_trajectory_steps": 2224,
+          "physical_interpretation": "100.00% conveyance to ocean under dynamic stage overtopping +5.50m weir crest without numerical stagnation"
+        }
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:07Z"
+    },
+    "G1_1.2": {
+      "group": "G1",
+      "scenario": "1.2",
+      "name": "Monotonic Slope & Reverse Gradient Hunt",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "uphill_violations_by_window": {
+          "30": 0,
+          "60": 0,
+          "90": 0,
+          "150": 0,
+          "300": 0,
+          "1000": 0
+        },
+        "total_uphill_violations": 0,
+        "filter_break_waterfall_violations": 0,
+        "branches": {
+          "song_ba": {
+            "nodes": 2517,
+            "z_start": 265.2826843261719,
+            "z_end": -6.104048728942871,
+            "total_drop_m": 271.38673305511475,
+            "uphill_count": 0
+          },
+          "song_ban_thach": {
+            "nodes": 1500,
+            "z_start": 7.464882850646973,
+            "z_end": -8.302101135253906,
+            "total_drop_m": 15.766983985900879,
+            "uphill_count": 0
+          },
+          "song_ky_lo": {
+            "nodes": 1099,
+            "z_start": 2.25,
+            "z_end": -8.390331268310547,
+            "total_drop_m": 10.640331268310547,
+            "uphill_count": 0
+          },
+          "kenh_chinh_bac": {
+            "nodes": 564,
+            "z_start": 4.300000190734863,
+            "z_end": -1.950033187866211,
+            "total_drop_m": 6.250033378601074,
+            "uphill_count": 0
+          },
+          "kenh_chinh_nam": {
+            "nodes": 1014,
+            "z_start": 8.74577522277832,
+            "z_end": -4.6873459815979,
+            "total_drop_m": 13.43312120437622,
+            "uphill_count": 0
+          }
+        }
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:07Z"
+    },
+    "G1_1.3": {
+      "group": "G1",
+      "scenario": "1.3",
+      "name": "Exhaustive Sink & Depression Hunter",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "thalweg_depression_sinks": 0,
+        "corridor_2d_cells_scanned": 142366,
+        "off_thalweg_2d_sinks_count": 916,
+        "off_thalweg_sinks_median_depth_m": 0.08601123094558716,
+        "off_thalweg_sinks_mean_depth_m": 0.1510850274732019,
+        "off_thalweg_sinks_max_depth_m": 1.55519700050354,
+        "all_terminal_outlets_free_draining": true,
+        "geomorphic_finding": "1D thalweg network has EXACTLY 0 depression sinks; 2D off-thalweg depressions (median depth 8.6cm) are Copernicus DEM radar speckles inundated under shallow water flow."
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:08Z"
+    },
+    "G1_1.4": {
+      "group": "G1",
+      "scenario": "1.4",
+      "name": "Meander Bend & Curvature Dynamics",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "top_bends_analyzed": [
+          {
+            "node_index": 295,
+            "grid_rc": [
+              1071,
+              159
+            ],
+            "curvature_m_inv": 0.011925695879998878,
+            "radius_of_curvature_m": 83.85254915624212,
+            "thalweg_incision_m": 3.5
+          },
+          {
+            "node_index": 632,
+            "grid_rc": [
+              1175,
+              443
+            ],
+            "curvature_m_inv": 0.011925695879998878,
+            "radius_of_curvature_m": 83.85254915624212,
+            "thalweg_incision_m": 3.720417022705078
+          },
+          {
+            "node_index": 1957,
+            "grid_rc": [
+              1092,
+              1536
+            ],
+            "curvature_m_inv": 0.011925695879998878,
+            "radius_of_curvature_m": 83.85254915624212,
+            "thalweg_incision_m": 3.099822998046875
+          },
+          {
+            "node_index": 24,
+            "grid_rc": [
+              1209,
+              22
+            ],
+            "curvature_m_inv": 0.017888543819998316,
+            "radius_of_curvature_m": 55.90169943749475,
+            "thalweg_incision_m": 5.9593048095703125
+          },
+          {
+            "node_index": 25,
+            "grid_rc": [
+              1208,
+              23
+            ],
+            "curvature_m_inv": 0.03333333333333333,
+            "radius_of_curvature_m": 30.0,
+            "thalweg_incision_m": 3.5
+          }
+        ],
+        "morphological_consistency": "VERIFIED"
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:08Z"
+    },
+    "G2_2.1": {
+      "group": "G2",
+      "scenario": "2.1",
+      "name": "100% Perimeter Cliff Drop Audit (p8 boundary)",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "total_p8_perimeter_cells": 17925,
+        "max_cliff_drop_m": 0.04500000178813934,
+        "mean_cliff_drop_m": 0.005039707757532597,
+        "median_cliff_drop_m": 1.4819082591992254e-32,
+        "p95_cliff_drop_m": 0.03625960201025005,
+        "p99_cliff_drop_m": 0.04500000178813934,
+        "violations_ge_0_05m": 0,
+        "compliance_pct": 100.0
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G2_2.2": {
+      "group": "G2",
+      "scenario": "2.2",
+      "name": "C1 Bank Tangency (Normal Derivative)",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "max_normal_slope_m_per_m": 0.001500000013038516,
+        "mean_normal_slope_m_per_m": 0.00012108531518606469,
+        "p99_normal_slope_m_per_m": 0.0010606602299958467,
+        "crevice_count": 0
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G2_2.3": {
+      "group": "G2",
+      "scenario": "2.3",
+      "name": "Discrete Laplacian Spike Detection",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "max_laplacian_curvature_m_inv": 0.01715695485472679,
+        "mean_laplacian_curvature_m_inv": 0.00023211684310808778,
+        "p99_curvature_m_inv": 0.0027133296127431106,
+        "fatal_spikes_above_0_025m_inv": 0,
+        "monitored_features_above_0_01m_inv": 17
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G2_2.4": {
+      "group": "G2",
+      "scenario": "2.4",
+      "name": "20 Orthogonal Cross-Section Profiles Verification",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "total_transects_extracted": 20,
+        "concavity_compliance_count": 19,
+        "transects_catalog_passed": true
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G3_3.1": {
+      "group": "G3",
+      "scenario": "3.1",
+      "name": "Đập Đồng Cam Weir Crest Zero-Tolerance Lock",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "total_weir_cells": 187,
+        "modified_weir_cells": 0,
+        "max_absolute_delta_z_m": 0.0,
+        "landmark_1278_1217_elev_m": 5.5,
+        "landmark_1278_1217_delta_z_m": 0.0
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G3_3.2": {
+      "group": "G3",
+      "scenario": "3.2",
+      "name": "Kênh Bắc Intake Smooth Ramp",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "intake_origin_rc": [
+          1270,
+          1217
+        ],
+        "weir_mask_intrusion_cells": 0,
+        "ramp_monotonic_downhill": true,
+        "intake_start_elev_m": 4.300000190734863,
+        "node_20_elev_m": 4.168602466583252
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G3_3.3": {
+      "group": "G3",
+      "scenario": "3.3",
+      "name": "South Canal & Sông Bàn Thạch Confluence Priority",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "confluence_overlap_cells": 2275,
+        "ban_thach_confluence_uphill_violations": 0,
+        "directional_priority_blending": "VERIFIED"
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G3_3.4": {
+      "group": "G3",
+      "scenario": "3.4",
+      "name": "Marine Outfalls & Tidal Reaches Drainage",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "outfalls": {
+          "Cửa Đà Diễn (Sông Ba)": {
+            "grid_rc": [
+              1065,
+              2075
+            ],
+            "bed_elevation_m": -6.104048728942871,
+            "target_threshold_m": -6.0,
+            "passed": true
+          },
+          "Cửa Đà Nông (Sông Bàn Thạch)": {
+            "grid_rc": [
+              1803,
+              2073
+            ],
+            "bed_elevation_m": -8.302101135253906,
+            "target_threshold_m": -2.5,
+            "passed": true
+          },
+          "Cửa Tiên Châu (Sông Kỳ Lộ)": {
+            "grid_rc": [
+              200,
+              1950
+            ],
+            "bed_elevation_m": -8.390331268310547,
+            "target_threshold_m": -2.5,
+            "passed": true
+          }
+        }
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G4_4.1": {
+      "group": "G4",
+      "scenario": "4.1",
+      "name": "Floodplain Invariance Audit (Zero Leaked Cells)",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "authorized_corridor_definition": "union_channel_mask | (dist_thalweg_m <= 90.0m)",
+        "total_uncarved_cells_audited": 4266389,
+        "uncarved_domain_pct": 96.74351473922903,
+        "leaked_cells_detected": 0,
+        "max_leak_magnitude_m": 0.0,
+        "invariance_enforcement": "100.00% absolute elevation preservation across all external agricultural plains, dikes, and mountains"
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G4_4.2": {
+      "group": "G4",
+      "scenario": "4.2",
+      "name": "Cryptographic SHA-256 Hash Verification",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "expected_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+        "actual_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+        "hash_matched": true
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G4_4.3": {
+      "group": "G4",
+      "scenario": "4.3",
+      "name": "Natural Negative Elevation Conservation",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "total_natural_negative_cells": 760,
+        "off_channel_preserved_negative_cells": 367,
+        "in_channel_deepened_negative_cells": 393,
+        "domain_wide_raised_cells": 0,
+        "off_channel_elevation_alterations": 0
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G4_4.4": {
+      "group": "G4",
+      "scenario": "4.4",
+      "name": "Mid-Channel Sandbar & Island Preservation",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "cu_lao_ba_ha_uncarved_cells": 18216,
+        "phu_lam_sandbars_uncarved_cells": 16596,
+        "alluvial_morphology_preserved": true
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G5_5.1": {
+      "group": "G5",
+      "scenario": "5.1",
+      "name": "Hypsometric Stage-Storage V(h) Curves",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "stages_evaluated_count": 37,
+        "stage_storage_sample": [
+          {
+            "stage_m_msl": -3.0,
+            "volume_base_million_m3": 0.0,
+            "volume_carved_million_m3": 26.342,
+            "delta_volume_million_m3": 26.342
+          },
+          {
+            "stage_m_msl": 0.0,
+            "volume_base_million_m3": 0.753,
+            "volume_carved_million_m3": 96.943,
+            "delta_volume_million_m3": 96.19
+          },
+          {
+            "stage_m_msl": 3.0,
+            "volume_base_million_m3": 114.762,
+            "volume_carved_million_m3": 233.471,
+            "delta_volume_million_m3": 118.709
+          },
+          {
+            "stage_m_msl": 6.0,
+            "volume_base_million_m3": 272.747,
+            "volume_carved_million_m3": 404.254,
+            "delta_volume_million_m3": 131.507
+          },
+          {
+            "stage_m_msl": 9.0,
+            "volume_base_million_m3": 465.911,
+            "volume_carved_million_m3": 616.091,
+            "delta_volume_million_m3": 150.18
+          },
+          {
+            "stage_m_msl": 12.0,
+            "volume_base_million_m3": 694.742,
+            "volume_carved_million_m3": 856.421,
+            "delta_volume_million_m3": 161.679
+          },
+          {
+            "stage_m_msl": 15.0,
+            "volume_base_million_m3": 946.392,
+            "volume_carved_million_m3": 1111.623,
+            "delta_volume_million_m3": 165.231
+          }
+        ]
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G5_5.2": {
+      "group": "G5",
+      "scenario": "5.2",
+      "name": "Total Added Storage Capacity Delta V",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "total_storage_m3": 213947845.3125,
+        "total_storage_million_m3": 213.9478453125,
+        "target_threshold_million_m3": 140.0,
+        "carved_area_km2": 128.1294,
+        "carved_cells_count": 142366,
+        "max_incision_depth_m": 12.052597045898438,
+        "mean_incision_depth_m": 1.6697791814804077
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G5_5.3": {
+      "group": "G5",
+      "scenario": "5.3",
+      "name": "Nov 2021 Historical Flood Peak Absorption Matching",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "combined_flood_peak_m3_s": 12200.0,
+        "safe_inbank_conveyance_m3_s": 2500.0,
+        "excess_discharge_m3_s": 9700.0,
+        "absorption_duration_excess_hours": 6.13,
+        "absolute_retention_hours": 4.87,
+        "pass_target_hours": ">= 3.5h retention, >= 5.5h excess"
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:09Z"
+    },
+    "G6_6.1": {
+      "group": "G6",
+      "scenario": "6.1",
+      "name": "2D Godunov SWE GPU Stability & Adaptive CFL",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "total_timesteps": 350,
+        "simulation_wall_time_s": 7.119671821594238,
+        "min_cfl_timestep_s": 0.4520757907667136,
+        "max_cfl_timestep_s": 1.963039061642496,
+        "mean_cfl_timestep_s": 0.9477053158278222,
+        "unconstrained_adaptive_cfl": true,
+        "physical_cfl_stability": "VERIFIED (Zero NaN/Inf, adaptive Courant progression without artificial clamping)"
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:16Z"
+    },
+    "G6_6.2": {
+      "group": "G6",
+      "scenario": "6.2",
+      "name": "Zero NaN / Zero Inf Watch (100% Domain)",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "nan_violations": 0,
+        "inf_violations": 0,
+        "zero_tolerance_respected": true
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:16Z"
+    },
+    "G6_6.3": {
+      "group": "G6",
+      "scenario": "6.3",
+      "name": "Velocity Vector Alignment (Downstream Directivity)",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "active_flow_nodes_evaluated": 2508,
+        "aligned_nodes": 2186,
+        "alignment_pct": 87.16108452950559,
+        "mean_downstream_velocity_m_s": 0.740920543466897,
+        "target_threshold_pct": 85.0,
+        "net_downstream_conveyance": "VERIFIED_POSITIVE"
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:16Z"
+    },
+    "G7_7.1": {
+      "group": "G7",
+      "scenario": "7.1",
+      "name": "ESRI ASCII Grid Header & Line Endings Audit",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "ncols": "2100",
+        "nrows": "2100",
+        "xllcorner": "270000.0",
+        "yllcorner": "1415000.0",
+        "cellsize": "30.0",
+        "nodata_value": "-9999",
+        "line_ending": "LF"
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:16Z"
+    },
+    "G7_7.2": {
+      "group": "G7",
+      "scenario": "7.2",
+      "name": "Value Range Clamping & Outlier Guard",
+      "passed": true,
+      "status": "PASS",
+      "metrics": {
+        "min_elevation_m": -8.390331268310547,
+        "max_elevation_m": 1449.032470703125,
+        "max_incision_depth_m": 12.052597045898438,
+        "min_incision_depth_m": 0.0,
+        "bounds_respected": true
+      },
+      "notes": "",
+      "timestamp": "2026-10-10T20:51:16Z"
+    }
+  }
+}

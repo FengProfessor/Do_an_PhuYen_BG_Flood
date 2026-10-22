@@ -1,0 +1,33 @@
+{
+  "schema_version": "V49-evidence-dossier-1",
+  "inland_objects_documented": 80,
+  "objects_with_any_edited_cells": 3,
+  "actual_edited_water_cells": 72,
+  "actual_edited_water_area_km2": 0.0648,
+  "unknown_types": 32,
+  "objects_with_published_zfw_reference": 2,
+  "objects_with_single_capacity_reference": 6,
+  "published_relative_location_context": {
+    "readback_pass": true,
+    "location_count": 8,
+    "geometry_authorized": 0,
+    "edge_intersecting_object_ids": [
+      "W20_0028"
+    ]
+  },
+  "missing_graph_candidate_edges": 7,
+  "channel_objects_without_graph_within_90m": [
+    "W20_0004",
+    "W20_0008",
+    "W20_0011",
+    "W20_0062"
+  ],
+  "coarse_graph_alignment_review_objects": [
+    "W20_0032"
+  ],
+  "actual_raster_confluence_pairs": 343,
+  "hydraulic_geometry_complete": false,
+  "pixel_coverage_is_not_depth_validation": true,
+  "source_evidence_sha256": "c3697eaa5b3cc135ab22e6f1464f1a60b78702eaf64ca45aa846dbf3029912f6",
+  "source_e_bed_sha256": "181115942dc88a95503a1e193b2f90149e918b6f8354a262085b293e11df2552"
+}

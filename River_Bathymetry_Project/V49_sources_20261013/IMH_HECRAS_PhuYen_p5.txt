@@ -1,0 +1,57 @@
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+69
+Kết quả khảo sát các vết lũ thuộc địa phận 
+các xã thuộc huyện Tây Hòa, Đông Hòa, Phú Hòa 
+và các huyện ở dọc hai bên sông hạ lưu sông Ba 
+(Hình 3), sẽ được dùng để hiệu chỉnh mô hình 
+ngập lụt.
+3. Thiết lập mô hình
+3.1. Thiết lập mô hình Hec HMS
+Lưu vực sông Ba có diện tích 13.417 km2 
+được chia thành 36 tiểu lưu vực con (Hình 4), 
+lưu vực sông Bàn Thạch có diện tích 1.624 km2 
+được chia thành 9 tiểu lưu vực con (Hình 5) nhờ 
+công cụ HEC-GEO HMS trong mô hình Armap.
+Xác định dữ liệu đầu vào cho mô hình Hec 
+HMS 
+Dữ liệu đầu cho mô hình HEC-HMS bao gồm 
+dữ liệu mưa lưới bao trùm toàn bộ miền tính 
+của lưu vực sông Ba và sông Bàn Thạch. Mô hình 
+HEC-HMS để tính nhập lưu khu giữa cho mô 
+hình thủy lực từ sau hồ chứa Ba Hạ, sông Hinh, 
+sông Bàn Thạch ra đến cửa biển.
+Phạm vi của mưa lưới bao gồm 160 ô lưới 
+theo chiều ngang và 223 ô lưới theo chiều dọc 
+với kích thước ô lưới 1.000 m, vị trí góc trái 
+dưới là 175.000 m kinh độ Đông và 1.393.000 
+m vĩ độ Bắc theo hệ tọa độ Universal Transverse 
+Mercator (WGS 84), múi chiếu UMT 49N. Sử 
+dụng số liệu mưa lưới đồng hóa của trận lũ năm 
+2016 và năm 2021 là 2 năm gần đây nhất có lũ 
+lớn để tính toán dòng chảy lũ làm đầu vào cho 
+mô hình thủy lực.
+Hình 4. Mô hình Hec HMS thiết lập cho sông Ba
+Hình 5. Mô hình Hec HMS thiết lập cho sông Bàn Thạch
+3.2. Thiết lập mô hình Hec Ras 1D
+Phạm vi mô phỏng là sông chính phần hạ lưu 
+sông Ba từ sau hồ chứa thủy điện Ba Hạ ra đến 
+cửa sông Đà Diễn đoạn sông chính này có chiều 
+dài 69,65 km và sau hồ chứa thủy điện sông 
+Hinh đến nhập lưu với sông Ba dài 19,59 km, 
+phần hạ lưu sông Bàn Thạch dài 30,5 km ra đến 
+cửa sông Đà Nông. 
+Biên trên mô hình của sông Ba là quá trình 
+lưu lượng theo giờ xả ra từ hồ chứa thủy điện Ba 
+Hạ, hồ sông Hinh, biên trên của sông Bàn Thạch 
+và lưu lượng khu giữa sông Ba, sông Bàn Thạch 
+được tính toán từ mô hình HEC-HMS với mưa 
+lưới 1 km.
+Biên dưới là mực nước triều theo giờ tại cửa 
+sông Đà Diễn, Đà Nông được tính toán từ tương 
+quan truyền triều tại trạm triều Quy Nhơn. Sử 
+dụng mực nước tại trạm thủy văn trạm Phú Lâm 
+hiệu chỉnh, kiểm định quá trình mực nước. Sơ 
+đồ mạng thủy lực mô hình HEC-RAS sông Ba sau 
+khi thiết lập thể hiện ở Hình 6.
+Hình 6. Sơ đồ mạng thủy lực HEC RAS 1D sông Ba, sông Bàn Thạch

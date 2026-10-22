@@ -1,0 +1,79 @@
+{
+  "base_dem_sha256": {
+    "observed": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "expected": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "match": true
+  },
+  "weir_crest_invariance": {
+    "pass": true,
+    "weir_cell_count": 187,
+    "weir_max_abs_dz": 0.0,
+    "weir_sum_abs_dz": 0.0,
+    "weir_nonzero_cells": 0,
+    "crossing_node": {
+      "row": 1278,
+      "col": 1217,
+      "base_z": 5.5,
+      "carved_full_z": 5.5,
+      "carved_trial_z": 5.5,
+      "delta_z": 0.0
+    }
+  },
+  "floodplain_invariance": {
+    "pass": false,
+    "outside_channel_cells": 4270084,
+    "outside_max_abs_dz": 14.5,
+    "outside_nonzero_cells": 1404,
+    "min_delta_z": 0.0,
+    "raising_cells_dz_lt_0": 0,
+    "raising_cells_full": 0,
+    "max_diff_full_consistency": 1.4781951904296875e-05
+  },
+  "bank_tangency_cliff": {
+    "pass": true,
+    "total_carved_cells": 140780,
+    "perimeter_cells_8conn": 20008,
+    "max_cliff_m": 0.029999999329447746,
+    "min_cliff_m": 2.249655406282369e-35,
+    "mean_cliff_m": 0.00661644758656621,
+    "median_cliff_m": 1.8357314710495585e-32,
+    "p95_cliff_m": 0.029999999329447746,
+    "p99_cliff_m": 0.029999999329447746,
+    "count_ge_005m": 0,
+    "count_ge_001m": 5218,
+    "per_branch": {
+      "song_ba": {
+        "perimeter_cells": 7572,
+        "max_cliff_m": 0.029999999329447746,
+        "mean_cliff_m": 0.002926743123680353,
+        "count_ge_005m": 0
+      },
+      "song_ban_thach": {
+        "perimeter_cells": 5527,
+        "max_cliff_m": 0.029999999329447746,
+        "mean_cliff_m": 0.005179010331630707,
+        "count_ge_005m": 0
+      },
+      "song_ky_lo": {
+        "perimeter_cells": 3469,
+        "max_cliff_m": 0.029999999329447746,
+        "mean_cliff_m": 0.002528188982978463,
+        "count_ge_005m": 0
+      },
+      "kenh_chinh_bac": {
+        "perimeter_cells": 563,
+        "max_cliff_m": 0.029999999329447746,
+        "mean_cliff_m": 0.024357059970498085,
+        "count_ge_005m": 0
+      },
+      "kenh_chinh_nam": {
+        "perimeter_cells": 2292,
+        "max_cliff_m": 0.029999999329447746,
+        "mean_cliff_m": 0.023554429411888123,
+        "count_ge_005m": 0
+      }
+    }
+  },
+  "overall_verdict": "REQUEST_CHANGES",
+  "all_pass": false
+}

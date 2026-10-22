@@ -1,0 +1,805 @@
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+65
+ỨNG DỤNG MÔ HÌNH HEC-RAS MÔ PHỎNG NGẬP LỤT 
+CHO HẠ LƯU SÔNG BA 
+Lương Hữu Dũng, Lê Quốc Huy, Phan Văn Thành,
+Văn Thị Hằng, Trần Thanh Thủy, Nguyễn Văn Đại
+Viện Khoa học Khí tượng Thủy văn và Biến đổi khí hậu
+Ngày nhận bài: 28/3/2024; ngày chuyển phản biện: 29/3/2024; ngày chấp nhận đăng: 6/5/2024
+Tóm tắt: Bài báo giới thiệu một số kết quả tính toán ngập lụt hệ thống sông Ba tỉnh Phú Yên sử dụng bộ 
+mô hình HEC. Các số liệu lưu lượng đầu vào trên sông Ba mô phỏng từ mưa bằng mô hình HEC-HMS. Bộ 
+thông số mô hình kết nối 1-2 chiều HEC-RAS được hiệu chỉnh và kiểm định bằng số liệu thực đo mực nước 
+các trận lũ lớn các năm 2009, 2016, 2021 tại trạm Phú Lâm trên sông Ba kết hợp với các tài liệu đo đạc vết 
+lũ của trận lũ lớn năm 2021. Kết quả hiệu chỉnh kiểm định HEC-RAS cho thấy sai số đỉnh lũ nhỏ chỉ dưới 0,17 
+m, hình dạng quá trình lũ thực đo khá tương đồng về pha và độ lớn chứng tỏ khả năng ứng dụng của mô 
+hình trong công tác xây dựng bản đồ ngập lụt và cảnh báo thiên tai lũ lụt cho khu vực hạ lưu. Dựa trên kết 
+quả mô phỏng tốt các trận lũ lớn sẽ tiến hành tính toán mô phỏng cho các trận lũ với tần suất 1%, 3%, 5%, 
+10%, để đánh giá mức độ ngập lụt hạ lưu sông Ba, sông Bàn Thạch theo các kịch bản mưa lũ khác nhau. Kết 
+quả mô phỏng cho thấy ngập lụt xuất hiện ở các huyện Đông Hòa, Phú Hòa, Tây Hòa và TP. Tuy Hòa với các 
+mức độ và cấp ngập khác nhau, đặc biệt ngập lụt lớn có thể thấy ở khu vực huyện Đông Hòa với tần suất 1%. 
+Từ khóa: Bộ mô hình HEC, sông Ba, ngập lụt.
+1. Đặt vấn đề
+Lũ lụt miền Trung nói chung và trên lưu vực 
+sông Ba nói riêng là một trong những thiên 
+tai, thường xuyên đe dọa cuộc sống của người 
+dân và sự phát triển kinh tế xã hội trong vùng. 
+Theo thống kê, một số năm gần đây cho thấy 
+tình hình lũ lụt trên lưu vực ngày càng nghiêm 
+trọng với mức độ thiệt hại có xu hướng ngày 
+càng tăng một số trận lũ lớn xảy ra trên lưu vực 
+là các năm 1993, 2009, 2021. Chính vì vậy, xây 
+dựng mô hình diễn toán lũ mô phỏng ngập lụt 
+cho vùng hạ lưu sông Ba trong điều kiện hiện 
+trạng cũng như trong tương lai nhằm phục vụ 
+nâng cao hiệu quả quản lý vận hành hệ thống 
+công trình cắt giảm lũ, đồng thời đề xuất các giải 
+pháp thích ứng là rất cần thiết.
+Mô phỏng và dự báo ngập lụt có nhiều 
+phương pháp đang được sử dụng như: Mô hình 
+thủy lực 1 chiều, 2 chiều, mô hình thủy động lực 
+kết nối 1-2 chiều, mô hình thủy lực kết hợp với 
+mô hình thủy văn. Trong đó, nổi bật là mô hình 
+thủy lực kết nối 1-2 chiều như MIKE FLOOD, 
+HEC-RAS 1-2D, với ưu điểm như khắc phục được 
+sai số tính toán do yếu tố địa hình lòng sông (dữ 
+liệu đầu vào quan trọng ảnh hưởng trực tiếp 
+đến kết quả tính toán), chi tiết hóa chế độ thủy 
+động lực, các công trình trên cơ sở kết nối vùng 
+1 chiều với vùng 2 chiều. 
+Trong đó, một số bộ mô hình thủy lực phổ 
+biến như MIKE DHI được ứng dụng ở Việt Nam 
+là dạng mô hình thương mại với chi phí cao, khối 
+lượng tính toán lớn và cần có ứng dụng cụ thể 
+cho các khu vực nghiên cứu có tính chất đặc thù 
+riêng. Trong khi đó, bộ mô hình HEC là dạng mô 
+hình mã nguồn mở, dễ hiểu và ứng dụng trong 
+công tác nghiên cứu. Nghiên cứu ứng dụng bộ 
+mô hình HEC bao gồm HEC-GEOHMS, HEC-HMS, 
+HEC-RAS 1D, HEC-RAS 2D nhằm mô phỏng ngập 
+lụt cho hạ lưu sông Ba trên cơ sở kết nối động 
+lực 1-2 chiều. 
+Những năm gần đây, với sự phát triển nhanh 
+chóng của công nghệ số đã tạo nên những công 
+cụ đắc lực để mô phỏng toàn bộ các quá trình 
+Liên hệ tác giả: Lương Hữu Dũng
+Email: dungluonghuu@gmail.com
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+66
+66
+ngoài thực tế bằng các công thức toán học, 
+chính là các mô hình hóa. Dựa vào hệ phương 
+trình Saint Vernat, nhiều mô hình thủy lực đã 
+mô phỏng các quá trình dòng chảy trong sông. 
+Trên thế giới, việc áp dụng mô hình thủy lực để 
+tính toán ngập lụt đã được sử dụng rất rộng rãi. 
+Knebla và cs (2005) [1] đã nghiên cứu mô hình 
+HEC-HMS/RAS mô phỏng ngập lụt quy mô lớn ở 
+lưu vực sông San Antonio, (khoảng 10.000 km2) 
+ở trung tâm Texas, Mỹ. Nielsen (2006) đã ứng 
+dụng mô hình MIKE SHE để tính toán ngập lụt 
+vùng đồng bằng và tiêu thoát nước đô thị [2]. 
+Tomkratoke và Sirisup (2015) đã dùng mô hình 
+thủy động lực học FVCOM để mô phỏng ngập 
+lụt vùng nghiên cứu [3]. Trong nước, việc sử 
+dụng các mô hình thủy lực để tính toán ngập lụt 
+cũng rất rộng rãi. Hoàng Thanh Tùng (2011) [4] 
+đã sử dụng mô hình HEC-RAS để tính toán lũ cho 
+lưu vực sông Cả. Trần Duy Kiều (2012) đã xây 
+dựng bộ công cụ quản lý lũ lớn cho lưu vực sông 
+Lam [5]. Hoàng Thanh Tùng (2011) đã Nghiên 
+cứu dự báo mưa, lũ trung hạn cho vận hành hệ 
+thống hồ chứa phòng lũ - ứng dụng cho lưu vực 
+sông Cả [4]. Đoàn Văn Hải và cộng sự đã nghiên 
+cứu xây dựng công cụ dự báo lưu lượng nước 
+đến hồ sông Hinh phục vụ dự báo lũ hạ lưu sông 
+Ba [6]. Phạm Thanh Long và cộng sự, (2022) đã 
+xây dựng hệ thống cảnh báo, dự báo lũ và ngập 
+lụt hạ lưu sông Kôn - Hà Thanh và Lại Giang tỉnh 
+Bình Định [7]. Đặng Thanh Mai và cộng sự, 2013 
+và 2016 đã nghiên cứu xây dựng hệ thống phân 
+tích, giám sát, cảnh báo, dự báo lũ, ngập lụt và 
+hạn hán cho hệ thống sông Ba [8]. 
+Để đánh giá khả năng ngập lụt đối với khu 
+vực hạ lưu sông Ba, nghiên cứu này đã ứng dụng 
+bộ phần mềm họ HEC gồm HEC-HMS, HEC-RAS 
+1-2D để mô phỏng quá trình lũ trên sông Ba, 
+kết hợp với phần mềm ArcGIS xây dựng bản đồ 
+ngập lụt, đánh giá nguy cơ ngập lụt cho lưu vực 
+sông Ba. Ngoài kết quả bản đồ ngập lụt, bộ công 
+cụ mô hình thủy văn, thủy lực có thể bàn giao 
+cho các sở ban ngành có chuyên môn sử dụng 
+cho việc dự báo lũ cho lưu vực sông Ba.
+2. Phương pháp nghiên cứu và dữ liệu
+2.1. Giới thiệu về khu vực nghiên cứu
+Lưu vực sông Ba nằm trong phạm vi 03 tỉnh 
+Tây Nguyên: Kon Tum, Gia Lai, Đăk Lăk và 01 
+tỉnh Duyên hải miền Trung Trung Bộ là Phú Yên. 
+Đây là một trong chín lưu vực sông lớn nhất 
+Việt Nam có diện tích tự nhiên toàn lưu vực 
+13.417 km². Phía Bắc giáp thượng nguồn sông 
+Trà Khúc, Bắc và Tây Bắc giáp sông Sê San, Tây và 
+Tây Nam giáp sông Srêpok. Phía Nam giáp sông 
+Bàn Thạch. Phía Đông là dải Trường Sơn Đông 
+ngăn cách với các lưu vực sông Kone, sông Kỳ Lộ. 
+Sông Ba đổ ra biển Đông ở cửa Đà Rằng, thành 
+phố Tuy Hòa tỉnh Phú Yên. Khu vực hạ lưu sông 
+Ba được tính toán từ sau hồ chứa Ba Hạ và sông 
+Hinh ra đến cửa Đà Diễn (Hình 1).
+2.2. Phương pháp mô hình hóa
+Các mô hình số trị thuộc bộ mô hình HEC 
+được sử dụng để xây dựng tính toán ngập lụt 
+lưu vực sông Ba bao gồm: HEC-GEO HMS, HEC 
+HMS, HEC-RAS 1D, HEC-RAS 2D. Ngoài ra dự án 
+cũng sử dụng kết quả tính toán mưa từ mô hình 
+khí tượng WRF.
+2.2.1. Mô hình HEC-HMS
+Mô hình HEC-HMS là mô hình được sử dụng 
+mô phỏng dòng chảy từ quá trình mưa trên lưu 
+vực. Có thể biểu thị mô hình bằng sơ đồ sau:
+2.2.2. Mô hình Hec Ras 1D
+Mô hình HEC-RAS do Trung tâm Kỹ thuật 
+Thủy văn - Quân đội Mỹ xây dựng và phát triển, 
+có ưu điểm nổi bật là có thể trao đổi được dữ 
+liệu với các phần mềm hệ thống thông tin địa 
+lý GIS và liên kết dễ dàng với mô hình thủy văn 
+HEC- HMS, có thể sử dụng mô hình để dự báo lũ, 
+mô phỏng kiểm soát lũ, mô phỏng vận hành hệ 
+thống tưới và tiêu thoát nước mặt, nghiên cứu 
+sóng triều và dòng chảy do mưa ở sông và cửa 
+sông,... Mô hình thủy lực HEC-RAS 1 chiều cho 
+dòng chảy không ổn định trong sông được mô 
+tả bằng hệ phương trình Saint Venant.
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+67
+Hình 1. Bản đồ lưu vực sông Ba sông Bàn Thạch
+2.2.3. Mô hình Hec Ras 2D và kết nối 1-2D
+Mô hình HEC-RAS 2 chiều mô phỏng dòng 
+chảy không ổn định được biểu diễn thông qua 
+hệ phương trình Navier-Stokes bao gồm các 
+phương trình bảo toàn động lượng và bảo toàn 
+khối lượng.
+Cơ sở kết nối 1-2 chiều dạng chảy tràn
+Do phạm vi nghiên cứu của đề tài chỉ áp dụng 
+mô phỏng ngập trong điều kiện chảy tràn nên 
+trong phần này sẽ trình bày lý thuyết cơ sở kết 
+nối thủy động lực 1-2 chiều trong điều kiện chảy 
+tràn.
+Sử dụng hệ thống kết nối thủy động lực 
+1-2 chiều để mô phỏng. Với cách này, dữ liệu 
+1 chiều (lòng sông được thể hiện bằng các mặt 
+cắt thông qua đo đạc trực tiếp) được kết nối 
+trực tiếp với vùng 2 chiều để diễn toán quá trình 
+chảy ra, chảy vào, tràn, vỡ bờ... của dòng nước, 
+từ đó dựa vào chênh lệch cao độ địa hình tạo 
+ra vùng ngập. Dựa vào những dữ liệu sẵn có, 
+nghiên cứu đã lựa chọn cách thức kết nối này để 
+mô phỏng ngập lụt cho một số trận lũ điển hình. 
+Mô hình HEC-RAS cho phép mô phỏng vùng 2 
+chiều dưới dạng hệ thống các ô ruộng. Các ô 
+này liên kết với sông - kênh thông qua các hệ 
+thống công trình như: Cống điều tiết, đập tràn 
+đáy, đập tràn tự do, đập tràn có cửa điều khiển. 
+Nước có thể chảy ra hoặc vào tùy theo tương 
+quan mực nước giữa sông và ô ruộng.
+Các mô hình số trị thủy văn, thủy lực được 
+xây dựng nhằm tính toán, mô phỏng ngập lụt tại 
+hạ lưu của lưu vực sông Ba và sông Bàn Thạch. 
+Theo thứ tự, ứng dụng, mô hình HEC-HMS tính 
+toán lưu lượng từ số liệu mưa lưới để tạo biên 
+nhập lưu khu giữa cho sông Ba từ sau hồ chứa 
+Ba Hạ, sông Hinh ra đến cửa biển và biên trên, 
+nhập lưu khu giữa cho sông Bàn Thạch, mô 
+hình thủy lực một chiều (mô hình HEC-RAS 1D) 
+để tính toán dòng chảy trên hệ thống sông Ba 
+kết nối với mô hình HEC-RAS 2D và mô hình kết 
+nối HEC-RAS 1D-2D để tính toán diễn biến ngập 
+khu vực hạ lưu 2 sông. Sơ đồ liên kết các mô 
+hình cho hệ thống sông Ba được miêu tả trong 
+Hình 2.
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+68
+68
+2.3. Dữ liệu đầu vào cho mô hình
+Dữ liệu khí tượng thủy văn của trận lũ năm 
+2009, 2016, 2021 bao gồm các trạm: 
++ Trạm đo mưa khí tượng: An Khê, Pleiku, 
+M’Đrắk, AyunPa, Buôn Hồ, Buôn Mê Thuột, Kon 
+Tum, Sơn Hòa;
++ Trạm đo lưu lượng: An Khê, PơMơRê, 
+AyunPa, Củng Sơn;
++ Trạm đo mực nước: Phú Lâm.
+Số liệu mưa lưới là kết quả mô phỏng từ mô 
+hình WRF và WRFDA phiên bản V3.9.1.1 để làm 
+số liệu đầu vào cho mô hình thủy văn. Số liệu 
+mưa có độ phân giải ngang 1x1 km là kết quả 
+của phương pháp đồng hóa dữ liệu giữa mô 
+hình số trị với số liệu tại các trạm đo mưa tự 
+động và trạm radar được tính toán bởi Trung 
+tâm Dự báo khí tượng thủy văn Quốc gia.
+Dữ liệu địa hình bao gồm: Địa hình toàn lưu 
+vực sông Ba mô hình cao độ số (DEM): 12,5x12,5 
+m; địa hình chi tiết hạ lưu sông Ba từ sau hồ 
+Ba Hạ, hồ sông Hinh đến TP. Tuy Hòa với tỷ lệ 
+1:10.000, địa hình TP. Tuy Hòa với tỷ lệ 1:2000, 
+1:5000; Đoạn sông Ba từ sau hồ chứa sông Ba 
+Hạ ra ra đến cửa sông Đà Diễn dài 69,65 km với 
+59 mặt cắt số liệu được đo đạc từ năm 2010, 
+mới nhất kế thừa của Đề tài ĐTĐL.CN.15/15 [9] 
+được đo đạc năm 2016 và được Dự án “Xây dựng 
+mô hình nguồn mở HEC-RAS dự báo và cảnh báo 
+ngập lụt cho hạ lưu sông Ba theo công nghệ Hàn 
+Quốc” đo đạc bổ sung với 20 mặt cắt mới trên 
+sông Ba từ sau hồ thủy điện Ba Hạ đến trước 
+đập Đồng Cam vào tháng 3/2023; Sông Hinh từ 
+sau hồ thủy điện sông Hinh đến trước nhập lưu 
+với sông Ba dài 19,59 km với 10 mặt cắt được đo 
+đạc bổ sung vào tháng 3/2023; Sông Bàn Thạch 
+có chiều dài 30,5 km với 09 mặt cắt được kế của 
+Đề tài ĐTĐL.CN.15/15 và 09 mặt cắt được Dự án 
+đo đạc mới vào tháng 3/2023.
+Hình 2. Sơ đồ tính toán ngập lụt hạ lưu hệ thống sông Ba
+Hình 3. Bản đồ vị trí các điểm khảo sát đo đạc vết lũ khu vực hạ lưu sông Ba cho trận lũ từ ngày 25/11-05/12/2021
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+69
+Kết quả khảo sát các vết lũ thuộc địa phận 
+các xã thuộc huyện Tây Hòa, Đông Hòa, Phú Hòa 
+và các huyện ở dọc hai bên sông hạ lưu sông Ba 
+(Hình 3), sẽ được dùng để hiệu chỉnh mô hình 
+ngập lụt.
+3. Thiết lập mô hình
+3.1. Thiết lập mô hình Hec HMS
+Lưu vực sông Ba có diện tích 13.417 km2 
+được chia thành 36 tiểu lưu vực con (Hình 4), 
+lưu vực sông Bàn Thạch có diện tích 1.624 km2 
+được chia thành 9 tiểu lưu vực con (Hình 5) nhờ 
+công cụ HEC-GEO HMS trong mô hình Armap.
+Xác định dữ liệu đầu vào cho mô hình Hec 
+HMS 
+Dữ liệu đầu cho mô hình HEC-HMS bao gồm 
+dữ liệu mưa lưới bao trùm toàn bộ miền tính 
+của lưu vực sông Ba và sông Bàn Thạch. Mô hình 
+HEC-HMS để tính nhập lưu khu giữa cho mô 
+hình thủy lực từ sau hồ chứa Ba Hạ, sông Hinh, 
+sông Bàn Thạch ra đến cửa biển.
+Phạm vi của mưa lưới bao gồm 160 ô lưới 
+theo chiều ngang và 223 ô lưới theo chiều dọc 
+với kích thước ô lưới 1.000 m, vị trí góc trái 
+dưới là 175.000 m kinh độ Đông và 1.393.000 
+m vĩ độ Bắc theo hệ tọa độ Universal Transverse 
+Mercator (WGS 84), múi chiếu UMT 49N. Sử 
+dụng số liệu mưa lưới đồng hóa của trận lũ năm 
+2016 và năm 2021 là 2 năm gần đây nhất có lũ 
+lớn để tính toán dòng chảy lũ làm đầu vào cho 
+mô hình thủy lực.
+Hình 4. Mô hình Hec HMS thiết lập cho sông Ba
+Hình 5. Mô hình Hec HMS thiết lập cho sông Bàn Thạch
+3.2. Thiết lập mô hình Hec Ras 1D
+Phạm vi mô phỏng là sông chính phần hạ lưu 
+sông Ba từ sau hồ chứa thủy điện Ba Hạ ra đến 
+cửa sông Đà Diễn đoạn sông chính này có chiều 
+dài 69,65 km và sau hồ chứa thủy điện sông 
+Hinh đến nhập lưu với sông Ba dài 19,59 km, 
+phần hạ lưu sông Bàn Thạch dài 30,5 km ra đến 
+cửa sông Đà Nông. 
+Biên trên mô hình của sông Ba là quá trình 
+lưu lượng theo giờ xả ra từ hồ chứa thủy điện Ba 
+Hạ, hồ sông Hinh, biên trên của sông Bàn Thạch 
+và lưu lượng khu giữa sông Ba, sông Bàn Thạch 
+được tính toán từ mô hình HEC-HMS với mưa 
+lưới 1 km.
+Biên dưới là mực nước triều theo giờ tại cửa 
+sông Đà Diễn, Đà Nông được tính toán từ tương 
+quan truyền triều tại trạm triều Quy Nhơn. Sử 
+dụng mực nước tại trạm thủy văn trạm Phú Lâm 
+hiệu chỉnh, kiểm định quá trình mực nước. Sơ 
+đồ mạng thủy lực mô hình HEC-RAS sông Ba sau 
+khi thiết lập thể hiện ở Hình 6.
+Hình 6. Sơ đồ mạng thủy lực HEC RAS 1D sông Ba, sông Bàn Thạch
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+70
+70
+3.3. Thiết lập mô hình HEC-RAS 2D và kết nối 
+1-2D
+Mạng thủy lực sông hạ lưu sông Ba được 
+hình thành từ sự kết hợp 3 con sông nên phạm 
+vi các vùng 2 chiều cũng khác nhau. Để đảm 
+bảo mô phỏng được diễn biến cũng như phạm 
+vi ngập lụt, căn cứ vào các khu vực ngập dựa 
+trên ảnh vệ tinh, căn cứ vào địa hình (những nơi 
+địa hình thấp có nhiều khả năng bị ngập úng) từ 
+bản đồ số độ cao DEM để đưa ra cơ sở khoanh 
+các vùng ngập lụt 2 chiều. Trong nghiên cứu này 
+đã chia vùng có nguy cơ ngập lụt hạ lưu sông 
+Ba thành 3 vùng để kết nối với các sông 1 chiều 
+thông qua dạng kết nối biên. Cụ thể, vùng 1 là 
+vùng 2D1: Là vùng địa hình phía bên trái hạ lưu 
+sông Ba từ phía hồ thủy điện Ba Hạ về cửa Đà 
+Diễn với tổng số 46.342 ô lưới, ô lưới có diện 
+tích nhỏ nhất là 1.312 m2, ô lưới có diện tích lớn 
+nhất là 5.583 m2. Vùng 2D2: Là vùng địa hình 
+phía bên phải hạ lưu sông Ba từ phía nhập lưu 
+sông Đồng Bò về cửa Đà Diễn với tổng số 59.289 
+ô lưới, ô lưới có diện tích nhỏ nhất là 986 m2, 
+ô lưới có diện tích lớn nhất là 3.983 m2. Vùng 
+2D3: Là vùng địa hình phía bên phải hạ lưu sông 
+Bàn Thạch từ phía sau đập Đồng Cam về cửa Đà 
+Nông với tổng số 39.140 ô lưới, ô lưới có diện 
+tích nhỏ nhất là 1.107 m2, ô lưới có diện tích lớn 
+nhất là 3.686 m2 (Hình 7).
+Hình 7. Mô hình HEC-RAS 2D và kết nối các vùng 1-2D
+4. Kết quả và thảo luận
+4.1. Hiệu chỉnh kiểm định bộ thông số mô hình
+Số liệu khí tượng thủy văn trận lũ từ ngày 
+27/11-13/12/2021 được sử dụng để hiệu chỉnh 
+và trận lũ từ 11-24/12/2016 kiểm định bộ thông 
+số mô hình HEC-HMS tại trạm thủy văn Củng 
+Sơn. Kết quả hiệu chỉnh, kiểm định thông số mô 
+hình HEC- HMS thể hiện ở Hình 8, Hình 9.
+Kết quả hiệu chỉnh và kiểm định thông số 
+mô hình HEC-HMS tại trạm Củng Sơn cho kết 
+quả khá tốt, hệ số Nash trận lũ năm 2021 đạt 
+0,93, năm 2016 đạt 0,76, sai số tổng lượng 
+tương đối thấp năm 2021 là 4,5%, năm 2016 
+là 10,2%, sai số đỉnh lũ cũng nhỏ với năm 2021 
+là 3,6% với năm 2016 là 4,8%. Đường quá trình 
+lưu lượng tính toán và thực đo tương đối phù 
+hợp. Vậy, kết quả bộ thông số của mô hình sẽ 
+được sử dụng để tính toán dòng chảy từ mưa 
+tại các lưu vực nghiên cứu để tính toán đầu 
+vào và nhập lưu khu giữa cho mô hình HEC-
+RAS 1D.
+Bộ thông số mô hình HEC-RAS được hiệu 
+chỉnh thông qua số liệu các trận lũ năm 2021 
+và kiểm định dựa trên trận lũ năm 2016, trận lũ 
+tháng 11/2009. Kết quả hiệu chỉnh, kiểm định 
+mực nước tại trạm Phú Lâm cho trận lũ các năm 
+2021, 2016, 2009 được thể hiện tại Hình 10, 
+Hình 11, Hình 12.
+Kết quả mô phỏng quá trình mực nước tại 
+trạm Phú Lâm để hiệu chỉnh cho trận lũ năm 
+2021 cho thấy mô hình đã mô phỏng tương đối 
+tốt quá trình mực nước tính toán và thực đo, 
+chênh lệch sai số đỉnh lũ thấp 0,16 m, sai số hệ 
+số NSE đạt 0,89 được đánh giá theo tiêu chuẩn 
+của hệ số NSE [10] cho kết quả tốt. Sau khi kết 
+quả hiệu chỉnh tốt đối với trận lũ năm 2021 tiến 
+hành kiểm định với trận lũ năm 2016 và 2009 
+đều cho kết quả tốt chênh lệch sai số đỉnh lũ 
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+71
+nhỏ chỉ dưới 0,06 m, hệ số Nash cũng đạt cao 
+năm 2016 đạt 0,92, năm 2009 đạt 0,91, hình 
+dạng quá trình lũ thực đo khá tương đồng về 
+pha và độ lớn. 
+Sau khi đã thiết lập được mô hình HEC-RAS 
+1D mô phỏng tốt quá trình thủy lực trong sông 
+sẽ xây dựng và thiết lập kết nối mô hình HEC-
+RAS 1-2D để mô phỏng đánh giá quá trình ngập 
+lụt hạ lưu sông Ba. Do không có đo đạc được vết 
+lũ năm 2016 nên sẽ sử dụng vết lũ năm 2021 
+khảo sát đo đạc tại 46 điểm để hiệu chỉnh mô 
+hình ngập lụt, sau đó sẽ kiểm định cho trận lũ 
+năm 2009 để đánh giá mô phỏng về diện ngập. 
+Kết quả hiệu chỉnh cho trận lũ năm 2021 tại các 
+vết lũ được đánh giá dựa trên tương quan cao 
+độ vết lũ tính toán và thực đo (Hình 13) và sai số 
+tính toán giữa mực nước tính toán và thực đo 
+tại Bảng 1.
+Hình 8. Kết quả hiệu chỉnh lưu lượng 
+tại trạm Củng Sơn
+Hình 9. Kết quả Kiểm định lưu lượng 
+tại trạm Củng Sơn
+Hình 10. Kết quả hiệu chỉnh mực nước tại trạm Phú Lâm trận lũ 2021 cho mô hình HEC-RAS
+Hình 11. Kết quả kiểm định mực nước tại trạm Phú 
+Lâm trận lũ năm 2016 mô hình HEC-RAS
+Hình 12. Kết quả kiểm định mực nước trạm Phú 
+Lâm trận lũ 2009 mô hình HEC-RAS
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+72
+72
+Hình 13. Tương quan cao độ vết lũ tính toán và thực đo trận lũ năm 2021
+Bảng 1. Kết quả mực nước tính toán và vết lũ tại một số vị trí điều tra tháng 5/2022 ứng với trận lũ 
+tháng 25/11-05/12/2021
+Tên Điểm
+Tọa độ
+Z_thực đo (m)
+Z_tính toán (m)
+∆Z (m)
+Kinh độ
+Vĩ độ
+1
+109,18
+12,94
+14,11
+14,49
+-0,38
+2
+109,19
+12,94
+13,18
+12,92
+0,26
+3
+109,21
+12,94
+11,47
+11,26
+0,21
+4
+109,21
+12,95
+11,95
+11,76
+0,19
+5
+109,25
+12,96
+8,95
+8,65
+0,3
+6
+109,23
+12,96
+9,81
+10,08
+-0,27
+7
+109,25
+12,96
+9,15
+9,03
+0,12
+8
+109,23
+12,96
+10,32
+10,64
+-0,32
+9
+109,39
+12,96
+4,7
+4,45
+0,25
+10
+109,19
+12,96
+13,59
+13,39
+0,2
+11
+109,38
+12,97
+5,26
+4,97
+0,29
+12
+109,24
+12,97
+11,06
+10,91
+0,15
+13
+109,37
+12,97
+5,02
+4,82
+0,2
+14
+109,38
+12,97
+5,77
+5,94
+-0,17
+15
+109,25
+12,97
+9,13
+9,28
+-0,15
+16
+109,34
+12,97
+4,08
+3,97
+0,11
+17
+109,17
+12,98
+17,06
+17,44
+-0,38
+18
+109,21
+12,98
+13,06
+12,71
+0,35
+19
+109,13
+12,98
+17,6
+17,79
+-0,19
+20
+109,38
+12,98
+5,62
+5,44
+0,18
+Kết quả mô phỏng trận lũ 11-12/2021 cho 
+kết quả khá tốt tại các vết lũ, kết quả mô phỏng 
+ở các bãi ngập lũ ở mức chấp nhận được. Sai số 
+trung bình tuyệt đối các vết lũ giữa tính toán 
+và thực đo là 0,22 m. Hầu hết các vết lũ đều có 
+chênh lệch mực nước giữa tính toán và điều tra 
+nhỏ và ở trong mức chấp nhận được. Về thời 
+gian xuất hiện đỉnh lũ, giữa tính toán và thực 
+đo lệch nhau 1,5 giờ (tính toán xuất hiện sớm 
+hơn). Với một trận lũ có cường suất lũ lớn và 
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+73
+đỉnh khá cao như vậy thì sai số thời gian xuất 
+hiện đỉnh như vậy là chấp nhận được. 
+Trận lũ tháng 11/2009 dùng để kiểm định 
+đánh giá mô phỏng diện tích ngập của mô hình 
+2 chiều HEC-RAS 2D, kết quả ngập lụt thể hiện 
+trong (Hình 14) so với diện tích ngập ảnh vệ tinh 
+thu thập được cho trận lũ tháng 11/2009, khu 
+vực hạ lưu sông Ba, sông Bàn Thạch (Hình 15).
+Hình 14. Bản đồ ngập lụt hạ lưu sông Ba sông Bàn Thạch 
+mô hình HEC- RAS 2D trận lũ tháng 11/2009
+Hình 15. Bản đồ ảnh vệ tinh ngập khu vực hạ lưu 
+sông Ba sông Bàn Thạch tháng 11/2009 [11]
+Dựa trên bản đồ ngập lớn nhất mô phỏng từ 
+mô hình và bản đồ ngập được xây dựng từ cơ 
+sở ảnh dữ liệu vệ tinh cho thấy diện tích ngập 
+khu vực hạ lưu sông Ba và sông Bàn Thạch có sự 
+tương đồng với nhau khu vực ngập và mức độ 
+ngập, mặc dù có nhiều khu vực diện tích ngập 
+từ mô hình thấp hơn ngập thực tế nhưng vấn 
+đề này vẫn chấp nhận được trong mức độ sai số 
+của mô hình cũng như chưa có sự đồng nhất và 
+mức độ chi tiết của địa hình khu vực nghiên cứu. 
+Như vậy cho thấy mô hình mô phỏng ngập lụt 
+cho lưu vực hạ lưu sông Ba và sông Bàn Thạch 
+đã mô phỏng tương đối tốt quá trình ngập lụt 
+cho khu vực nghiên cứu.
+4.2. Mô phỏng ngập lụt ở hạ lưu sông Ba sông 
+Bàn Thạch theo các tần suất
+Để xác định và đánh giá quá trình ngập lụt 
+trên sông Ba sông Bàn Thạch với các trận lũ 
+có tần suất khác nhau tại trạm thủy văn Củng 
+Sơn, nghiên cứu đã xây dựng đường tần suất 
+lưu lượng lớn nhất tại trạm Củng Sơn dựa trên 
+chuỗi số liệu đo đạc từ năm 2010-2022 để từ 
+đó xác định được các tần suất lũ. Sau đó sẽ tiến 
+hành mô phỏng ngập lụt hạ lưu sông Ba tương 
+ứng với tần suất lũ tại Củng Sơn theo các tần 
+suất P = 1%, 3%, 5%, 10%. Dạng đường quá trình 
+trận lũ tháng 11/2021 được sử dụng làm trận lũ 
+điển hình để mô phỏng các tần suất lũ, số liệu 
+nhập lưu lượng biên trên cho sông Bàn Thạch và 
+nhập lưu khu giữa sông Ba sông Bàn Thạch được 
+tính bằng mô hình Hec HMS từ mưa các trạm 
+khí tượng theo trận lũ điển hình năm 2021 sau 
+đó thu phóng theo hệ số tương ứng với tần suất 
+lũ ở trạm Củng Sơn, số liệu mưa trạm sẽ được 
+nội suy thành mưa lưới có kích thước mỗi ô lưới 
+tính là 1 km. Kết quả mô phỏng cho các trận lũ 
+điển hình được trình bày dưới Bảng 2, Hình 16.
+Huyện
+Diện tích tự 
+nhiên (km2)
+Tổng diện tích ngập (km2)
+% diện tích ngập
+P=1%
+P=3%
+P=5%
+P=10%
+P=1%
+P=3%
+P=5%
+P=10%
+Đông Hòa
+203,2
+71,5
+62,9
+53,1
+39,1
+35,2
+31,0
+26,1
+19,2
+Phú Hòa
+204,8
+85,4
+75,8
+64,1
+47,2
+41,7
+37,0
+31,3
+23,1
+Tây Hòa
+628,9
+108,5
+81,5
+62,8
+39,3
+17,3
+13,0
+10,0
+6,3
+TP. Tuy Hòa
+111,6
+48,7
+46,5
+39,8
+30,2
+43,6
+41,6
+35,7
+27,0
+Bảng 2. Diện tích và tỷ lệ ngập các huyện theo các tần suất lũ
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+74
+74
+a) Bản đồ ngập tương ứng với tần suất lũ 1%
+b) Bản đồ ngập tương ứng với tần suất lũ 3%
+c) Bản đồ ngập tương ứng với tần suất lũ 5%
+d) Bản đồ ngập tương ứng với tần suất lũ 10%
+Kết quả tính toán mô phỏng ngập lụt ở hạ 
+lưu sông Ba - Bàn Thạch theo các trận lũ ứng với 
+tần suất lũ 1%, 3%, 5%, 10% cho thấy ngập lụt 
+đều xuất hiện ở các huyện Đông Hòa, Phú Hòa, 
+Tây Hòa và TP. Tuy Hòa với các mức độ và cấp 
+độ ngập khác nhau. Đối với tần suất lũ 1% cho 
+thấy mức độ ngập lụt rất lớn, một số khu vực 
+xã/phường bị ngập hoàn toàn trong lũ như xã 
+Hòa Thành và Hòa Vĩnh (huyện Đông Hòa), xã 
+Hòa An (huyện Phú Hòa), Hòa Bình 2, Hòa Đồng, 
+Hòa Phong và Hòa Bình 1 (huyện Tây Hòa), xã 
+Bình Ngọc và từ phường 1 đến phường 6 và 
+phường 8 thuộc thành phố Tuy Hòa có diện tích 
+ngập lớn hơn 95% diện tích toàn xã/phường. 
+Mức độ ngập với tần suất lũ 10% đã giảm rõ 
+rệt không còn khu vực xã/phường nào bị ngập 
+hoàn toàn nữa, trong đó thì huyện Tây Hòa mức 
+độ ngập còn rất nhỏ chỉ 6,3% diện tích bị ngập. 
+Trong trận lũ tương ứng tần suất 10%, các công 
+trình các công trình như đê, đường giao thông 
+thuộc các tuyến quốc lộ 1, quốc lộ 25 và quốc lộ 
+29 đã góp phần ngăn lũ tràn từ sông Ba vào các 
+khu vực trũng thấp và khu dân cư. Khu vực TP. 
+Tuy Hòa và huyện Đông Hòa là 2 khu vực ngập 
+nhiều nhất nhưng chịu ảnh hưởng và tác động 
+lớn nhất của ngập lụt vẫn là khu vực TP. Tuy Hoà 
+bởi địa hình nơi đây khá bằng bằng, dân cư tập 
+trung đông đúc cũng là nơi tập trung các cơ sở 
+kinh tê, chính trị lớn nhất của tỉnh Phú Yên. Phía 
+bên sông Bàn Thạch mức độ ngập lụt cũng giảm 
+và ít chịu tác động lớn như ở phía bên sông Ba 
+do khu vực ngập nhiều nhất là huyện Đông Hòa 
+lại có dân cu thưa thớt, các cơ sở phát triển kinh 
+tế như khu công nghiệp, nhà máy ít, khu vực địa 
+hình trũng chủ yếu phát triển nông nghiệp, nuôi 
+trồng thủy sản đã thích nghi được với tình trạng 
+ngập lũ trong quá trình nhiều năm bị ảnh hưởng 
+bởi ngập lũ.
+Hình 16. Bản đồ ngập hạ lưu sông Ba tương ứng với các tần suất lũ
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+75
+5. Kết luận 
+Nghiên cứu đã áp dụng thành công mô hình 
+HEC-RAS mô phỏng ngập lụt cho hạ lưu sông Ba 
+sông Bàn Thạch trên cơ sở kết nối thủy động lực 
+học 1-2 chiều. Kết quả tính toán hiệu chỉnh và 
+kiểm định thủy lực tại trạm thủy văn Phú Lâm 
+đều cho kết quả quả tốt chênh lệch sai số đỉnh 
+lũ nhỏ dưới 0,17 m, hệ số Nash đều đạt giá trị 
+tương đối cao trên từ 0,89 trở lên, hình dạng 
+đường quá trình lũ tính toán và thực đo phù 
+hợp nhau.
+Nghiên cứu đã mô phỏng ngập lụt ở hạ lưu 
+sông Ba - Bàn Thạch theo các trận lũ ứng với 
+tần suất lũ 1%, 3%, 5%, 10%. Kết quả mô phỏng 
+ngập lũ cho các tần suất lũ cho thấy trên sông Ba 
+khu vực TP. Tuy Hòa chịu ảnh hưởng ngập lụt lớn 
+nhất, còn trên sông Bàn Thạch là huyện Đông 
+Hòa đây là 2 vùng có địa hình khá thấp và nằm 
+ngay cạnh 2 con sông lớn. Đối với các trận lũ lớn 
+với tần suất từ 5% trở lên thì mức độ ngập lụt rất 
+lớn gần như các tuyến đê và các tuyến đường 
+như quốc lộ 1, quốc lộ 25 và quốc lộ 29 đã bị 
+ngập hoàn toàn hoặc ngập một phần đã làm mất 
+vai trò ngăn lũ từ sông Ba chảy tràn vào các khu 
+vực có địa hình trũng và khu dân cư. 
+Bên cạnh những kết quả đạt được nghiên 
+cứu vẫn còn tồn tại những mặt hạn chế về sai 
+số mô hình. Trong đó, nghiên cứu mới chỉ hiệu 
+chỉnh và kiểm định cho một số trận lũ lớn mà 
+chưa mô phỏng cho những trận lũ trung bình, 
+đồng thời số liệu mặt cắt khu vực hạ lưu sông 
+Ba sông Bàn Thạch còn thưa có thể cũng ảnh 
+hưởng đến chất lượng của kết quả tính toán mô 
+phỏng ngập lụt.
+Lời cảm ơn: Bài báo hoàn thành nhờ vào kết quả của Đề tài: “Xây dựng mô hình nguồn mở HEC-RAS dự 
+báo và cảnh báo ngập lụt cho lưu vực sông Ba theo công nghệ Hàn Quốc”.
+Tài liệu tham khảo
+1.	
+Knebla, M.R. et al. (2005), "Regional scale flood modeling using NEXRAD rainfall, GIS and HEC-
+HMS/RAS: a case study for the San Antonio River Basin Summer 2002 storm event", Journal of 
+Environmental Management, Vol 75, Issue 4, 325-336.
+2. 	 Nielsen, C., (2006), "The application of MIKE SHE to floodplain inundation and urban drainage 
+assessment in South East Asia", DHI Water and Environment (Malaysia).
+3. 	 Tomkratoke, S., Sirisup, S., (2015), "Hydrodynamic simulation of overland flooding over lowlying 
+flat lands: A case study of the severe 2011 flood in Sam-Khok and Klong Luang districts Thailand", 
+Hydrological Research Letters, 9 (4), 47-53.
+4. 	 Hoàng Thanh Tùng (2011), Nghiên cứu dự báo mưa, lũ trung hạn cho vận hành hệ thống hồ chứa 
+phòng lũ - ứng dụng cho lưu vực sông Cả, Luận án tiến sĩ chuyên ngành Thủy văn học, Trường Đại 
+học Thủy Lợi.
+5. 	 Trần Duy Kiều (2012), Nghiên cứu quản lý lũ lớn lưu vực sông Lam, Luận án tiến sĩ kỹ thuật chuyên 
+ngành Phát triển nguồn nước, Trường Đại học Thủy Lợi.
+6. 	 Đoàn Văn Hải và cộng sự (2020), "Nghiên cứu xây dựng công cụ dự báo lưu lượng nước đến hồ 
+sông Hinh phục vụ dự báo lũ hạ lưu sông Ba", Tạp chí Khí tượng Thủy văn, số 710, 70-77.
+7. 	 Phạm Thanh Long và cộng sự (2022), "Xây dựng hệ thống cảnh báo, dự báo lũ và ngập lụt hạ lưu 
+sông Kôn - Hà Thanh và Lại Giang tỉnh Bình Định", Tạp chí Khoa học Biến đổi khí hậu, số 24 - tháng 
+12/2022.
+8. 	 Đặng Thanh Mai, Vũ Đức Long (2016), "Nghiên cứu xây dựng công nghệ cảnh báo, dự báo lũ lưu 
+vực sông Kôn - Hà Thanh, tỉnh Bình Định", Tạp chí Khí tượng Thủy văn, số 668, 1-11.
+9. 	 Nguyễn Tiền Giang (2019), Nghiên cứu cơ sở khoa học để xác định cơ chế bồi lấp, sạt lở và đề 
+xuất các giải pháp ổn định các cửa sông Đà Diễn và Đà Nông tỉnh Phú Yên phục vụ phát triển bền 
+vững cơ sở hạ tầng và kinh tế xã hội, Báo cáo tổng kết nhiệm vụ Khoa học và Công nghệ cấp quốc 
+gia.
+10. 	Nguyễn Thị Thu Huyền và cộng sự (2012), "Nghiên cứu ứng dụng mô hình Swat đánh giá biến động 
+dòng chảy, bùn cát trên sông Nhật Lệ tỉnh Quảng Bình", Tạp chí Khoa học và công nghệ Thủy lợi, số 
+
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+76
+76
+12/2012.
+11. 	Trung tâm viễn thám quốc gia (2012), "Ứng dụng công nghệ viễn thám thành lập bản đồ ngập lụt 
+sông Ba tỉnh Phú Yên", Tạp chí Khoa học và công nghệ Thủy lợi, số 29.
+12. 	U.S.Army Corps of Engineers Institute for Water Resources Hydrologic Engineering Centere (2016), 
+HEC-RAS 5.0 Reference Manual.
+APPLICATION OF HEC-RAS MODEL TO SIMULATE FLOOD 
+AND INUNDATION IN THE BA RIVER DOWNSTREAM 
+Luong Huu Dung, Le Quoc Huy, Phan Van Thanh,
+Van Thi Hang, Tran Thanh Thuy, Nguyen Van Dai
+The Viet Nam Institute of Meteorology, Hydrology and Climate Change
+Received: 28/3/2024; Accepted: 6/5/2024
+Abstract: The study provides the results of inundation modeling for the Ba river system using HEC model. 
+The input data are simulated from rainfall using the HEC-HMS model. The coupled model parameters for 
+HEC-RAS are calibrated and validated using observed extreme floods in 2009, 2016, 2021 at Phu Lam station 
+in the Ba river together with flood stains in 2021. The results show the similar patterns between observed 
+and calculated data with the peak correction less than 0.17 m. Hence, the model is suitable for inundation 
+modeling and flood early warning at the Ba and the Ban Thach river downstream. Based on the good 
+performance of the model for extreme events, the research simulates for floods corresponding to flood 
+frequency of 1%, 3%, 5%, 10%, to evaluate the inundation level at the downstream of the Ba and the Ban 
+Thach river corresponding according to different rainfall scenarios. The results show inundation level and area 
+differs from different districts and communes with the most severe area in Dong Hoa district in case of flood 
+frequency 1%.
+Keywords: Hec model, Ba river, flood.

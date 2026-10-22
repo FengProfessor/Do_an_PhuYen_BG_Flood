@@ -1,0 +1,44 @@
+TẠP CHÍ KHOA HỌC BIẾN ĐỔI KHÍ HẬU
+Số 30 - Tháng 6/2024
+68
+68
+2.3. Dữ liệu đầu vào cho mô hình
+Dữ liệu khí tượng thủy văn của trận lũ năm 
+2009, 2016, 2021 bao gồm các trạm: 
++ Trạm đo mưa khí tượng: An Khê, Pleiku, 
+M’Đrắk, AyunPa, Buôn Hồ, Buôn Mê Thuột, Kon 
+Tum, Sơn Hòa;
++ Trạm đo lưu lượng: An Khê, PơMơRê, 
+AyunPa, Củng Sơn;
++ Trạm đo mực nước: Phú Lâm.
+Số liệu mưa lưới là kết quả mô phỏng từ mô 
+hình WRF và WRFDA phiên bản V3.9.1.1 để làm 
+số liệu đầu vào cho mô hình thủy văn. Số liệu 
+mưa có độ phân giải ngang 1x1 km là kết quả 
+của phương pháp đồng hóa dữ liệu giữa mô 
+hình số trị với số liệu tại các trạm đo mưa tự 
+động và trạm radar được tính toán bởi Trung 
+tâm Dự báo khí tượng thủy văn Quốc gia.
+Dữ liệu địa hình bao gồm: Địa hình toàn lưu 
+vực sông Ba mô hình cao độ số (DEM): 12,5x12,5 
+m; địa hình chi tiết hạ lưu sông Ba từ sau hồ 
+Ba Hạ, hồ sông Hinh đến TP. Tuy Hòa với tỷ lệ 
+1:10.000, địa hình TP. Tuy Hòa với tỷ lệ 1:2000, 
+1:5000; Đoạn sông Ba từ sau hồ chứa sông Ba 
+Hạ ra ra đến cửa sông Đà Diễn dài 69,65 km với 
+59 mặt cắt số liệu được đo đạc từ năm 2010, 
+mới nhất kế thừa của Đề tài ĐTĐL.CN.15/15 [9] 
+được đo đạc năm 2016 và được Dự án “Xây dựng 
+mô hình nguồn mở HEC-RAS dự báo và cảnh báo 
+ngập lụt cho hạ lưu sông Ba theo công nghệ Hàn 
+Quốc” đo đạc bổ sung với 20 mặt cắt mới trên 
+sông Ba từ sau hồ thủy điện Ba Hạ đến trước 
+đập Đồng Cam vào tháng 3/2023; Sông Hinh từ 
+sau hồ thủy điện sông Hinh đến trước nhập lưu 
+với sông Ba dài 19,59 km với 10 mặt cắt được đo 
+đạc bổ sung vào tháng 3/2023; Sông Bàn Thạch 
+có chiều dài 30,5 km với 09 mặt cắt được kế của 
+Đề tài ĐTĐL.CN.15/15 và 09 mặt cắt được Dự án 
+đo đạc mới vào tháng 3/2023.
+Hình 2. Sơ đồ tính toán ngập lụt hạ lưu hệ thống sông Ba
+Hình 3. Bản đồ vị trí các điểm khảo sát đo đạc vết lũ khu vực hạ lưu sông Ba cho trận lũ từ ngày 25/11-05/12/2021

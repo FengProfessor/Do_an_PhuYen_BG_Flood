@@ -1,0 +1,122 @@
+{
+  "revision": "R2-20261013",
+  "class_changes": [
+    {
+      "object_id": "W20_0002",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "ESTUARY_TIDAL_RIVER",
+      "reason": "Mapped coastal channel overlaps 66.87%; low elevation and coastal proximity require explicit tidal/backwater assessment. Tidal influence is not assumed verified."
+    },
+    {
+      "object_id": "W20_0008",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "RIVER_STREAM",
+      "reason": "Current mapped river overlaps 72.01%, with linear OSM/HydroRIVERS support and JRC water. Geometry authorization remains subject to D and C.1."
+    },
+    {
+      "object_id": "W20_0012",
+      "before": "RIVER_STREAM",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 99.46%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0014",
+      "before": "RIVER_STREAM",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 98.68%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0018",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 97.10%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0019",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 88.11%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0020",
+      "before": "RIVER_STREAM",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 99.71%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0024",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped lake overlaps 90.95%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0025",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 76.49%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0027",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped lake overlaps 99.81%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0028",
+      "before": "RIVER_STREAM",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 94.66%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0064",
+      "before": "RIVER_STREAM",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 98.53%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0069",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 99.24%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0070",
+      "before": "WETLAND_FLOODPLAIN_WATER",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 99.59%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0071",
+      "before": "RIVER_STREAM",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 92.84%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0072",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped lake overlaps 98.08%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0074",
+      "before": "UNKNOWN_REVIEW_REQUIRED",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped reservoir overlaps 95.39%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    },
+    {
+      "object_id": "W20_0078",
+      "before": "RIVER_STREAM",
+      "after": "LAKE_RESERVOIR",
+      "reason": "Current mapped lake overlaps 99.93%; independent JRC water supports standing-water type. Persistence and historical shoreline are assessed separately."
+    }
+  ],
+  "phase_checks": {
+    "C": true,
+    "D": true,
+    "C1": true,
+    "E": true,
+    "F": true
+  },
+  "hydraulic_promotion_ready": false,
+  "frozen_G_inputs_modified": false
+}

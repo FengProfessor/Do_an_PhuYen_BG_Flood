@@ -1,0 +1,37 @@
+{
+  "schema_version": "V49-C-validation-1",
+  "inventory_object_count": 81,
+  "classified_object_count": 81,
+  "missing_object_ids": [],
+  "extra_object_ids": [],
+  "duplicate_object_ids": [],
+  "missing_required_fields": [],
+  "blank_required_field_counts": {
+    "final_class": 0,
+    "subtype": 0,
+    "final_confidence": 0,
+    "treatment_code": 0,
+    "treatment_rule": 0,
+    "evidence_summary": 0
+  },
+  "invalid_classes": [],
+  "treatment_mismatch_object_ids": [],
+  "channel_eligibility_mismatch_object_ids": [],
+  "unknown_review_required_failures": [],
+  "unknown_no_carve_failures": [],
+  "class_specific_treatment_failures": {
+    "OCEAN": [],
+    "WETLAND_FLOODPLAIN_WATER": [],
+    "LAKE_RESERVOIR": [],
+    "ESTUARY_TIDAL_RIVER": []
+  },
+  "unknown_review_count": 42,
+  "all_objects_documented": true,
+  "historical_osm_provenance_ok": true,
+  "dem_expected_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "dem_current_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+  "dem_unchanged": true,
+  "modified_water_pixel_count_in_v49_c": 0,
+  "gate_c_interpretation": "V49-C performs no DEM edits. Gate C passes when every inventory object has a documented class/treatment, uncertain objects are explicitly no-carve review targets, class safety constraints hold, and the source DEM hash is unchanged.",
+  "gate_c_pass": true
+}

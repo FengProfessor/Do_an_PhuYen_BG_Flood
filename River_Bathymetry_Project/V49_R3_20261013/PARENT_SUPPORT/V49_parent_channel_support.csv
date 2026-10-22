@@ -1,0 +1,82 @@
+﻿object_id,before,after,changed,reason,parent_osm_id,parent_component_index,parent_overlap_fraction,same_component_graph_m,parent_component_area_m2,parent_name,local_graph_m,local_osm_channel_m,authorizes_geometry,verifies_2021_persistence
+OCEAN_0001,OCEAN,OCEAN,False,Previously reconciled type retained.,relation/8719877,0,0.003964329024995769,28828.504351877284,17460985.8084825,Sông Đà Rằng,601.8845281801084,5424.4974675536205,False,False
+W20_0001,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,relation/17488977,0,1.0,13333.19877653697,8748159.423679233,Sông Cái,125.04581512948539,1671.812135763803,False,False
+W20_0002,ESTUARY_TIDAL_RIVER,ESTUARY_TIDAL_RIVER,False,Previously reconciled type retained.,relation/17488977,0,0.6606242138809248,13333.19877653697,8748159.423679233,Sông Cái,6349.084030649271,15912.302484636379,False,False
+W20_0003,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,relation/17488977,0,0.9658380927864028,13333.19877653697,8748159.423679233,Sông Cái,339.2454601874221,762.989099593528,False,False
+W20_0004,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,way/1238214271,0,0.4222900055023148,28.136576855696447,194640.5091476212,,0.0,381.46211106193215,False,False
+W20_0005,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,relation/17488977,0,1.0,13333.19877653697,8748159.423679233,Sông Cái,474.8190406523581,503.91850932857096,False,False
+W20_0006,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,149.60183186328632,659.9469707577576,False,False
+W20_0007,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,relation/17488977,0,0.8572015696787298,13333.19877653697,8748159.423679233,Sông Cái,50.74582243665521,430.24385682210414,False,False
+W20_0008,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,way/1238214270,0,0.7201075970337191,0.0,135031.4443712796,,0.0,1329.26848952683,False,False
+W20_0009,ESTUARY_TIDAL_RIVER,ESTUARY_TIDAL_RIVER,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,13258.228681463595,788.244853814273,False,False
+W20_0010,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0011,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,752.431170864384,False,False
+W20_0012,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,1598.4870467800263,0.0,False,False
+W20_0013,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,72.09112112881128,420.4495074750409,False,False
+W20_0014,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,2195.855190076331,2404.517977928633,False,False
+W20_0015,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0016,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,3.159828542107643,0.0,False,False
+W20_0017,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0018,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0019,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0020,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,1582.6111680931194,0.0,False,False
+W20_0021,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0022,ESTUARY_TIDAL_RIVER,ESTUARY_TIDAL_RIVER,False,Previously reconciled type retained.,relation/8719877,0,0.48794792826256495,28828.504351877284,17460985.8084825,Sông Đà Rằng,62827.40496191028,66881.17898992347,False,False
+W20_0023,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,relation/8719877,0,0.3731802662219119,28828.504351877284,17460985.8084825,Sông Đà Rằng,0.0,0.0,False,False
+W20_0024,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0025,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0026,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,way/1528082180,0,0.9780005858448462,6680.742101938716,2392499.921429743,,1079.4315472481019,2594.1080873571354,False,False
+W20_0027,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0028,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,way/1528082180,0,0.03887410218347977,6680.742101938716,2392499.921429743,,6704.906938658663,5075.636900846543,False,False
+W20_0029,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0030,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0031,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,relation/14630772,0,0.551664187832998,85.06470380717559,273779.91772598174,Hinh River,150.0048680296736,348.7598229634699,False,False
+W20_0032,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,way/1528082180,0,0.8548886983788125,6680.742101938716,2392499.921429743,,0.0,257.2379761821678,False,False
+W20_0033,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0034,UNKNOWN_REVIEW_REQUIRED,RIVER_STREAM,True,"Current mapped river overlaps 100.00%, with linear OSM/HydroRIVERS support and JRC water. Geometry authorization remains subject to D and C.1. Same connected parent way/1422851117 component 0 intersects 3075.9 m of HydroRIVERS. This is type evidence only; local graph support and geometry gates are unchanged.",way/1422851117,0,1.0,3075.9302790681186,2584889.478075809,,0.0,0.0,False,False
+W20_0035,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,way/1422851117,0,0.002895578240957048,3075.9302790681186,2584889.478075809,,0.0,0.0,False,False
+W20_0036,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,267.64164111340204,0.0,False,False
+W20_0037,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,228.75596391844198,0.0,False,False
+W20_0038,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0039,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0040,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0041,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,469.10276363030954,439.20557041718826,False,False
+W20_0042,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,relation/7078052,0,0.725983692113471,13611.868878600824,1493742.9396656845,Sông Bàn Thạch,7751.0482031716765,6087.156472869033,False,False
+W20_0043,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,relation/7078052,0,0.7448415231138275,13611.868878600824,1493742.9396656845,Sông Bàn Thạch,1822.7693674492182,1584.7901959432415,False,False
+W20_0044,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,298.2267754150356,607.6254745836887,False,False
+W20_0045,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0046,ESTUARY_TIDAL_RIVER,ESTUARY_TIDAL_RIVER,False,Previously reconciled type retained.,relation/14117571,0,0.3498398271223743,6871.850342766942,3782701.7950648894,Sông Bàn Thạch,23276.905465915857,14034.059603494188,False,False
+W20_0047,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0048,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,1747.0203596430997,1922.4716403866628,False,False
+W20_0049,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0050,UNKNOWN_REVIEW_REQUIRED,ESTUARY_TIDAL_RIVER,True,Mapped coastal channel overlaps 76.44%; low elevation and coastal proximity require explicit tidal/backwater assessment. Tidal influence is not assumed verified. Same connected parent relation/7078052 component 0 intersects 13611.9 m of HydroRIVERS. This is type evidence only; local graph support and geometry gates are unchanged.,relation/7078052,0,0.7643534058125068,13611.868878600824,1493742.9396656845,Sông Bàn Thạch,0.0,0.0,False,False
+W20_0051,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,way/155941617,0,0.9110403141012455,7687.300002196091,956412.212025802,,670.4772721474322,693.3978296799862,False,False
+W20_0052,UNKNOWN_REVIEW_REQUIRED,ESTUARY_TIDAL_RIVER,True,Mapped coastal channel overlaps 78.50%; low elevation and coastal proximity require explicit tidal/backwater assessment. Tidal influence is not assumed verified. Same connected parent relation/7078052 component 0 intersects 13611.9 m of HydroRIVERS. This is type evidence only; local graph support and geometry gates are unchanged.,relation/7078052,0,0.7850180415071724,13611.868878600824,1493742.9396656845,Sông Bàn Thạch,0.0,0.0,False,False
+W20_0053,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0054,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,way/155941617,0,0.8223555099975685,7687.300002196091,956412.212025802,,604.2640687118359,980.2606096433672,False,False
+W20_0055,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,655.6853620274967,756.0641858486158,False,False
+W20_0056,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,341.3379124095976,0.0,False,False
+W20_0057,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0058,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0059,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,31743.722268375248,25074.491462205588,False,False
+W20_0060,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,way/155941617,0,0.9508037178299781,7687.300002196091,956412.212025802,,751.2733997351111,721.5307795234061,False,False
+W20_0061,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,429.1167913988804,890.1860431189,False,False
+W20_0062,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,424.7271580728964,False,False
+W20_0063,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,180.69049267384128,520.5540882365348,False,False
+W20_0064,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,593.4015311863074,0.0,False,False
+W20_0065,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,606.120931249667,238.6225467257596,False,False
+W20_0066,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,270.42636828343467,583.4197291926449,False,False
+W20_0067,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0068,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,215.3945047524452,872.2875741888513,False,False
+W20_0069,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,118.972780732923,0.0,False,False
+W20_0070,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0071,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,543.9672524601475,511.54623629410344,False,False
+W20_0072,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,1278.2836175233115,0.0,False,False
+W20_0073,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0074,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0075,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0076,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,492.9267255071108,835.4481543792283,False,False
+W20_0077,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False
+W20_0078,LAKE_RESERVOIR,LAKE_RESERVOIR,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,2110.8632410797827,1171.499506040432,False,False
+W20_0079,RIVER_STREAM,RIVER_STREAM,False,Previously reconciled type retained.,,-1,0.0,0.0,0.0,,416.8211836230602,0.0,False,False
+W20_0080,UNKNOWN_REVIEW_REQUIRED,UNKNOWN_REVIEW_REQUIRED,False,No sufficient overlap and HydroRIVERS support within the same connected river polygon.,,-1,0.0,0.0,0.0,,0.0,0.0,False,False

@@ -1,0 +1,17 @@
+{
+  "scope": "Exploratory analysis after known interruption, not preregistered Gate G",
+  "comparison": "Historical frozen V48 BASE paired at nearest output time; max offset 1 second",
+  "temporary_water_candidate_mask": "valid non-ocean AND 0<=water_density<=0.5 AND HAND>=0; no SAR scoring",
+  "depth_threshold_m": 0.3,
+  "local_aoi": "500 m buffer of each of the two authorized D reaches, native raster cell centers",
+  "local_aoi_reach_ids": [
+    "HR_41349822",
+    "HR_41352752"
+  ],
+  "difference_diagnostics_m": [
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "promotion": false
+}
