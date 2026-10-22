@@ -395,7 +395,7 @@
     },
     "CENTRAL": {
       "path": "D:\\VTP\\River_Bathymetry_Project\\V49_G_attempt_2\\results\\V49_G_CENTRAL.nc",
-      "exists": false,
+      "exists": true,
       "status": "RUNNING",
       "sar_frame_available": false,
       "complete_to_endtime": false

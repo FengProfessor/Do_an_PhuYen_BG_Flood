@@ -23,22 +23,21 @@ def check_for_remote_dem() -> dict:
     if code != 0:
         return {"status": "FETCH_FAILED", "error": stderr}
 
-    # 2. Compare HEAD and origin/main
-    _, local_sha, _ = run_cmd(["git", "rev-parse", "HEAD"])
-    _, remote_sha, _ = run_cmd(["git", "rev-parse", "origin/main"])
+    # 2. Check if remote has commits that local does not have
+    code, rev_count, _ = run_cmd(["git", "rev-list", "HEAD..origin/main", "--count"])
+    num_new_commits = int(rev_count) if code == 0 and rev_count.isdigit() else 0
 
-    if local_sha == remote_sha:
-        # Check if local new DEM file appeared manually as well
-        dem_candidates = find_dem_candidates()
+    if num_new_commits == 0:
         return {
             "status": "UP_TO_DATE",
-            "message": "Local and remote are in sync. Waiting for new commit from Git.",
-            "local_sha": local_sha,
-            "existing_candidates": [str(p) for p in dem_candidates]
+            "message": "Origin/main has no new commits. Waiting for new DEM commit from Git...",
+            "num_new_commits": 0
         }
 
     # 3. There are new commits on remote -> Pull
-    print(f"[WATCHER] New remote commit detected: {remote_sha[:8]} (local: {local_sha[:8]}). Pulling...")
+    _, remote_sha, _ = run_cmd(["git", "rev-parse", "origin/main"])
+    _, local_sha, _ = run_cmd(["git", "rev-parse", "HEAD"])
+    print(f"[WATCHER] {num_new_commits} new remote commit(s) detected ({remote_sha[:8]}). Pulling...")
     code, pull_out, pull_err = run_cmd(["git", "pull", "origin", "main"])
     if code != 0:
         return {"status": "PULL_FAILED", "error": pull_err}
@@ -48,11 +47,12 @@ def check_for_remote_dem() -> dict:
     changed_files = [line.strip() for line in changed_files_raw.splitlines() if line.strip()]
 
     # 5. Check if any carved / breached DEM is among changed files
+    dem_exts = [".tif", ".tiff", ".asc", ".dem"]
     dem_keywords = ["dem", "bathy", "carv", "breach", "bed", "hydraulic"]
     dem_matches = [
         f for f in changed_files
-        if any(f.lower().endswith(ext) for ext in [".tif", ".tiff", ".asc"])
-        or any(k in f.lower() for k in dem_keywords)
+        if any(f.lower().endswith(ext) for ext in dem_exts)
+        and any(k in f.lower() for k in dem_keywords)
     ]
 
     result = {
