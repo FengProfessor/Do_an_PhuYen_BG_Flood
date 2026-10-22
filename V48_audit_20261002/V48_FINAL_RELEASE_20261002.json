@@ -1,0 +1,97 @@
+{
+  "status": "V48_CONDITIONED_FROZEN_PRE_SAR_RELEASE",
+  "date": "2026-10-02",
+  "release_role": "Frozen hydrodynamic model terrain input; Sentinel-1 remains held out for subsequent validation.",
+  "base": {
+    "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+    "sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+  },
+  "frozen": {
+    "tif": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif",
+    "tif_sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "asc": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.asc",
+    "asc_sha256": "e323dc1fc6e24dcc28c59e8d118c0814a644e39769edcaf0596dcf9cac0b9aa9"
+  },
+  "selection": {
+    "baseline_strict_components": 47,
+    "cap_stable_strict_components": 45,
+    "jrc_independent_strict_components": 45,
+    "sensitivity_robust_components": 182,
+    "final_components": 40,
+    "final_cut_cells": 55
+  },
+  "cut_statistics": {
+    "min_m": 0.0048308372497558,
+    "median_m": 0.586259126663208,
+    "max_m": 0.9735184907913208,
+    "volume_m3": 25565.372087806463
+  },
+  "candidate_sensitivity": {
+    "number_of_configurations": 11,
+    "all_run_intersection_cells": 207,
+    "all_run_intersection_baseline_pct": 25.39877300613497,
+    "all_run_intersection_components": 90,
+    "ge9of11_cells": 770,
+    "ge9of11_baseline_pct": 94.47852760736197,
+    "ge9of11_components": 212,
+    "ge10of11_cells": 553,
+    "ge10of11_baseline_pct": 67.85276073619632,
+    "union_all_tier_a_cells": 2900,
+    "baseline_survival_frequency": {
+      "7": 2,
+      "8": 43,
+      "9": 217,
+      "10": 346,
+      "11": 207
+    }
+  },
+  "topology_cap_sensitivity": {
+    "configurations": 7,
+    "stable_strict_components_all_runs": 45
+  },
+  "source_holdout": {
+    "jrc_changed_decision_components": 6,
+    "jrc_strict_retained": 45,
+    "jrc_bounded_retained": 62,
+    "osm_holdout_scope": "candidate-stage diagnostic only; historical OSM geometry remains a topology construction input"
+  },
+  "conditioning_invariants": {
+    "grid_transform_preserved": true,
+    "crs_preserved": true,
+    "nodata_preserved": true,
+    "only_selected_cells_modified": true,
+    "only_lowering": true,
+    "global_priority_flood_applied_to_final_dem": false,
+    "epsilon_ramp_applied_to_final_dem": false,
+    "negative_elevations_clipped": false,
+    "sentinel1_2021_used_for_conditioning": false
+  },
+  "verification": {
+    "base_copy_byte_identical": true,
+    "grid_metadata_preserved": true,
+    "changed_mask_exact": true,
+    "changed_cells": 55,
+    "expected_cells": 55,
+    "all_changes_lowering": true,
+    "max_cut_m": 0.9735184907913208,
+    "all_frozen_values_match_selected_proposals": true,
+    "finite_valid_cells": true,
+    "asc_grid_ok": true,
+    "asc_vs_frozen_max_abs_diff_m": 0.0,
+    "sentinel1_2021_used": false
+  },
+  "scientific_freeze": {
+    "sentinel1_2021_used_for_conditioning": false,
+    "global_priority_flood_applied_to_final_dem": false,
+    "epsilon_ramp_applied_to_final_dem": false,
+    "negative_elevations_clipped": false,
+    "rule_after_freeze": "Do not tune or alter V48_CONDITIONED_FROZEN using Sentinel-1 2021 results. Any SAR-informed change must be a separate exploratory branch/version."
+  },
+  "audit_files": {
+    "selection": "D:\\VTP\\V48_research_20261002\\final_selection\\V48_final_selection_summary.json",
+    "conditioning": "D:\\VTP\\V48_audit_20261002\\V48_conditioning_summary.json",
+    "verification": "D:\\VTP\\V48_audit_20261002\\V48_final_verification.json",
+    "applied_cells": "D:\\VTP\\V48_audit_20261002\\V48_applied_cells.csv",
+    "manifest": "D:\\VTP\\V48_audit_20261002\\V48_conditioning_manifest.json"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "status": "FROZEN_BG_FLOOD_INPUT_CONTRACT_PRE_SAR_NOT_EXECUTED",
+  "date": "2026-10-02",
+  "bg_flood_run": false,
+  "sentinel1_2021_used": false,
+  "config": {
+    "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\BG_param_PhuYen_30m_V48_FROZEN.txt",
+    "sha256": "dcc14a545563fc1970f6e01bc249b4493421d6a6fa047b1cd7352e41f24b1dc5"
+  },
+  "terrain": {
+    "asc": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.asc",
+      "sha256": "71b99c74541fd1efddb4d7a67d05c387e973f113ce730c3f97a70463f2613784"
+    },
+    "tif": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.tif",
+      "sha256": "e75019ce5d0c02996bfab421623bda33ab3d56ff5bfd8a06e51f2ca2b3cd4feb"
+    },
+    "prj": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.prj",
+      "sha256": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060"
+    },
+    "stats": {
+      "ncols": 2100,
+      "nrows": 2100,
+      "cellsize_m": 30.0,
+      "nodata_value": -9999.0,
+      "nodata_cells": 0,
+      "valid_cells": 4410000,
+      "valid_min_m": -3.0,
+      "valid_max_m": 1449.032470703125,
+      "valid_negative_cells": 760,
+      "valid_le_minus_1m_cells": 509,
+      "valid_cells_le_minmask": 0
+    },
+    "minmask": -4.0,
+    "minmask_policy": "Pin minmask 1.0 m below the exact frozen DEM valid minimum (-3.0 m). This preserves every valid negative terrain cell while masking the -9999 ASC NoData sentinel under the pinned reader semantics."
+  },
+  "initial_state": {
+    "zsinit_m": 1.0,
+    "zsoffset_m": 0.0,
+    "semantics": "Cold start uses global water-surface elevation: zs=max(zsinit+zsoffset, zb), h=max(zs-zb, 0).",
+    "lineage": "Inherited from BG_param_PhuYen_30m_V45.txt; this freeze records the previously used value and does not claim an independent V48 calibration."
+  },
+  "parameters": {
+    "dx_m": 30,
+    "dy_m": 30,
+    "frictionmodel": -1,
+    "boundaries": {
+      "left": 0,
+      "right": 2,
+      "top": 2,
+      "bottom": 2
+    },
+    "endtime_s": 432000,
+    "outputtimestep_s": 10800,
+    "outvars": [
+      "zs",
+      "h",
+      "zb",
+      "u",
+      "v"
+    ]
+  },
+  "forcing": {
+    "river_ba_ha": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\xa_lu_BaHa_Nov2021_V40_sync.txt",
+      "sha256": "c756075697ab44ca5341fc45b1dd892e680e2360fea1247351ad953028cfaede"
+    },
+    "river_ban_thach": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\xa_lu_BanThach_V43.txt",
+      "sha256": "bb81bfbda9deb4fad66f81d357c00ac22bff513fd40b08fb892c8d6cf5da6a88"
+    },
+    "river_ky_lo": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\xa_lu_KyLo_V40_sync.txt",
+      "sha256": "c53c460fda3d97ee839b6f95f891854f7d4d4e88e179e9fd30006fec3f5a7bb5"
+    },
+    "river_tuy_an": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\xa_lu_TuyAn_V40_sync.txt",
+      "sha256": "07a8fd949965e35ec682acdd652b13e436bbd24539367facb9a030794c72e61e"
+    },
+    "rainfall": {
+      "path": "D:\\VTP\\Scenarios\\rain_v34_era5_x2.txt",
+      "sha256": "02e569860a840fdccc3f36efbd4fa3096bed11acedb1be480252f0d8b6f5184e"
+    },
+    "initial_loss": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\il_30m_V36.asc",
+      "sha256": "3f7f0d59f09b69efdb7bf928e0075104e5357ad183a882f83de854184a95083f"
+    },
+    "continuous_loss": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\cl_30m_V36.asc",
+      "sha256": "8ac18cdd54dc36c6b0c9c1745ccf1cac9d9baf1b5ba5096551f9ded5df46002b"
+    },
+    "manning": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_manning_30m_V43.asc",
+      "sha256": "d2ecf20017cb70d747ba2820075edc1dc0229bbc98dfa1eb4d2922113a34aab3"
+    }
+  },
+  "engine_semantics": {
+    "read_input": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\python\\bg_flood\\read_input.py",
+      "sha256": "9130817e39147eab34555ddf40e38f941a2835df26861bf9afde42964cbfdfd5"
+    },
+    "param": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\python\\bg_flood\\param.py",
+      "sha256": "60fcfd45b25a57ab509497e03d30fadda472b444297cf80d5fa7b63032681307"
+    },
+    "initial_conditions": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\python\\bg_flood\\initial_conditions.py",
+      "sha256": "0a13c4ae9b37065c0387ea62d10d23e04f94060d3d704003ecb44fc012db1d53"
+    },
+    "init_evolv": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\python\\bg_flood\\init_evolv.py",
+      "sha256": "fa7f83a42fcf2824addb453706d763af4e967c99befd1005d02a9f0da888a35f"
+    }
+  },
+  "provenance": {
+    "source_v45_config": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\BG_param_PhuYen_30m_V45.txt",
+      "sha256": "5d2dd71bfa30a61ca3f7690107f89e534ea666a8d94661f74ff30e45e89af83d"
+    },
+    "forcing_lineage_note": "The exact files are frozen here because they are directly referenced by the evidenced V45 configuration. Their scientific lineage into V48 remains inherited rather than independently re-derived for V48.",
+    "closed_loop_summary": {
+      "path": "D:\\VTP\\V48_closed_loop_direct_20261002\\V48_closed_loop_direct_summary.json",
+      "sha256": "493a8832b2ebbbd0bd9c7172df23e4fc401cc0e9aaa2e13d62549f1816422405"
+    },
+    "closed_loop_release": {
+      "path": "D:\\VTP\\V48_CLOSED_LOOP_FROZEN_RELEASE_20261002.json",
+      "sha256": "db599a2446e08803cbfecd1dd124592e7e4e13b44f6f559c6cbafbd66c08aced"
+    }
+  },
+  "release_gate": {
+    "closed_loop_status": "PASS_CLOSED_LOOP_DIRECT_CONVERGED_CANDIDATE_PRE_SAR",
+    "closed_loop_final_strict_components": 0,
+    "closed_loop_iterations_with_new_cuts": 16,
+    "formal_bg_flood_run_allowed": false,
+    "reason": "Closed-loop terrain is frozen and the input contract is deterministic. Formal BG_Flood remains gated until the SAR preregistration validator reports READY_FOR_FORMAL_EVALUATION."
+  }
+}

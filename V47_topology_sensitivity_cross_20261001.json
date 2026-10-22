@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "purpose": "Cross-analyze preregistered candidate sensitivity with historical-407 topology decisions.",
+  "baseline": {
+    "cells": 407,
+    "components": 151
+  },
+  "component_decision_robustness": {
+    "AUTO_APPROVE_STRICT": {
+      "components": 13,
+      "baseline_cells": 18,
+      "all_cells_11of11_components": 0,
+      "any_cell_11of11_components": 1,
+      "all_cells_ge9of11_components": 12,
+      "any_cell_ge9of11_components": 12,
+      "mean_component_survival_count_of_11": 9.58974358974359,
+      "min_component_cell_survival_count_of_11": 8
+    },
+    "REJECT": {
+      "components": 57,
+      "baseline_cells": 211,
+      "all_cells_11of11_components": 2,
+      "any_cell_11of11_components": 15,
+      "all_cells_ge9of11_components": 49,
+      "any_cell_ge9of11_components": 53,
+      "mean_component_survival_count_of_11": 9.59120022277917,
+      "min_component_cell_survival_count_of_11": 8
+    },
+    "REVIEW_APPROVE_BOUNDED": {
+      "components": 81,
+      "baseline_cells": 178,
+      "all_cells_11of11_components": 8,
+      "any_cell_11of11_components": 19,
+      "all_cells_ge9of11_components": 79,
+      "any_cell_ge9of11_components": 81,
+      "mean_component_survival_count_of_11": 9.860562414266118,
+      "min_component_cell_survival_count_of_11": 8
+    }
+  },
+  "approved_support_channels": {
+    "approved_components": 94,
+    "jrc25_support": 25,
+    "upstream_area_0_5km2_support": 87,
+    "both": 18,
+    "upstream_area_only": 69,
+    "jrc_only": 7
+  },
+  "reject_reason_counts": {
+    "NO_JRC25_OR_UPSTREAM_AREA_0_5KM2_SUPPORT": 24,
+    "CUT_DEPTH_EXCEEDS_GLOBAL_CAP": 11,
+    "CUT_DEPTH_EXCEEDS_GLOBAL_CAP;NO_JRC25_OR_UPSTREAM_AREA_0_5KM2_SUPPORT": 8,
+    "COMPONENT_GT_1_CELL_FROM_HISTORICAL_OSM_CENTERLINE": 3,
+    "NO_DIRECT_D8_UPSTREAM_DOWNSTREAM_TOPOLOGY": 2,
+    "NO_POSITIVE_CUT_NEEDED;NO_JRC25_OR_UPSTREAM_AREA_0_5KM2_SUPPORT": 2,
+    "CUT_DEPTH_EXCEEDS_GLOBAL_CAP;MODIFIED_CELLS_EXCEED_GLOBAL_CAP": 2,
+    "NO_POSITIVE_CUT_NEEDED": 2,
+    "PATH_SPAN_EXCEEDS_CAP;CUT_DEPTH_EXCEEDS_GLOBAL_CAP;MODIFIED_CELLS_EXCEED_GLOBAL_CAP": 1,
+    "PATH_SPAN_EXCEEDS_CAP;MODIFIED_CELLS_EXCEED_GLOBAL_CAP": 1,
+    "MODIFIED_CELLS_EXCEED_GLOBAL_CAP": 1
+  },
+  "interpretation": [
+    "Candidate-stage robustness and topology admissibility are distinct filters.",
+    "All-11 or >=9/11 survival is a parameter-sensitivity diagnostic, not physical truth.",
+    "Approval counts remain dry-run outputs; this analysis does not modify the DEM."
+  ],
+  "outputs": {
+    "component_csv": "D:\\VTP\\V47_topology_sensitivity_components_20261001.csv"
+  }
+}

@@ -1,0 +1,9 @@
+# Kich ban xa lu Song Ba Ha (Cap nhat theo VNExpress) - Ngay 30/11/2021
+# Thoi_gian(s)   Luu_luong_Q(m3/s)
+0               2000
+28800           6000
+41400           9000
+54000           11000
+59400           6400
+64800           6400
+108000          6400

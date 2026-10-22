@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "checks": {
+    "base_copy_byte_identical": true,
+    "grid_metadata_preserved": true,
+    "changed_mask_exact": true,
+    "changed_cells": 55,
+    "expected_cells": 55,
+    "all_changes_lowering": true,
+    "max_cut_m": 0.9735184907913208,
+    "all_frozen_values_match_selected_proposals": true,
+    "finite_valid_cells": true,
+    "asc_grid_ok": true,
+    "asc_vs_frozen_max_abs_diff_m": 0.0,
+    "sentinel1_2021_used": false
+  },
+  "base": {
+    "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m.tif",
+    "sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "metadata": {
+      "shape": [
+        2100,
+        2100
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        270000.0,
+        0.0,
+        -30.0,
+        1478000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "crs": "EPSG:32649",
+      "nodata": -9999.0
+    }
+  },
+  "frozen": {
+    "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif",
+    "sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "metadata": {
+      "shape": [
+        2100,
+        2100
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        270000.0,
+        0.0,
+        -30.0,
+        1478000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "crs": "EPSG:32649",
+      "nodata": -9999.0
+    }
+  },
+  "asc": {
+    "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.asc",
+    "sha256": "e323dc1fc6e24dcc28c59e8d118c0814a644e39769edcaf0596dcf9cac0b9aa9"
+  },
+  "cuts": {
+    "path": "D:\\VTP\\V48_research_20261002\\final_selection\\V48_final_cut_cells.csv",
+    "sha256": "2672c1b2e637d99ee29faec4fdf6adaf3c23060bce5c27442c985b7c3c3c14d9"
+  }
+}

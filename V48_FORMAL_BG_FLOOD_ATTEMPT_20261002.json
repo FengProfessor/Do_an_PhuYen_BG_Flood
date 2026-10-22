@@ -1,0 +1,37 @@
+{
+  "status": "ABORTED_BEFORE_FIRST_FORMAL_OUTPUT_FRAME",
+  "date": "2026-10-02",
+  "arm": "V48_BASE_COPERNICUS",
+  "pair_prep": {
+    "path": "D:\\VTP\\V48_FORMAL_RUN_PAIR_PREP_20261002.json",
+    "sha256": "641ec485bba07e3d177c761000e95f35051f06321b22eda0b493c5f58d9a1aea"
+  },
+  "config": {
+    "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\BG_param_PhuYen_30m_V48_FORMAL_BASE.txt",
+    "sha256": "03d58044b16d18fe3e0e0364056f32615f38c33b4041679672e40227d89108f4"
+  },
+  "command": "python -u python/run_bgflood.py BG_param_PhuYen_30m_V48_FORMAL_BASE.txt",
+  "termination": {
+    "intentional": true,
+    "reason": "Runtime feasibility check showed the 30 m full-domain formal run could not be completed inside the interactive tool session. The process was stopped without changing any scientific input or evaluation rule.",
+    "last_observed_model_time_s": 493.94,
+    "last_observed_main_loop_elapsed_s": 253.5,
+    "planned_first_output_time_s": 10800,
+    "reached_first_output_time": false
+  },
+  "partial_output": {
+    "archived_path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\results\\V48_FORMAL_BASE_ABORTED_RUNTIME_PROBE_20261002.nc",
+    "sha256": "a81830f7d1938067c2a22036a6b07d759be0bdd640a4022660ecedca7ee2a2b7",
+    "bytes": 46254,
+    "netcdf_time_dimension": 0,
+    "committed_time_values": []
+  },
+  "scientific_state": {
+    "sentinel_evaluation_run": false,
+    "sentinel_metrics_inspected": false,
+    "terrain_changed_after_preregistration": false,
+    "forcing_changed_after_preregistration": false,
+    "evaluation_rule_changed_after_preregistration": false,
+    "completed_formal_bg_flood_output_available": false
+  }
+}

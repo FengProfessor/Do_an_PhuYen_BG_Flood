@@ -1,0 +1,23 @@
+{
+  "algorithm": "D:\\VTP\\v47_topology_paths.py",
+  "algorithm_sha256": "1a6428aeccf27fc52d368bd35479e3f65749023c318f8f5c9c9b4d0f9277e434",
+  "inputs": {
+    "05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "V48_research_20261002\\topology_raw815\\V48_baseline815_core.tif": "aaf916fa26916653a2042084b297a0b1215d71e3116f6b413082722379d281e3",
+    "V48_research_20261002\\topology_raw815\\V48_baseline815_core_manifest.json": "b629f1a615e68a80fb027067d45295f8a429061d554e3f13445d343491a68a93",
+    "V48_research_20261002\\candidate_baseline_strict_1_2\\V46_obstruction_candidates.csv": "8b6336225f70465357877d0c5b83c7017c5b6fe0eb67e5158ea4e90b65728fb7",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_D8.tif": "49cb1a217efbc416f23d321cca140204b8936a81a7b1f31492956efa665d89ea",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_upstream_area_km2.tif": "254f5dee60a4861defd1c45b868bfff123e1d08c9160b0530470ab86a3c0b516",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_HAND_drain_1km2.tif": "a134b6b2cbf1396feb9ceaca2bd9645d7d98f08ef979554147757216f83b7ddb",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_JRC_GSW1_3_occurrence_1984_2020.tif": "8eb4652f93a72e5a049039f9c22a653d94e176e4cace47c1469e8e1297d71513",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_filled_for_routing_only.tif": "bb167a75f86398cdba9c168c05007a211278354fd51b1bd2ede205f7c0203b71",
+    "V46_inputs\\osm_historical_20211125\\historical_osm_manifest.json": "da152750960e504c544c0b2d205e593ecc163ec910bbdd90622bdc02389c6e82"
+  },
+  "outputs": {
+    "V48_audit_20261002\\post_condition_topology\\V46_topology_components.csv": "7c492745760f5ce005fab75b99c23c74665aa6e98e2067bc75d5e7dd45f5b8a1",
+    "V48_audit_20261002\\post_condition_topology\\V46_proposed_cut_cells.csv": "77408429bded0ffbcc80fe54b430fe24507b8ff5fd771947afe7e5f23d7ff58d",
+    "V48_audit_20261002\\post_condition_topology\\V46_candidate_paths.geojson": "8413c6b538c0d80ce4783fe1e8bc447805c047e97af6416543516d5ef2fae835",
+    "V48_audit_20261002\\post_condition_topology\\V46_auto_approved_strict_cut_mask.tif": "51347e9c4e0aba26d997bae4f3767e708e4d4d648a39109d9062533034e89791",
+    "V48_audit_20261002\\post_condition_topology\\V46_topology_summary.json": "d2f732ad86c83e2e6f416b3960191835dde232e63fb901327ffa0a7787891a83"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PASS_METADATA_AND_RANGE_READ",
+  "stac_item_id": "S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0_rtc",
+  "start_datetime": "2021-11-29 22:36:38.799806+00:00",
+  "end_datetime": "2021-11-29 22:37:03.797720+00:00",
+  "assets": {
+    "vv": {
+      "asset": "vv",
+      "source_href": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2021/11/29/IW/DV/S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0_7891/measurement/iw-vv.rtc.tiff",
+      "driver": "GTiff",
+      "width": 28097,
+      "height": 21791,
+      "dtype": "float32",
+      "count": 1,
+      "crs": "EPSG:32649",
+      "transform": [
+        10.0,
+        0.0,
+        89660.0,
+        0.0,
+        -10.0,
+        1636210.0
+      ],
+      "bounds": [
+        89660.0,
+        1418300.0,
+        370630.0,
+        1636210.0
+      ],
+      "nodata": -32768.0,
+      "center_sample": 0.19039611518383026
+    },
+    "vh": {
+      "asset": "vh",
+      "source_href": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2021/11/29/IW/DV/S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0_7891/measurement/iw-vh.rtc.tiff",
+      "driver": "GTiff",
+      "width": 28097,
+      "height": 21791,
+      "dtype": "float32",
+      "count": 1,
+      "crs": "EPSG:32649",
+      "transform": [
+        10.0,
+        0.0,
+        89660.0,
+        0.0,
+        -10.0,
+        1636210.0
+      ],
+      "bounds": [
+        89660.0,
+        1418300.0,
+        370630.0,
+        1636210.0
+      ],
+      "nodata": -32768.0,
+      "center_sample": 0.13605713844299316
+    }
+  }
+}

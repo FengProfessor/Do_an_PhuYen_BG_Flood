@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checks": {
+    "base_sha256_expected": true,
+    "osm_snapshot_exact": true,
+    "osm_no_post_snapshot_way": true,
+    "jrc_pre2021": true,
+    "validated_seed_is_55_cells": true,
+    "all_applied_inside_validated_seed": true,
+    "diff_matches_audit_rows": true,
+    "all_changes_lowering": true,
+    "all_applied_decisions_allowed": true,
+    "all_applied_components_have_direct_d8_topology": true,
+    "strict_cut_cap_1m": true,
+    "bounded_cut_cap_3m": true,
+    "all_applied_have_reason": true,
+    "all_applied_reason_has_direct_d8": true,
+    "all_applied_have_osm": true,
+    "all_applied_have_hydrorivers": true,
+    "sentinel_not_in_applied_reason": true,
+    "all_manifest_hashes_match": true
+  },
+  "manifest_errors": {
+    "D:\\VTP\\V46_audit_20260930\\V46_conditioning_manifest.json": [],
+    "D:\\VTP\\V46_hydro_evidence_20260930\\V46_hydro_evidence_manifest.json": [],
+    "D:\\VTP\\V46_seed55_historical_validated_20260930\\V46_seed55_validation_manifest.json": [],
+    "D:\\VTP\\V46_topology_20260930\\V46_topology_manifest.json": []
+  },
+  "base_sha256": "9fb70773a96fc2d52521aa803c3aa08537a5e379d9592754541365ad32e15488",
+  "v46_sha256": "bbfe4be06347d014fefd958aff7af33d518593120e0bfeca4e1e7b9e9f3676ac",
+  "validated_seed_cells": 55,
+  "modified_cells": 38,
+  "modified_components": 16,
+  "strict_cells": 1,
+  "bounded_cells": 37,
+  "cut_min_m": 0.7350001335144043,
+  "cut_median_m": 1.1603334248065948,
+  "cut_max_m": 2.9624996185302734
+}

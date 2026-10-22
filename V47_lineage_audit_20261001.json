@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "purpose": "Quantify inherited edits in the V41 base used by V46.",
+  "files_sha256": {
+    "PhuYen_DEM_30m.asc": "90f8f10da33ff19e5933ee7b1a0f83652d3a096d706259881c1fa27ad2d1bf2f",
+    "PhuYen_DEM_30m_V35.asc": "7c2d4d9932648bb068f7770ab0634a523a29b4d0665650e9d17f3ce22920897c",
+    "PhuYen_DEM_30m_V35_fixed.asc": "652330073ba37d24db154222a4a3b86770ae41ebf4f1926fa8a0654146154903",
+    "PhuYen_DEM_30m_V39_Safe.asc": "fb854aa12aee152a0ec30c6880589650203bda7b162a0017a2eb23bece7d3cde",
+    "PhuYen_DEM_30m_V41.asc": "9fb70773a96fc2d52521aa803c3aa08537a5e379d9592754541365ad32e15488"
+  },
+  "pre_v41_lineage": {
+    "raw_asc_to_v35_fixed": {
+      "changed_cells": 3,
+      "min_m": -5.000007446289061,
+      "median_m": -5.000002685546889,
+      "max_m": -5.0000019531250075,
+      "sum_cell_m": -15.000012084960957,
+      "abs_ge_0_1m_cells": 3,
+      "abs_ge_1m_cells": 3,
+      "abs_ge_2m_cells": 3,
+      "all_significant_deltas_m": [
+        -5.000007446289061,
+        -5.000002685546889,
+        -5.0000019531250075
+      ]
+    },
+    "v35_to_v35_fixed": {
+      "changed_cells": 0
+    },
+    "v35_fixed_to_v39_safe": {
+      "changed_cells": 22928,
+      "min_m": -2.5000001192092896,
+      "median_m": -2.5,
+      "max_m": -2.4999998807907104,
+      "sum_cell_m": -57320.00000259373,
+      "abs_ge_0_1m_cells": 22928,
+      "abs_ge_1m_cells": 22928,
+      "abs_ge_2m_cells": 22928,
+      "all_deltas_minus_2_5m": true
+    }
+  },
+  "v41_reproduction": {
+    "valid_cells": 4410000,
+    "exact_equal_cells": 4410000,
+    "max_abs_diff_m": 0.0
+  },
+  "counterfactual_conditioning": {
+    "v35_mock_punch_effect_after_conditioning": {
+      "changed_cells": 3,
+      "min_m": -5.0,
+      "median_m": -5.0,
+      "max_m": -4.923000000000002,
+      "sum_cell_m": -14.923000000000002,
+      "abs_ge_0_1m_cells": 3,
+      "abs_ge_1m_cells": 3,
+      "abs_ge_2m_cells": 3
+    },
+    "v39_safe_effect_after_conditioning": {
+      "changed_cells": 37776,
+      "min_m": -2.5000000000000018,
+      "median_m": -0.3490000000000002,
+      "max_m": -0.0009999999999994458,
+      "sum_cell_m": -23933.096,
+      "abs_ge_0_1m_cells": 29359,
+      "abs_ge_1m_cells": 8266,
+      "abs_ge_2m_cells": 3317
+    },
+    "v39_original_edit_cells": 22928,
+    "v39_original_edit_cells_with_final_effect": 19417,
+    "v39_original_edit_cells_fully_removed_by_fill": 3511,
+    "final_effect_cells_outside_original_v39_edit_mask": 18359
+  },
+  "priority_flood": {
+    "raw_raised_cells": 217054,
+    "v35_fixed_raised_cells": 217055,
+    "v39_safe_raised_cells": 220844
+  },
+  "interpretation": [
+    "A PASS only verifies numerical reproduction of the stored V41 conditioning path.",
+    "It does not validate the physical correctness of the V35 or V39_Safe edits.",
+    "The provenance of the road-density layer and the generation command for V39_Safe must be audited separately."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "algorithm": "D:\\VTP\\v46_build_hydro_evidence.py",
+  "algorithm_sha256": "bd8cd4e9b16692cda9c420f9daa24a1d5ede7a790cb10e4035f9b11672dcd17d",
+  "inputs": {
+    "05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "V46_inputs\\JRC_GSW1_3_occurrence_1984_2020_100E_10N.tif": "64060355cb6ff43bf6d7a7751872d316d820a0954cd710bea1bc9039fba924b7"
+  },
+  "outputs": {
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_filled_for_routing_only.tif": "bb167a75f86398cdba9c168c05007a211278354fd51b1bd2ede205f7c0203b71",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_D8.tif": "49cb1a217efbc416f23d321cca140204b8936a81a7b1f31492956efa665d89ea",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_upstream_area_km2.tif": "254f5dee60a4861defd1c45b868bfff123e1d08c9160b0530470ab86a3c0b516",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_HAND_drain_1km2.tif": "a134b6b2cbf1396feb9ceaca2bd9645d7d98f08ef979554147757216f83b7ddb",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_HAND_drain_10km2.tif": "ebafcfa9dd1e8d1fdc0563f91807e3494ee3f0c1f1e346ee0713f748097ce374",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_fill_depth_m.tif": "79fa2447d3b5a35b4ae2bd6c3591b9399e39ff41cec9ba428df28535f185eee4",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_JRC_GSW1_3_occurrence_1984_2020.tif": "8eb4652f93a72e5a049039f9c22a653d94e176e4cace47c1469e8e1297d71513",
+    "V48_audit_20261002\\post_condition_hydro_recompute\\V46_hydro_evidence_summary.json": "e759f77a872a4508c92885aeb521f65bfde5f86756e76035ce03ccb5bb4254ff"
+  }
+}

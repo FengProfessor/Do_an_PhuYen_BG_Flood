@@ -1,0 +1,41 @@
+{
+  "status": "TOPOLOGY_AND_CUT_DRY_RUN_NO_DEM_MODIFICATION",
+  "seed_cells": 815,
+  "core_scope": "historical_strict_tierA_core",
+  "components": 206,
+  "decision_counts": {
+    "REJECT": 130,
+    "REVIEW_APPROVE_BOUNDED": 65,
+    "AUTO_APPROVE_STRICT": 11
+  },
+  "direct_d8_topology_components": 203,
+  "auto_approved_components": 11,
+  "bounded_review_components": 65,
+  "auto_approved_cut_cells": 15,
+  "auto_approved_cut_volume_m3": 6241.2693647401675,
+  "constraints": {
+    "historical_osm_projection_max_offset_cells": 1,
+    "direct_d8_topology_required": true,
+    "auto_strict_max_cut_m": 1.0,
+    "auto_strict_max_modified_cells_per_component": 4,
+    "bounded_max_cut_m": 3.0,
+    "bounded_max_modified_cells_per_component": 8,
+    "max_path_span_cells": 20,
+    "supplemental_evidence": "JRC occurrence >=25% within 1 cell OR D8 upstream area >=0.5 km2 within 2 cells"
+  },
+  "invariants": {
+    "dem_modified": false,
+    "seed_current_osm_used_as_evidence": false,
+    "sentinel1_2021_used": false,
+    "historical_osm_required": true,
+    "jrc_temporal_coverage": "1984-2020",
+    "d8_source_dem": "05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif",
+    "d8_source_dem_sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e"
+  },
+  "outputs": {
+    "components": "V48_audit_20261002\\post_condition_topology\\V46_topology_components.csv",
+    "cuts": "V48_audit_20261002\\post_condition_topology\\V46_proposed_cut_cells.csv",
+    "paths": "V48_audit_20261002\\post_condition_topology\\V46_candidate_paths.geojson",
+    "auto_mask": "V48_audit_20261002\\post_condition_topology\\V46_auto_approved_strict_cut_mask.tif"
+  }
+}

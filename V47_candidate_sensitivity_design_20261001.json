@@ -1,0 +1,36 @@
+{
+  "status": "PREREGISTERED_BEFORE_V47_SENSITIVITY_RUNS",
+  "date": "2026-10-01",
+  "purpose": "Test candidate-stage robustness of the historical strict core without Sentinel-1 2021 selection.",
+  "fixed_inputs": {
+    "dem": "D:/VTP/05-Du-lieu-GIS/PhuYen_DEM_30m_V41.asc",
+    "osm": "D:/VTP/V46_inputs/osm_historical_20211125",
+    "osm_max_timestamp": "2021-11-25T00:00:00Z",
+    "hydrorivers": "D:/VTP/V46_inputs/HydroRIVERS_as/HydroRIVERS_v10_as_shp/HydroRIVERS_v10_as.shp",
+    "compare_v44": "D:/VTP/05-Du-lieu-GIS/PhuYen_DEM_30m_V41.asc",
+    "compare_v45": "D:/VTP/05-Du-lieu-GIS/PhuYen_DEM_30m_V41.asc",
+    "sentinel1_2021_used_for_selection": false
+  },
+  "baseline": {
+    "run_id": "baseline_strict_1_2",
+    "reuse_existing": "D:/VTP/V46_dryrun_sensitivity/strict_1_2",
+    "corridor_cells": 1.0,
+    "hydro_corridor_cells": 2.0,
+    "relief_threshold_m": 1.0,
+    "relief_window": 5,
+    "max_slope_deg": 5.0,
+    "max_elevation_m": 20.0
+  },
+  "runs": [
+    {"run_id":"relief_0p75","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":0.75,"relief_window":5,"max_slope_deg":5.0,"max_elevation_m":20.0},
+    {"run_id":"relief_1p50","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.5,"relief_window":5,"max_slope_deg":5.0,"max_elevation_m":20.0},
+    {"run_id":"window_3","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.0,"relief_window":3,"max_slope_deg":5.0,"max_elevation_m":20.0},
+    {"run_id":"window_7","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.0,"relief_window":7,"max_slope_deg":5.0,"max_elevation_m":20.0},
+    {"run_id":"slope_3","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.0,"relief_window":5,"max_slope_deg":3.0,"max_elevation_m":20.0},
+    {"run_id":"slope_7","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.0,"relief_window":5,"max_slope_deg":7.0,"max_elevation_m":20.0},
+    {"run_id":"elev_15","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.0,"relief_window":5,"max_slope_deg":5.0,"max_elevation_m":15.0},
+    {"run_id":"elev_30","corridor_cells":1.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.0,"relief_window":5,"max_slope_deg":5.0,"max_elevation_m":30.0},
+    {"run_id":"corridor_2_2","corridor_cells":2.0,"hydro_corridor_cells":2.0,"relief_threshold_m":1.0,"relief_window":5,"max_slope_deg":5.0,"max_elevation_m":20.0},
+    {"run_id":"corridor_1_3","corridor_cells":1.0,"hydro_corridor_cells":3.0,"relief_threshold_m":1.0,"relief_window":5,"max_slope_deg":5.0,"max_elevation_m":20.0}
+  ]
+}

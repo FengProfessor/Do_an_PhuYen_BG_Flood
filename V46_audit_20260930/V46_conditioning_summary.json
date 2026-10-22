@@ -1,0 +1,36 @@
+{
+  "status": "V46_HYDROLOGICALLY_CONDITIONED_DEM_CREATED",
+  "base_dem": {
+    "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V41.asc",
+    "sha256": "9fb70773a96fc2d52521aa803c3aa08537a5e379d9592754541365ad32e15488"
+  },
+  "output_dem": {
+    "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V46.asc",
+    "sha256": "bbfe4be06347d014fefd958aff7af33d518593120e0bfeca4e1e7b9e9f3676ac",
+    "prj": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V46.prj",
+    "prj_sha256": "f091cc5695962ce8d7807e3c43aa152ee62e419212c0fab878c56782910f2080"
+  },
+  "selection": {
+    "allowed_decisions": [
+      "AUTO_APPROVE_STRICT",
+      "REVIEW_APPROVE_BOUNDED"
+    ],
+    "include_bounded": true,
+    "modified_cells": 38,
+    "modified_area_km2": 0.0342,
+    "cut_depth_min_m": 0.7350001335144043,
+    "cut_depth_median_m": 1.1603333453337354,
+    "cut_depth_max_m": 2.9624998569488525,
+    "excavation_volume_m3": 49289.827609062195
+  },
+  "invariants": {
+    "grid_transform_preserved": true,
+    "nodata_preserved": true,
+    "only_approved_cells_modified": true,
+    "only_lowering": true,
+    "sentinel1_2021_used_for_conditioning": false,
+    "base_v41_unchanged": true
+  },
+  "topology_summary_sha256": "e7726c31d2012a855974fee8ae758aef1d3b7904acdae34ee022347e2374e3ea",
+  "applied_cells": "D:\\VTP\\V46_audit_20260930\\V46_applied_cells.csv"
+}

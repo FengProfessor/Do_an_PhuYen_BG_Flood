@@ -1,0 +1,320 @@
+[
+  {
+    "page": 1,
+    "characters": 490,
+    "first": "ĐẠI HỌC QUỐC GIA HÀ NỘI | TRƯỜNG ĐẠI HỌC CÔNG NGHỆ | VIỆN CÔNG NGHỆ HÀNG KHÔNG VŨ TRỤ | ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC HỆ CHÍNH QUY | NGÀNH CÔNG NGHỆ ",
+    "last": "uan công tác: Viện Công nghệ Hàng không Vũ trụ | Hà Nội – Năm 2026"
+  },
+  {
+    "page": 2,
+    "characters": 549,
+    "first": "ii | Lời cam đoan | Tôi xin cam đoan đồ án này được thực hiện dưới sự hướng dẫn của TS. Hà Minh  | Cường. Các kết quả mô phỏng, phép đối chiếu ",
+    "last": "gày … tháng … năm 2026 | Sinh viên cam đoan | [Họ và tên Sinh viên]"
+  },
+  {
+    "page": 3,
+    "characters": 1088,
+    "first": "iii | Lời cảm ơn | Trong quá trình thực hiện đồ án, em đã nhận được sự hướng dẫn và hỗ trợ của  | thầy cô, gia đình và bạn bè. | Em xin trân trọ",
+    "last": "ày … tháng … năm 2026 | Sinh viên thực hiện | [Họ và tên Sinh viên]"
+  },
+  {
+    "page": 4,
+    "characters": 1882,
+    "first": "iv | Tóm tắt | Đồ án thiết lập quy trình kết hợp dữ liệu địa hình, viễn thám radar và mô hình  | thủy lực hai chiều để nghiên cứu phạm vi ngập ",
+    "last": "iều; BG_Flood; SAR; Phú Yên; phạm vi ngập;  | hiệu chỉnh địa hình."
+  },
+  {
+    "page": 5,
+    "characters": 2125,
+    "first": "v | Abstract | This study establishes a workflow combining terrain data, radar remote sensing  | and two-dimensional hydraulic modelling to inv",
+    "last": "ugh controlled paired simulations and  | independent observations."
+  },
+  {
+    "page": 6,
+    "characters": 112,
+    "first": "vi | Keywords: two-dimensional hydraulic modelling; BG_Flood; SAR; Phu Yen;  | flood extent; terrain modification.",
+    "last": "ng; BG_Flood; SAR; Phu Yen;  | flood extent; terrain modification."
+  },
+  {
+    "page": 7,
+    "characters": 1611,
+    "first": "vii | Danh mục từ viết tắt | ST | T | Viết tắt Thuật ngữ Tiếng Anh / Tiếng Việt | 1 2D SWE 2D Shallow Water Equations (Phương trình nước nông hai",
+    "last": "MO World Meteorological Organization (Tổ chức Khí tượng Thế giới)"
+  },
+  {
+    "page": 8,
+    "characters": 387,
+    "first": "viii | ST | T | Viết tắt Thuật ngữ Tiếng Anh / Tiếng Việt | 23 BĐKH Biến đổi khí hậu toàn cầu | 24 PCTT Phòng chống thiên tai và Tìm kiếm cứu nạn",
+    "last": " MCC Matthews Correlation Coefficient (Hệ số tương quan Matthews)"
+  },
+  {
+    "page": 9,
+    "characters": 4679,
+    "first": "ix | MỤC LỤC | Lời cam đoan...................................................................................................................",
+    "last": "ới ướt/khô (Wet-Dry Treatment) và kiểm soát lỗi NaN........... 16"
+  },
+  {
+    "page": 10,
+    "characters": 3330,
+    "first": "x | 2.2 Quy trình xử lý và trích xuất vết ngập từ ảnh viễn thám Sentinel-1 SAR........................... 17 | 2.3 Các phương pháp tiền xử lý ",
+    "last": ".............................................................. 41"
+  },
+  {
+    "page": 11,
+    "characters": 370,
+    "first": "xi | Danh mục hình ảnh | Hình 3.1 Phân bố các nhóm đối chiếu V44 với SAR tại khoảng 102 giờ ...................................... 30 | Hình 3.",
+    "last": "h ............................................................ 32"
+  },
+  {
+    "page": 12,
+    "characters": 922,
+    "first": "xii | Danh mục bảng biểu | Bảng 2.1 Ma trận nhầm lẫn không gian (Contingency Matrix) đánh giá độ khớp vết ngập .......... 20 | Bảng 3.1 Các thô",
+    "last": " mô hình học máy thay thế .................................... 33"
+  },
+  {
+    "page": 13,
+    "characters": 1962,
+    "first": "1 | MỞ ĐẦU | 1. Đặt vấn đề và tính cấp thiết của đề tài | Thiên tai liên quan đến thời tiết, khí hậu và nước gây tổn thất lớn về người và tài ",
+    "last": "GPU [3]. Ảnh Sentinel-1 SAR cung cấp thông tin bề mặt trong điều "
+  },
+  {
+    "page": 14,
+    "characters": 1639,
+    "first": "2 | kiện có mây [4]. Việc kết hợp hai nguồn cho phép đối chiếu không gian, với điều kiện  | ghi rõ sai số quan sát và mức độc lập giữa dữ liệu",
+    "last": " sung. | 3. Đối tượng và phạm vi nghiên cứu | Đối tượng nghiên cứu:"
+  },
+  {
+    "page": 15,
+    "characters": 1892,
+    "first": "3 | - Dòng chảy lũ mặt tự do hai chiều biến đổi không dừng theo hệ phương trình vi phân  | đạo hàm riêng phi tuyến nước nông (2D SWE). | - Tín ",
+    "last": " tắc đánh giá, hoặc ghi rõ những khác biệt làm hạn chế diễn giải."
+  },
+  {
+    "page": 16,
+    "characters": 1527,
+    "first": "4 | 5. Ý nghĩa khoa học và thực tiễn của đề tài | Ý nghĩa khoa học: | Thiết lập quy trình mô phỏng và đối chiếu có hồ sơ dữ liệu, cấu hình và c",
+    "last": "của đồ án và  | đề xuất các hướng phát triển nghiên cứu tiếp theo."
+  },
+  {
+    "page": 17,
+    "characters": 133,
+    "first": "5 | Tài liệu tham khảo gồm các nguồn được sử dụng trong thân bài; phụ lục ghi các  | tệp cấu hình, dữ liệu và kết quả phục vụ truy vết.",
+    "last": " lục ghi các  | tệp cấu hình, dữ liệu và kết quả phục vụ truy vết."
+  },
+  {
+    "page": 18,
+    "characters": 1849,
+    "first": "6 | CHƯƠNG 1 TỔNG QUAN TÀI LIỆU VÀ CƠ SỞ LÝ LUẬN | 1.1 Tổng quan nghiên cứu mô phỏng ngập lụt trên thế giới và tại Việt Nam | 1.1.1 Tiến trình ",
+    "last": " toán trên GPU [3]. Hiệu suất phụ thuộc thuật toán và phần cứng. "
+  },
+  {
+    "page": 19,
+    "characters": 1919,
+    "first": "7 | Đồ án báo cáo thời gian solver của V44, không chuyển hệ số tăng tốc của công trình  | khác thành kết quả đo của dự án. | 1.1.2 Tổng quan cá",
+    "last": " Lũ sông thường có thời  | gian duy trì từ vài ngày đến hàng tuần."
+  },
+  {
+    "page": 20,
+    "characters": 2017,
+    "first": "8 | 2. Lũ quét (Flash Flood): Là loại hình lũ xảy ra bất ngờ tại các lưu vực sông suối miền  | núi có độ dốc lớn, hình thành chỉ sau một trận ",
+    "last": "nhân  | hệ số cần được mô tả và kiểm tra bằng dữ liệu phù hợp [9]."
+  },
+  {
+    "page": 21,
+    "characters": 1927,
+    "first": "9 | Lưu lượng sau hồ chứa cần được mô tả bằng chuỗi theo thời gian và đúng vị trí  | trong mạng sông. Cần phân biệt lưu lượng đến hồ, qua tràn",
+    "last": " khuếch tán trên bề mặt cạn (Diffuse / Rough Surface Scattering):"
+  },
+  {
+    "page": 22,
+    "characters": 2007,
+    "first": "10 | Độ nhám và cấu trúc lớp phủ làm thay đổi tán xạ ngược của đất cạn. Một số bề  | mặt cạn cũng có tín hiệu thấp, trong khi nước có thể có t",
+    "last": "lớp nước tham  | chiếu; độ đúng phân loại cần được đánh giá riêng."
+  },
+  {
+    "page": 23,
+    "characters": 1752,
+    "first": "11 | Thuật toán chia histogram thành hai lớp theo từng ngưỡng ứng viên và chọn  | ngưỡng có phương sai giữa lớp lớn nhất. Phương pháp không đò",
+    "last": "à, công trình xây dựng, cầu cống, đường dây điện và tán cây rừng."
+  },
+  {
+    "page": 24,
+    "characters": 1860,
+    "first": "12 | DEM là thuật ngữ chung cho biểu diễn độ cao dạng số; tùy sản phẩm, nó có thể  | phản ánh bề mặt hoặc địa hình. DTM hướng tới mặt đất, còn",
+    "last": "g dòng chảy D8 (Flow Direction): | 𝐻𝐴𝑁𝐷(𝑥) = 𝑍(𝑥) − 𝑍(𝑑𝑟𝑎𝑖𝑛𝑎𝑔𝑒(𝑥))"
+  },
+  {
+    "page": 25,
+    "characters": 1545,
+    "first": "13 | HAND biểu diễn chênh cao tới kênh nhận nước theo đường dòng chảy [16]. Chỉ  | số này hỗ trợ mô tả địa hình tương đối; việc quy đổi thành ",
+    "last": "a với lưới  | đầu vào trước khi tính diện tích hoặc chồng xếp SAR."
+  },
+  {
+    "page": 26,
+    "characters": 1678,
+    "first": "14 | CHƯƠNG 2 PHƯƠNG PHÁP NGHIÊN CỨU VÀ CÔNG NGHỆ ÁP  | DỤNG | 2.1 Cơ sở toán học của mô hình thủy lực 2 chiều (BG_Flood) | 2.1.1 Hệ phương trìn",
+    "last": "dòng chảy trung bình theo chiều sâu dọc  | theo trục x và y (m/s)."
+  },
+  {
+    "page": 27,
+    "characters": 1798,
+    "first": "15 | - hu và hv là lưu lượng dòng chảy trên một đơn vị chiều rộng theo phương x và y  | (m²/s). | - g là gia tốc trọng trường chuẩn (g = 9.81 m",
+    "last": "(sóng tràn bờ, sóng vỡ đập), nghiệm của phương trình có thể xuất "
+  },
+  {
+    "page": 28,
+    "characters": 2130,
+    "first": "16 | hiện các điểm gián đoạn mạnh (Discontinuities / Shock waves). Các phương pháp giải  | số truyền thống (như sai phân trung tâm) thường xuấ",
+    "last": "ng xác định  | NaN (Not-a-Number) và gây phân kỳ trường tính toán."
+  },
+  {
+    "page": 29,
+    "characters": 1668,
+    "first": "17 | Mô hình BG_Flood xử lý vấn đề trên bằng kỹ thuật kiểm soát ngưỡng ướt/khô  | cục bộ: | Mặc định param.eps của mã là 0,0001 m; nhánh GPU dù",
+    "last": "g một công thức LUT hoặc chuỗi xử lý khi chưa có dữ  | liệu nguồn."
+  },
+  {
+    "page": 30,
+    "characters": 1772,
+    "first": "18 | Hiệu chỉnh hình học và đưa về lưới: cần xác định raster gốc, hệ tọa độ, phương  | pháp hiệu chỉnh địa hình và phép tái lấy mẫu. Lưới mô h",
+    "last": "quy định. Không gán mọi biên lưu vực hoặc cửa thoát  | cao độ 0 m."
+  },
+  {
+    "page": 31,
+    "characters": 1810,
+    "first": "19 | Bước 2: lấy ô thấp nhất, xét các ô lân cận chưa xử lý và cập nhật mức cao độ  | theo quy tắc lan truyền của thuật toán. Một phép nâng ô l",
+    "last": "vùng đệm từ mạng sông có provenance, ghi rõ  | kích thước và lưới."
+  },
+  {
+    "page": 32,
+    "characters": 1433,
+    "first": "20 | Bước 2: xác định quy tắc chọn ô và cao độ mục tiêu theo nhánh thí nghiệm; khóa  | DEM đầu ra, số ô và phân bố mức thay đổi. Không dùng 3,",
+    "last": " lệ. NODATA và nước  | thường trực bị loại không được tính như TN."
+  },
+  {
+    "page": 33,
+    "characters": 1622,
+    "first": "21 | 2.4.2 Hệ thống các chỉ số định lượng đánh giá | Các chỉ số được tính từ cùng ma trận và cùng miền đánh giá. Định nghĩa CSI,  | POD/Recall ",
+    "last": " = (𝑇𝑃 𝑇𝑁 − 𝐹𝑃 𝐹𝑁)/√[(𝑇𝑃 + 𝐹𝑃)(𝑇𝑃 + 𝐹𝑁)(𝑇𝑁 + 𝐹𝑃)(𝑇𝑁 + 𝐹𝑁)] (2.16)"
+  },
+  {
+    "page": 34,
+    "characters": 1722,
+    "first": "22 | MCC tổng hợp cả bốn nhóm trong ma trận nhị phân, có miền giá trị từ −1 đến  | +1. Cần báo cáo giá trị và điều kiện tính, không tự gán nhã",
+    "last": "o thời gian quan  | sát, tính chỉ số và chẩn đoán địa hình bổ trợ."
+  },
+  {
+    "page": 35,
+    "characters": 1839,
+    "first": "23 | CHƯƠNG 3 KẾT QUẢ THỰC NGHIỆM VÀ THẢO LUẬN | 3.1 Đặc điểm khu vực nghiên cứu hạ lưu sông Ba và dữ liệu trận lũ 11/2021 | 3.1.1 Vị trí địa l",
+    "last": "ng 3.1  | tổng hợp những thông số đã đối chiếu từ cấu hình và log."
+  },
+  {
+    "page": 36,
+    "characters": 1556,
+    "first": "24 | Bảng 3.1 Các thông số cấu hình vật lý và số học của mô hình thủy lực BG_Flood | Thông số Giá trị Ghi chú | Raster đầu vào 2.100×2.100; 30 ",
+    "last": "cropland | 40 Cropland — cây trồng Tham số n phải truy theo raster"
+  },
+  {
+    "page": 37,
+    "characters": 1648,
+    "first": "25 | Mã lớp Tên lớp chính thức Vai trò khi thiết lập nhám | 50 Built-up — xây dựng Không suy ra n từ mã lớp đơn thuần | 80 Permanent water bodi",
+    "last": "2026, không xem  | chúng như chuỗi thí nghiệm chỉ khác một yếu tố."
+  },
+  {
+    "page": 38,
+    "characters": 1772,
+    "first": "26 | Bảng 3.3 Trạng thái và phạm vi đánh giá của các nhánh thực nghiệm | Nhánh Lưới danh  | định Đầu ra đã đọc | CSI tại  | 102 h Runtime/đánh gi",
+    "last": "p với một lớp cố định, không phải chuỗi kiểm  | định diễn biến lũ."
+  },
+  {
+    "page": 39,
+    "characters": 1165,
+    "first": "27 | Bảng 3.4 Độ khớp các khung V44 với mặt nạ SAR cố định | Fram | e | Thời gian thực s Giờ mô hình CSI % Recall % Precision % | 0 10801,134 3,0",
+    "last": "0078 19,39 23,11 54,65 | 24 270000,125 75,000035 19,49 23,23 54,72"
+  },
+  {
+    "page": 40,
+    "characters": 1402,
+    "first": "28 | Fram | e | Thời gian thực s Giờ mô hình CSI % Recall % Precision % | 25 280800,375 78,000104 19,57 23,34 54,77 | 26 291600,719 81,000200 19,",
+    "last": "thay thời điểm ảnh. Hình 3.2 thể  | hiện chuỗi chỉ số đã đối soát."
+  },
+  {
+    "page": 41,
+    "characters": 899,
+    "first": "29 | Tại frame 33, khoảng 75,03% lớp ngập SAR chưa được mô hình bao phủ và  | 45,68% lớp ngập mô hình nằm ngoài SAR. Kết quả cho thấy độ khớp ",
+    "last": "ong miền đánh giá | Ô hợp lệ 3.480.444 Không tính ô loại khỏi mask"
+  },
+  {
+    "page": 42,
+    "characters": 70,
+    "first": "30 | Hình 3.1 Phân bố các nhóm đối chiếu V44 với SAR tại khoảng 102 giờ",
+    "last": "ình 3.1 Phân bố các nhóm đối chiếu V44 với SAR tại khoảng 102 giờ"
+  },
+  {
+    "page": 43,
+    "characters": 818,
+    "first": "31 | Hình 3.2 Chuỗi chỉ số V44 đối chiếu với cùng mặt nạ SAR | 3.5 Chẩn đoán phân bố ngập theo địa hình | Đầu ra frame 33 được chồng xếp với ch",
+    "last": ", độ dốc, cân bằng nước hoặc độ đúng thủy lực từ các  | tỷ lệ này."
+  },
+  {
+    "page": 44,
+    "characters": 1171,
+    "first": "32 | 3.6 Giới hạn của kết quả và thiết kế thực nghiệm tiếp theo | Hình 3.1 cho thấy phần mô hình không ngập/SAR ngập lớn trong miền đánh giá. ",
+    "last": "lại lớp SAR để chấm điểm làm hạn  | chế tính độc lập của đánh giá."
+  },
+  {
+    "page": 45,
+    "characters": 1826,
+    "first": "33 | Thiết kế đánh giá V45 và V48 | Đối soát V45 ngày 04/10 ghi CSI≈32,40%, Recall≈72,95%, Precision≈36,83%  | tại 102 giờ theo engine và phép ",
+    "last": " mục tiêu xấp xỉ | và thực địa | Không coi nhãn solver là  | chân lý"
+  },
+  {
+    "page": 46,
+    "characters": 1360,
+    "first": "34 | Nội dung Cần xác định Cách đánh giá Giới hạn | Đầu vào Biến có sẵn tại lúc dự báo Kiểm tra độ sâu tiền  | nhiệm và thời gian Tránh rò rỉ t",
+    "last": " hướng phát triển, chưa  | coi là công cụ dự báo đã được xác nhận."
+  },
+  {
+    "page": 47,
+    "characters": 1811,
+    "first": "35 | KẾT LUẬN VÀ KIẾN NGHỊ | 1. Kết luận | Đồ án đã thiết lập quy trình mô phỏng và đối chiếu phạm vi ngập bằng mô hình  | thủy lực hai chiều kế",
+    "last": "ết kế đánh giá độc lập  | trước khi chuyển sang ứng dụng vận hành."
+  },
+  {
+    "page": 48,
+    "characters": 727,
+    "first": "36 | Dữ liệu địa hình: bổ sung khảo sát cao độ, mặt cắt và công trình; kiểm tra datum,  | phạm vi sửa DEM và ảnh hưởng tới dung tích chứa. Dữ ",
+    "last": " hiện tại phục vụ nghiên cứu phương pháp  | và kế hoạch cải thiện."
+  },
+  {
+    "page": 49,
+    "characters": 2347,
+    "first": "37 | TÀI LIỆU THAM KHẢO | [1] World Meteorological Organization (2021). WMO Atlas of Mortality and  | Economic Losses from Weather, Climate and",
+    "last": " C., Radu, R., Schepers, D., Simmons, A., Soci, C., Abdalla, S., "
+  },
+  {
+    "page": 50,
+    "characters": 2409,
+    "first": "38 | Abellan, X., Balsamo, G., Bechtold, P., Biavati, G., Bidlot, J., Bonavita, M., ... &  | Thépaut, J. N. (2020). The ERA5 global reanalysis",
+    "last": "e, 540(7633),  | 418-422. DOI: https://doi.org/10.1038/nature20584"
+  },
+  {
+    "page": 51,
+    "characters": 1023,
+    "first": "39 | [19] Barnes, R., Lehman, C. và Mulla, D. J. (2014). Priority-flood: An optimal  | depression-filling and watershed-labeling algorithm for",
+    "last": " 9(8), 1735-1780. DOI: https://doi.org/10.1162/neco.1997.9.8.1735"
+  },
+  {
+    "page": 52,
+    "characters": 1511,
+    "first": "40 | PHỤ LỤC HỒ SƠ DỮ LIỆU VÀ THỰC THI | Các tệp dưới đây xác định bộ V44 được đối soát. Kết quả của nhánh khác phải có  | hồ sơ riêng và không",
+    "last": " lịch sử, chưa được chứng nhận là phương pháp căn chỉnh  | tối ưu."
+  },
+  {
+    "page": 53,
+    "characters": 312,
+    "first": "41 | Phạm vi áp dụng | Danh mục hình có ba hình được tạo từ phép đối soát V44 và số liệu địa hình; các  | hình dự kiến chưa có dữ liệu đã được ",
+    "last": "ên cứu tiếp theo,  | chưa có bảng chỉ số nghiệm thu trong bản này."
+  }
+]

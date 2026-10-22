@@ -1,0 +1,44 @@
+{
+  "status": "V48_CONDITIONED_FROZEN_CREATED_PRE_SAR",
+  "base": {
+    "source": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m.tif",
+    "source_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "named_copy": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+    "named_copy_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "byte_identical": true
+  },
+  "frozen": {
+    "draft": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_DRAFT.tif",
+    "draft_sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "tif": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif",
+    "tif_sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "asc": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.asc",
+    "asc_sha256": "e323dc1fc6e24dcc28c59e8d118c0814a644e39769edcaf0596dcf9cac0b9aa9",
+    "prj": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.prj",
+    "prj_sha256": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060"
+  },
+  "selection": {
+    "components": 40,
+    "modified_cells": 55,
+    "modified_area_km2": 0.0495,
+    "cut_depth_min_m": 0.004830837249757636,
+    "cut_depth_median_m": 0.586259126663208,
+    "cut_depth_max_m": 0.9735184907913206,
+    "excavation_volume_m3": 25565.372087806467
+  },
+  "invariants": {
+    "grid_transform_preserved": true,
+    "crs_preserved": true,
+    "nodata_preserved": true,
+    "only_selected_cells_modified": true,
+    "only_lowering": true,
+    "global_priority_flood_applied_to_final_dem": false,
+    "epsilon_ramp_applied_to_final_dem": false,
+    "negative_elevations_clipped": false,
+    "sentinel1_2021_used_for_conditioning": false
+  },
+  "selection_summary": "D:\\VTP\\V48_research_20261002\\final_selection\\V48_final_selection_summary.json",
+  "selection_summary_sha256": "356458d24465790ab5bc958032d56c1130b1065507c79abcb54ecdb2657b1214",
+  "applied_cells": "D:\\VTP\\V48_audit_20261002\\V48_applied_cells.csv",
+  "applied_cells_sha256": "3ebba97aa085967489b6e204eced44019d518977a72ee83981d8f5c29605e800"
+}

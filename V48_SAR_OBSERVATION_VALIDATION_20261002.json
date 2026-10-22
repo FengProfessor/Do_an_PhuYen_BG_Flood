@@ -1,0 +1,20 @@
+{
+  "status": "PASS_V48_SAR_OBSERVATION_VALIDATION",
+  "manifest": "D:\\VTP\\V48_SAR_OBSERVATION_RELEASE_20261002.json",
+  "manifest_sha256": "d433cf1e5e50f0bbef7398e66251b72056a89b565b396c57d0abde7a2e573739",
+  "processing_script": "D:\\VTP\\v48_build_s1_rtc_observation.py",
+  "observation_tif": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.tif",
+  "observed_classes": [
+    0,
+    1,
+    255
+  ],
+  "observed_counts": {
+    "class_0_dry_candidate": 2330567,
+    "class_1_water_flood_candidate": 1345926,
+    "nodata": 733507
+  },
+  "failures": [],
+  "formal_bg_flood_run": false,
+  "formal_sar_evaluation_run": false
+}

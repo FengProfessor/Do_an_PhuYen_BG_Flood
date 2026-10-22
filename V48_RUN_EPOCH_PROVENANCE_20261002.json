@@ -1,0 +1,83 @@
+{
+  "status": "PASS_V48_RUN_EPOCH_PROVENANCE",
+  "date": "2026-10-02",
+  "formal_bg_flood_run_started": false,
+  "conclusion": {
+    "model_t0_local": "2021-11-26T00:00:00+07:00",
+    "model_t0_timezone": "Asia/Ho_Chi_Minh",
+    "model_t0_utc": "2021-11-25T17:00:00Z",
+    "timezone_verified": true,
+    "basis": "The exact retained command that created rain_v23 requested Open-Meteo with timezone=Asia/Ho_Chi_Minh and encoded the returned hourly sequence as elapsed seconds starting at i=0. The only later retained edit removed one backward duplicate terminal timestamp and did not rebase the time axis. rain_v34 preserves the V23 time vector and applies a fixed x2 rate scaling."
+  },
+  "generator_provenance": {
+    "message": {
+      "path": "C:\\Users\\CuongHM\\.gemini\\antigravity\\brain\\bb357db6-a6f6-4f5e-bc1c-f195409d437d\\.system_generated\\messages\\dfbc1279-8a8a-4d50-ae6b-1dbb6bfa1879.json",
+      "sha256": "4f63be919e9b50c5d54d58e4ec98b94890bf2d97cd44838d53717fe83ad1b0b1"
+    },
+    "task_log": {
+      "path": "C:\\Users\\CuongHM\\.gemini\\antigravity\\brain\\bb357db6-a6f6-4f5e-bc1c-f195409d437d\\.system_generated\\tasks\\task-3863.log",
+      "sha256": "23ba55f67d8e4c786ab4cffdb8e649cf1a3d8b9692e9f8b231e5cba3b3cc6431"
+    },
+    "verified_facts": {
+      "api": "Open-Meteo archive API",
+      "request_timezone": "Asia/Ho_Chi_Minh",
+      "request_start_date": "2021-11-26",
+      "request_end_date": "2021-12-01",
+      "grid_points": 16,
+      "time_encoding": "t_s = i * 3600",
+      "output_path": "D:\\VTP\\Scenarios\\rain_v23_era5_spatial.txt",
+      "task_reported_mean_total_mm": 199.0
+    }
+  },
+  "post_generation_edit_provenance": {
+    "transcript": {
+      "path": "C:\\Users\\CuongHM\\.gemini\\antigravity\\brain\\2a14d3b9-0c61-4507-b922-ac4882d9ae0d\\.system_generated\\logs\\chunks\\transcript_full\\00000015.jsonl",
+      "sha256": "5c5d25b6820e45baaa853615eb757a90987dcfc78e32c669fcb0e689fc461ff8"
+    },
+    "source_note": {
+      "evidence_selection": "Pinned retained transcript chunk containing all three exact edit markers.",
+      "aggregate_log_path": "C:\\Users\\CuongHM\\.gemini\\antigravity\\brain\\2a14d3b9-0c61-4507-b922-ac4882d9ae0d\\.system_generated\\logs\\transcript_full.jsonl",
+      "aggregate_log_hash_validation": false,
+      "reason": "The aggregate transcript_full.jsonl is appendable. Hash-validating the retained chunk avoids false integrity failures caused by unrelated later appends while preserving hash-backed evidence for the historical edit.",
+      "previous_aggregate_sha256": "10e23eb885e3a5158ff35b380976c5c581191d9ecfa0fab4322ecf44e706f8ad"
+    },
+    "verified_facts": {
+      "edit_time_utc": "2026-09-04T02:52:36Z",
+      "removed_row": "432000\\t0.0000000000",
+      "reason": "432000 <= previous timestamp 514800",
+      "lines_before": 147,
+      "lines_after": 146,
+      "time_rebase_performed": false
+    }
+  },
+  "retained_forcing": {
+    "rain_v23": {
+      "path": "D:\\VTP\\Scenarios\\rain_v23_era5_spatial.txt",
+      "sha256": "6b9fb0a6bdfc177f139f2fdab47cac965c4929e8f5e870d964670be00208ef2b",
+      "numeric_rows": 144,
+      "first_elapsed_s": 0,
+      "last_elapsed_s": 514800,
+      "step_s": 3600,
+      "strictly_monotonic": true
+    },
+    "prep_v34": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\prep_v34.py",
+      "sha256": "f0d7cc09dbf7fdd2ff5d9badea9a9ac4960f50dbe9b0a9e95798dfaf745b1c6a"
+    },
+    "rain_v34": {
+      "path": "D:\\VTP\\Scenarios\\rain_v34_era5_x2.txt",
+      "sha256": "02e569860a840fdccc3f36efbd4fa3096bed11acedb1be480252f0d8b6f5184e",
+      "numeric_rows": 144,
+      "first_elapsed_s": 0,
+      "last_elapsed_s": 514800,
+      "step_s": 3600,
+      "time_axis_identical_to_v23": true,
+      "rate_scaling_from_v23": 2.0,
+      "max_rate_scaling_abs_error_m_per_s": 0.0
+    }
+  },
+  "bg_flood_contract": {
+    "path": "D:\\VTP\\V48_BG_Flood_contract_20261002.json",
+    "sha256": "6771f361ce8cf44dbcb3632946af8325c1c06a9b3c4774883b8cd98cc8fe4c8b"
+  }
+}

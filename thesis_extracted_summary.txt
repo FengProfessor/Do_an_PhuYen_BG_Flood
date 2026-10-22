@@ -1,0 +1,700 @@
+[0] ĐẠI HỌC QUỐC GIA HÀ NỘI
+[1] TRƯỜNG ĐẠI HỌC CÔNG NGHỆ
+[2] Hoàng Tích Phúc
+[3] ỨNG DỤNG VIỄN THÁM, GIS VÀ HỌC MÁY
+[4] ĐỂ THÀNH LẬP BẢN ĐỒ NHẠY CẢM LŨ LỤT
+[5] TẠI THỪA THIÊN HUẾ
+[6] ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC HỆ CHÍNH QUY
+[7] Ngành: Công nghệ Hàng không Vũ trũ
+[8] Cán bộ hướng dẫn: TS. Hà Minh Cường
+[9] Hà Nội, năm 2021
+[10] Tóm tắt
+[11] Lũ lụt là thảm họa thiên nhiên thường xuyên xảy ra nhất trên thế giới và đang có xu hướng ngày càng gia tăng cả về tần suất lẫn mức độ phá hoại trong những năm gần đây. Hiện nay, do sự tác động của con người gây ra biến đổi khí hậu, nóng lên toàn cầu khiến cho lũ lụt ngày càng diễn biến thất thường, tác động mạnh mẽ tới sinh kế của người dân và các hoạt động kinh tế xã hội trên toàn thế giới. Về mặt quản lý môi trường và tài nguyên nước, cần xác định được các khu vực dễ bị ngập lụt để hỗ trợ các nhà quy hoạch thực hiện các chiến lược phòng chống hiệu quả. Mục tiêu của nghiên cứu này là phát triển một phương pháp kết hợp mới dựa trên thuật toán tối ưu hóa Bald Eagle Search (BES) và các mô hình học máy cơ bản: Support Vector Machine (SVM), Random Forest (RF)và Multi-Layer Perceptron (MLP) để lập bản đồ nhạy cảm với lũ lụt ở tỉnh Thừa Thiên Huế, Việt Nam. Với tổng cộng 1621 điểm đo lũ lụt và 14 yếu tố ảnh hưởng tới lũ lụt được sử dụng. Dữ liệu này được chia thành 60% để đào tạo mô hình, 20% để xác thực mô hình và 20% để kiểm tra. Các mô hình được đánh giá chính bởi sai số bình phương trung bình (MSE). Ngoài ra, các chỉ số thống kê khác nhau cũng được sử dụng để đánh giá hiệu suất của mô hình là: sai số tuyệt đối trung bình (MAE) và hệ số xác định (). Kết quả cho thấy thuật toán BES đã hoạt động tốt trong việc tốt ưu hóa các mô hình học máy cơ bản và tất các mô hình đều cho kết quả tốt với chỉ số lỗi MSE < 0.05, đặc biệt trong đó mô hình RFR-BES đạt kết quả tốt nhất khi chỉ số MSE đạt 0.017. Kết quả của nghiên cứu này có thể hỗ trợ các quyết định của chính quyền địa phương và khu vực ở Việt Nam cũng như các quốc gia khác trên thế giới trong việc lập kế hoạch hạn chế và giảm thiểu tác động của thiên tai, lũ lụt gây ra.
+[12] Lời cảm ơn
+[13] Đối với bất kỳ sinh viên, đồ án tốt nghiệp là dấu mốc vô cùng quan trọng nhằm đánh giá kết quả trong suốt quá trình học tập và rèn luyện tại trường đại học. Trong quá trình thực hiện đồ án tốt nghiệp, ngoài những cố gắng của bản thân thì em cũng không thể nào hoàn thành tốt nếu không có sự giúp đỡ từ phía các thầy cô. Để có được những thành công đó, em xin được bày tỏ lòng biết ơn sâu sắc tới các thầy, cô là cán bộ, giảng viên trong trường Đại học Công nghệ nói chung và Viện Công nghệ Hàng không Vũ trụ nói riêng. Em xin cảm ơn các thầy, cô đã giúp đỡ em trong suốt thời gian qua.
+[14] Đặc biệt trong đó em xin được cảm ơn TS. Hà Minh Cường – giảng viên Viện Công nghệ Hàng không Vũ trụ, trường Đại học Công nghệ. Cảm ơn thầy đã trực tiếp hướng dẫn em trong quá trình học tập và hoàn thành đồ án tốt nghiệp.
+[15] Bên cạnh đó em cũng xin được cảm ơn TS. Nguyễn Hữu Duy – giảng viên khoa Địa lý, trường Đại học Khoa học – Tự nhiên. Cảm ơn thầy đã hỗ trợ, cung cấp dữ liệu giúp em hoàn thành đồ án tốt nghiệp.
+[16] Cuối cùng, em xin được gửi lời cảm ơn tới gia đình, bạn bè đã giúp đỡ, chia sẻ cùng em trong quá trình học tập cũng như hoàn thành đồ án tốt nghiệp.
+[17] Một lần nữa, em xin được bày tỏ lòng biết ơn sâu sắc tới tất cả mọi người.
+[18] Em xin chân thành cảm ơn!
+[19] Hà Nội, ngày … tháng 12 năm 2021
+[20] Sinh viên
+[21] Hoàng Tích Phúc
+[22] Mục lục
+[23] Tóm tắt1
+[24] Lời cảm ơn2
+[25] Mục lục3
+[26] Danh mục từ viết tắt5
+[27] Danh mục hình ảnh6
+[28] Danh mục bảng biểu7
+[29] Mở đầu8
+[30] 1.Đặt vấn đề8
+[31] 2.Mục tiêu và nội dung nghiên cứu9
+[32] 3.Đối tượng và phạm vi nghiên cứu10
+[33] 4.Quan điểm và phương pháp nghiên cứu10
+[34] 5.Ý nghĩa khoa học và thực tiễn của đề tài10
+[35] 6.Cấu trúc của đồ án10
+[36] Chương 1: Tổng quan tài liệu và cơ sở lý luận về ứng dụng viễn thám, GIS và học máy trong nghiên cứu lũ lụt11
+[37] 1.1. Ứng dụng viễn thám, GIS và học máy trong nghiên cứu lũ lụt11
+[38] 1.1.1. Trên thế giới11
+[39] 1.1.2. Tại Việt Nam12
+[40] 1.2. Khái quát về lũ lụt13
+[41] 1.3. Khái quát về viễn thám15
+[42] 1.3.1. Viễn thám là gì?15
+[43] 1.3.2. Khái quát về dữ liệu viễn thám trong nghiên cứu lũ lụt16
+[44] 1.4. Khái quát về hệ thống thông tin địa lý18
+[45] 1.4.1. Hệ thống thông tin địa lý là gì?18
+[46] 1.4.2. Bản đồ nhạy cảm lũ lụt19
+[47] 1.5. Khái quát về học máy và các phương pháp học máy20
+[48] Chương 2: Phương pháp ứng dụng viễn thám, GIS và học máy để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế21
+[49] 2.1. Các phương pháp học máy trong thành lập bản đồ nhạy cảm lũ lụt21
+[50] 2.1.1. Thuật toán Máy vector hỗ trợ (SVM)21
+[51] 2.1.2. Thuật toán Rừng ngẫu nhiên (RF)25
+[52] 2.1.3. Thuật toán Perceptron đa lớp (MLP)32
+[53] 2.2. Thuật toán tối ưu hóa Bald Eagle Search37
+[54] 2.3. Phương pháp thống kê thông tin ngập lụt dựa trên dữ liệu ảnh Sentinel 1A41
+[55] 2.4. Sơ đồ quy trình nghiên cứu42
+[56] 2.5. Các phương pháp đánh giá mô hình43
+[57] 2.5.1. Chia tách ngẫu nhiên43
+[58] 2.5.2. MSE43
+[59] 2.5.3. MAE43
+[60] 2.5.4. Hệ số xác định44
+[61] Chương 3: Kết quả thực nghiệm ứng dụng viễn thám, GIS và học máy để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế45
+[62] 3.1. Đặc điểm tự nhiên và kinh tế - xã hội tại Thừa Thiên Huế45
+[63] 3.1.1. Đặc điểm tự nhiên45
+[64] 3.1.2. Đặc điểm kinh tế - xã hội47
+[65] 3.2. Cơ sở dữ liệu48
+[66] 3.3. Đánh giá và so sánh hiệu xuất các mô hình53
+[67] 3.4. Đánh giá tính nhạy cảm lũ lụt tại Thừa Thiên Huế59
+[68] Kết luận và kiến nghị63
+[69] Tài liệu tham khảo66
+[70] Danh mục từ viết tắt
+[71] Từ
+[72] Viết tắt
+[73] Dịch – Nghĩa
+[74] Susceptibility map
+[75] Bản đồ nhạy cảm
+[76] Artificial Intelligence
+[77] AI
+[78] Trí tuệ nhân tạo
+[79] Machine Learning
+[80] ML
+[81] Học máy
+[82] Deep Learning
+[83] Học sâu
+[84] Supervised learning
+[85] Học có giám sát
+[86] Synthetic Aperture Radar
+[87] SAR
+[88] Radar khẩu độ tổng hợp
+[89] Geographic Information System
+[90] GIS
+[91] Hệ thống thông tin địa lý
+[92] Susceptibility map
+[93] Bản đồ nhạy cảm
+[94] Support Vector Machine
+[95] SVM
+[96] Máy vector hỗ trợ
+[97] Support Vector Machine Regression
+[98] SVR
+[99] Hồi quy máy vector hỗ trợ
+[100] Hyperplane
+[101] Mặt siêu phẳng
+[102] Random Forests
+[103] RF
+[104] Rừng ngẫu nhiên
+[105] Random Forests Regression
+[106] RFR
+[107] Hồi quy rừng ngẫu nhiên
+[108] Decision tree
+[109] DT
+[110] Cây quyết định
+[111] Multi-layer Perceptron 
+[112] MLP
+[113] Perceptron đa lớp
+[114] Multi-layer Perceptron Regression
+[115] MLPR
+[116] Hồi quy perceptron đa lớp
+[117] Bald Eagle Search
+[118] BES
+[119] Tìm kiếm Đại bàng đầu trắng
+[120] Select space
+[121] Lựa chọn khu vực
+[122] Search space
+[123] Tìm kiếm con mồi
+[124] Swoop
+[125] Tấn công con mồi
+[126] Swarm Intelligence
+[127] SI
+[128] Trí thông minh bầy đàn
+[129] Coefficient of determination
+[130] Hệ số xác định
+[131] Mean squared error
+[132] MSE
+[133] Sai số bình phương trung bình
+[134] Mean absolute error
+[135] MAE
+[136] Sai số tuyệt đối trung bình
+[137] Ground Range Detected
+[138] GRD
+[139] Phạm vi mặt đất
+[140] Danh mục hình ảnh
+[141] Hình 1.1: Cơ chế hoạt động của radar khẩu độ tổng hợp16
+[142] Hình 1.2: Bản đồ nhạy cảm trượt lở đất theo địa chất đảo Trà Bản.19
+[143] Hình 2.1: Mặt siêu phẳng với lề cực đại phân tách dữ liệu thành 2 lớp.22
+[144] Hình 2.2: Minh họa cây quyết định25
+[145] Hình 2.3: Đồ thị hàm entropy với n = 2.27
+[146] Hình 2.4: Mô tả phương thức hoạt động của thuật toán rừng ngẫu nhiên30
+[147] Hình 2.5: Minh minh họa nơ-ron sinh học32
+[148] Hình 2.6: Cấu trúc của một perceptron cơ bản32
+[149] Hình 2.7: Minh họa các tầng của mạng nơ-ron34
+[150] Hình 2.8: Trình tự quá trình săn mồi của đại bàng đầu trắng.37
+[151] Hình 2.9: Mô tả việc đại bàng tìm kiếm trong không gian xoắn ốc39
+[152] Hình 2.10: Quy trình xử lý dữ liêu Sentinel-1A trong ESA-SNAP và ArcGIS41
+[153] Hình 2.11: Sơ đồ quy trình nghiên cứu42
+[154] Hình 3.1: Bản đồ hành chính tỉnh Thừa Thiên Huế.45
+[155] Hình 3.2: Bản đồ hiện trạng ngập lụt thành lập từ ảnh Sentinel 1A và phân bố của 1621 điểm ghi nhận lũ lụt khu vực tỉnh Thừa Thiên Huế.48
+[156] Hình 3.3: Biểu diễn 14 yếu tố ảnh hướng tới ngập lụt dưới dạng bản đồ.52
+[157] Hình 3.4: Sự thay đổi của chỉ số MSE qua các vòng lặp trong SVR-BES54
+[158] Hình 3.5: Sự thay đổi của chỉ số MSE qua các vòng lặp trong RFR-BES54
+[159] Hình 3.6: Sự thay đổi của chỉ số MSE qua các vòng lặp trong MLPR-BES55
+[160] Hình 3.7: Biểu đồ đánh giá chỉ số tầm quan trọng của các biến (VI) trong 14 yếu tố ảnh hưởng tới lũ lụt của mô hình RFR-BES58
+[161] Hình 3.8: Bản đồ nhạy cảm lũ lụt tỉnh Thừa Thiên Huế theo mô hình.62
+[162] Danh mục bảng biểu
+[163] Bảng 3.1: Kết quả của thuật toán BES53
+[164] Bảng 3.2: Bảng số liệu đánh giá hiệu xuất các mô hình56
+[165] Bảng 3.3: Tỉ lệ chỉ số MSE giảm sau khi áp dụng các tham số kết quả của BES đối với từng mô hình. (VD: ).56
+[166] Bảng 3.4: Sự phân bố các lớp của các mô hình.59
+[167] Mở đầu
+[168] Đặt vấn đề
+[169] Ngày 1/9/2021 vừa qua, Tổ chức Khí tượng thế giới (WMO), trực thuộc Liên Hợp Quốc (LHQ) đã đưa ra cảnh báo đang lo ngại về biến đổi khí hậu khi mà các thảm họa thiên nhiên đã tăng gấp 5 lần trong nửa thế kỷ qua và gây thiệt hại gấp 7 lần so với những năm 1970 [1]. Theo đó, để đưa ra cảnh báo này WMO đã nghiên cứu số liệu từ hơn 11.000 thảm họa thiên nhiên trong nửa thế kỷ qua. Vào những năm 1970, trung bình mỗi năm có hơn 700 hiện tượng thiên tai, trong khi đó từ năm 2000 đến 2009, mỗi năm ghi nhận hơn 3.500 vụ, tương đương với khoảng 10 vụ mỗi ngày. Trong những năm 2010, trung bình mỗi năm ghi nhận 3.165 vụ thiên tai. Các hiện tượng như bão, lũ lụt và hạn hán là nguyên nhân gây ra nhiều trường hợp tử vong và thiệt hại nhất trong 50 năm qua. Đáng chú ý, hơn 90% trong số khoảng 2 triệu người thiệt mạng vì thiên tai được LHQ xác định là ở các nước đang phát triển trong khi 60% thiệt hại kinh tế lại được ghi nhận ở các nước giàu có hơn. 
+[170] Trong bối cảnh đó, Việt Nam cũng không nằm ngoài tác động của thiên tai và biến đối khí hậu đang diễn biến phức tạp với xu hướng ngày càng tăng cả về tần suất lẫn thiệt hại. Nước ta nằm ở phía Đông Nam của Châu Á, trong khu vực nhiệt đới gió mùa nóng, ẩm và mưa nhiều. Với vị trí địa lý kéo dài gần 15 vĩ độ từ bắc tới nam, cùng với đường bờ biển trên 3000 km. Do tiếp giáp với đại lục Châu Á và đại dương bao la, nên nước ta là nơi giao thoa của nhiều hệ thống thời tiết phức tạp mang đang dạng sắc thái và biến động lớn theo thời gian và không gian. Vì vậy, thiên tai mà nhất là thiên tai có nguồn gốc khí tượng thuỷ văn như bão, lũ lụt, dông sét, lốc tố… thường xuyên xảy ra. Trong thập niên gần đây, do nhiều nguyên nhân mà trong đó có tới 90% là do hoạt động của con người làm cho trái đất nóng lên, nước biển dâng cao và khí hậu biển đổi một cách khắc nghiệt. Sự biến đổi khí hậu làm cho tần suất, mức độ của thiên tai trở nên khó lường. Những tác động trên đã làm cho các hiện tượng thời tiết cực đoan xảy ra phức tạp, gia tăng cả về mức độ khốc liệt và tầm ảnh hưởng. Với quy mô và mật độ dân cư tập trung chủ yếu ở các vùng ven sông và ven biển, cùng nhiều loại hình sinh kế phụ thuộc vào điều kiện tự nhiên, do đó nước ta trở nên rất dễ bị tổn thương trước tác động của thiên tai, đặc biệt là thủy tai.
+[171] Đặc biệt năm 2020 vừa qua, nước ta đã hứng chịu đợt ”Lũ lụt lịch sử” hay “Lũ chồng lũ” với bốn đợt mưa lũ liên tiếp, kéo dài từ tháng 10 đến giữa tháng 11 đánh thẳng vào miền Trung [2]. Đây được xem là một đợt lũ lịch sử mới, đặt mức báo động IV, thuộc cấp thiên tai nguy hiểm, rủi to lớn của Việt Nam, gây ảnh hưởng sâu rộng và có tác động gây tổn thất, thiệt hại toàn khu vực, phá hủy, trì hoãn và đẩy ngược nền kinh tế, xã hội tại miền Trung Việt Nam đặc biệt là các tỉnh như: Thừa Thiên Huế, Quảng Bình, Quảng Trị, Đã Nẵng… vốn trước đó là những điểm nóng của đại dịch Covid – 19. Kết quả thống kê vào tháng 12 năm 2020 cho thấy đợt lũ kết thúc với tổng cộng 247 người chết và mất tích, thiệt hại hơn 30.000 tỷ đồng về kinh tế, gây ảnh hưởng lớn cho đời sống của người dân cũng như sự phát triển cho đất nước.
+[172] “Bốn mươi năm qua mới chứng kiến cơn lũ lịch sử tàn phá khủng khiếp đến vậy, nhiều nhà dân xói lở, chơ vơ như ốc đảo sau khi lũ rút, hàng nghìn con trâu bò, lợn gà trôi theo dòng nước.”
+[173] – Lời của những người cao tuổi ở miền Trung khi nói về Lũ lịch sử 2020.
+[174] Cụ thể, trong nghiên cứu này được xem xét kỹ hơn đối với tỉnh Thừa Thiên Huế là một trong những tỉnh trung tâm của miền Trung nước ta, sở hữu đường bờ biển kéo dài ở phía Đông và dãy Trường Sơn ở phía Tây nên thường gặp thiên tai, bão lũ. Trong năm 2020 nơi đây đã bị ảnh hưởng trực tiếp của 3 cơn bão (số 5, số 9, số 13), hoàn lưu của 4 cơn bão (số 6, số 7, số 8, số 12) gây ra sức gió cấp 11-12 giật cấp 14-15, kèm theo mưa rất lớn trên diện rộng [3]. Tổng lượng mưa năm 2020 đã vượt trung bình nhiều năm từ 151% đến 182%; Riêng trong tháng 10 tổng lượng mưa: trạm Huế 2.615 mm bằng 330% trung bình nhiều năm; Nam Đông 3.259mm đạt 342% trung bình nhiều năm; A Lưới 3.449mm đạt 385% trung bình nhiều năm. Mực nước trên sông Bồ tại Phú Ốc đạt +5,24m vượt đỉnh lũ lịch sử 1999 là 0,06m, sông Hương tại Kim Long + 4.17m trên báo động III là 0,67m. Trong các trận thiên tai khốc liệt, tỉnh Thừa Thiên Huế đã có 41 người chết, 11 người mất tích, thiệt hại 2.273 tỷ đồng, ảnh hưởng nặng nề đến đời sống và sản xuất của hàng triệu người dân trên địa bàn.
+[175] Do đó đề tài: “Ứng dụng viễn thám và máy học để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế” đã được chọn để thực hiện với mong muốn kết quả nghiên cứu sẽ là cơ sở khoa học, tài liệu tham khảo quan trọng cho việc dự báo lũ lụt. Từ đó góp phần xây dựng phương án nhằm hạn chế và giảm thiểu thiệt hại gây ra bởi thiên tai tại địa phương nói riêng và trên cả nước nói chung.
+[176] Mục tiêu và nội dung nghiên cứu
+[177] Mục tiêu của nghiên cứu này là phát triển một phương pháp kết hợp mới dựa trên thuật toán tối ưu hóa Bald Eagle Search ứng dụng cho các thuật toán học máy cơ bản như: Máy vector hỗ trợ, Rừng ngẫu nhiên và Perceptron đa lớp cũng với đó là tích hợp công nghệ viễn thám và GIS để lập bản đồ nhạy cảm với lũ lụt ở tỉnh Thừa Thiên Huế.
+[178] Đối tượng và phạm vi nghiên cứu
+[179] Đối tượng và phạm vi nghiên cứu:
+[180] Trong học máy, các thuật toán cơ bản gồm: Máy vector hỗ trợ, Rừng ngẫu nhiên và Perceptron đa lớp tích hợp thuật toán tối ưu hóa Bald Eagle Search.
+[181] Đối với viễn thám và GIS: dữ liệu ngập lụt tại 1621 trạm quan sát cùng với hai hình ảnh Sentinel 1A trước (20/9/2020) và sau (18/10/2020) trận lụt trong khu vực tỉnh Thừa Thiên Huế.
+[182] Quan điểm và phương pháp nghiên cứu
+[183] Đồ án được nghiên cứu trên cơ sở lý luận và thực nghiệm bằng cách thu thập số liệu, sử dụng những nguồn thông tin đã sẵn có. Tiếp đó là kế thừa, tham khảo kết luận, kết quả có liên quan của một số nghiên cứu trước đó của các tác giả, cơ quan, tổ chức khác nhau. Và cuối cùng là thực nghiệm bài toán cụ thể bằng cách thực hiện xây dựng bản đồ nhạy cảm lũ lụt dựa trên kết quả dự đoán thông qua các mô hình học máy đã được tối ưu hóa.
+[184] Ý nghĩa khoa học và thực tiễn của đề tài
+[185] Đề tài: “Ứng dụng viễn thám, GIS và máy học để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế” đã được thực hiện với mong muốn kết quả nghiên cứu sẽ là cơ sở khoa học, tài liệu tham khảo quan trọng cho việc dự báo lũ lụt. Bản đồ nhạy cảm với lũ lụt là một yếu tố, tài liệu quan trọng nhằm giúp xác định các khu vực dễ bị tổn thương nhất dựa trên các đặc điểm vật lý xác định xu hướng lũ lụt. Từ đó góp phần xây dựng phương án nhằm hạn chế và giảm thiểu thiệt hại gây ra bởi thiên tai, lũ lụt tại địa phương.
+[186] Cấu trúc của đồ án
+[187] Nội dung chính của đồ án gồm 3 chương như sau:
+[188] Chương 1: Tổng quan tài liệu và cơ sở lý luận về ứng dụng viễn thám, GIS và học máy trong nghiên cứu lũ lụt;
+[189] Chương 2: Phương pháp ứng dụng viễn thám, GIS và học máy để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế;
+[190] Chương 3: Kết quả thực nghiệm ứng dụng viễn thám, GIS và học máy để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế.
+[191] Tổng quan tài liệu và cơ sở lý luận về ứng dụng viễn thám, GIS và học máy trong nghiên cứu lũ lụt
+[192] Ứng dụng viễn thám, GIS và học máy trong nghiên cứu lũ lụt
+[193] Trên thế giới
+[194] Vào những thập niên 70, 80 thế kỷ trước đã có nhiều những nghiên cứu về nguy cơ lũ lụt và tai biến do nó gây ra trên các đồng bằng ở Đông và Đông Nam Á của tác giả Oya (1973 và 1977) và của H.Th.Verstappen (1983). Các công trình này chủ yếu tập trung vào đo vẽ thành lập bản đồ địa mạo để phân loại các khu vực có nguy cơ lũ lụt khác nhau trên các đồng bằng châu thổ của các con sông như Kiso, Chikugo, Yoshino (Nhật Bản), sông Mê Kông, Sông Nile (Ai Cập). Về hướng tiếp cận và phương pháp, trong những năm gần đây, bên cạnh các phương pháp nghiên cứu địa mạo lũ lụt truyền thống, các công trình tập trung nhiều hơn cho việc nghiên cứu cảnh báo tai biến lũ lụt, lũ quét với sự hỗ trợ của công nghệ viễn thám và GIS.
+[195] Một số phương pháp đã được phát triển, bao gồm các mô hình thủy văn dựa trên vật lý như Mike flood (Patro, Chatterjee et al. 2009, Tansar, Babur et al. 2020), Hệ thống phân tích sông của Trung tâm Kỹ thuật Thủy văn (HEC-RAS) (Oleyiblo và Li 2010, Huţanu, Mihu-Pintilie et al. 2020), và Công cụ đánh giá nước (SWAT) (Lee, Heo et al. 2017, Yu, Xie et al. 2018). Các phương pháp này đã được chứng minh là hiệu quả trong việc đánh giá nguy cơ lũ lụt. Tuy nhiên, việc sử dụng các mô hình này có những hạn chế quan trọng khi áp dụng cho các vùng rộng lớn, đặc biệt là các vùng có dữ liệu hạn chế, vì chúng yêu cầu dữ liệu tại chỗ chi tiết như dữ liệu mặt cắt ngang sông và dữ liệu khí tượng thủy văn dài hạn (Li, Zhang et al. 2012, Bui, Ngo et al. 2019). Với sự phát triển của công nghệ viễn thám và dữ liệu mở, viễn thám được coi là một công cụ hiệu quả để giám sát lũ lụt. Ngoài ra, mặc dù viễn thám và GIS có thể phân tích sự phân bố theo không gian của lũ lụt, chúng có những hạn chế nghiêm trọng trong việc biểu diễn các tác động tiềm ẩn và nguyên nhân của lũ lụt.
+[196] Để giải quyết những hạn chế này, cộng đồng khoa học toàn cầu đã tích hợp phân tích không gian và các mô hình theo hướng dữ liệu để xác định các vùng dễ bị ngập lụt với độ chính xác cao, ngay cả đối với các vùng có dữ liệu hạn chế. Các nghiên cứu trước đây đã sử dụng các mô hình truyền thống, bao gồm mô hình thống kê hai biến (Tehrany, Lee và cộng sự 2014), tỷ lệ tần số (Rahmati, Pourghasemi và cộng sự 2016), Weights-of-evidence (Costache và Zaharia 2017) và Fuzzy weight of evidence (Hong, Tsangaratos và cộng sự 2018). Tuy nhiên, các mô hình này chủ yếu là cấu trúc tuyến tính và không giải quyết được cấu trúc phức tạp và phi tuyến tính của các sự kiện ngập lụt. Hiện nay, có một xu hướng mới là sử dụng trí tuệ nhân tạo kết hợp với viễn thám và GIS để hình dung và đánh giá rõ hơn tác động của lũ lụt, chẳng hạn như Máy vector hỗ trợ (SVM) (Tehrany, Pradhan et al. 2014, Tehrany, Pradhan et al. . 2015), Mạng nơ-ron nhân tạo (ANN) (Falah, Rahmati et al. 2019), Kernel Logistic Regression (KLR) (Chen, Shahabi et al. 2019, Pham, Phong et al. 2020), cây quyết định (DT) ( Khosravi, Pham et al. 2018, Chen, Li et al. 2020), Rừng ngẫu nhiên (RF) (Chen, Li et al. 2020, Abedi, Costache et al. 2021). Các mô hình này có một số ưu điểm so với các mô hình truyền thống: (i) Chúng có thể dự đoán các cấu trúc phi tuyến tính phức tạp của các sự kiện lũ lụt với độ chính xác cao, ngay cả trong các vùng ràng buộc dữ liệu và (ii) chúng có thể dễ dàng kết hợp với dữ liệu không gian thu được từ ảnh vệ tinh.
+[197] Tại Việt Nam
+[198] Ở Việt nam, những nghiên cứu liên quan đến tai biến ngập lụt thực sự được định hình vào những năm 90 thế kỷ XX. Xuất hiện nhiều công trình nghiên cứu liên quan đến địa chất đô thị và địa chất môi trường như: ngập lụt, lũ quét, trượt lở đất, xói lở, bồi tụ bờ sông, bờ biển ... của nhiều tác giả khác nhau. Đặc biệt, trong những năm cuối của thế kỷ XX, được sự chỉ đạo của Bộ Khoa học - Công nghệ và Môi trường, hàng loạt đề tài cấp Nhà nước, cấp Bộ và cấp cơ sở đã tập trung vào hướng nghiên cứu thiên tai.
+[199] Một số công trình liên quan đến lĩnh vực nghiên cứu của đề tài đáng chú ý: Ứng dụng GIS xây dựng bản đồ bị tổn thương ngập lụt do biến đổi khí hậu tại Thành phố Tam Kỳ, tỉnh Quảng Nam (Trương Đỗ Minh Phượng, 2019); Sử dụng ảnh viễn thám giám sát lũ và đánh giá thiệt hại đến đất nông nghiệp tại huyện Quảng Điền, tỉnh Thừa Thiên Huế (Nguyễn Bích Ngọc và cộng sự, 2019); Tăng cường ứng dụng công nghệ viễn thám - GIS trong phòng chống và giảm nhẹ thiên tai (Nguyễn Thanh Hùng và cộng sự, 2018); Ứng dụng công nghệ GIS và viễn thám thành lập bản đồ ngập lụt tỉnh Trà Vinh (Trần Văn Hải, 2017);… Đây đều là những đều tài ứng dụng công nghệ viễn thám và GIS trong nghiên cứu thiên tai, bão lũ.
+[200] Bên cạnh đó, cùng với xu hướng phát triển công nghệ hiện nay, các đề tài ứng dụng học máy và một số công nghệ mới cũng đã được thực hiện, đáng chú ý như: Nghiên cứu xác định diện tích ngập nước sử dụng ảnh Sentinel-1 trên nền Google Earth Engine: áp dụng cho tỉnh Đồng Tháp, đồng bằng Sông Cửu Long (Phạm Văn Chiến, 2020); Ứng dụng công nghệ điện toán đám mây Google Earth Engine trong nghiên cứu lũ lụt tại Đồng Tháp, hạ lưu sông Mê Công (Vũ Hữu Long cùng cộng sự, 2018); Deep learning: Ứng dụng cho dự báo lưu lượng nước đến hồ chứa Hòa Bình (Trương Xuân Nam, Nguyễn Thanh Tùng, 2016); Mạng nơ-ron truyền thẳng và ứng dụng trong dự báo lũ lụt (Nguyễn Xuân Hòa, 2014); Ứng dụng mạng Nơ-ron nhân tạo đa lớp trong thành lập mô hình phân vùng lũ quét khu vực miền núi Tây Bắc, thực nghiệm tại tỉnh Yên Bái (Nguyễn Viết Nghĩa và Nguyễn Cao Cường, 2020);…
+[201] Xét thấy điểm chung của các đề tài nêu trên đều đã ứng dụng công nghệ viễn thám, hệ thống thông tin địa lý, học máy. Tuy nhiên việc sử dụng đa dạng các mô hình học máy là chưa thực sự được tối ưu hóa. Vậy nên, mục tiêu của nghiên cứu này là phát triển các mô hình mới tiên tiến dựa trên máy học, viễn thám và GIS để đánh giá tính nhạy cảm của lũ lụt ở tỉnh Thừa Thiên Huế, Việt Nam. Nghiên cứu này khác với các nghiên cứu trước đó ở chỗ nó đại diện cho việc sử dụng BES đầu tiên để tối ưu hóa ba mô hình riêng lẻ: SVM, RF và MLP. Giả thuyết được kiểm tra trong nghiên cứu này là BES có thể tối ưu hóa các mô hình cơ bản để hoạt động tốt hơn. Mặc dù các mô hình này được áp dụng cho Việt Nam nhưng kết quả có thể được sử dụng để thông báo về công việc ở các nơi khác trên thế giới, ngay cả ở những vùng có dữ liệu hạn chế. Những phát hiện của nghiên cứu này có thể được coi là một trợ giúp quan trọng cho các quyết định bằng cách nêu bật các khu vực có khả năng bị ngập lụt cao và do đó thích hợp để phát triển, giúp giảm thiểu tác động của lũ lụt đối với nền kinh tế và cuộc sống của con người.
+[202]  Khái quát về lũ lụt 
+[203] Lũ lụt [4] là một từ ghép để chỉ hai hiện tượng thiên nhiên là lũ và lụt. Trong đó, lũ là hiện tượng nước chảy xiết với tốc độ cao, mang tính chất bất ngờ, có khả năng cuốn trôi nhà cửa, vật nuôi, tài sản, cây cối, thậm chí đe dọa tính mạng con người và thường xảy ra chủ yếu ở vùng có địa hình đồi núi cao và dốc. Tiếp đó, lụt là hiện tượng một vùng đất bị ngập nước trong một khoảng thời gian nhất định, có thể do nước không có chỗ thoát hoặc do nước do mưa lũ quá nhiều gây ngập, vỡ đê… Như vậy, hiểu một cách đơn giản lũ lụt là hiện tượng mực nước dòng chảy trên sông, hồ quá lớn vượt mức quy định dẫn đến tình trạng ngập úng, tràn đê, vỡ đê… Hiện tượng lũ lụt xảy ra phổ biến nhất là do lượng mưa lớn vượt quá khả năng chứa của các nguồn nước tự nhiên. Tuy nhiên, lũ lụt không phải lúc nào cũng vậy. Ở các vùng ven biển, lũ lụt có thể do triều cường, do xoáy thuận nhiệt đới, sóng thần... Một số nguyên nhân chính gây ra lũ lụt như: mưa lớn kéo dài nhiều ngày; bão và triều cường; do tác động của con người chặt phá rừng, khai thác tài nguyên bừa bãi; biến đổi khí hậu;…
+[204] Nếu như ô nhiễm không khí tác động trực tiếp đến khí hậu, thì lũ lụt lại tác động trực tiếp đến con người, đến hoạt động sinh hoạt hàng ngày của người dân, để lại nhiều hậu quả nghiêm trọng. Đầu tiên phải kể tới là lũ lụt có thể đe dọa trực tiếp tới tính mạng con người và nhiều loài động vật. Lũ quét là kẻ giết người số một liên quan đến thời tiết ở nhiều quốc gia, cướp đi sinh mạng của con người, vật nuôi và động vật hoang dã. Ở Việt Nam, có thể kể tới đợt lũ lịch sử ở miền Trung năm 2020 vừa qua đã có hơn 200 người chết và vô số người mất tích. Tiếp đó lũ lụt còn gây nhiều thiệt hại về vật chất, mỗi con lũ lụt đi qua đều càn quét bao nhiêu nhà dân, nương rẫy, các loại động vật gia cầm gây thiệt hại trực tiếp về vật chất của người dân. Ngoài ra, tình trạng bão lũ kéo dài còn khiến cho việc trồng trọt nông nghiệp bị ảnh hưởng: các loại cây lương thực bị ngập úng mà chết, nguồn thực phẩm trở nên khan hiếm… Có thể nói, lũ lụt có thể gây thiệt hại trực tiếp về vật chất đối với người dân. 
+[205] Thứ để lại sau mỗi trận lũ lụt chính là ô nhiễm môi trường và nguy cơ phát sinh dịch bệnh, nấm mốc. Lũ lụt kéo theo những chất thải, rác thải từ cống rãnh, ao hồ và các khu dân cư, khu đổ rác gây ra nguy cơ ô nhiễm trực tiếp đến nguồn nước sinh hoạt. Từ đó làm con người dễ bị nhiễm virus, bệnh ngoài da, bệnh đường ruột… Việc sinh hoạt trong điều kiện thiếu thốn nước sạch, xung quanh bị bao phủ bởi nước lũ ô nhiễm, rác thải, xác động vật...phát sinh “mầm mống” gây bệnh, các loại virus, các loại dịch bệnh lan truyền qua nguồn nước rất nhanh.
+[206] Và cuối cùng, lũ lụt còn gây ảnh hưởng trực tiếp đến nền kinh tế địa phương, đất nước. Việc lũ lụt kéo dài ảnh hưởng nặng nề đến nền kinh tế địa phương, làm giảm “tức thời” các hoạt động du lịch. Bởi tình trạng lũ lụt nên người dân cũng không thể tăng gia sản xuất, đẩy mạnh việc đi làm nên nền kinh tế sẽ cũng bị ảnh hưởng nhất định. Ngoài ra, rất nhiều cơ sở hạ tầng và các công trình dân sinh khác có thể bị tàn phá và hư hỏng. Gần đây nhất tại Việt Nam là đợt mưa lũ lịch sử miền Trung năm 2020 đã gây thiệt hại ước tính hơn 30.000 tỷ đồng [5]. Trong đó, có 1.531 ngôi nhà bị sập; 239.340 nhà bị hư hại, tốc mái và hơn 473.450 lượt nhà bị ngập nước; có 1.531 ngôi nhà bị sập; 239.340 nhà bị hư hại, tốc mái và hơn 473.450 lượt nhà bị ngập nước… và còn vô vàn thiệt hại khó có thể kể hết.
+[207]  Khái quát về viễn thám
+[208] Viễn thám là gì?
+[209] Tại Việt Nam, viễn thám là lĩnh vực khoa học công nghệ cho phép nghiên cứu, thu thập các thông tin về các đối tượng địa lý mà không cần tiếp xúc trực tiếp với đối tượng đó [6]. Trong đó, hoạt động viễn thám là các hoạt động có liên quan đến hệ thống thu nhận dữ liệu ảnh viễn thám; thu nhận, lưu trữ, xử lý, cung cấp, khai thác và sử dụng dữ liệu ảnh viễn thám; xây dựng cơ sở dữ liệu ảnh viễn thám. Viễn thám được sử dụng trong nhiều lĩnh vực bao gồm địa lý, khảo sát đất đai, và hầu hết các ngành khoa học Trái Đất (ví dụ thủy văn, khí tượng học, hải dương học, địa chất); nó cũng có các ứng dụng trong quân sự, tình báo, thương mại, kinh tế, kế hoạch và trong các ứng dụng nhân đạo. Thuật ngữ "viễn thám" thường dùng để chỉ việc sử dụng các công nghệ cảm biến dựa trên vệ tinh hoặc máy bay để phát hiện và phân loại các vật thể trên Trái Đất. Nó bao gồm bề mặt Trái Đất, bầu khí quyển và đại dương, dựa trên việc truyền tính hiệu. Về cơ bản viễn thám có thể được chia thành 2 loại là: viễn thám "chủ động" (khi tín hiệu được phát ra một cách chủ động từ vệ tinh hoặc máy bay tới vật thể và sự phản xạ của nó được cảm biến phát hiện) và viễn thám "thụ động" (khi cảm biến ghi lại bức xạ được phát ra từ đối tượng hoặc phản xạ từ ánh sáng mặt trời). 
+[210] Khi nói tới viễn thám, không thể không nhắc tới dữ liệu ảnh viễn thám là thông tin, hình ảnh của đối tượng địa lý được thu nhận từ vệ tinh viễn thám. Tại Việt Nam, dữ liệu ảnh viễn thám được khai thác và sử dụng phục vụ nhiều mục đích khác nhau. Đầu tiên là quan trắc, giám sát về ô nhiễm môi trường: đất, nước do chất thải sinh hoạt và chất thải công nghiệp; không khí do khí phát thải công nghiệp và sinh hoạt; ô nhiễm môi trường do thiên tai, các khoáng chất tự nhiên độc hại phát tán vào môi trường, khai thác khoáng sản; kiểm kê khí nhà kính. Thứ hai, dữ liệu ảnh viễn thám phục vụ công tác thu thập thông tin, dữ liệu, phân tích, điều tra, đánh giá, theo dõi diễn biến tài nguyên, môi trường định kỳ và đột xuất nhằm đưa ra các báo cáo phục vụ phát triển kinh tế - xã hội; phòng, chống thiên tai; giám sát hạn hán, cảnh báo cháy rừng, diễn biến lũ lụt, cứu hộ cứu nạn và ứng phó với biến đổi khí hậu; hiện trạng sản xuất nông nghiệp. Tiếp đó là công tác xây dựng, cập nhật bản đồ chuyên đề và cơ sở dữ liệu chuyên đề về hiện trạng tài nguyên thiên nhiên và môi trường, thực trạng biến đổi khí hậu. Cuối cùng dữ liệu này còn được dùng để cập nhật cơ sở dữ liệu nền địa lý quốc gia, hệ thống bản đồ địa hình quốc gia và phục vụ công tác quốc phòng, an ninh, bảo vệ tổ quốc.
+[211] Khái quát về dữ liệu viễn thám trong nghiên cứu lũ lụt
+[212] Trong nghiên cứu, ta chủ yếu quan tâm dữ liệu viễn thám chủ động cụ thể là radar khẩu độ tổng hợp (hay SAR). Radar khẩu độ tổng hợp là một radar hình ảnh được gắn trên hệ thống chuyển động. Sóng điện từ được truyền đi một cách tuần tự, phản xạ được thu thập và hệ thống điện tử số hóa và lưu trữ dữ liệu để xử lý tiếp theo. Khi quá trình truyền và nhận xảy ra tại các thời điểm khác nhau, chúng ánh xạ đến các vị trí khác nhau. Sự kết hợp có trật tự của các tín hiệu nhận được tạo ra một khẩu độ ảo dài hơn nhiều so với chiều rộng ăng-ten vật lý. Đó là nguồn gốc của thuật ngữ "khẩu độ tổng hợp", tạo cho nó thuộc tính của một radar hình ảnh. Hướng phạm vi song song với đường bay và vuông góc với hướng phương vị, còn được gọi là hướng dọc theo đường bay vì nó phù hợp với vị trí của đối tượng trong trường quan sát của ăng ten.
+[213] Hình 1.1: Cơ chế hoạt động của radar khẩu độ tổng hợp
+[214] Do sử dụng sóng điện từ, SAR có thể thu thập tín hiệu ở các dạng phân cực khác nhau, bằng cách kiểm soát phân cực đã phân tích trong cả đường truyền và nhận. Một xung radar có thể được phân cực theo chiều ngang hoặc chiều dọc và tương tự như vậy, radar có thể được cấu hình để chỉ đo phần phân cực theo chiều ngang hoặc chiều dọc của phản xạ. Điều đó tạo ra tối đa nhiều kết hợp phân cực. Một thiết bị SAR chuyển đổi giữa các tổ hợp này khi nó di chuyển sẽ thu được nhiều thông tin hơn về hiện trường, vì phản xạ từ các bề mặt và vật thể khác nhau có cường độ tương đối khác nhau tùy thuộc vào phân cực.
+[215] SAR có khả năng cũng cấp viễn thám độ phân giải cao, không phụ thuộc vào độ cao bay và không phụ thuộc vào thời tiết, mưa bão, cũng như điều kiện ánh sáng trong ngày. Ảnh SAR có ứng dụng rộng rãi trong viễn thám và lập bản đồ bề mặt Trái đất cùng với các hành tinh khác. Các ứng dụng của SAR rất nhiều. Ví dụ bao gồm địa hình, hải dương học, băng hà, địa chất (ví dụ: phân biệt địa hình và hình ảnh dưới bề mặt). SAR cũng có thể được sử dụng trong lâm nghiệp để xác định chiều cao rừng, sinh khối và nạn phá rừng. Giám sát núi lửa và động đất sử dụng giao thoa kế vi sai. SAR cũng có thể được áp dụng để theo dõi sự ổn định của cơ sở hạ tầng dân dụng như cầu. SAR rất hữu ích trong việc giám sát môi trường như tràn dầu, lũ lụt, tăng trưởng đô thị, giám sát quân sự: bao gồm đánh giá chính sách chiến lược và chiến thuật. SAR có thể được thực hiện như SAR nghịch đảo bằng cách quan sát mục tiêu chuyển động trong một khoảng thời gian đáng kể bằng ăng ten tĩnh. 
+[216] Kể từ năm 2010, các hệ thống trên không cung cấp độ phân giải khoảng 10 cm, hệ thống băng siêu rộng cung cấp độ phân giải vài mm. Một số hệ thống cung cấp dữ liệu SAR phổ biến có thể kể tới như: Sentinel 1A/B và Envisat của Cơ quan Vũ trụ châu Âu; Radarsat-1 của Canada; ALOS của Nhật Bản; TerraSAR-X của Đức;…
+[217] Với những ưu điểm vượt trội kể trên việc ứng dụng dữ liệu SAR trong nghiên cứu thiên tai, khí tượng thủy văn, đặc biệt là nghiên cứu lũ lụt đã và đang trở thành xu hướng, được ứng dụng phổ biến trên thê giới nói chung cũng như Việt Nam nói riêng. Một số nghiên cứu của các nhà khoa học trong nước có thể kể đến như: Nghiên cứu thành lập bản đồ ngập lụt từ ảnh viễn thám Radar áp dụng cho hạ du lưu vực sông Trà Khúc, sông Vệ, tỉnh Quảng Ngãi (Nguyễn Thành Luân cùng cộng sự, 2017); Ứng dụng tư liệu viễn thám Radar và quang học đánh giá nhanh ảnh hưởng lũ lụt đến lớp phủ mặt đất, thử nghiệm tại Thừa Thiên Huế (Quang Nguyễn, 2016); Viễn thám Radar và ứng dụng trong giám sát lũ lụt ở Việt Nam (Vũ Anh Tuấn cùng cộng sự, 2020);…
+[218] Khái quát về hệ thống thông tin địa lý
+[219] Hệ thống thông tin địa lý là gì?
+[220] Hệ thống thông tin địa lý (GIS) [7] là một tập hợp có tổ chức, bao gồm hệ thống phần cứng, phần mềm máy tính, dữ liệu địa lý và con người, được thiết kế nhằm mục đích nắm bắt, lưu trữ, cập nhật, điều khiển, phân tích, và hiển thị tất cả các dạng thông tin liên quan đến vị trí địa lý.
+[221] GIS được hình thành vào những năm 1960 và phát triển rất rộng rãi trong 10 năm lại đây. Ngày nay hệ thống này là công cụ trợ giúp quyết định trong nhiều hoạt động kinh tế - xã hội, quốc phòng của nhiều quốc gia trên thế giới. GIS có khả năng trợ giúp các cơ quan chính phủ, các nhà quản lý, các doanh nghiệp, các cá nhân... đánh giá được hiện trạng của các quá trình, các thực thể tự nhiên, kinh tế - xã hội thông qua các chức năng thu thập, quản lý, truy vấn, phân tích và tích hợp các thông tin được gắn với một nền hình học (bản đồ) nhất quán trên cơ sở toạ độ của các dữ liệu đầu vào.
+[222] Về cơ bản, GIS bao gồm 5 thành phần sau:
+[223] Con người: hệ thống thông tin địa lý là do con người tạo ra và quản lý;
+[224] Cơ sở dữ liệu địa lý: GIS sử dụng cơ sở dữ liệu địa lý làm dữ liệu của mình, bao gồm: dữ liệu dạng vector, dạng raster và dạng lưới;
+[225] Phương pháp và quy trình: nhằm thu thập, lưu trữ, kiểm tra, tích hợp, phân tích và hiển thị dữ liệu được quy chiếu cụ thể vào Trái đất;
+[226] Phần cứng: là hệ thống máy tính trên đó một hệ thống thông tin địa lý hoạt động hoạt động;
+[227] Phần mềm: cung cấp các chức năng và các công cụ cần thiết để lưu giữ, phân tích và hiển thị thông tin địa lý.
+[228] Tại Việt Nam công nghệ GIS cũng được thí điểm khá sớm, và đến nay đã được ứng dụng trong khá nhiều ngành như quy hoạch nông lâm nghiệp, quản lý rừng, lưu trữ tư liệu địa chất, đo đạc bản đồ, địa chính, quản lý đô thị... Tuy nhiên các ứng dụng có hiệu quả nhất mới giới hạn ở các lĩnh vực lưu trữ, in ấn các tư liệu bản đồ bằng công nghệ GIS. Các ứng dụng GIS thuộc lĩnh vực quản lý, điều hành, trợ giúp quyết định hầu như mới dừng ở mức thử nghiệm, còn cần thời gian và đầu tư mới có thể đưa vào ứng dụng chính thức. Trong nghiên cứu này, GIS được sử dụng nhằm thu thập, phân tích dữ liệu và xây dựng bản đồ nhạy cảm lũ lụt từ kết quả xử lý của học máy. 
+[229] Bản đồ nhạy cảm lũ lụt
+[230] Bản đồ nhạy cảm (Susceptibility map) là sự kết hợp nhiều yếu tố tác động gây nguy hiểm, làm nổi bật các khu vực bị ảnh hưởng hoặc dễ bị tổn thương bởi một mối nguy cụ thể, nhằm đưa ra chỉ dẫn, dự báo về các vị trí có nhiều khả năng xảy ra nguy hiểm từ các thảm họa như: lũ lụt, sạt lở, động đất, sóng thần, tràn dầu… 
+[231] Hiện nay, bản đồ nhạy cảm là một công cụ quan trọng trong việc dự báo tác động nguy hiểm và giúp đưa ra những phương án làm giảm thiểu thiên tai, thảm họa. Một số nghiên cứu đã được thực hiện nhằm thành lập bản đồ nhạy cảm ở Việt Nam có thể kể đến như: Ứng dụng GIS và phương pháp chỉ số thống kê trong xây dựng bản đồ nhạy cảm trượt lở đất khu vực thành phố Bắc Kạn (Nguyễn Tiếp Tân cùng cộng sự, 2020); Chuyên đề: Thành lập bản đồ nhạy cảm tràn dầu (Nguyễn Thị Việt Liên cùng cộng sự, 2009); Nghiên cứu phân cấp mức độ nhạy cảm của tai biến trượt lở đất khu vực đảo Trà Bản, vịnh Bái Tử Long, tỉnh Quảng Ninh (Đỗ Thị Yến Ngọc cùng cộng sự, 2020); Đánh giá rủi ro thiên tai do lũ lụt khu vực Trung Trung Bộ (Huỳnh Thị Lan Hương cùng cộng sự, 2020)…
+[232] Hình 1.2: Bản đồ nhạy cảm, dễ bị tổn thương bởi thiên tai lũ lụt 6 tỉnh miền Trung.
+[233] Khái quát về học máy và các phương pháp học máy
+[234] Những năm gần đây, Trí tuệ nhân tạo (AI) và cụ thể hơn là Học máy (ML) nổi lên như một bằng chứng của cuộc cách mạng công nghiệp lần thứ tư (1 - động cơ hơi nước, 2 - năng lượng điện, 3 - công nghệ thông tin). Trí Tuệ Nhân Tạo đang len lỏi vào mọi lĩnh vực trong đời sống mà có thể chúng ta không nhận ra. Xe tự hành của Google và Tesla, hệ thống tự tag khuôn mặt trong ảnh của Facebook, trợ lý ảo Siri của Apple, hệ thống gợi ý sản phẩm của Amazon, hệ thống gợi ý phim của Netflix, máy chơi cờ vây AlphaGo của Google DeepMind,… chỉ là một vài trong vô vàn ứng dụng của AI/ML. 
+[235] Học máy là một tập con của AI. Theo định nghĩa của Wikipedia: “Machine learning is the subfield of computer science that “gives computers the ability to learn without being explicitly programmed”. Nói đơn giản, Học máy là một lĩnh vực nhỏ của khoa học máy tính, nó có khả năng tự học hỏi dựa trên dữ liệu đưa vào mà không cần phải được lập trình cụ thể. 
+[236] Cùng với sự tiến bộ của khoa học công nghệ, khi mà khả năng tính toán của các máy tính được nâng lên một tầm cao mới và lượng dữ liệu khổng lồ được thu thập bởi các hãng công nghệ lớn, Học máy đã tiến thêm một bước dài và một lĩnh vực mới được ra đời gọi là Deep Learning (Học Sâu). Deep Learning đã giúp máy tính thực thi những việc tưởng chừng như không thể vào 10 năm trước: phân loại cả ngàn vật thể khác nhau trong các bức ảnh, tự tạo chú thích cho ảnh, bắt chước giọng nói và chữ viết của con người, giao tiếp với con người, hay thậm chí cả sáng tác văn hay âm nhạc.
+[237] Về cơ bản theo phương thức học, các thuật toán học máy thường được chia làm 4 nhóm, như sau: học có giám sát (thuật toán tạo ra một hàm ánh xạ dữ liệu đầu vào tới kết quả mong muốn); học không giám sát (mô hình hóa một tập dữ liệu, không có sẵn các ví dụ đã được gắn nhãn); học bán giám sát (mô hình hóa một tập dữ liệu, không có sẵn các ví dụ đã được gắn nhãn); học tăng cường (trong đó, thuật toán học một chính sách hành động tùy theo các quan sát về thế giới).
+[238] Hiện nay, ta có thể kể tới một số thuật toán ML cơ bản như: Máy vector hỗ trợ (SVM); Rừng ngẫu nhiên (RF); Perceptron đa lớp (MLP); Cây quyết định (DT); Hồi quy tuyến tính; Hồi quy logic;…
+[239] Phương pháp ứng dụng viễn thám, GIS và học máy để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế
+[240] Các phương pháp học máy trong thành lập bản đồ nhạy cảm lũ lụt
+[241] Thuật toán Máy vector hỗ trợ (SVM)
+[242] Thuật toán Máy vector hỗ trợ (Support Vector Machine – SVM) [8] lần đầu tiên được biết đến vào năm 1992, được giới thiệu bởi Boser, Guyon và Vapnik trong COLT-92. SVM là một tập hợp các phương pháp học có giám sát liên quan được sử dụng để phân loại và hồi quy. Chúng thuộc về một họ các bộ phân loại tuyến tính tổng quát. Nói cách khác, SVM là một công cụ dự đoán hồi quy và phân loại sử dụng lý thuyết máy học để tối đa hóa độ chính xác của dự đoán trong khi tự động tránh over-fit với dữ liệu. Ban đầu SVM phổ biến với cộng đồng NIPS nhưng hiện nay nó đã trở nên cực kỳ phổ biến trong việc nghiên cứu học máy trên toàn thể giới. Thuật toán SVM được sử dụng trong nhiều ứng dụng khác, chẳng hạn như: phân tích chữ viết tay, phân tích khuông mặt,… đặc biệt là các ứng dụng dựa trên phân loại và hồi quy mẫu. Đặc biệt, nó trở nên nổi tiếng khi sử dụng các pixel làm đầu vào và cho độ chính xác tương đương mạng nơ-ron tinh vi với các tính năng được trau chuốt trong bài toán nhận dạng chữ viết tay.
+[243] Cách thức hoạt động của SVM: để hiểu rõ cách thức hoạt động của SVM ta cần xem xét bài toán SVM tuyến tính (Linear SVM). Trong bài toán này ta xem xét tập dữ liệu huấn luyện với n mẫu, cụ thể: 
+[244] Trong đó  là nhãn của bộ dữ liệu mang giá trị là 1 và -1, xác định lớp của mỗi . Mỗi  là một vector thực p – chiều. Mục tiêu của bài toán là tìm một mặt siêu phẳng có lề lớn nhất để chia tách các điểm có nhãn khác nhau về hai phía khác nhau của mặt siêu phẳng. Ở đây, mặt siêu phẳng có thể được viết dưới dạng tập hợp các điểm x thỏa mãn:
+[245] với  là tích vô hướng của  và một vector pháp tuyến của mặt siêu phẳng.
+[246] Từ đó ta dễ dàng xác định được tham số  là khoảng cách giữa gốc tọa độ và mặt siêu phẳng theo hướng vector pháp tuyến .
+[247] Tiếp theo ta chọn  và  để cực đại hóa lề, hay khoảng cách giữa hai mặt siêu phẳng song song ở xa nhất có thể trong khi các điểm dữ liệu vẫn được phân chia một cách chính xác. Ta xác định được các mặt siêu phẳng là:
+[248]  
+[249] và 
+[250] Ta thấy, nếu dữ liệu huấn luyện có thể được chia tách một cách tuyến tình thì ta có hể chọn hai mặt siêu phẳng có lề sao cho không có điểm nào nằm giữa chúng và sau đó tăng khoảng cách giữa chúng lên tối đa có thể. Bằng hình học ta được khoảng cách giữa hai mặt siêu phẳng là . Vậy nên ta cần cực tiểu hóa giá trị  để đảm bảo rằng không có điểm dữ liệu nào xuất hiện bên trong lề.
+[251] Vậy ở đây, bài toán trở thành cực tiểu hóa  (theo w và b), với điều kiện
+[252] Hình 2.1: Mặt siêu phẳng với lề cực đại phân tách dữ liệu thành 2 lớp.
+[253] Ở đây, các điểm nằm trên lề được gọi là các vector hỗ trợ.
+[254] Dạng ban đầu: bài toán tối ưu ở mục trên tương đối khó giải vì hàm mục tiêu phụ thuộc vào , là một hàm có khai căn. Tuy nhiên thay thế  bằng hàm mục tiêu  (hệ số 1/2 để tiện cho các biến đổi toán học sau này) mà không làm thay đổi thay đổi kết quả, cụ thể bài toán trở thành:
+[255] Cực tiêu hóa  (theo w và b). Bằng cách thêm các nhân tử Lagrange  và sử dụng kỹ thuật quy hoạch toàn phương. Theo điều kiện Karush – Kuhn – Tucher, lời giải có thể được viết dưới dạng tổ hợp tuyến tính của các vector như sau:
+[256] Chỉ cần một vài  nhận giá trị lớn hơn 0. Các điểm  tương ứng với các vector hỗ trợ nằm trên lề và thỏa mãn . Từ điều kiện này ta tính được giá trị của b như sau:
+[257] hoặc có thể tính được b từ trung bình của tất cả số lượng vector hỗ trợ ():
+[258] Lề mềm: vào năm 1995, Corinna Cortes và Vladimir N. Vapnik đã đề xuất một ý tưởng mới cho phép toán gán nhãn sai cho một số ví dụ huấn luyện. Nếu không tồn tại siêu phẳng nào phân tách được hai lớp dữ liệu thì thuật toán lề mềm sẽ chọn một siêu phẳng phân tách dữ liệu tốt nhát có thể và đồng thời cực đại hóa khoảng cách giữa siêu phẳng với các điểm được gán nhãn đúng. Phương pháp này sử dụng biến bù , dùng để đo độ sai lệch của các :
+[259] Kernel: trong SVM, đối với từng bộ dữ liệu khác nhau ta có thể sử dụng các hàm kernel (hàm hạt nhân) phù hợp nhằm biến đổi chiều của bộ dữ liệu cho phù hợp để đạt được kết quả tốt nhất, dưới đây là một số ví dụ về các hàm kernel phổ biến:
+[260] Linear kernel: 
+[261] Polynomial kernel: 
+[262] Gaussian Radial – Basis Function (RBF) kernel:
+[263] Sigmoid: 
+[264] Ưu điểm: Là một kĩ thuật phân lớp khá phổ biến, SVM thể hiện được nhiều ưu điểm trong số đó có việc tính toán hiệu quả trên các tập dữ liệu lớn. Đầu tiên phải nhắc tới là xử lý trên không gian số chiều cao. Tiếp theo là khả năng tiết kiệm bộ nhớ do chỉ có một tập hợp con của các điểm được sử dụng trong quá trình huấn luyện và ra quyết định thực tế cho các điểm dữ liệu mới nên chỉ có những điểm cần thiết mới được lưu trữ trong bộ nhớ khi ra quyết định. Và cuối cùng là tính linh hoạt, với Khả năng áp dụng nhiều kernel mới cho phép linh động giữa các phương pháp tuyến tính và phi tuyến tính từ đó khiến cho hiệu suất phân loại lớn hơn.
+[265] Nhược điểm: với bài toán số chiều cao, trong trường hợp số lượng thuộc tính của tập dữ liệu lớn hơn rất nhiều so với số lượng dữ liệu thì SVM cho kết quả khá kém. Bên cạnh đó là việc chưa thể hiện rõ tính xác suất do SVM chỉ cố gắng tách các đối tượng vào các lớp được phân tách bởi siêu phẳng SVM. Điều này chưa giải thích được xác suất xuất hiện của một thành viên trong một nhóm là như thế nào. Tuy nhiên hiệu quả của việc phân lớp có thể được xác định dựa vào khái niệm lề từ điểm dữ liệu mới đến siêu phẳng phân lớp.
+[266] Thuật toán Rừng ngẫu nhiên (RF)
+[267] Rừng ngẫu nhiên (Random Forests – RF) [9] là thuật toán học có giám sát được sử dụng cho cả phân lớp và hồi quy lần đầu tiên được Tim Kam Ho đề xuất vào năm 1995. Sau đó được phát triển bởi Leo Breiman và Adele Cutler, những người đã đăng ký cái tên "Random Forests" làm nhãn hiệu vào năm 2006 (tính đến năm 2019, nó thuộc sở hữu của Minitab). Đây là thuật toán linh hoạt và dễ sử dụng nhất. Một khu rừng bao gồm cây cối. Người ta nói rằng càng có nhiều cây thì rừng càng mạnh. Random forests tạo ra cây quyết định trên các mẫu dữ liệu được chọn ngẫu nhiên, được dự đoán từ mỗi cây và chọn giải pháp tốt nhất bằng cách bỏ phiếu. Nó cũng cung cấp một chỉ báo khá tốt về tầm quan trọng của tính năng. Random forests có nhiều ứng dụng, chẳng hạn như công cụ đề xuất, phân loại hình ảnh và lựa chọn tính năng…
+[268] Để hiểu về cách thức hoạt động của rừng ngẫu nhiên, trước tiên cần hiểu về cây quyết định và một thuật toán Iterative Dichotomiser 3 (hay ID3):
+[269] Cây quyết định là một mô hình học có giám sát, có thể được áp dụng vào cả hai bài toán phân lớp và hồi quy. Cụ thể, cây quyết định là một cấu trúc giống như lưu đồ, trong đó mỗi nút bên trong đại diện cho một "thử nghiệm" trên một thuộc tính (ví dụ: liệu một lần lật đồng xu xuất hiện đầu hay sấp), mỗi nhánh đại diện cho kết quả của thử nghiệm và mỗi nút lá đại diện cho một nhãn lớp (quyết định được thực hiện sau khi tính toán tất cả các thuộc tính). Các đường đi từ gốc đến lá đại diện cho các quy tắc phân loại.
+[270] Hình 2.2: Minh họa cây quyết định
+[271] Tiếp theo, ta sẽ làm rõ một thuật toán xây dựng cây quyết định ra đời từ rất sớm và rất phổ biến, đó là ID3. Đây là một thuật toán nhằm xây dựng cây quyết định được áp dụng cho các bài toán phân lớp mà tất cả các thuộc tính đều ở dạng dữ liệu phân loại (các thông tin có đặc điểm giống nhau được nhóm lại, VD: (mưa, nắng) hay (xanh, đỏ)…).
+[272] Trong ID3, ta cần xác định thứ tự của thuộc tính cần được xem xét tại mỗi bước. Với các bài toán có nhiều thuộc tính và mỗi thuộc tính có nhiều giá trị khác nhau, việc tìm được nghiệm tối ưu thường là không khả thi. Thay vào đó, một phương pháp đơn giản thường được sử dụng là tại mỗi bước, một thuộc tính tốt nhất sẽ được chọn ra dựa trên một tiêu chuẩn nào đó. Với mỗi thuộc tính được chọn, ta chia dữ liệu vào các child node tương ứng với các giá trị của thuộc tính đó rồi tiếp tục áp dụng phương pháp này cho mỗi đỉnh con. Việc chọn ra thuộc tính tốt nhất ở mỗi bước như thế này được gọi là cách chọn greedy (tham lam). Cách chọn này có thể không phải là tối ưu, nhưng trực giác cho chúng ta thấy rằng cách làm này sẽ gần với cách làm tối ưu. Ngoài ra, cách làm này khiến cho bài toán cần giải quyết trở nên đơn giản hơn. 
+[273] Sau mỗi câu hỏi để phân chia tại các đỉnh, dữ liệu được chia vào từng đỉnh con tương ứng với các câu trả lời cho câu hỏi đó. Câu hỏi ở đây chính là một thuộc tính, câu trả lời chính là giá trị của thuộc tính đó. Để đánh giá chất lượng của một cách phân chia, chúng ta cần đi tìm một phép đo. 
+[274] Trước hết, thế nào là một phép phân chia tốt? Bằng trực giác, một phép phân chia là tốt nhất nếu dữ liệu trong mỗi đỉnh con hoàn toàn thuộc vào một lớp khi đó đỉnh con này có thể được coi là một lá, tức ta không cần phân chia thêm nữa. Nếu dữ liệu trong các đỉnh con vẫn lẫn vào nhau theo tỉ lệ lớn, ta coi rằng phép phân chia đó chưa thực sự tốt. Từ nhận xét này, ta cần có một hàm số đo độ tinh khiết (purity), hoặc độ vẩn đục (impurity) của một phép phân chia. Hàm số này sẽ cho giá trị thấp nhất nếu dữ liệu trong mỗi đỉnh con nằm trong cùng một lớp tinh khiết nhất, và cho giá trị cao nếu mỗi đỉnh con  có chứa dữ liệu thuộc nhiều lớp khác nhau.
+[275] Một hàm số có các đặc điểm này và được dùng nhiều trong lý thuyết thông tin là hàm entropy.
+[276] Hàm entropy là gì?
+[277] Cho một phân phối xác suất của một biến rời rạc  có thể nhận  giá trị khác nhau . Giả sử rằng xác suất để  nhận các giá trị này là  với . Ký hiệu phân phối này là . Entropy của phân phối này được định nghĩa là:
+[278] trong đó log là logarit tự nhiên (hoặc một số tài liệu dùng là logarit cơ số 2, nhưng giá trị của  chỉ khác bằng cách nhân với một hằng số) và quy ước .
+[279] Hình 2.3: Đồ thị hàm entropy với n = 2.
+[280] Khi đó  tinh khiết nhất khi  là 1 trong 2 giá trị là 0 hoặc 1; và  bị vẩn đục khi .
+[281] Tổng quát lên với n > 2, hàm entropy đạt giá trị nhỏ nhất nếu có một giá trị  và lớn nhất nếu tất cả  bằng nhau. 
+[282] Những tính chất này của hàm entropy khiến nó được sử dụng trong việc đo độ vẩn đục của một phép phân chia của ID3. Vì lý do này, ID3 còn được gọi là entropy-based decision tree.
+[283] Thuật toán ID3
+[284] Trong ID3, tổng có trọng số của entropy tại các lá sau khi xây dựng cây quyết định được coi là hàm mất mát của cây quyết định đó. Các trọng số ở đây tỉ lệ với số điểm dữ liệu được phân vào mỗi đỉnh. Công việc của ID3 là tìm các cách phân chia hợp lý (thứ tự chọn thuộc tính hợp lý) sao cho hàm mất mát cuối cùng đạt giá trị càng nhỏ càng tốt. Như đã đề cập, việc này đạt được bằng cách chọn ra thuộc tính sao cho nếu dùng thuộc tính đó để phân chia, entropy tại mỗi bước giảm đi một lượng lớn nhất. Bài toán xây dựng một cây quyết định bằng ID3 có thể chia thành các bài toán nhỏ, trong mỗi bài toán, ta chỉ cần chọn ra thuộc tính giúp cho việc phân chia đạt kết quả tốt nhất. Mỗi bài toán nhỏ này tương ứng với việc phân chia dữ liệu trong một đỉnh không phải lá. Chúng ta sẽ xây dựng phương pháp tính toán dựa trên mỗi đỉnh này này.
+[285] Xét một bài toán với  lớp khác nhau. Giả sử ta đang làm việc với một đỉnh không phải lá với các điểm dữ liệu tạo thành một tập  với số phần tử là . Giả sử thêm rằng trong số  điểm dữ liệu này,  điểm thuộc vào lớp c. Xác suất để mỗi điểm dữ liệu rơi vào một lớp  được xấp xỉ bằng  (Ước lượng khả năng tối đa). Như vậy, giá trị entropy tại đỉnh này được tính bởi: 
+[286] Tiếp theo, giả sử thuộc tính được chọn là . Dựa trên , các điểm dữ liệu trong  được chia thành  đỉnh con:  với số điểm trong mỗi đỉnh con lần lượt là . Ta định nghĩa:
+[287] là tổng có trọng số entropy của mỗi đỉnh con được tính tương tự như . Việc lấy trọng số này rất quan trọng vì các đỉnh thường có số lượng điểm khác nhau. Tiếp theo, ta định nghĩa Information gain dựa trên thuộc tính của :
+[288] Trong ID3, tại mỗi đỉnh, thuộc tính được chọn được xác định bởi:
+[289] tức là thuộc tính khiến Information gain đạt giá trị lớn nhất.
+[290] Điều kiện dừng của thuật toán ID3
+[291] Trong các thuật toán cây quyết định nói chung và ID3 nói riêng, nếu ta tiếp tục phân chia các đỉnh chưa tinh khiết, ta sẽ thu được một cây mà mọi điểm trong tập huấn luyện đều được dự đoán đúng (giả sử rằng không có hai đầu vào giống nhau nào cho đầu ra khác nhau). Khi đó, cây có thể sẽ rất phức tạp (nhiều đỉnh) với nhiều lá chỉ có một vài điểm dữ liệu. Như vậy, nhiều khả năng overfitting sẽ xảy ra. Để tránh overfitting, một trong số các phương pháp sau có thể được sử dụng. Tại một đỉnh, nếu một trong số các điều kiện sau đây xảy ra, ta không tiếp tục phân chia node đó và coi nó là một lá:
+[292] Nếu đỉnh đang xét có entropy bằng 0, tức mọi điểm ở đỉnh đều thuộc một lớp.
+[293] Nếu đỉnh đó có số phần tử nhỏ hơn một ngưỡng nào đó. Trong trường hợp này, ta chấp nhận có một số điểm bị phân lớp sai để tránh overfitting. Lớp cho lá này có thể được xác định dựa trên lớp chiếm đa số trong đỉnh.
+[294] Nếu khoảng cách từ đỉnh đó đến đỉnh gốc đạt tới một giá trị nào đó. Việc hạn chế chiều sâu của cây này làm giảm độ phức tạp của cây và phần nào giúp tránh overfitting.
+[295] Nếu tổng số lá vượt quá một ngưỡng nào đó.
+[296] Nếu việc phân chia đỉnh đó không làm giảm entropy quá nhiều (information gain nhỏ hơn một ngưỡng nào đó).
+[297] Ngoài các phương pháp trên, một phương pháp phổ biến khác được sử dụng để tránh overfitting là pruning (tạm dịch là cắt tỉa).
+[298] Rừng ngẫu nhiên
+[299] Như vậy, từ những thông tin và ví dụ ở trên ta đã hiểu được về thuật toán ID3 và mô hình cây quyết định. Vậy rừng ngẫu nhiên hoạt động như thế nào? Về mặt kỹ thuật, rừng ngẫu nhiên là một phương pháp tổng hợp (dựa trên cách tiếp cận phân chia và chinh phục) của các cây quyết định được tạo ra trên một tập dữ liệu được chia ngẫu nhiên. Bộ sưu tập phân loại cây quyết định này còn được gọi là rừng. Cây quyết định riêng lẻ được tạo ra bằng cách sử dụng chỉ báo chọn thuộc tính như tăng thông tin, tỷ lệ tăng và chỉ số Gain (hoặc Gini) cho từng thuộc tính. Mỗi cây phụ thuộc vào một mẫu ngẫu nhiên độc lập. Trong bài toán phân loại, mỗi phiếu bầu chọn và lớp phổ biến nhất được chọn là kết quả cuối cùng. Trong trường hợp hồi quy, mức trung bình của tất cả các kết quả đầu ra của cây được coi là kết quả cuối cùng. Nó đơn giản và mạnh mẽ hơn so với các thuật toán phân loại phi tuyến tính khác.
+[300] Hình 2.4: Mô tả phương thức hoạt động của thuật toán rừng ngẫu nhiên
+[301] Rừng ngẫu nhiên hoạt động theo bốn bước sau:
+[302] Bước 1: Chọn các mẫu ngẫu nhiên từ tập dữ liệu đã cho.
+[303] Bước 2: Thiết lập cây quyết định cho từng mẫu và nhận kết quả dự đoán từ mỗi quyết định cây.
+[304] Bước 3: Hãy bỏ phiếu cho mỗi kết quả dự đoán.
+[305] Bước 4: Chọn kết quả được dự đoán nhiều nhất là dự đoán cuối cùng.
+[306] Ba thành phần tạo nên rừng ngẫu nhiên:
+[307] Tính ngẫu nhiên hóa và không cắt tỉa:
+[308] Tại mỗi cây, các thuộc tính tại đỉnh được chọn một cách ngẫu nhiên,
+[309] Mỗi nhánh con sẽ được phát triển từ đỉnh,
+[310] Cây sẽ được phát triển một cách tối đa mà không có sự cắt tỉa,
+[311] Tính kết hợp: mỗi khi cần dự đoán, ta sẽ lấy trung bình tất cả các phán đoán của các cây con trong rừng.
+[312] Tính đóng gói: việc chọn tập huấn luyện riêng cho từng cây được thực hiện một cách ngẫu nhiên từ dữ liệu ban đầu bằng cách “lấy mẫu có trùng lặp” – tức là các mẫu đã được lấy ra sẽ không bị loại bỏ khỏi tập ban đầu.
+[313] Ưu điểm: Rừng ngẫu nhiên được coi là một phương pháp chính xác và mạnh mẽ vì số cây quyết định tham gia vào quá trình này. Nó không bị vấn đề overfitting. Lý do chính là nó dùng trung bình của tất cả các dự đoán, trong đó hủy bỏ những thành kiến. Thuật toán có thể được sử dụng trong cả hai vấn đề phân loại và hồi quy. Random forests cũng có thể xử lý các giá trị còn thiếu. Có hai cách để xử lý các giá trị này: sử dụng các giá trị trung bình để thay thế các biến liên tục và tính toán mức trung bình gần kề của các giá trị bị thiếu. Bạn có thể nhận được tầm quan trọng của tính năng tương đối, giúp chọn các tính năng đóng góp nhiều nhất cho trình phân loại. 
+[314] Nhược điểm: Rừng ngẫu nhiên chậm tạo dự đoán bởi vì nó có nhiều cây quyết định. Bất cứ khi nào nó đưa ra dự đoán, tất cả các cây trong rừng phải đưa ra dự đoán cho cùng một đầu vào cho trước và sau đó thực hiện bỏ phiếu trên đó. Toàn bộ quá trình này tốn thời gian. Mô hình khó hiểu hơn so với cây quyết định, nơi bạn có thể dễ dàng đưa ra quyết định bằng cách đi theo đường dẫn trong cây.
+[315] Thuật toán Perceptron đa lớp (MLP)
+[316] Perceptron đa lớp (Multi-layer Perceptron – MLP) là một mạng lưới thần kinh nhân tạo truyền thằng mà tạo ra một tập hợp các kết quả đầu ra từ một tập hợp các nguyên liệu đầu vào. Một MLP được đặc trưng bởi một vài lớp của các nút đầu vào kết nối như một đồ thị có hướng giữa đầu vào và đầu ra lớp. MLP sử dụng giải thuật lan truyền ngược để đào tạo mạng.
+[317] Một mạng nơ-ron được cấu thành bởi các nơ-ron đơn lẻ được gọi là các perceptron. Nên trước tiên ta tìm hiểu xem perceptron là gì đã rồi tiến tới mô hình của mạng nơ-ron sau. Nơ-ron nhân tạo được lấy cảm hứng từ nơ-ron sinh học như hình sau:
+[318] Hình 2.5: Minh minh họa nơ-ron sinh học
+[319] Như hình trên, ta có thể thấy một nơ-ron có thể nhận nhiều đầu vào và cho ra một kết quả duy nhất. Mô hình của perceptron cũng tương tự như vậy
+[320] Hình 2.6: Cấu trúc của một perceptron cơ bản
+[321] trong đó  các trọng số liên kết;  là các dữ liệu đầu vào; và  (bias) là độ lệch.
+[322] Một perceptron sẽ nhận một hoặc nhiều đầu  vào dạng nhị phân và cho ra một kết quả  dạng nhị phân duy nhất. Các đầu vào được điều phối tầm ảnh hưởng bởi các tham số trọng lượng tương ứng  của nó, còn kết quả đầu ra được quyết định dựa vào một ngưỡng quyết định b nào đó:
+[323] Đặt , ta có thể viết thành:
+[324] Trọng số và độ lệch
+[325] Hiểu một cách đơn giản các kết nối của nơ-ron sinh học được mô hình hóa trong mạng nơ-ron nhân tạo là các trọng số (hay weight) giữa các nút. Hay trọng số mô ta các kết nối của các nơ-ron với nhau. Trọng số dương phản ánh kết nối kích thích, trong khi giá trị âm có nghĩa là kết nối ức chế. Tất cả các đầu vào được sửa đổi theo trọng số và tổng.
+[326] Độ lệch (hay bias) giống như hệ số chặn được thêm vào trong một phương trình tuyến tính. Nó là một tham số bổ sung trong mạng nơ-ron được sử dụng để điều chỉnh đầu ra cùng với tổng trọng số của các đầu vào cho nơ-ron. Do đó có thể hiểu độ lệch là một hằng số giúp điều chỉnh mô hình theo cách phù hợp nhất với dữ liệu đầu vào.
+[327] Như vậy, luật học trong mạng nơ-ron về cơ bản là quá trình để thay đổi các trọng số và độ lệch của mạng (giải thuật huấn luyện mạng) nhằm phù hợp với dữ liệu đầu vào.
+[328] Hàm kích hoạt mô phỏng tỷ lệ truyền xung qua sợi trục của một nơ-ron thần kinh. Trong một mạng nơ-ron nhân tạo, hàm kích hoạt đóng vai trò là thành phần phi tuyến tại đầu ra của các nơ-ron. 
+[329] Một điểm cần lưu ý là các hàm kích hoạt buộc phải là hàm phi tuyến. Vì nếu nó là tuyến tính thì khi kết hợp với phép toán tuyến tính  thì kết quả thu được cũng sẽ là một thao tác tuyến tính dẫn tới chuyện nó trở nên vô nghĩa. Ở đây, ta sẽ đi vào làm rõ một số hàm kích hoạt phổ biến như sau:
+[330] Hàm Sigmoid với đầu vào và đầu ra dạng nhị phân, ta khó có thể điều chỉnh một lượng nhỏ đầu vào để đầu ra thay đổi chút ít, nên để linh động ta có thể mở rộng chúng trong khoảng [0, 1]. Lúc này ta có thể quyết định đầu ra bởi hàm sigmoid với công thức như sau:
+[331] Hàm tanh nhận đầu vào là một số thực và chuyển thành một giá trị trong khoảng (-1; 1). Cũng như Sigmoid, hàm Tanh bị bão hoà ở 2 đầu (gradient thay đổi rất ít ở 2 đầu). Tuy nhiên hàm Tanh lại đối xứng qua 0 nên khắc phục được một nhược điểm của Sigmoid.
+[332] Công thức của hàm tanh: 
+[333] Hàm ReLU (Rectified Linear Unit) đang được sử dụng khá nhiều trong những năm gần đây khi huấn luyện các mạng neuron bởi tính đơn giản của nó. 
+[334] Công thức hàm ReLu: 
+[335] Kiến trúc mạng nơ-ron: mạng nơ-ron là sự kết hợp của của các tầng perceptron hay còn được gọi là perceptron đa tầng (multilayer perceptron) như hình vẽ bên dưới:
+[336] Hình 2.7: Minh họa các tầng của mạng nơ-ron
+[337] Một mạng NN sẽ có 3 kiểu tầng:
+[338] Tầng vào (input layer): Là tầng bên trái cùng của mạng thể hiện cho các đầu vào của mạng.
+[339] Tầng ra (output layer): Là tầng bên phải cùng của mạng thể hiện cho các đầu ra của mạng.
+[340] Tầng ẩn (hidden layer): Là tầng nằm giữa tầng vào và tầng ra thể hiện cho việc suy luận logic của mạng.
+[341] Lưu ý rằng, một mạng nơ-ron chỉ có 1 tầng vào và 1 tầng ra nhưng có thể có nhiều tầng ẩn.
+[342] Kiến trúc của một mạng perceptron đa tầng tổng quát có thể mô tả như sau:
+[343] Đầu vào là các vector (x1, x2, …, xp) trong không gian p chiều, đầu ra là các vector (y1, y2, …, yq) trong không gian q chiều. Đối với các bài toán phân loại, p chính là kích thước của mẫu đầu vào, q chính là số lớp cần phân loại.
+[344] Mỗi nơ-ron thuộc tầng sau liên kết với tất cả các nơ-ron thuộc tầng liền trước nó.
+[345] Đầu ra của tầng trước là đầu vào của nơ-ron thuộc tầng liền sau nó.
+[346] Hoạt động của mạng perceptron đa tầng như sau: tại tầng đầu vào các nơ-ron nhận tín hiệu vào xử lý (tính tổng trọng số, gửi tới hàm truyền) rồi cho ra kết quả (là kết quả của hàm truyền); kết quả này sẽ được truyền tới các nơ-ron thuộc tầng ẩn thứ nhất; các nơ-ron tại đây tiếp nhận như là tín hiệu đầu vào, xử lý và gửi kết quả đến tầng ẩn thứ 2. Quá trình tiếp tục cho đến khi các nơ-ron thuộc tầng ra cho kết quả.
+[347] Mạng nơ-ron gồm 3 kiểu tầng chính là tầng vào biểu diễn cho đầu vào, tầng ra biểu diễn cho kết quả đầu ra và tầng ẩn thể hiện cho các bước suy luận trung gian. Mỗi nơ-ron sẽ nhận tất cả đầu vào từ các nơ-ron ở tầng trước đó và sử dụng một hàm kích hoạt dạng phi tuyến như sigmoid, ReLU, tanh đề tính toán đầu ra.
+[348] Quá trình suy luận từ tầng vào tới tầng ra của mạng nơ-ron là quá trình lan truyền tiến tức là đầu vào các nơ-ron tại 1 tầng đều lấy từ kết quả các nơ-ron tầng trước đó mà không có quá trình suy luận ngược lại.
+[349] Hàm lỗi của mạng có dạng cross-entropy, và do mạng nơ-ron có nhiều đầu ra nên hàm lỗi cũng phải lấy tổng lỗi của tất cả các đầu ra này. Để tối ưu được hàm lỗi này người ta sử dụng giải thuật lan truyền ngược để tính được đạo hàm của hàm lỗi này.
+[350] Ưu điểm của MLP là rất hữu ích trong nghiên cứu vì khả năng giải quyết các vấn đề ngẫu nhiên, thường cho các dự đoán gần đúng cho các vấn đề cực kỳ phức tạp. Bên cạnh đó, MLP cũng có thể được sử dụng để tạo các mô hình toán học bằng cách phân tích hồi quy. Vì phân loại là một trường hợp hồi quy cụ thể khi biến phản hồi có tính phân loại, các MLP tạo ra các thuật toán phân loại tốt. MLP là một giải pháp học máy phổ biến trong những năm 1980, được ứng dụng trong các lĩnh vực đa dạng như nhận dạng giọng nói, phân loại hình ảnh và phần mềm dịch máy…
+[351] Nhược điểm của MLP bao gồm quá nhiều tham số vì nó được kết nối đầy đủ. Số thông số = chiều rộng x chiều sâu x chiều cao. Mỗi nút được kết nối với một nút khác trong một trang web rất dày đặc - dẫn đến dư thừa và không hiệu quả và khiến thời gian tính toán kéo dài hơn bình thường.
+[352] Thuật toán tối ưu hóa Bald Eagle Search
+[353] Thuật toán tối ưu hóa Bald Eagle Search (BES) [10] hay có thể gọi là thuật toán Tìm kiếm đại bàng đầu trắng là một thuật toán tối ưu hóa mới, được để xuất lần đầu bởi H. A. Alsattar cùng cộng sự vào năm 2019. Thuật toán được lấy cảm hứng từ cuộc sống tự nhiên, bắt chước chiến lược săn mồi và hành vi xã hội thông minh của loài đại bàng đầu trắng khi chúng tìm kiếm cá. Trong tự nhiên, loài đại bàng đầu trắng tìm kiếm thức ăn trong ba giai đoạn, gồm: 
+[354] Giai đoạn 1: Lựa chọn khu vực – những con đại bàng xác định một khu vực mà chúng sẽ tiến hành tìm kiếm.
+[355] Giai đoạn 2: Tìm kiếm con mồi – những con đại bàng tìm kiếm thức ăn trong khu vực đã chọn.
+[356] Giai đoạn 3: Tấn công con mồi – đại bàng quyết định tấn công con mồi đã chọn.
+[357] Dưới đây là hình ảnh mô tả ba giai đoạn trên:
+[358] Hình 2.8: Trình tự quá trình săn mồi của đại bàng đầu trắng.
+[359] Từ hình trên có thể thấy, sự di chuyển của đại bàng đầu trắng trong ba giai đoạn phụ thuộc vào một điểm trung tâm. Trong gia đoạn lựa chọn khu vực, những con đại bàng di chuyển từ điểm ban đầu về phía khu vực tìm kiếm đã chọn. Trong giai đoạn tìm kiếm con mồi, những con đại bàng tìm kiếm trong không gian đã chọn và xung quanh điểm trung tâm. Trong giai đoạn tấn công con mồi, những con đại bàng di chuyển về phía con mồi từ điểm trung tâm của khu vực tìm kiếm. Đại bàng đầu trắng bắt đầu từ điểm trung tâm của khu vực tìm kiếm tiến hành phóng xuống để tấn công con mồi. Những ưu điểm của kỹ thuật tiến hóa và bầy đàn đã được tích hợp vào việc xây dựng thuật toán BES. Giai đoạn đầu tiên và giai đoạn thứ hai tương tự đáng kể với hành vi tìm kiếm của các kỹ thuật tiến hóa. Cụ thể, giai đoạn đầu tiên của thuật toán BES chuyển tiếp và thu thập tất cả các điểm tìm kiếm bắt đầu từ điểm gốc đến điểm tốt nhất. Giai đoạn thứ hai được coi là giai đoạn tiến hóa cho tất cả các điểm tìm kiếm và tối đa hóa các điểm tìm kiếm ưu tiên dọc theo hướng dẫn đến điểm trung tâm. Giai đoạn thứ ba bắt chước hành vi của trí thông minh bầy đàn (SI) trong khi di chuyển đến điểm tốt nhất, với kinh nghiệm từ việc tìm kiếm trước đó. Việc coi điểm trung tâm là điểm tìm kiếm cục bộ giúp cho giai đoạn này có thể chỉ đạo tìm kiếm trên diện rộng và khắc phục những thiếu sót trong các giai đoạn tìm kiếm trước.
+[360] Giai đoạn lựa chọn khu vực:
+[361] Trong giai đoạn này, đại bàng đầu trắng xác định và chọn khu vực tốt nhất (về lượng thức ăn) trong không gian tìm kiếm đã chọn, nơi chúng có thể săn mồi. Phương trình dưới đây trình bày hành vi này về mặt toán học.
+[362] trong đó α là tham số để kiểm soát sự thay đổi vị trí nhận giá trị từ 1,5 đến 2 và r là số ngẫu nhiên nhận giá trị từ 0 đến 1. Trong giai đoạn lựa chọn, đại bàng đầu trắng chọn một khu vực trên cơ sở thông tin từ giai đoạn trước. Đại bàng chọn ngẫu nhiên một khu vực tìm kiếm khác nhưng nằm gần khu vực tìm kiếm trước đó.  biểu thị không gian tìm kiếm hiện đang được đại bàng đầu trắng lựa chọn dựa trên vị trí tốt nhất được xác định trong quá trình tìm kiếm trước đó của chúng. Đại bàng tìm kiếm ngẫu nhiên tất cả các điểm gần không gian tìm kiếm đã chọn trước đó. Trong khi đó,  chỉ ra rằng những con đại bàng này đã sử dụng hết thông tin từ những điểm trước đó. Chuyển động hiện tại của đại bàng đầu trắng được xác định bằng cách nhân thông tin được tìm kiếm ngẫu nhiên trước đó với . Quá trình này thay đổi ngẫu nhiên tất cả các điểm tìm kiếm.
+[363] Giai đoạn tìm kiếm con mồi:
+[364] Trong giai đoạn tìm kiếm, đại bàng đầu trắng tìm kiếm con mồi trong không gian tìm kiếm đã chọn và di chuyển theo các hướng khác nhau trong không gian xoắn ốc để tăng tốc tìm kiếm. Vị trí tốt nhất cho việc tấn công được biểu thị bằng toán học trong phương trình:
+[365]  ;
+[366] ;
+[367] ;
+[368] Hình 2.9: Mô tả việc đại bàng tìm kiếm trong không gian xoắn ốc
+[369] trong đó  là tham số nhận giá trị từ 5 đến 10 để xác định góc giữa tìm kiếm điểm ở điểm trung tâm và R nhận giá trị từ 0,5 đến 2 để xác định số chu kỳ tìm kiếm. Hình... cho thấy đại bàng đầu trắng di chuyển theo hướng xoắn ốc trong không gian tìm kiếm đã chọn và xác định vị trí tốt nhất để sà và săn mồi. Ở đây dụng thuộc tính biểu đồ cực để đại diện toán học cho chuyển động này. Thuộc tính này cũng cho phép thuật toán BES phát hiện ra các không gian mới và tăng tính đa dạng hóa bằng cách nhân sự khác biệt giữa điểm hiện tại và điểm tiếp theo với điểm cực trong trục y và bằng cách thêm sự khác biệt giữa điểm hiện tại và điểm trung tâm với điểm cực trong trục x. 
+[370] Giai đoạn tấn công con mồi:
+[371] Trong giai đoạn sà xuống, đại bàng đầu trắng bắt đầu từ vị trí tốt nhất trong không gian tìm kiếm tấn công con mồi mục tiêu. Tất cả các điểm cũng hướng tới điểm tốt nhất. Phương trình dưới đây minh họa về mặt toán học hành vi này.
+[372] Trong đó:
+[373]  ;
+[374] ;
+[375] ; ;và 
+[376] Chuyển động của các điểm trong phương trình tấn công mục tiêu khi các tham số được thay đổi là chuyển động tròn đến điểm tốt nhất. Trung bình tất cả các đối tượng của quần thể trong giai đoạn này có thể giúp thuật toán tăng cường và đa dạng hóa, trong đó tất cả các giải pháp đều tiệm cận với giải pháp tốt nhất. Ba giai đoạn này rất quan trọng để có được một giải pháp tốt với số lần lặp lại tối thiểu, trong đó mỗi giai đoạn phụ thuộc vào hai đặc điểm quan trọng là tăng cường và đa dạng hóa. Những đặc điểm này là rất quan trọng để có được một giải pháp mới liên tục và tìm kiếm một giải pháp tối ưu.
+[377] Phương pháp thống kê thông tin ngập lụt dựa trên dữ liệu ảnh Sentinel 1A
+[378] Sentinel 1 là chòm sao vệ tinh của Cơ quan Vũ trụ châu Âu (ESA). Sentinel 1 bao gồm hai vệ tinh Sentinel 1 A / B mang hình ảnh SAR của băng tần C với chu kỳ ảnh trong 6 ngày với sự sẵn có của cả hai vệ tinh và 12 đối với từng vệ tinh riêng lẻ. Sentinel 1 cung cấp dữ liệu phát hiện phạm vi mặt đất (GRD) cấp độ 1, độ phân giải cao ở chế độ swath phân cực kép (IW) với độ phân giải không gian 20x22m, kích thước pixel là 10x10m và khoảng cách là 250 km.
+[379] Việc ứng dụng dữ liệu Sentinel cho nghiên cứu khu vực lũ lụt có thể được phân tích bằng giá trị pixel tán xạ ngược (Sigma 0), có giá trị thấp hơn các pixel khác vì tín hiệu radar bị phản xạ khỏi cảm biến và điều này dẫn đến khu vực tối trong ảnh [11]. Để xử lý vấn đề này, ta sử dụng 2 phần mềm đó là: ESA-SNAP và ArcGIS. Quy trình xử lý được thể hiện trong bên dưới. 
+[380] Hình 2.10: Quy trình xử lý dữ liêu Sentinel-1A trong ESA-SNAP và ArcGIS
+[381] Để phát hiện và giám sát lũ lụt, ta sử dụng 2 hình ảnh trước và trong khi lũ lụt để so sánh diện tích nước và đất.
+[382] Sơ đồ quy trình nghiên cứu
+[383] Dưới đây là sơ đồ biểu diễn toàn bộ quy trình nghiên cứu thực nghiệm với dữ liệu trên địa bàn tỉnh Thừa Thiên Huế:
+[384] Hình 2.11: Sơ đồ quy trình nghiên cứu
+[385] Trong nghiên cứu này, ta chia tách một cách ngẫu nhiên tập dữ liệu gồm 1621 điểm ghi nhận lũ lụt thành ba phần gồm: Tập dữ liệu huấn luyện, Tập dữ liệu xác thực và Tập dữ liệu kiểm tra với tỷ lệ lần lượt là 60% - 20% - 20%. Sau đó tiến hành tích hợp thuật toán tối ưu hóa BES trong quá trình huấn luyện và đánh giá các mô hình. Và cuối cùng, từ các mô hình đã được huấn luyện ta thành lập được bản đồ nhạy cảm lũ lụt tại tỉnh Thừa Thiên Huế.
+[386] Bên cạnh đó, ta xác định tỷ lệ dừng của thuật toán BES bằng công thức sau:
+[387] Các phương pháp đánh giá mô hình
+[388] Chia tách ngẫu nhiên
+[389] Chia tách ngẫu nhiên (random splitting) là một phương pháp thống kê được sử dụng để đánh giá hiệu quả của các mô hình học máy. Trong phương pháp này toàn bộ tập dữ liệu sẽ được chia ngẫu nhiên theo một tỷ lệ nhất định thành hai tập con không giao nhau, gồm:
+[390] Tập huấn luyện: được sử dụng để huấn luyện mô hình;
+[391] Tập kiểm tra: được sử dụng để đánh giá hiệu năng của mô hình sau khi đã được huấn luyện.
+[392] Ưu điểm của phương pháp này là nhanh chóng, đơn giản và linh hoạt. Tuy nhiên, phương pháp này thường dẫn đến sự biến thiên cao do sự khác biệt của hai tập dữ liệu, dẫn đến sự khác biệt trong việc dự đoán hay phân loại.
+[393] MSE
+[394] Sai số bình phương trung bình (Mean squared error – MSE) là một chỉ số dùng để đánh giá mô hình hồi quy, nó được tính bằng trung bình của bình phương các sai số, tức là sự khác biệt giữa các ước lượng và những gì được đánh giá.  
+[395] MSE đánh giá chất lượng của một ước lượng (ví dụ, một hàm toán học lập bản đồ mẫu dữ liệu của một tham số của dân số từ đó các dữ liệu được lấy mẫu) hoặc một yếu tố dự báo (ví dụ, một bản đồ chức năng có số liệu vào tùy ý để một mẫu của các giá trị của một số biến ngẫu nhiên). 
+[396] Công thức của MSE:
+[397] Trong đó,  là vector của n giá trị dự báo và  là vector của n giá trị quan sát được. Tức là MSE là trung bình của bình phương các sai số.
+[398] MAE
+[399] Sai số tuyệt đối trung bình (Mean absolute error – MAE) là một chỉ số dùng để đo lường mức độ trung bình của các lỗi trong một tập hợp các dự đoán, mà không xem xét hướng của chúng.
+[400] MAE được tính bởi công thức:
+[401] Trong đó,  là vector của n giá trị dự báo và  là vector của n giá trị quan sát được. Tức là MAE là trung bình của trị tuyệt đối các sai số.
+[402] Hệ số xác định
+[403] Hệ số xác định (Coefficient of determination – ) là một chỉ số đánh giá tỷ lệ của sự thay đổi trong biến phụ thuộc có thể dự đoán được từ các biến độc lập. 
+[404] Công thức tính R bình phương xuất phát từ ý tưởng xem toàn bộ biến thiên quan sát được của biến phụ thuộc được chia thành 2 phần: phần biến thiên do hồi quy và phần biến thiên do phần dư. Nếu phần biến thiên do phần dư càng nhỏ, nghĩa là khoảng cách từ các điểm quan sát đến đường ước lượng hồi quy càng nhỏ thì phần biến thiên do hồi quy sẽ càng cao, khi đó giá trị R bình phương sẽ càng cao.
+[405] Trong đó:
+[406] ESS: là tổng độ lệch bình phương của phần dư;
+[407] TSS: là tổng các độ lệch bình phương của tất cả;
+[408] RSS = TSS – ESS: là tổng độ lệch bình phương giải thích từ hồi quy.
+[409] Giá trị  dao động từ 0 đến 1. R bình phương càng gần 1 thì mô hình đã xây dựng càng phù hợp với bộ dữ liệu dùng chạy hồi quy. Hệ số xác định càng gần 0 thì mô hình đã xây dựng càng kém phù hợp với bộ dữ liệu dùng chạy hồi quy. Trường hợp đặt biệt, phương trình hồi quy đơn biến ( chỉ có 1 biến độc lập) thì  chính là bình phương của hệ số tương quan r giữa hai biến đó.
+[410] Ý nghĩa cụ thể: giả sử R bình phương là 0.60, thì mô hình hồi quy tuyến tính này phù hợp với tập dữ liệu ở mức 60%. Nói cách khác, 60% biến thiên của biến phụ thuộc được giải thích bởi các biến độc lập (40% còn lại là do sai số đo lường, do cách thu thập dữ liệu, do có thể có biến độc lập khác giải thích cho biến phụ thuộc mà chưa được được vào mô hình nghiên cứu…vv). Thông thường, ngưỡng của  phải trên 50%, vì như thế mô hình mới phù hợp. Tuy nhiên tùy vào dạng nghiên cứu, như các mô hình về tài chính, không phải tất cả các hệ số  đều bắc buộc phải thỏa mãn lớn hơn 50% (ví dụ như: GDP, ROA, ROE…, do rất khó dể dự đoán giá vàng, giá cổ phiếu mà chỉ đơn thuần dựa vào các biến độc lập).
+[411] Kết quả thực nghiệm ứng dụng viễn thám, GIS và học máy để thành lập bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế
+[412] Đặc điểm tự nhiên và kinh tế - xã hội tại Thừa Thiên Huế
+[413] Thừa Thiên Huế là một tỉnh ven biển nằm ở cực nam của vùng Bắc Trung Bộ, miền Trung, Việt Nam. Địa hình của tỉnh rất phức tạp, dao động từ 0 đến 1774 m, được chia thành ba vùng rõ rệt: núi, đồng bằng và đầm phá ven biển. Trong số này, núi chiếm khoảng 85% tổng diện tích, đồng bằng 10% và đầm phá 5%. Tỉnh cũng có mạng lưới thủy văn dày đặc 0,3–2,5 km / km² với ba con sông chính: sông Hương, sông Bồ và sông Ông Lâu.
+[414] Hình 3.1: Bản đồ hành chính tỉnh Thừa Thiên Huế.
+[415] Đặc điểm tự nhiên
+[416] Tỉnh Thừa Thiên Huế nằm ở duyên hải miền trung Việt Nam bao gồm phần đất liền và phần lãnh hải thuộc thềm lục địa biển Đông [12]. Tỉnh có chung ranh giới đất liền với tỉnh Quảng Trị, Quảng Nam, thành phố Đà Nẵng, nước Cộng hòa dân chủ nhân dân Lào và giáp biển Đông. Phần đất liền, Thừa Thiên Huế có diện tích 5025,30 km2, kéo dài theo hướng Tây Bắc - Đông Nam, nơi dài nhất 120 km (dọc bờ biển), nơi ngắn nhất 44 km (phần phía Tây); mở rộng chiều ngang theo hướng Đông Bắc - Tây Nam với nơi rộng nhất là 65km và nơi hẹp nhất là khối đất cực Nam chỉ khoảng 2-3km. Với vùng nội thủy: rộng 12 hải lý. Vùng đặc quyền kinh tế mở rộng đến 200 hải lý tính từ đường cơ sở. Trên thềm lục địa biển Đông ở về phía Đông Bắc cách mũi cửa Khém nơi gần nhất khoảng 600m có đảo Sơn Chà. 
+[417] Thừa Thiên Huế nằm trên trục giao thông quan trọng xuyên Bắc-Nam, trục hành lang Đông - Tây nối Thái Lan - Lào - Việt Nam theo đường 9. Đây là vị trí trung độ của cả nước, nằm giữa thành phố Hà Nội và thành phố Hồ Chí Minh là hai trung tâm lớn của hai vùng kinh tế phát triển nhất là Hà Nội (cách 660 km) và thành phố Hồ Chí Minh (cách 1.080 km).
+[418] Bờ biển của tỉnh dài 120 km, có cảng Thuận An và vịnh Chân Mây với độ sâu 18 - 20m đủ điều kiện xây dựng cảng nước sâu với công suất lớn, có cảng hàng không Phú Bài nằm trên đường quốc lộ 1A và đường sắt xuyên Việt chạy dọc theo tỉnh.
+[419] Nằm trong vùng khí hậu nhiệt đới gió mùa cho nên thời tiết diễn ra theo chu kỳ 4 mùa, mùa xuân mát mẽ, ấm áp; mùa hè nóng bức; mùa thu dịu và mùa đông gió rét. Nhiệt độ trung bình cả năm 25°C. Số giờ nắng cả năm là 2000 giờ. Mùa du lịch đẹp nhất từ tháng 11 năm trước đến tháng 4 năm sau.
+[420] Địa hình Thừa Thiên Huế có cấu tạo dạng bậc khá rõ rệt. Địa hình núi chiếm khoảng 1/4 diện tích, từ biên giới Việt - Lào và kéo dài đến thành phố Đà Nẵng. Địa hình trung du chiếm khoảng 1/2 diện tích, độ cao phần lớn dưới 500 m, có đặc điểm chủ yếu là đỉnh rộng, sườn thoải và phần lớn là đồi bát úp, với chiều rộng vài trăm mét. Đồng bằng Thừa Thiên Huế (chiếm khoảng 1.400 km2) điển hình cho kiểu đồng bằng mài mòn, tích tụ, có cồn cát, đầm phá.
+[421] Tổng chiều dài sông suối và sông đào tại Thừa Thiên Huế đạt tới 1.055km, tổng diện tích lưu vực tới 4.195km2. Mật độ sông suối dao động trong khoảng 0,3-1km/km2, có nơi tới 1,5-2,5 km/km2. Trên lãnh thổ tỉnh từ Bắc vào gặp các sông chính như: sông Ô Lâu, hệ thống Sông Hương, sông Nong, sông Truồi, sông Cầu Hai, sông Bù Lu. Ngoài các sông thiên nhiên, xung quanh thành phố Huế còn gặp nhiều sông đào như: sông An Cựu (có tên là Lợi Nông) dài 27km nối sông Hương với đầm Cầu Hai ở Cống Quan thông qua sông Đại Giang; sông Đông Ba dài khoảng 3km là sông đào từ cầu Gia Hội đến Bao Vinh; sông Kẻ Vạn dài 5,5km nối sông Hương (cầu Bạch Hổ) với sông Bạch Yến và sông An Hòa, vòng ngoài kinh thành Huế rồi lại đổ vào sông Hương ở Bao Vinh. Trên đồng bằng duyên hải còn có hói Bảy Xã, hói Hàng Tổng nối sông Hương với sông Bồ, hói Phát Lát, hói Như Ý, hói Chợ Mai.
+[422] Đặc điểm kinh tế - xã hội
+[423] Thừa Thiên Huế là một cực tăng trưởng của vùng kinh tế trọng điểm miền trung [13]. Với ơ cấu các khu vực kinh tế: Dịch vụ - Công nghiệp và xây dựng - Nông nghiệp - Thuế sản phẩm trừ trợ cấp sản phẩm tương ứng 47,36% - 32,25% - 11,86% - 8,53%.Tổng sản phẩm trong tỉnh (GRDP) bình quân đầu người đến năm 2020 ước đạt 49 triệu đồng, tương đương 2.120 USD, tăng 5% (xấp xỉ đạt KH là 2.150 USD). 
+[424]  Trong năm 2020, tốc độ tăng trưởng kinh tế của tỉnh tiếp tục tăng nhưng giá trị gia tăng thấp, ước đạt 2,06%, không đạt kế hoạch đề ra do ảnh hưởng trực tiếp của đại dịch Covid-19 và thiên tai trong năm gây ra. Trong đó: khu vực dịch vụ tăng trưởng âm 0,79%, đặc biệt doanh thu du lịch giảm sâu 64%, lượng khách giảm 60%; so với cùng kỳ; vận tải (vận tải hành khách giảm trên 30%); xuất nhập khẩu (giảm 16%); hơn 10.000 lao động bị thất nghiệp; học sinh, sinh viên bị nghỉ học dài ngày (đặc biệt 30.000 sinh viên ngoại tỉnh), doanh thu thiệt hại ước khoảng 11.000 tỷ đồng.
+[425] Năm 2020, Thừa Thiên Huế bị ảnh hưởng nặng nề do thiên tai, đặc biệt các trận mưa lớn vào cuối vụ Đông Xuân gây ngập, úng làm giảm năng suất nhiều loại cây trồng đến kỳ thu hoạch (giảm trên 10.000 tấn lúa). Vào thời điểm cuối năm, các trận bão, lụt xảy ra liên tiếp xảy ra và kéo dài gây thiệt hại nghiêm trọng về tính mạng và tài sản của nhân dân, cụ thể: Cơn bão số 05 (ngày 18/9) làm 04 người chết, 92 người bị thương; 10 nhà bị sập, 21.283 nhà bị hư hại, tốc mái; sản xuất nông lâm ngư nghiệp với gần 3.000 ha bị thiệt hại; các công trình hạ tầng bị thiệt hại nghiêm trọng (đặc biệt hệ thống điện hư hỏng đến 80%); Đợt mưa lũ đặc biệt lớn từ ngày 6-22/10 gây sạt lở nghiêm trọng tuyến đường 71 (Phong Điền - A Lưới), tuyến đường Quốc lộc 49A, Quốc lộ 49B đã làm 32 người chết (13 người chết do mưa lũ; 6 công nhân nhà máy thủy điện Rào Trăng 3; 13 người trong đoàn công tác tại khu vực Trạm quản lý bảo vệ rừng Tiểu khu 67), 11 người mất tích tại nhà máy thủy điện Rào Trăng 3, 36 người bị thương; có 137.205 nhà/581.890 người bị ảnh hưởng của 128/145 phường xã bị ngập (86% số xã toàn tỉnh) với độ ngập 1-2,5m; Cơn bão số 9 làm 14 người bị thương,…. Ngoài ra, đã ảnh hưởng trực tiếp đến hoạt động sản xuất nông lâm ngư nghiệp, giao thông, công trình cấp nước sinh hoạt, thông tin liên lạc,…. Giá trị thiệt hại ước tính trên 2.000 tỷ đồng, chiếm 3,5% GRDP của tỉnh.
+[426] Cơ sở dữ liệu
+[427] Nhiều nguồn dữ liệu khác nhau đã được sử dụng để xác định các vị trí lũ lụt trong quá khứ, bao gồm các nguồn chính thức của chính phủ và các dấu vết lũ lụt do đoàn công tác thực địa thu thập. Trong nghiên cứu này, ta sử dụng kỹ thuật viễn thám để trích xuất các vị trí lũ lụt. Hai hình ảnh Sentinel 1A trước trận lụt (10/10/2020) và sau trận lụt (13/10/2020) được sử dụng để phát hiện các khu vực bị ngập lụt, bằng cách so sánh hai hình ảnh. 
+[428] Hình 3.2: Bản đồ hiện trạng ngập lụt thành lập từ ảnh Sentinel 1A và phân bố của 1621 điểm ghi nhận lũ lụt khu vực tỉnh Thừa Thiên Huế.
+[429] Sau khi có được dữ liệu ngập lụt, ta tiến hành lựa chọn các yêu tố ảnh hưởng tới ngập lụt để đưa vào mô hình. Việc lựa chọn các yếu tố này được coi là một nhiệm vụ quan trọng; nếu được lựa chọn một cách khoa học, chúng sẽ cải thiện đáng kể độ chính xác của mô hình nhạy cảm với lũ. Các yếu tố này được chia thành các hoạt động môi trường, thủy văn, khí hậu và con người. Trong nghiên cứu này, 14 yếu tố ảnh hưởng tới lũ lụt đã được lựa chọn, đó là: độ cao (elevation); hướng (aspect); độ cong (curvature); độ dốc (slope); mật độ sông (density of river); mật độ đường (density of road); khoảng cách đến sông (distance to river); khoảng cách đến đường (distance to road); hướng dòng chảy (flow direction); Chỉ số độ ẩm địa hình (TWI); Chỉ số thực vật chênh lệch chuẩn hóa (NDVI); Chỉ số xây dựng chênh lệch chuẩn hóa (NDBI); Chỉ số nước nhênh lệch chuẩn hóa (NDWI) và lượng mưa (rainfall). 
+[430] Độ cao, hướng, độ cong, độ dốc, TWI và hướng dòng chảy được tính toán từ Mô hình Độ cao Kỹ thuật số (DEM) và được xây dựng từ bản đồ địa hình tỷ lệ 1 / 50.000. Mật độ sông, mật độ đường giao thông, khoảng cách đến sông và khoảng cách với đường bộ được tính toán từ bản đồ địa hình tỷ lệ 1 / 50.000. Lượng mưa hàng năm vào năm 2020 được xây dựng dựa trên mười trạm khí hậu và thủy văn trên địa bàn tỉnh Thừa Thiên Huế. Những dữ liệu này được sử dụng để xây dựng bản đồ lượng mưa bằng cách áp dụng các phương pháp kigring. 
+[431] Độ cao được coi là một trong những yếu tố quan trọng nhất trong mô hình tính nhạy cảm với lũ vì nó ảnh hưởng trực tiếp đến tình trạng của dòng chảy. Giá trị của độ cao là tỷ lệ thuận với sự xuất hiện của lũ, trong khi độ dốc có mối quan hệ quan trọng với cả tích nước và tốc độ dòng chảy. Khả năng tích tụ nước và tốc độ dòng chảy tăng theo giá trị độ dốc 
+[432] Tiếp đó, hướng là một yếu tố cần thiết trong phân tích tính nhạy cảm với lũ vì nó thể hiện hướng của độ dốc và dòng chảy, trong khi nồng độ dòng chảy được xác định bằng độ cong. Khả năng xảy ra lũ lụt thường tập trung ở các độ cong thấp hơn.
+[433] TWI là một yếu tố thủy văn quan trọng, có ảnh hưởng đến quá trình tích tụ dòng chảy. Phương trình sau đây tính TWI: 
+[434] trong đó α là diện tích ngược dốc cục bộ tiêu thoát qua một điểm nhất định trên mỗi đơn vị chiều dài của đường đồng mức và β là là độ dốc cục bộ tính bằng radian.
+[435] Khoảng cách đến sông và mật độ sông cũng là những yếu tố quan trọng ảnh hưởng đến xác suất xuất hiện lũ vì chúng kiểm soát sự lan truyền và cường độ của lũ. Nếu khoảng cách đến sông ngắn thì khả năng lũ sẽ cao. Các khu vực có mật độ sông cao hơn dễ bị ngập lụt hơn.
+[436] Hướng dòng chảy là cũng cần cần xem xét khi thiết lập mô hình thủy văn và dự báo lũ. Nó mô tả hướng của nước và sự phân bố của nó trên bề mặt. Lượng mưa được coi là nguyên nhân gây ra lũ lụt, như đã được nhấn mạnh trong một số nghiên cứu. Điều này là do mưa làm tràn khả năng chứa nước của sông và tích tụ phù sa, một trong những nguyên nhân chính gây ra lũ lụt. 
+[437] NDVI phản ánh mật độ thực vật. Sự lan truyền và cường độ của lũ phụ thuộc vào mật độ thực vật. NDWI cũng được sử dụng để biểu thị những thay đổi liên quan đến hàm lượng nước trên bề mặt trái đất. Các giá trị của NDVI và NDWI được tính toán từ Landsat 8 OLI vào năm 2020 với các phương trình sau: 
+[438] NIR, RED và SWIR là độ phản xạ bề mặt của tia hồng ngoại gần, tia hồng ngoại màu đỏ và bước sóng ngắn. Các hoạt động của con người như xây dựng đường (và do đó thay đổi khoảng cách với đường và mật độ đường) và xây dựng nhà (liên quan đến NDBI) có thể ảnh hưởng đáng kể đến xác suất lũ lụt, đặc biệt là do tăng tốc độ dòng chảy và giảm lượng nước tính thấm bề ​​mặt.
+[439] Toàn bộ dữ liệu này được cung cấp bởi TS. Nguyễn Hữu Duy, khoa Địa lý, trường Đại học Khoa học – Tự nhiên – ĐHQGHN.
+[440] Dưới đây là bản đồ biểu diễn các yêu tố ảnh hưởng tới lũ lụt:
+[441] Hình 3.3: Biểu diễn 14 yếu tố ảnh hướng tới ngập lụt dưới dạng bản đồ.
+[442] Gồm: a) độ cao; b) hướng; c) độ cong; d) độ dốc; e)mật độ sông; f) khoảng cách đến sông; g) mật độ đường; h) khoảng cách đến đường; i) hướng dòng chảy; j) chỉ số độ ẩm địa hình; k) chỉ số xây dựng chênh lệch chuẩn hóa; l) chỉ số thực vật chênh lệch chuẩn hóa; m) chỉ số nước nhênh lệch chuẩn hóa và n) lượng mưa.
+[443] Đánh giá và so sánh hiệu xuất các mô hình
+[444] Một bước quan trọng khác là xây dựng mô hình với các thông số được tối ưu hóa để đảm bảo khả năng thực nghiệm lại ở các khu vực khác trên thế giới. Trong quá trình thực nghiệm, đầu vào của thuật toán tối ưu hóa BES là các mô hình hồi quy với các thuật toán học máy cơ bản gồm: Hồi quy máy vector hỗ trợ (SVR), Hồi quy từng ngẫu nhiên (RFR) và Hồi quy mạng nơ-ron đa lớp (MLPR) với sự thay đổi nhằm tối ưu các tham số nổi bật trong khoảng giới hạn nhất định. Việc tìm kiếm các giá trị tối ưu đã được chỉ định bằng cách sử dụng phương pháp thử và sai. Kết quả của thuật toán BES được tóm tắt trong bảng sau:
+[445] Thuật toán
+[446] Tham số
+[447] Giới hạn
+[448] Mặc định
+[449] BestSol
+[450] Mean
+[451] Std
+[452] Std
+[453] /mean
+[454] Vòng lặp
+[455] SVR
+[456] C
+[457] 0,1 - 100
+[458] 1
+[459] 81,2
+[460] 82,3
+[461] 2,07
+[462] 0.0251
+[463] 167
+[464] gamma
+[465] 0,0001 - 10
+[466] ~ 0,07
+[467] 0,38
+[468] 0,38
+[469] 0,0036
+[470] 0.0094
+[471] epsilon
+[472] 0,001 - 1
+[473] 0,1
+[474] 0,0038
+[475] 0,0038
+[476] 0,000042
+[477] 0.0111
+[478] RFR
+[479] max_features
+[480] 1 - 14
+[481] 14
+[482] 2
+[483] 1,6
+[484] 0,06
+[485] 0.0360
+[486] 1000
+[487] n_estimators
+[488] 1 - 1000
+[489] 100
+[490] 65
+[491] 72,8
+[492] 5,7
+[493] 0.0779
+[494] min_samples_split
+[495] 2 - 100
+[496] 2
+[497] 5
+[498] 3,7
+[499] 0,8
+[500] 0.2212
+[501] min_samples_leaf
+[502] 1 - 100
+[503] 1
+[504] 2
+[505] 2,1
+[506] 0,2
+[507] 0.1076
+[508] MLPR
+[509] hidden_layer_sizes
+[510] 1 - 1000
+[511] 100
+[512] 731
+[513] 722,8
+[514] 140
+[515] 0.1938
+[516] 1000
+[517] alpha
+[518] 0,0001 - 1
+[519] 0,0001
+[520] 0,0022
+[521] 0,0023
+[522] 0,0007
+[523] 0.2991
+[524] max_iter
+[525] 100 - 1000
+[526] 200
+[527] 490
+[528] 485,3
+[529] 94
+[530] 0.1938
+[531] Bảng 3.1: Kết quả của thuật toán BES
+[532] trong đó BestSol là giá trị tốt nhất ứng với từng tham số của các mô hình; mean và std lần lượt là giá trị trung bình và độ lệch chuẩn của từng tham số trong giới hạn quần thể là 20; tỉ lệ std/mean cho thấy tính biến động của quần thể BES; và cuối cùng số vòng lặp giới hạn cần thiết của BES để đạt được kết quả khi điều kiện dừng được cài đặt là chỉ số MSE đạt 99.9% so với toàn bộ quần thể trong 100 lần hoặc số vòng lặp đạt 1000.
+[533] Từ bảng 1 ta thấy, thuật toán BES hoạt động hoàn toàn ổn định với điều kiện dừng như đã đề cập bên trên và có thể tìm ra được các giá trị BestSol phù hợp và không quá sai lệch so với giá trị trung bình của quần thể BES. Bên cạnh đó khi xem xét độ lệch chuẩn, giá trị trung bình và tỉ lệ giữa chúng ta thấy rằng tất cả đều không vượt quá 0.3, đây là một dấu hiệu tốt cho thấy sự hội tụ của quần thể. 
+[534] Tuy nhiên, ta vẫn cần xem xét kỹ lưỡng từng trường hợp. Đối với SVR-BES có số vòng lặp là 167, tỉ lệ std/mean < 0.0251 và BestSol không sai lệch quá nhiều so với mean; đây là trường hợp tốt nhất khi đã hoàn toàn thỏa mãn điều kiện dừng đã nêu. Nhưng trong trường hợp của RFR-BES và MLPR-BES thì lại không như vậy. Khi đạt tới 1000 vòng lặp cho thấy quần thể của BES vẫn chưa thực sự được hội tụ và giá trị BestSol như trong bảng vẫn chưa phải là giá trị cuối cùng có thể tìm được của bài toán. Để hiểu rõ hơn về vấn đề này ta sẽ theo dõi các đồ thị về sự thay đổi của chỉ số MSE qua từng vòng lặp trong thuật toán BES được biểu diễn trong các hình dưới đây:
+[535] Hình 3.4: Sự thay đổi của chỉ số MSE qua các vòng lặp trong SVR-BES
+[536] Đối với SVR-BES, đồ thị thể hiện rõ xu hướng hội tụ khi số vòng lặp tăng, hoàn toàn thỏa mãn điều kiện dừng sau khi kết thúc 167 vòng lặp.
+[537] Hình 3.5: Sự thay đổi của chỉ số MSE qua các vòng lặp trong RFR-BES
+[538] Hình 3.6: Sự thay đổi của chỉ số MSE qua các vòng lặp trong MLPR-BES
+[539] Đối với RFR-BES và MLPR-BES, đồ thị cho thấy xu hướng giảm vẫn đang xảy ra dù đã chạm tới mốc 1000 vòng lặp. Theo kinh nghiệm cá nhân trong quá trình thực nghiệm, việc tăng số vòng lặp hoặc giảm điều kiện dừng hoàn toàn có khả năng cải thiện vấn đề này.
+[540] Tiếp theo, khi đã có được các tham số tối ưu từ BES, ta tiến hành đánh gái các mô hình. Các mô hình nhạy cảm lũ lụt được đào tạo với cùng một bộ dữ liệu và được đánh giá bởi cùng một bộ dữ liệu xác thực và một bộ dữ liệu thử nghiệm. Bảng bên dưới cho thấy kết quả đánh giá và thử nghiệm 6 mô hình được đào tạo gồm: SVR, RFR, MLPR, SVR-BES, RFR-BES và MLPR-BES. Trong đó để so sánh hiệu xuất các mô hình, công cụ chính được sử dụng là chỉ số MSE bên cạnh đó MAE và  cũng được sử dụng để tham khảo trong quá trình đánh giá. 
+[541] Bảng dưới đây biểu diễn kết quả các chỉ số MSE, MAE và  của từng mô hình:
+[542] Thuật toán
+[543] Huấn luyện (60%)
+[544] & Xác thực (20%)
+[545] Kiểm tra (20%)
+[546] MSE
+[547] MAE
+[548] MSE
+[549] MAE
+[550] SVR
+[551] 0,0479
+[552] 0,1329
+[553] 0,7901
+[554] 0,0290
+[555] 0,1134
+[556] 0,8338
+[557] RFR
+[558] 0,0310
+[559] 0,0634
+[560] 0,8639
+[561] 0,0186
+[562] 0,0493
+[563] 0,8935
+[564] MLPR
+[565] 0,0444
+[566] 0,1177
+[567] 0,8055
+[568] 0,0251
+[569] 0,0996
+[570] 0,8565
+[571] SVR-BES
+[572] 0,0268
+[573] 0,0798
+[574] 0,8785
+[575] 0,0255
+[576] 0,0886
+[577] 0,8540
+[578] RFR-BES
+[579] 0,0215
+[580] 0,0654
+[581] 0,9022
+[582] 0,0170
+[583] 0,0653
+[584] 0,9028
+[585] MLPR-BES
+[586] 0,0231
+[587] 0,0718
+[588] 0,8949
+[589] 0,0186
+[590] 0,0745
+[591] 0,8934
+[592] Bảng 3.2: Bảng số liệu đánh giá hiệu xuất các mô hình
+[593] Từ bảng 2 dễ thấy, điểm chung của quá trình huấn luyện và kiểm tra trong bảng trên là ba mô hình SVR-BES, RFR-BES và MLPR-BES đều cho thấy chỉ số MSE giảm rõ rệt so với các mô hình SVR, RFR và MLPR cơ bản. Đặc biệt trong đó chỉ số MSE của phương pháp RFR-BES đã đạt kết quả tốt nhất trong cả 2 trường hợp. Nhìn chung các số liệu xuất hiện hoàn toàn thỏa mãn với giả thuyết ban đầu rằng thuật toán BES sẽ tối ưu hóa các mô hình học máy trong việc dự đoán lũ lụt khi giảm thiểu lỗi dự đoán trong các mô hình. 
+[594] Mô hình
+[595] Huấn luyện – Xác thực
+[596] Kiểm tra
+[597] SVR
+[598] 0,4415
+[599] 0,1207
+[600] RFR
+[601] 0,3059
+[602] 0,0860
+[603] MLPR
+[604] 0,4790
+[605] 0,2590
+[606] Bảng 3.3: Tỉ lệ chỉ số MSE giảm sau khi áp dụng các tham số kết quả của BES đối với từng mô hình. (VD: ).
+[607] Khi xem xét cụ thể hơn đối với bộ dữ liệu huấn luyện trước và sau khi áp dụng thuật toán BES có sự giảm thiểu chỉ số MSE rõ dệt, xét bảng 3 ta thấy chỉ số MSE trong cả 3 mô hình đều giảm > 0.3; đặc biệt trong đó là SVR và MLPR sau khi áp dụng BES vào đã giảm lần lượt ~ 0.44 và 0.48. Như vậy chỉ xét riêng trên bộ dữ liệu huấn luyện và kiểm định, đã cho thấy hiệu quả rõ rệt khi áp dụng BES và không áp dụng BES. 
+[608] Khi xét sang bộ dữ liệu kiểm tra, các chỉ số MSE vẫn có xu hướng giảm khi so sánh giữa việc áp dụng thuật toán BES và không áp dụng BES; tuy nhiên tỉ lệ giảm lại thấp hơn hẳn khi so với bộ dữ liệu huấn luyện và xác thực, cụ thể giao động trong khoảng 0.8 đến 0.26. Điều này cho thấy thuật toán BES đã thực sự hoạt động tốt và hoàn toàn có thể giảm thiểu lỗi MSE của mô hình.
+[609] Ngoài MSE, khi xem xét tới chỉ số MAE và  đều có xu hướng thay đổi tương tự như MSE. Tuy nhiên đột biến xuất hiện với chỉ số MAE của mô hình RFR trong cả 2 bộ dữ liệu. Khi so sánh MAE áp dụng BES và không có BES thì kết quả hoàn toàn ngược lại, chỉ số MAE không những không giảm mà còn cho thấy dấu hiệu tăng. Điều bất thường này cho thấy việc áp dụng BES trong tối ưu hóa mô hình vẫn cần được nghiên cứu thêm nếu muốn đưa vào thực tế.
+[610] Như vậy, thông qua các đánh giá trên ta hoàn toàn có thể khẳng định rằng việc áp dụng thuật toán tối ưu hóa BES vào các mô hình học máy để xác định tính nhạt cảm của lũ lụt là hoàn toàn khả thi và có thể đem lại kết quả tốt. Đặc biệt trong đó mô hình RFR-BES có chỉ số MSE = 0.17 thấp nhất và hoàn toàn còn có thể cải tiến thêm. Mô hình SVR có chỉ số MSE khi chưa áp dụng BES cao nhất cả trước và sau khi được tối ưu hóa bằng BES. Tuy nhiên, SVR lại là mô hình duy nhất thoải mãn điều kiện tỷ lệ dừng của BES đạt 99,9% trong 100 lần.
+[611] Bên cạnh việc đánh giá BES và các mô hình học máy, việc xem xét tầm quan trọng của các yếu tố ảnh hưởng tới bão lũ cũng rất cần thiết. Trong nghiên cứu này, tất các mô hình đều sử dụng 14 yếu tố có khả năng gây ảnh hưởng tới lũ lụt như đã đề cập trong phần 2.1. Bên cạnh đó, dựa trên kết quả đánh giá các mô hình từ số liệu ở trên, ta sẽ sử dụng mô hình có kết quả tốt nhất là RFR-BES để tiến hành đánh giá chỉ số VI (Variable importance) hay chỉ số tầm quan trong của 14 yếu tố ảnh hưởng tới bão lũ như sau:
+[612] Hình 3.7: Biểu đồ đánh giá chỉ số tầm quan trọng của các biến (VI) trong 14 yếu tố ảnh hưởng tới lũ lụt của mô hình RFR-BES
+[613] Dựa trên mô hình RFR-BES, chỉ số VI được tính toán cho từng yếu tố có khả năng gây ảnh hưởng tới lũ lụt và các yếu tố này được xếp hạng từ 1 đến 14. Kết quả cho thấy tất cả các yếu tố đều góp phần vào dự báo lũ. Trong số đó, độ cao – DEM (0.1), mật độ sông – Density_reiver (0.013), lượng mưa – Rainfall (0.012), mật độ đường – Density_road (0.011) và độ dốc – Slope (0.011) có ảnh hưởng nhiều hơn đến mô hình không gian của tính nhạy cảm với lũ so với các yếu tố khác. Sau đó là: NDVI(0.01), khoảng cách đến sông – Distance_river (0.006), khoảng cách đến đường – Distance_road (0.006), NDWI (0.005), TWI (0.005), NDBI (0.004) và hướng – Aspect (0.04) được phân loại từ 6 đến 12. Cuối cùng là 2 yếu tố: độ cong – Curvature (0.01) và hướng dòng chảy – Flow_direction (0.01) có ảnh hưởng ít nhất đến mô hình đánh giá nhạy cảm với lũ lụt.
+[614] Đánh giá tính nhạy cảm lũ lụt tại Thừa Thiên Huế
+[615] Dưới đây là bản đồ tính nhạy cảm lũ lụt được xây dựng bởi mô hình SVR, RFR, MLPR, SVR-BES, RFR-BES và MLPR-BES. Sự phân bố của từng lớp với các mô hình khác nhau được trình bày trong bảng 3.4. Mặc dù có sự khác biệt về hiệu suất giữa các mô hình, nhưng tất cả các mô hình đều cho thấy rằng hầu hết lũ lớn và rất cao xảy ra ở đồng bằng ven biển và ở các vùng trũng ven sông. Trong số đó, mô hình SVR có tới 47,45% diện tích nghiên cứu nằm trong vùng có khả năng bị ngập lụt cao và rất cao; con số này là 49,02% đối với mô hình RF; 40,00% đối với MLPR; 47,06% đối với SVR-BES; 41,96% đối với RFR-BES và MLPR-BES.
+[616] Rất thấp (km²)
+[617] Thấp (km²)
+[618] Trung bình (km²)
+[619] Cao (km²)
+[620] Rất cao (km²)
+[621] SVR
+[622] 1123,3
+[623] 748,9
+[624] 768,6
+[625] 689,7
+[626] 1694,8
+[627] RFR
+[628] 1616,0
+[629] 473,0
+[630] 571,5
+[631] 473,0
+[632] 1891,9
+[633] MLPR
+[634] 453,3
+[635] 1044,5
+[636] 1064,2
+[637] 1261,3
+[638] 1202,1
+[639] SVR-BES
+[640] 630,6
+[641] 1123,3
+[642] 1162,7
+[643] 886,8
+[644] 1221,8
+[645] RFR-BES
+[646] 1478,0
+[647] 729,2
+[648] 808,0
+[649] 650,3
+[650] 1359,8
+[651] MLPR-BES
+[652] 1458,3
+[653] 689,7
+[654] 768,6
+[655] 610,9
+[656] 1497,7
+[657] Bảng 3.4: Sự phân bố các lớp của các mô hình.
+[658] Để tiến hành phân lớp trong bản đồ nhạy cảm lũ lụt, ta sử dụng phương pháp phân lớp Jenks. Phân lớp Jenks là một phương pháp phân loại dữ liệu được thiết kế để tối ưu hóa việc sắp xếp một tập hợp các giá trị thành các lớp "tự nhiên". Lớp Tự nhiên là giới hạn phân lớp tối ưu nhất được tìm thấy "tự nhiên" của một tập dữ liệu. Giớ hạn lớp bao gồm các mục có các đặc điểm tương tự nhau tạo thành một nhóm "tự nhiên" của một tập dữ liệu. Jenks tìm cách giảm thiểu độ lệch trung bình so với giá trị trung bình của lớp trong khi tối đa hóa độ lệch so với giá trị trung bình của các nhóm khác. Phương pháp này làm giảm phương sai trong các lớp và tối đa hóa phương sai giữa các lớp.
+[659] Dưới đây là kết quả bản đồ nhạy cảm lũ lụt tại Thừa Thiên Huế được thành lập theo các mô hình SVR, RFR, MLPR, SVR-BES, RFR-BES và MLPR-BES:
+[660] Hình 3.8: Bản đồ nhạy cảm lũ lụt tỉnh Thừa Thiên Huế theo mô hình.
+[661] Gồm: a) Mô hình SVR; b) Mô hình SVR-BES; c) Mô hình RFR; d) Mô hình RFR-BES; e) Mô hình MLPR; f) Mô hình MLPR-BES.
+[662] Kết luận và kiến nghị
+[663] Các trường hợp lũ lụt ngày càng gia tăng cả về cường độ và tần suất trong bối cảnh biến đổi khí hậu. Do đó, việc đánh giá xác suất xuất hiện lũ đóng vai trò quan trọng hơn bao giờ hết trong việc thiết lập các chiến lược quản lý lũ hiệu quả. Về vấn đề này, với sự tiến bộ nhanh chóng của công nghệ máy tính và kỹ thuật viễn thám, ngày càng có nhiều cơ hội để dự đoán lũ lụt. 
+[664] Nghiên cứu này áp dụng phương pháp tiếp cận mới dựa trên công nghệ máy học và viễn thám hiện đại, cụ thể là BES, SVM, RF và MLP để phân tích tính nhạy cảm với lũ lụt ở tỉnh Thừa Thiên Huế. Việc xác định các khu vực này là rất cần thiết, vì các cơ quan chức năng sẽ sử dụng nó để đánh giá rủi ro lũ lụt và đưa ra các biện pháp thích hợp để giảm thiểu thiệt hại trong tương lai.
+[665] Nghiên cứu này đã sử dụng một bản đồ thống kê bằng hình ảnh radar do khả năng thu nhận dữ liệu trong "mọi thời tiết" của hình ảnh này. Việc khai thác dữ liệu ngập lụt từ hình ảnh radar tương đối dễ dàng và có thể đạt được bằng một vài kỹ thuật đo ngưỡng bức xạ đơn giản. Tuy nhiên, hình ảnh radar cũng có những nhược điểm liên quan đến việc khó xác định ngưỡng đo bức xạ khi có gió mạnh: sóng hình thành trên bề mặt nước có xu hướng tăng tán xạ ngược. 
+[666] Giá trị của 14 yếu tố theo thứ tự mức độ ảnh hưởng tới lũ lụt gồm: độ cao – DEM (0.1), mật độ sông – Density_reiver (0.013), lượng mưa – Rainfall (0.012), mật độ đường – Density_road (0.011) và độ dốc – Slope (0.011), NDVI(0.01), khoảng cách đến sông – Distance_river (0.006), khoảng cách đến đường – Distance_road (0.006), NDWI (0.005), TWI (0.005), NDBI (0.004) và hướng – Aspect (0.04), độ cong – Curvature (0.01) và hướng dòng chảy – Flow_direction (0.01). Việc lựa chọn chính xác các yếu tố này đóng một vai trò quan trọng trong việc cải thiện hiệu suất của mô hình vì sự dư thừa dữ liệu có thể làm cho mô hình phức tạp hơn và ảnh hưởng đến khả năng dự đoán của mô hình. Kết quả cho thấy tất cả các yếu tố đều góp phần vào việc dự đoán khả năng xảy ra lũ lụt. Trong đó, các yếu tố ảnh hưởng nhiều nhất là độ cao, lượng mưa, mật độ sông, mật độ đường và độ dốc. Kết quả này hoàn toàn phù hợp với thực tế của tỉnh Thừa Thiên Huế nói riêng và Việt Nam nói chung do lũ thường xảy ra ở những vùng trũng với mật độ sông cao. Ngoài ra, mức độ lũ lụt còn phụ thuộc vào chiều cao của nước, tốc độ của dòng chảy và thời gian của lũ. Các thông số này được điều hòa bởi lượng mưa. 
+[667] Tuy nhiên, kết quả này cũng mâu thuẫn với một số nghiên cứu trước đây (Avand và Moradi 2021) đã đánh giá tầm quan trọng của lượng mưa đứng thứ ba sau độ cao và mật độ sông. Trong mô hình tính nhạy cảm với lũ lụt ở lưu vực sông Haraz ở tỉnh Mazandaran, miền bắc Iran. (Shahabi, Shirzadi et al. 2020) coi lượng mưa là thứ chín trong số mười yếu tố được sử dụng. (Costache, Popa et al. 2020) nhấn mạnh rằng lượng mưa được xếp thứ 10 trong số 12 yếu tố được sử dụng để dự đoán tính nhạy cảm với lũ lụt ở lưu vực sông Buzău của Romania. (Pham, Avand et al. 2020) báo cáo chỉ ra rằng khoảng cách đến sông, độ dốc, độ cao, thạch học và đất là những yếu tố quan trọng nhất; lượng mưa được xếp hạng quan trọng thứ sáu trong mô hình tính nhạy cảm với lũ lụt ở lưu vực sông Tafresh, tỉnh Markazi, Iran. Có hai lý do chính cho sự khác biệt này. Điều đầu tiên là tầm quan trọng của các yếu tố ảnh hưởng tới lũ lụt phụ thuộc vào đặc điểm tự nhiên và phương pháp luận được sử dụng. Thứ hai là liên quan đến loại lũ. Có hai loại lũ chính: Loại thứ nhất xảy ra do nước sông dâng cao trong mùa mưa. Nó là một cuộc xâm lược hàng năm của nước, được kiểm soát bởi các con đê và kênh đào. Do độ cao thấp và mạng lưới thủy văn dày đặc, các vụ ngập nước xảy ra nhiều lần trong năm. Trong trường hợp này, mặc dù lượng mưa là nguyên nhân gây ra lũ, nhưng nó không phải là yếu tố quyết định vì lũ xuất hiện sau trận mưa vài ngày. Mặt khác, lũ lụt ngoài tầm kiểm soát do các hiện tượng thời tiết cực đoan gây ra, chẳng hạn như bão nhiệt đới. Tại tỉnh Thừa Thiên Huế, mưa lũ thường xuyên xảy ra cùng với xoáy thuận và áp thấp nhiệt đới, gây mưa lớn trên diện rộng. Do đó, lượng mưa và địa hình là hai yếu tố quan trọng nhất.
+[668] Kết quả của nghiên cứu xác nhận rằng BES đã thành công trong việc cải thiện hiệu suất của mô hình cơ sở của SVM, RF và MLP. Như đã đề cập ở trên, với cấu trúc phức tạp và phi tuyến tính của các sự kiện ngập lụt, các mô hình riêng lẻ dễ dẫn đến sai lệch trong kết quả dự báo tính nhạy cảm với lũ. Do đó, các mối quan hệ phi tuyến giữa các yếu tố ảnh hưởng và điểm ngập lụt được giảm thiểu bằng cách điều chỉnh các thông số. Mặc dù việc điều chỉnh thông số có thể làm giảm các vấn đề này và cải thiện hiệu suất của mô hình. Tuy nhiên, việc này có thể rất khó khăn, tốn thời gian và có thể dẫn đến sự so sánh không công bằng giữa các mô hình. Bản thân việc điều chỉnh các tham số là một vấn đề tối ưu hóa. Trong nghiên cứu này đã xác định phạm vi giá trị cho từng tham số của thuật toán riêng lẻ để điều chỉnh các tham số này. Mô hình với 1000 lần lặp và giá trị của chúng tăng lên với mỗi lần lặp. Bảng 1 cho thấy hầu hết các giá trị tham số mặc định của các thuật toán riêng lẻ hầu như luôn thấp hơn sau khi áp dụng thuật toán BES. Giá trị trung bình của quần thể BES khá tiệm cận đối với giải pháp tốt nhất từ ​​BES. Nó cho thấy rằng việc sử dụng thuật toán tinh chỉnh có thể cải thiện đáng kể hiệu suất của các mô hình riêng lẻ. Nhìn chung, trong số ba mô hình được đề xuất, RFR-BES cho kết quả tốt hơn các mô hình khác, với MSE = 0.0215 trong xác thực và MSE = 0.017 trong kiểm tra. Tiếp đó là mô hình MLPR-BES và SVR-BES, mặc dù thấp hơn nhưng cũng đạt kết quả khá tốt khi được tối ưu bởi BES.
+[669] Tóm lại, mặc dù có sự khác biệt nhỏ về hiệu suất giữa các mô hình được đề xuất trong nghiên cứu này, nhưng BES đã thực sự có hiệu quả trong việc cải thiện hiệu suất của các phân loại cơ bản SVR, RFR và MLPR. Từ những kết quả này, ta có thể kết luận rằng cách tiếp cận mô hình kết hợp có thể giảm thiểu các vấn đề về nhiễu, phương sai và quá khớp. Bên cạnh đó, nghiên cứu này đã chứng minh một số đặc điểm hạn chế chung của việc sử dụng máy học để xây dựng bản đồ nhạy cảm với lũ lụt. Ví dụ, những bản đồ này không cung cấp thông tin về độ sâu lũ và vận tốc lũ. Ngoài ra, mặc dù nghiên cứu này sử dụng DEM với độ phân giải 10 m, trong tương lai ta có thể sử dụng ASTER DEM, vì chúng phản ánh tốt hơn diện tích đất, đặc biệt là về đặc điểm của các tòa nhà, thảm thực vật, hướng dòng chảy và độ dốc.
+[670] Lập bản đồ tính nhạy cảm với lũ với độ chính xác cao được coi là cực kỳ quan trọng để thiết lập các chiến lược quản lý lũ lụt và quy hoạch sử dụng đất bền vững, đặc biệt là khi đối mặt với biến đổi khí hậu. Mục tiêu của nghiên cứu này là phát triển một phương pháp tiếp cận mới dựa trên công nghệ máy học tiên tiến và viễn thám - cụ thể là BES, SVR, RFR và MLPR để xây dựng bản đồ nhạy cảm với lũ lụt ở tỉnh Thừa Thiên Huế. Các phát hiện của nghiên cứu này chứng minh tầm quan trọng của máy học quy mô lớn và viễn thám để xác định các vùng có khả năng xảy ra lũ lụt với độ chính xác cao. Nhà quản lý, đưa ra quyết định có thể sử dụng chúng để đưa ra các biện pháp thích hợp nhất nhằm giảm thiểu thiệt hại và thiệt hại về nhân mạng. Những phát hiện này rất quan trọng không chỉ đối với Việt Nam, mà đối với các quốc gia khác thường bị ảnh hưởng bởi lũ lụt.
+[671] Tài liệu tham khảo
+[672] [1]
+[673] Báo Công an nhân dân. “Thiên tai ngày càng khốc liệt và thường xuyên trên toàn cầu,” 9 2021. 
+[674] [2]
+[675] Wikipedia. “Lũ lụt miền Trung Việt Nam năm 2020,” 2021. 
+[676] [3]
+[677] Thuathienhue.gov.vn. “Chủ động ứng phó thiên tai phức tạp, khó lường năm 2021,” 2021. 
+[678] [4]
+[679] weatherplus.vn. “Lũ lụt là gì?,” 9 2021. 
+[680] [5]
+[681] baochinhphu.vn. “Thiệt hại 30.000 tỷ đồng do thiên tai dị thường ở miền Trung,” 12 2020. 
+[682] [6]
+[683] Nghị định về hoạt động viễn thám số 03/2019/NĐ-CP của Chính phủ, 2019. 
+[684] [7]
+[685] Wikipedia. “Hệ thống Thông tin Địa lý,” 
+[686] [8]
+[687] “Tutorial on Support Vector Machine (SVM) Vikramaditya Jakkula, School of EECS, Washington State University, Pullman 99164”.
+[688] [9]
+[689] Wikipedia. “Random Forests,”
+[690] [10]
+[691] “Novel meta-heuristic bald eagle search optimisation algorithm,” 2019.
+[692] [11]
+[693] “Application of interferometric SAR using Sentinel-1A for flood monitoring,” Jefriza và cộng sự 2020.
+[694] [12]
+[695] https://thuathienhue.gov.vn/. “Thông tin dư địa chí tỉnh Thừa Thiên Huế,”  
+[696] [13]
+[697] https://thuathienhue.gov.vn, “Tình hình kinh tế - xã hội năm 2020,” 2020.
+[698] [14]
+[699] Trần Văn Hải, 2017. “Ứng dụng công nghệ gis và viễn thám thành lập bản đồ ngập lụt tỉnh Trà Vinh”.

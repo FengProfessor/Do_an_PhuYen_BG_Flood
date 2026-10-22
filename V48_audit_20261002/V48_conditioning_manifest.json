@@ -1,0 +1,24 @@
+{
+  "algorithm": "D:\\VTP\\v48_apply_frozen_dem.py",
+  "algorithm_sha256": "b95402e1b8d4c1532c0438507b4f365fc39895ad8e62ec2f7a500c1ebf3552e8",
+  "inputs": {
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m.tif": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "D:\\VTP\\V48_research_20261002\\final_selection\\V48_final_cut_cells.csv": "2672c1b2e637d99ee29faec4fdf6adaf3c23060bce5c27442c985b7c3c3c14d9",
+    "D:\\VTP\\V48_research_20261002\\final_selection\\V48_final_selection_summary.json": "356458d24465790ab5bc958032d56c1130b1065507c79abcb54ecdb2657b1214",
+    "D:\\VTP\\V48_research_20261002\\candidate_sensitivity\\V48_candidate_sensitivity_summary.json": "daaf08b0092dd634f552b103605790c829cb6b583d861384b295f194ec0281b3",
+    "D:\\VTP\\V48_research_20261002\\topology_cap_sensitivity\\V48_topology_cap_sensitivity_summary.json": "e48712b1a7700f8367c16609277e78e6e60377312f12ee25aede65a887de679a",
+    "D:\\VTP\\V48_research_20261002\\source_holdout\\V48_source_holdout_summary.json": "f36658c5ca455b1b37fbadcb390099beb022feb050e71393e45d03c6b4707548",
+    "D:\\VTP\\V48_research_20261002\\hydro_evidence_raw\\V46_hydro_evidence_manifest.json": "72fba8b9c83fd4404c9615f59d3da3d2a7e033a34a2967124fde11ac124018d2",
+    "D:\\VTP\\V47_copernicus_provenance_20261001.json": "b144efdf44b506c53d434b835fe8c0c0ab346ebb825f3b59b1d31484f1087199"
+  },
+  "outputs": {
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_DRAFT.tif": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.asc": "e323dc1fc6e24dcc28c59e8d118c0814a644e39769edcaf0596dcf9cac0b9aa9",
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "D:\\VTP\\V48_audit_20261002\\V48_applied_cells.csv": "3ebba97aa085967489b6e204eced44019d518977a72ee83981d8f5c29605e800",
+    "D:\\VTP\\V48_audit_20261002\\V48_conditioning_summary.json": "daa8560131248d8fc79b17b2dc78d693327079289b56a77939666ba458fbde88"
+  },
+  "sentinel1_2021_used": false
+}

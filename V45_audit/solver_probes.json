@@ -1,0 +1,31 @@
+{
+  "rain": {
+    "file_peak_m_per_s": 2.3646e-06,
+    "actual_dh_m_per_s": 6.568333333333334e-13,
+    "expected_over_actual": 3600000.0
+  },
+  "same_grid_interpolation": {
+    "expected_first_cell": 0.0,
+    "actual_first_cell": 3.5,
+    "meaning": "At true ASC first-cell center (15,15), current reader treats corner (0,0) as sample center."
+  },
+  "infiltration_one_step": {
+    "initial_h": 0.02,
+    "final_h": 0.02,
+    "stored_cumulative_il": 0.02,
+    "residual_h_plus_cum_minus_initial": 0.02,
+    "dt": 1.0,
+    "il_mm": 30.0,
+    "cl_mm_per_h": 0.0
+  },
+  "wall_predictor_halo": {
+    "after_boundary": 0.0,
+    "after_predictor_halo_fill": 2.0
+  },
+  "correctness_checks": {
+    "rain_units_match_file": false,
+    "same_grid_preserves_values": false,
+    "infiltration_bookkeeping_conserves_water": false,
+    "wall_boundary_survives_predictor_halo": false
+  }
+}

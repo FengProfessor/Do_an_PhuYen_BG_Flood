@@ -1,0 +1,50 @@
+{
+  "status": "HYDRO_EVIDENCE_ONLY_BASE_DEM_UNCHANGED",
+  "base_dem": {
+    "path": "05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif",
+    "sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e"
+  },
+  "jrc_source": {
+    "path": "V46_inputs\\JRC_GSW1_3_occurrence_1984_2020_100E_10N.tif",
+    "sha256": "64060355cb6ff43bf6d7a7751872d316d820a0954cd710bea1bc9039fba924b7",
+    "temporal_coverage": "1984-2020"
+  },
+  "software": {
+    "python": "3.11.11",
+    "numpy": "2.4.6",
+    "rasterio": "1.4.4",
+    "pyflwdir": "0.5.12"
+  },
+  "method": {
+    "flow": "pyflwdir.dem.fill_depressions, Wang & Liu (2006), D8, edge outlets",
+    "hand_thresholds_km2": [
+      1.0,
+      10.0
+    ],
+    "jrc_resampling": "nearest"
+  },
+  "diagnostics": {
+    "valid_cells": 4410000,
+    "routing_fill_cells": 218129,
+    "routing_fill_depth_max_m": 30.0472412109375,
+    "routing_fill_depth_p99_m": 1.272834062576294,
+    "upstream_area_max_km2": 3107.089599609375,
+    "jrc_valid_cells": 4410000,
+    "jrc_occurrence_gt0_cells": 1048804,
+    "jrc_occurrence_ge50_cells": 937426
+  },
+  "invariants": {
+    "base_dem_modified": false,
+    "sentinel1_2021_used": false,
+    "jrc_ends_before_2021": true
+  },
+  "outputs": {
+    "filled": "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_filled_for_routing_only.tif",
+    "d8": "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_D8.tif",
+    "uparea": "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_upstream_area_km2.tif",
+    "hand1": "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_HAND_drain_1km2.tif",
+    "hand10": "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_HAND_drain_10km2.tif",
+    "filldepth": "V48_audit_20261002\\post_condition_hydro_recompute\\V46_V41_fill_depth_m.tif",
+    "jrc": "V48_audit_20261002\\post_condition_hydro_recompute\\V46_JRC_GSW1_3_occurrence_1984_2020.tif"
+  }
+}

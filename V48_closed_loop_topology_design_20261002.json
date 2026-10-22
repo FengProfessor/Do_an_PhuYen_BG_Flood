@@ -1,0 +1,46 @@
+{
+  "status": "FROZEN_DESIGN_BEFORE_CLOSED_LOOP_DRY_RUN",
+  "date": "2026-10-02",
+  "purpose": "Recompute hydrologic topology on the frozen conditioned V48 DEM, decide the component set from that recomputed topology, and perturb the two AUTO_APPROVE_STRICT gate dimensions directly.",
+  "sentinel1_2021_used": false,
+  "bg_flood_run": false,
+  "base_dem": "D:/VTP/05-Du-lieu-GIS/PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif",
+  "base_dem_sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+  "core": "D:/VTP/V48_research_20261002/topology_raw815/V48_baseline815_core.tif",
+  "core_sha256": "aaf916fa26916653a2042084b297a0b1215d71e3116f6b413082722379d281e3",
+  "core_manifest": "D:/VTP/V48_research_20261002/topology_raw815/V48_baseline815_core_manifest.json",
+  "core_manifest_sha256": "b629f1a615e68a80fb027067d45295f8a429061d554e3f13445d343491a68a93",
+  "strict_csv": "D:/VTP/V48_research_20261002/candidate_baseline_strict_1_2/V46_obstruction_candidates.csv",
+  "strict_csv_sha256": "8b6336225f70465357877d0c5b83c7017c5b6fe0eb67e5158ea4e90b65728fb7",
+  "jrc": "D:/VTP/V46_inputs/JRC_GSW1_3_occurrence_1984_2020_100E_10N.tif",
+  "jrc_sha256": "64060355cb6ff43bf6d7a7751872d316d820a0954cd710bea1bc9039fba924b7",
+  "osm_dir": "D:/VTP/V46_inputs/osm_historical_20211125",
+  "osm_manifest": "D:/VTP/V46_inputs/osm_historical_20211125/historical_osm_manifest.json",
+  "osm_manifest_sha256": "da152750960e504c544c0b2d205e593ecc163ec910bbdd90622bdc02389c6e82",
+  "hydro_builder": "D:/VTP/v46_build_hydro_evidence.py",
+  "topology_algorithm": "D:/VTP/v47_topology_paths.py",
+  "python_dependency_path": "D:/VTP/_v46_deps",
+  "output_root": "D:/VTP/V48_closed_loop_topology_20261002",
+  "reference_post_condition_topology": "D:/VTP/V48_audit_20261002/post_condition_topology/V46_topology_components.csv",
+  "previous_final_selection": "D:/VTP/V48_research_20261002/final_selection/V48_final_selection_summary.json",
+  "selection_policy": {
+    "selected_class": "AUTO_APPROVE_STRICT",
+    "selected_from_run": "baseline",
+    "baseline_strict_max_cut_m": 1.0,
+    "baseline_strict_max_modified_cells": 4,
+    "sensitivity_is_diagnostic": true,
+    "pre_condition_topology_does_not_control_closed_loop_selection": true
+  },
+  "fixed_outer_constraints": {
+    "max_cut_m": 3.0,
+    "max_modified_cells": 8,
+    "max_path_span_cells": 20
+  },
+  "sensitivity_runs": [
+    {"run_id": "baseline", "strict_max_cut_m": 1.0, "strict_max_modified_cells": 4},
+    {"run_id": "strict_cut_0p75", "strict_max_cut_m": 0.75, "strict_max_modified_cells": 4},
+    {"run_id": "strict_cut_1p25", "strict_max_cut_m": 1.25, "strict_max_modified_cells": 4},
+    {"run_id": "strict_cells_3", "strict_max_cut_m": 1.0, "strict_max_modified_cells": 3},
+    {"run_id": "strict_cells_5", "strict_max_cut_m": 1.0, "strict_max_modified_cells": 5}
+  ]
+}

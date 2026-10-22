@@ -1,0 +1,569 @@
+PARAGRAPHS=433 TABLES=9 SECTIONS=1
+P0000	Normal	ĐẠI HỌC QUỐC GIA HÀ NỘI
+TRƯỜNG ĐẠI HỌC CÔNG NGHỆ
+VIỆN CÔNG NGHỆ HÀNG KHÔNG VŨ TRỤ
+P0001	Normal	-----------------------***-----------------------
+P0002	Normal	ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC HỆ CHÍNH QUY
+NGÀNH CÔNG NGHỆ HÀNG KHÔNG VŨ TRỤ
+P0003	Normal	ỨNG DỤNG VIỄN THÁM, GIS VÀ MÔ HÌNH THỦY LỰC SỐ
+ĐỂ MÔ PHỎNG VÀ ĐÁNH GIÁ DIỄN BIẾN NGẬP LỤT
+TẠI HẠ LƯU LƯU VỰC SÔNG BA, TỈNH PHÚ YÊN
+P0004	Normal	Sinh viên thực hiện:		[Họ và tên Sinh viên / CuongHM]
+Mã số sinh viên:		[Mã số sinh viên]
+Khóa đào tạo:			QH-2022-I/CQ
+Cán bộ hướng dẫn:		TS. Hà Minh Cường
+Cơ quan công tác:		Viện Công nghệ Hàng không Vũ trụ
+P0005	Normal	Hà Nội – Năm 2026
+P0007	Normal	Lời cam đoan
+P0008	Normal	Tôi xin cam đoan rằng công trình nghiên cứu trong đồ án tốt nghiệp này là do chính tôi thực hiện dưới sự định hướng và hướng dẫn khoa học trực tiếp của TS. Hà Minh Cường. Các số liệu, kết quả tính toán mô phỏng thủy lực và các phân tích viễn thám trình bày trong đồ án là hoàn toàn trung thực, khách quan và được đúc kết từ quá trình thực nghiệm nghiêm túc trên mô hình BG_Flood kết hợp dữ liệu ảnh vệ tinh Sentinel-1 SAR.
+P0009	Normal	Các tài liệu tham khảo, số liệu trích dẫn kế thừa từ các công trình khoa học của các tác giả khác trong và ngoài nước đều được dẫn chiếu nguồn gốc rõ ràng, minh bạch theo đúng quy chuẩn học thuật quốc tế. Tôi xin chịu hoàn toàn trách nhiệm trước Hội đồng chấm đồ án và pháp luật về tính chính xác và liêm chính học thuật của công trình này.
+P0010	Normal	Hà Nội, ngày … tháng … năm 2026
+Sinh viên cam đoan
+
+
+[Họ và tên Sinh viên]
+P0012	Normal	Lời cảm ơn
+P0013	Normal	Đối với mỗi sinh viên ngành Công nghệ Hàng không Vũ trụ, đồ án tốt nghiệp không chỉ là dấu mốc quan trọng khép lại chặng đường học tập tại giảng đường đại học mà còn là công trình nghiên cứu khoa học độc lập đầu tay, đánh dấu sự trưởng thành về tư duy học thuật và năng lực thực hành chuyên môn. Trong suốt quá trình thực hiện đồ án, em đã nhận được sự quan tâm, chỉ dẫn tận tình từ các thầy cô, gia đình và bạn bè.
+P0014	Normal	Trước hết, em xin bày tỏ lòng biết ơn sâu sắc và chân thành nhất tới TS. Hà Minh Cường – cán bộ giảng dạy tại Viện Công nghệ Hàng không Vũ trụ, Trường Đại học Công nghệ – ĐHQGHN. Thầy đã trực tiếp hướng dẫn, định hướng khoa học, truyền đạt cho em những kiến thức chuyên sâu về công nghệ viễn thám radar, xử lý dữ liệu địa không gian GIS và kỹ thuật mô hình hóa thủy lực số hai chiều. Sự nghiêm cẩn, tận tụy và những lời động viên quý báu của Thầy là động lực to lớn giúp em vượt qua nhiều rào cản kỹ thuật phức tạp trong quá trình nghiên cứu.
+P0015	Normal	Em xin trân trọng cảm ơn các thầy cô giáo trong Ban Giám hiệu, Ban Chủ nhiệm Viện Công nghệ Hàng không Vũ trụ và toàn thể cán bộ, giảng viên Trường Đại học Công nghệ – ĐHQGHN đã tận tâm giảng dạy, trang bị cho em nền tảng kiến thức khoa học cơ bản và cơ sở ngành vững chắc trong suốt khóa học.
+P0016	Normal	Em cũng xin gửi lời cảm ơn tới các chuyên gia và các bạn đồng môn tại phòng thí nghiệm đã luôn đồng hành, chia sẻ tài nguyên tính toán GPU, thảo luận chuyên môn và hỗ trợ em giải quyết bài toán tối ưu hóa thuật toán Godunov trên GPU.
+P0017	Normal	Cuối cùng, em xin bày tỏ lòng biết ơn sâu sắc tới gia đình và người thân, những người luôn động viên, hỗ trợ và tạo mọi điều kiện thuận lợi nhất để em hoàn thành chương trình đào tạo và đồ án tốt nghiệp này.
+P0018	Normal	Em xin chân thành cảm ơn!
+P0019	Normal	Hà Nội, ngày … tháng … năm 2026
+Sinh viên thực hiện
+
+
+[Họ và tên Sinh viên]
+P0021	Normal	Tóm tắt
+P0022	Normal	Lũ lụt là một trong những loại hình thiên tai nguy hiểm và có tần suất xuất hiện cao tại khu vực duyên hải miền Trung Việt Nam, đặc biệt tại các lưu vực sông có đặc điểm địa hình dốc, thời gian tập trung nước nhanh và chịu sự điều tiết xả lũ phức tạp từ hệ thống các hồ chứa thủy điện ở thượng nguồn. Trận lũ cuối tháng 11 năm 2021 tại tỉnh Phú Yên là một sự kiện ngập lụt quy mô lớn, xảy ra dưới tác động tổ hợp của mưa lớn diện rộng và vận hành xả lũ với lưu lượng đỉnh trên 9.000 m³/s từ thủy điện Sông Ba Hạ, gây ngập lụt diện rộng tại vùng hạ lưu sông Ba và đồng bằng Tuy Hòa. Mục tiêu trọng tâm của đồ án tốt nghiệp này là xây dựng, hiệu chỉnh và kiểm định một quy trình mô phỏng thủy lực số hai chiều (2D) độ phân giải 30m sử dụng mô hình mã nguồn mở BG_Flood gia tốc trên GPU, kết hợp chặt chẽ với công nghệ viễn thám radar khẩu độ tổng hợp Sentinel-1 (SAR) và hệ thống thông tin địa lý (GIS).
+P0023	Normal	Nghiên cứu tập trung giải quyết bài toán cốt lõi về rào cản nhân tạo trên mô hình số độ cao (DEM) — nguyên nhân chính khiến các mô hình thủy lực quy mô lớn không thể tái hiện hiện tượng nước tràn bờ qua hệ thống đê điều, đường giao thông. Thông qua quá trình phân tích số học và thực nghiệm qua nhiều phiên bản nâng cấp (từ V1 đến V44), đồ án đã phát triển và ứng dụng các giải pháp kỹ thuật: chuẩn hóa cấu hình hệ số nhám Manning, thuật toán lấp hố sụt thủy văn (Priority-Flood Sink Filling) hạn chế sốc vận tốc, thuật toán mở đường tràn cục bộ (Levee Breaching) và san phẳng hình thái (Morphological Carving). Kết quả mô phỏng trận lũ 120 giờ cho thấy mô hình duy trì tính ổn định số học trong suốt chuỗi tính toán (không xảy ra lỗi phân kỳ NaN) với tốc độ tính toán nhanh gấp 1.75 - 1.83 lần thời gian thực trên GPU.
+P0024	Normal	Kiểm định định lượng với vết ngập thực tế trích xuất từ ảnh vệ tinh Sentinel-1 SAR (tại thời điểm 05:36 ngày 30/11/2021, tức 102 giờ mô phỏng) cho thấy chỉ số thành công tới hạn (CSI) đạt 20.64%, độ phủ (Recall) đạt 24.97% và độ chính xác (Precision) đạt 54.32%, cải thiện đáng kể so với các phiên bản ban đầu (CSI đạt 3.29% ở V23 và 13.5% ở V43). Đồng thời, phương pháp kiểm chứng địa hình độc lập HAND (Height Above Nearest Drainage) xác nhận 90.43% tổng diện tích ngập mô phỏng phân bố phù hợp trong vùng bãi bồi tự nhiên (HAND <= 3.5m). Kết quả nghiên cứu cung cấp cơ sở khoa học và công cụ mô phỏng hỗ trợ công tác quy hoạch, cảnh báo sớm và giảm thiểu rủi ro thiên tai lũ lụt tại tỉnh Phú Yên.
+P0025	Normal	Từ khóa: BG_Flood, Hệ phương trình nước nông 2D, Sentinel-1 SAR, GIS, Đục đê (Levee Breaching), Hạ lưu Sông Ba, Phú Yên, CSI, HAND.
+P0027	Normal	Abstract
+P0028	Normal	Flooding is one of the most frequent and hazardous natural disasters in Central Vietnam, particularly in short and steep river basins governed by complex upstream reservoir operations. The flood event in late November 2021 in Phu Yen Province is a representative case study, caused by high-volume emergency discharge exceeding 9,000 m³/s from the Song Ba Ha hydropower reservoir combined with heavy monsoon rainfall, triggering widespread inundation across the Tuy Hoa plain. The primary objective of this graduation thesis is to establish, calibrate, and validate a high-resolution (30m) 2D hydrodynamic flood simulation framework using the GPU-accelerated open-source model BG_Flood, integrated with Sentinel-1 Synthetic Aperture Radar (SAR) remote sensing and Geographic Information Systems (GIS).
+P0029	Normal	This study tackles a practical challenge in computational hydraulics: the presence of artificial barriers in digital elevation models (DEMs), which restrict floodwaters from expanding naturally across floodplains. Through systematic numerical experimentation across progressive versions (V1 to V44), targeted technical solutions were implemented: resolving spatial roughness parameterization, applying Priority-Flood sink filling to eliminate local shock instabilities, levee breaching, and morphological carving along river corridors. The 120-hour flood simulation maintained numerical stability throughout computation (zero NaN divergence) while achieving a real-time computational speedup of 1.75x to 1.83x on GPU architecture.
+P0030	Normal	Quantitative validation against benchmark flood extents derived from Sentinel-1 SAR imagery (captured at simulation hour 102) demonstrated clear progress: the Critical Success Index (CSI) reached 20.64%, with a Recall of 24.97% and Precision of 54.32%, substantially improving upon earlier baseline setups (CSI of 3.29% in V23 and 13.5% in V43). Furthermore, independent topographic verification using the Height Above Nearest Drainage (HAND) index confirmed that 90.43% of simulated inundation appropriately settled within natural floodplains (HAND <= 3.5m). This research delivers a consistent numerical modeling workflow for flood hazard assessment and disaster mitigation in Phu Yen Province.
+P0031	Normal	Keywords: BG_Flood, 2D Shallow Water Equations, Sentinel-1 SAR, GIS, Levee Breaching, Lower Ba River, Phu Yen, CSI, HAND index.
+P0033	Normal	Danh mục từ viết tắt
+P0035	Normal	Danh mục hình ảnh
+P0036	Normal	Hình 1.1: Cơ chế hoạt động của Radar khẩu độ tổng hợp (SAR) và các dạng tán xạ sóng
+P0037	Normal	Hình 1.2: So sánh cấu trúc không gian giữa DSM, DEM và DTM trong mô phỏng dòng chảy bề mặt
+P0038	Normal	Hình 1.3: Nguyên lý phân định đới bãi bồi thủy văn dựa trên chỉ số địa hình HAND
+P0039	Normal	Hình 2.1: Lưới sai phân thể tích hữu hạn (FVM) và bộ giải Riemann HLLC trên mặt tiếp xúc ô lưới
+P0040	Normal	Hình 2.2: Quy trình tự động xử lý ảnh radar Sentinel-1 SAR và phân ngưỡng Otsu trích xuất vết lũ
+P0041	Normal	Hình 2.3: Minh họa cơ chế rào cản nhân tạo trên DEM 30m và thuật toán đục đê (Levee Breaching)
+P0042	Normal	Hình 2.4: Sơ đồ ma trận nhầm lẫn không gian Contingency (TP, FP, FN, TN) kiểm chuẩn với ảnh vệ tinh
+P0043	Normal	Hình 2.5: Sơ đồ khung quy trình nghiên cứu tổng thể của đồ án
+P0044	Normal	Hình 3.1: Bản đồ mạng lưới sông ngòi và lưu vực hạ lưu sông Ba, tỉnh Phú Yên
+P0045	Normal	Hình 3.2: Chuỗi thời gian lưu lượng xả lũ đập Sông Ba Hạ và Sông Hinh trong trận lũ tháng 11/2021
+P0046	Normal	Hình 3.3: Bản đồ phân bố hệ số nhám Manning không gian 30m khu vực hạ lưu Phú Yên
+P0047	Normal	Hình 3.4: Diễn biến lan tỏa của sóng lũ qua các khung hình thời gian (t = 3h, 24h, 54h, 102h)
+P0048	Normal	Hình 3.5: Bản đồ kiểm chuẩn không gian 4 màu mô phỏng V44 so với ảnh SAR tại mốc 102 giờ
+P0049	Normal	Hình 3.6: Mặt cắt ngang địa hình (DEM) và mực nước sông Ba tại X=314955 minh chứng thân đê cản lũ
+P0050	Normal	Hình 3.7: Bản đồ phân bố diện tích ngập lụt theo các cấp địa hình thủy văn HAND
+P0052	Normal	Danh mục bảng biểu
+P0053	Normal	Bảng 2.1: Ma trận nhầm lẫn không gian (Contingency Matrix) đánh giá độ khớp vết ngập
+P0054	Normal	Bảng 3.1: Các thông số cấu hình vật lý và số học của mô hình thủy lực BG_Flood
+P0055	Normal	Bảng 3.2: Hệ số nhám Manning quy đổi từ bản đồ lớp phủ đất ESA WorldCover 10m
+P0056	Normal	Bảng 3.3: Lịch sử tiến hóa và so sánh hiệu quả các thế hệ kịch bản mô phỏng từ V1 đến V45
+P0057	Normal	Bảng 3.4: Tiến trình diễn biến các chỉ số kiểm chuẩn theo chuỗi thời gian mô phỏng V44 (40 khung hình)
+P0058	Normal	Bảng 3.5: Bảng thống kê chi tiết các chỉ số định lượng tại thời điểm đỉnh lũ 102 giờ (Khung hình 33)
+P0059	Normal	Bảng 3.6: Phân bố diện tích ngập của mô hình V44 theo các đới thủy văn địa hình HAND
+P0060	Normal	Bảng 3.7: Kết quả thử nghiệm sơ bộ mô hình học máy (Surrogate Model) dự báo độ sâu ngập
+P0062	Normal	MỞ ĐẦU
+P0063	Normal	1. Đặt vấn đề và tính cấp thiết của đề tài
+P0064	Normal	Lũ lụt là một trong những loại hình thiên tai phổ biến và gây thiệt hại nghiêm trọng trên thế giới đối với con người, cơ sở hạ tầng và kinh tế - xã hội. Trong những thập niên gần đây, dưới tác động của biến đổi khí hậu cùng với áp lực nhân sinh trên lưu vực (suy giảm diện tích che phủ rừng, mở rộng đô thị, các công trình ngăn dòng), chế độ dòng chảy lũ có nhiều biến động phức tạp. Theo báo cáo tổng kết giai đoạn 1970–2019 của Tổ chức Khí tượng Thế giới (WMO) [1], hơn 11.000 vụ tai biến thiên nhiên đã được ghi nhận trên quy mô toàn cầu, trong đó các hiện tượng lũ lụt và bão lũ chiếm hơn 50% tổng số các đợt thiên tai, làm thiệt hại hơn 2 triệu sinh mạng và gây tổn thất kinh tế ước tính trên 3.640 tỷ USD. Đáng chú ý, tần suất xuất hiện các đợt mưa lũ có cường suất cực đoan, vượt các mốc lịch sử quan trắc nhiều năm, đang có xu hướng gia tăng tại nhiều vùng khí hậu.
+P0065	Normal	Việt Nam nằm ở vành đai nhiệt đới gió mùa Tây Bắc Thái Bình Dương – một trong những tâm bão hoạt động mạnh mẽ nhất thế giới. Với dải bờ biển kéo dài hơn 3.260 km và địa hình nghiêng dốc từ Tây sang Đông, mạng lưới sông ngòi của nước ta phân bố dày đặc nhưng có đặc điểm phân hóa sâu sắc theo vùng miền. Nếu như ở miền Bắc và miền Nam, các con sông lớn như sông Hồng và sông Mê Kông sở hữu lưu vực rộng lớn hàng trăm nghìn km² với khả năng điều tiết dung tích lũ tương đối êm thuận, thì khu vực Duyên hải Nam Trung Bộ lại là nơi quy tụ các hệ thống sông ngắn, dốc, chảy thẳng từ dãy Trường Sơn ra biển. Các lưu vực sông tại miền Trung, tiêu biểu như lưu vực sông Ba thuộc địa phận hai tỉnh Gia Lai và Phú Yên, có thời gian tập trung dòng chảy lũ rất ngắn (thường chỉ từ 6 đến 12 giờ sau khi dứt cơn mưa lớn). Đồng thời, dải đồng bằng ven biển lại bị chia cắt mạnh bởi các đới núi lan sát bờ biển (như đèo Cù Mông, đèo Cả), tạo thành các vùng trũng lòng chảo dễ bị ngập sâu và cô lập khi xảy ra thiên tai.
+P0066	Normal	Hơn thế nữa, trong hơn hai thập kỷ qua, hệ thống bậc thang các hồ chứa thủy điện và thủy lợi lớn đã được xây dựng trên thượng nguồn lưu vực sông Ba (như Thủy điện Sông Ba Hạ, Sông Hinh, Krông H'năng, An Khê - Kanak). Trong điều kiện bình thường, các hồ chứa này đóng vai trò quan trọng trong việc tích nước phát điện và cắt giảm các đỉnh lũ nhỏ. Tuy nhiên, khi xuất hiện các tổ hợp thời tiết cực đoan như bão đổ bộ kết hợp không khí lạnh tăng cường và dải hội tụ nhiệt đới, dung tích phòng lũ của các hồ nhanh chóng bị lấp đầy. Nhằm bảo đảm an toàn cho công trình đầu mối, các hồ chứa thực hiện quy trình vận hành xả tràn. Sự kết hợp giữa lưu lượng xả lũ từ các hồ chứa thượng nguồn với lượng mưa lớn diễn ra ngay tại vùng hạ du tạo nên các đợt lũ tổ hợp có quy mô ngập lụt lớn trên đồng bằng hạ lưu sông Ba.
+P0067	Normal	Trận lũ cuối tháng 11 năm 2021 tại tỉnh Phú Yên (kéo dài từ ngày 26/11 đến 01/12/2021) là một sự kiện ngập lụt điển hình tại vùng duyên hải Nam Trung Bộ. Trong vòng 4 ngày, lượng mưa tích lũy tại nhiều trạm đo khu vực Phú Yên đạt 700 - 850 mm. Thủy điện Sông Ba Hạ vận hành xả tràn với lưu lượng đỉnh đạt 9.400 m³/s vào rạng sáng ngày 30/11/2021, đồng thời hồ thủy điện Sông Hinh xả lũ với lưu lượng trên 3.200 m³/s đổ vào sông Bàn Thạch. Tổng lưu lượng dòng chảy dồn về hạ du vượt quá 12.000 m³/s. Dòng lũ gây ngập diện rộng tại đồng bằng Tuy Hòa, thị xã Đông Hòa và các huyện Phú Hòa, Tây Hòa với độ sâu ngập phổ biến từ 1.5 đến 3.5 mét; gây ngập hơn 50.000 ngôi nhà và làm đình trệ giao thông trên tuyến Quốc lộ 1A cũng như đường sắt Bắc - Nam [2].
+P0068	Normal	Trước những nguy cơ thiên tai đối với đời sống và hạ tầng kinh tế, bài toán đặt ra là: Làm thế nào để mô phỏng chính xác, chi tiết và dự báo kịp thời không gian ngập lụt (ranh giới ngập, độ sâu ngập và thời gian truyền sóng lũ) trên diện tích lưu vực rộng lớn trong điều kiện địa hình phức tạp và dữ liệu đo đạc thực địa khan hiếm? Các mô hình thủy lực một chiều (1D) truyền thống như HEC-RAS 1D hay MIKE 11 bộc lộ nhiều hạn chế khi mô tả dòng chảy tràn hai chiều trên các bãi bồi và đồng bằng rộng. Trong khi đó, các mô hình thủy lực hai chiều (2D) truyền thống giải trên CPU đòi hỏi thời gian tính toán lớn đối với miền tính quy mô lưu vực (thường mất từ 10 đến 25 ngày tính toán liên tục cho một trận lũ 5 ngày), khó đáp ứng yêu cầu cung cấp thông tin kịp thời phục vụ công tác phòng chống lũ.
+P0069	Normal	Sự phát triển của mô hình thủy lực hai chiều BG_Flood (Block-Adaptive GPU-accelerated Flood Model) do Viện Nghiên cứu Nước và Khí quyển Quốc gia New Zealand (NIWA) phát triển [3], khai thác năng lực tính toán song song trên chip đồ họa GPU CUDA, cho phép giải hệ phương trình nước nông 2 chiều (2D Shallow Water Equations) trên lưới hàng triệu ô với thời gian tính toán được rút ngắn đáng kể. Song song đó, công nghệ viễn thám radar vệ tinh khẩu độ tổng hợp Sentinel-1 (SAR) thuộc Cơ quan Vũ trụ Châu Âu (ESA), với ưu thế thu nhận dữ liệu không phụ thuộc vào điều kiện mây che phủ [9], cung cấp nguồn tư liệu độc lập phục vụ kiểm chuẩn không gian cho mô hình.
+P0070	Normal	Tuy nhiên, khi ứng dụng mô hình 2D độ phân giải 30m trên các lưu vực thực tế, các công trình đắp cao như thân đê sông, nền đường giao thông trên mô hình số độ cao (DEM) có xu hướng tạo thành rào cản dòng chảy nhân tạo. Do kích thước ô lưới 30m chưa thể hiện được hệ thống cầu cống tiêu thoát nước ngầm, dòng chảy trong mô hình bị lưu giữ cục bộ trong lòng dẫn chính, dẫn đến việc mô hình bỏ sót diện tích ngập trên bãi tràn khi đối chiếu với ảnh vệ tinh. Việc nghiên cứu cơ chế thủy lực và phát triển thuật toán xử lý rào cản địa hình nhân tạo là yêu cầu quan trọng nhằm nâng cao độ tin cậy của mô hình.
+P0071	Normal	Xuất phát từ những đòi hỏi cấp bách của thực tiễn phòng chống thiên tai tại tỉnh Phú Yên và yêu cầu phát triển phương pháp luận khoa học trong lĩnh vực công nghệ hàng không vũ trụ và thông tin địa lý, đề tài: 'Ứng dụng viễn thám, GIS và mô hình thủy lực số để mô phỏng và đánh giá diễn biến ngập lụt tại hạ lưu lưu vực sông Ba, tỉnh Phú Yên' đã được lựa chọn và thực hiện.
+P0072	Normal	2. Mục tiêu nghiên cứu
+P0073	Normal	Mục tiêu tổng quát: Ứng dụng và làm chủ quy trình tích hợp giữa mô hình thủy lực số hai chiều GPU (BG_Flood), dữ liệu viễn thám vệ tinh radar Sentinel-1 SAR và hệ thống thông tin địa lý GIS để mô phỏng động học ngập lụt cho trận lũ lịch sử tháng 11/2021 tại hạ lưu sông Ba, tỉnh Phú Yên; nghiên cứu xử lý vấn đề rào cản địa hình nhân tạo nhằm nâng cao độ chính xác của mô hình.
+P0074	Normal	Mục tiêu cụ thể:
+P0075	Normal	1. Xây dựng bộ cơ sở dữ liệu địa không gian chuẩn hóa phục vụ mô phỏng thủy lực 2D bao gồm: Mô hình số độ cao DEM 30m, bản đồ độ nhám thủy lực Manning không gian, bản đồ thấm đất, mạng lưới trạm mưa không gian giờ ERA5 và chuỗi lưu lượng xả lũ giờ của các hồ chứa Sông Ba Hạ, Sông Hinh.
+P0076	Normal	2. Thiết lập, tối ưu hóa thuật toán số học và vận hành thành công mô hình BG_Flood trên kiến trúc phần cứng GPU, đảm bảo mô hình chạy ổn định liên tục 120 giờ không bị lỗi phân kỳ số học (NaN) với tốc độ nhanh hơn thời gian thực.
+P0077	Normal	3. Xây dựng quy trình tự động xử lý ảnh vệ tinh Sentinel-1 SAR bằng thuật toán phân ngưỡng Otsu tối ưu nhằm trích xuất bản đồ vết ngập thực địa khách quan tại thời điểm đỉnh lũ làm chuẩn kiểm định mặt đất.
+P0078	Normal	4. Phân tích bản chất vật lý của hiện tượng cản dòng trên DEM; nghiên cứu, phát triển và thử nghiệm các thuật toán xử lý địa hình chuyên sâu: Lấp hố sụt thủy văn (Priority-Flood Sink Filling), Mở đường tràn cục bộ (Levee Breaching) và San phẳng hình thái bờ sông (Morphological Carving).
+P0079	Normal	5. Thực hiện kiểm chuẩn định lượng đa tiêu chí giữa kết quả mô phỏng với ảnh SAR (thông qua ma trận Contingency: CSI, Recall, Precision) và kiểm chứng tính hợp lý thủy lực độc lập thông qua chỉ số địa hình bãi bồi tự nhiên HAND.
+P0080	Normal	3. Đối tượng và phạm vi nghiên cứu
+P0081	Normal	Đối tượng nghiên cứu:
+P0082	Normal	- Dòng chảy lũ mặt tự do hai chiều biến đổi không dừng theo hệ phương trình vi phân đạo hàm riêng phi tuyến nước nông (2D SWE).
+P0083	Normal	- Tín hiệu tán xạ ngược radar vi ba (Backscatter coefficient) của vệ tinh Sentinel-1 SAR trên các bề mặt lớp phủ ngập nước và không ngập nước.
+P0084	Normal	- Các đặc trưng địa hình số, tham số ma sát đáy Manning và cơ chế tác động của công trình nhân tạo (đê, đường) đến dòng chảy tràn lũ.
+P0085	Normal	Phạm vi không gian: Vùng hạ lưu lưu vực sông Ba thuộc địa bàn tỉnh Phú Yên, tập trung vào đồng bằng Tuy Hòa, thị xã Đông Hòa và các dải trũng phụ lưu sông Bàn Thạch, sông Kỳ Lộ. Miền tính toán mô hình có tọa độ giới hạn từ X = 270.000m đến 332.970m, Y = 1.415.000m đến 1.477.970m (hệ tọa độ UTM Zone 49N, WGS84), bao phủ diện tích xấp xỉ 4.000 km².
+P0086	Normal	Phạm vi thời gian: Trận lũ diễn ra từ 00:00 ngày 26 tháng 11 năm 2021 đến 00:00 ngày 01 tháng 12 năm 2021 (tổng thời gian 5 ngày, tương đương 120 giờ hoặc 432.000 giây mô phỏng liên tục). Thời điểm vệ tinh Sentinel-1 chụp ảnh kiểm chuẩn là 05:36 ngày 30/11/2021 (tương ứng giờ mô phỏng thứ 101.6).
+P0087	Normal	4. Quan điểm và phương pháp luận nghiên cứu
+P0088	Normal	Đề tài được tiến hành dựa trên phương pháp luận khoa học liên ngành, kết hợp chặt chẽ giữa:
+P0089	Normal	- Mô hình toán học dựa trên quy luật vật lý (Physics-based Deterministic Modeling): Mô phỏng cơ học chất lỏng dựa trên các định luật bảo toàn khối lượng và bảo toàn động lượng của cơ học thủy khí cổ điển, hạn chế tính suy đoán chủ quan.
+P0090	Normal	- Quan sát Trái Đất từ không gian (Earth Observation Validation): Sử dụng ảnh viễn thám radar vệ tinh độc lập làm nguồn dữ liệu khách quan để hiệu chuẩn và kiểm định mô hình, không phụ thuộc hoàn toàn vào các trạm quan trắc mặt đất vốn có thể bị ảnh hưởng trong lũ lớn.
+P0091	Normal	- Phân tích không gian địa lý (Geospatial Analysis): Khai thác GIS và chỉ số địa hình thủy văn (HAND) để phân tích tương quan giữa hình thái địa hình và sự lan tỏa của dòng lũ.
+P0092	Normal	- Thực nghiệm số học kế tiếp (Iterative Computational Experimentation): Kế thừa, đánh giá và cải tiến mô hình qua các kịch bản từ V1 đến V45, rút ra các bài học về toán số học và cơ học chất lưu.
+P0093	Normal	5. Ý nghĩa khoa học và thực tiễn của đề tài
+P0094	Normal	Ý nghĩa khoa học:
+P0095	Normal	- Làm rõ cơ chế thủy lực của dòng tràn hai chiều trên đồng bằng miền Trung dưới tác động kết hợp của xả lũ hồ chứa và mưa lớn diện rộng.
+P0096	Normal	- Phân tích nguyên nhân giới hạn của thuật toán mở đường tràn phụ thuộc vào mặt nạ SAR (do đỉnh đê nhô cao không ngập nước nên dữ liệu SAR phân loại là bề mặt cạn), từ đó đề xuất phương pháp san phẳng hình thái (Morphological Carving) xử lý các vị trí đê kè cản dòng ven sông.
+P0097	Normal	- Áp dụng quy trình kiểm chuẩn khoa học kết hợp giữa ma trận Contingency không gian với phân tích thủy văn bãi bồi HAND.
+P0098	Normal	Ý nghĩa thực tiễn:
+P0099	Normal	- Cung cấp bộ bản đồ số hóa độ phân giải 30m về độ sâu ngập lụt, ranh giới ngập và thời gian ngập theo từng bước thời gian cho tỉnh Phú Yên, hỗ trợ công tác tham mưu phòng chống thiên tai và tìm kiếm cứu nạn.
+P0100	Normal	- Cung cấp tài liệu tham khảo khoa học cho công tác đánh giá an toàn công trình, xây dựng quy trình vận hành liên hồ chứa trên lưu vực sông Ba và quy hoạch hướng tuyến các công trình hạ tầng giao thông thích ứng với các kịch bản lũ lớn.
+P0101	Normal	6. Cấu trúc của đồ án
+P0102	Normal	Đồ án tốt nghiệp được kết cấu thành các phần chính:
+P0103	Normal	Phần Mở đầu: Trình bày bối cảnh, tính cấp thiết, mục tiêu, đối tượng, phạm vi, phương pháp luận và ý nghĩa của đề tài.
+P0104	Normal	Chương 1: Tổng quan tài liệu và cơ sở lý luận về ứng dụng viễn thám, GIS và mô hình thủy lực trong nghiên cứu ngập lụt. Đánh giá tổng quan các công trình nghiên cứu trên thế giới và tại Việt Nam; phân tích cơ sở lý thuyết về viễn thám SAR, mô hình số địa hình DEM/HAND và mô hình thủy lực GPU BG_Flood.
+P0105	Normal	Chương 2: Phương pháp nghiên cứu và công nghệ áp dụng. Trình bày chi tiết hệ phương trình 2D SWE, phương pháp thể tích hữu hạn Godunov, bộ giải Riemann HLLC, quy trình xử lý ảnh Sentinel-1 Otsu, các thuật toán xử lý rào cản nhân tạo (Sink Filling, Levee Breaching, Morphological Carving) và hệ thống chỉ số kiểm chuẩn.
+P0106	Normal	Chương 3: Kết quả thực nghiệm, kiểm định mô hình và thảo luận. Trình bày kết quả xây dựng cơ sở dữ liệu đầu vào, phân tích lịch sử tiến hóa qua các thế hệ kịch bản (V1 đến V45), đánh giá chi tiết kết quả mô phỏng V44 mốc 102 giờ đạt CSI 20.64%, kiểm chứng tính chân thực thủy lực qua HAND (90.43%), chẩn đoán nguyên nhân vật lý đê kè hạ lưu sông Ba và định hướng kịch bản V45.
+P0107	Normal	Phần Kết luận và kiến nghị: Tóm tắt các đóng góp khoa học chính của đồ án và đề xuất các hướng phát triển nghiên cứu tiếp theo.
+P0108	Normal	Phần Tài liệu tham khảo: Danh mục các công trình khoa học trong và ngoài nước được trích dẫn chuẩn chỉ kèm liên kết kiểm chứng.
+P0110	Normal	CHƯƠNG 1: TỔNG QUAN TÀI LIỆU VÀ CƠ SỞ LÝ LUẬN
+P0111	Normal	1.1. Tổng quan nghiên cứu mô phỏng ngập lụt trên thế giới và tại Việt Nam
+P0112	Normal	1.1.1. Tiến trình phát triển mô hình toán thủy lực trên thế giới
+P0113	Normal	Mô phỏng ngập lụt bằng mô hình toán là một nhánh nghiên cứu chuyên sâu của thủy lực học tính toán (Computational Hydraulics) và thủy văn môi trường, đóng vai trò là công cụ cốt lõi trong việc dự báo, đánh giá hiểm họa và quy hoạch quản lý rủi ro thiên tai. Lịch sử phát triển của các mô hình thủy lực mô phỏng dòng chảy lũ trên thế giới có thể được chia thành bốn thời kỳ tiến hóa rõ rệt:
+P0114	Normal	1. Thời kỳ mô hình thủy lực một chiều (1D Hydrodynamic Models):
+P0115	Normal	Khởi đầu từ những năm 1970 và 1980 với sự ra đời của các chương trình tính toán số như HEC-2, HEC-RAS 1D (thuộc Trung tâm Kỹ thuật Thủy văn Quân đội Hoa Kỳ - USACE) [10], MIKE 11 (Viện Thủy lực Đan Mạch - DHI), và ISIS (sau này là Flood Modeller - Anh Quốc). Các mô hình này giải hệ phương trình Saint-Venant 1 chiều mô tả dòng chảy dọc theo trục chính của lòng sông. Giả thiết cơ bản của mô hình 1D là mực nước và lưu lượng chỉ biến đổi theo phương dọc dòng chảy (phương x), các thành phần vận tốc theo phương ngang và phương đứng bị bỏ qua. Dù có ưu thế vượt trội về tốc độ tính toán và chỉ yêu cầu dữ liệu mặt cắt ngang thưa thớt, mô hình 1D bộc lộ những khiếm khuyết mang tính bản chất khi nước lũ dâng cao tràn qua bờ đê và tỏa rộng ra các vùng trũng đồng bằng. Khi tràn bờ, nước lũ chảy theo nhiều hướng phức tạp, phụ thuộc vào vi địa hình và độ dốc mặt đất; việc áp đặt dòng chảy 1D trên bãi tràn dẫn đến việc ước tính sai lệch nghiêm trọng cả về diện tích ngập, độ sâu ngập lẫn thời gian lưu chuyển sóng lũ.
+P0116	Normal	2. Thời kỳ mô hình bán hai chiều và mô hình 1D-2D tích hợp (Quasi-2D and Coupled 1D-2D Models):
+P0117	Normal	Để giải quyết hạn chế của mô hình 1D trên bãi tràn mà vẫn tiết kiệm tài nguyên tính toán, các mô hình bán 2 chiều ra đời vào thập niên 1990 (tiêu biểu như phương pháp ô ngập lụt - Storage Cell approach trong HEC-RAS 1D hay SOBEK). Bãi tràn được chia thành các ô trũng (cells) có mối liên hệ thủy lực với nhau và với lòng sông chính qua các công trình tràn hoặc phương trình cống ngầm. Tiếp đó, các mô hình tích hợp 1D-2D liên kết động (Coupled 1D-2D) như MIKE FLOOD ra đời, trong đó lòng dẫn chính được mô phỏng 1D còn bãi tràn được mô phỏng 2D bằng phương pháp sai phân hữu hạn. Tuy nhiên, việc thiết lập các liên kết trao đổi động lượng tại ranh giới 1D-2D đòi hỏi người dùng phải can thiệp thủ công rất nhiều, dễ phát sinh bất ổn định số học và vẫn bị giới hạn về quy mô miền tính toán.
+P0118	Normal	3. Thời kỳ mô hình thủy lực hai chiều thuần túy trên CPU (Fully 2D CPU Models):
+P0119	Normal	Vào đầu những năm 2000, với sự gia tăng mạnh mẽ của năng lực máy tính cá nhân và sự sẵn có của dữ liệu mô hình số độ cao (DEM) từ vệ tinh, các mô hình giải phương trình nước nông hai chiều đầy đủ (2D Shallow Water Equations - SWE) trên CPU như Telemac-2D, TUFLOW, InfoWorks ICM, và HEC-RAS 2D (từ phiên bản 5.0) đã được ứng dụng rộng rãi trong ngành kỹ thuật thủy lợi. Các mô hình này mô tả tương đối đầy đủ các hiện tượng lan truyền sóng lũ, phản xạ sóng, nước dâng và dòng xoáy cục bộ. Tuy nhiên, hạn chế lớn nhất của mô hình 2D giải trên CPU là chi phí thời gian tính toán lớn. Phương trình nước nông là hệ phương trình vi phân phi tuyến dạng hyperbolic; để đảm bảo tính ổn định số học theo điều kiện Courant-Friedrichs-Lewy (CFL), bước thời gian dt bị giới hạn nghiêm ngặt khi kích thước ô lưới dx giảm xuống 30m hoặc 10m. Đối với một lưu vực rộng 2.000 - 4.000 km² với hàng triệu ô tính toán, một kịch bản mô phỏng lũ 5 ngày trên CPU đa nhân hiện đại thường đòi hỏi từ 15 đến 30 ngày chạy máy liên tục, khó đáp ứng yêu cầu cung cấp thông tin kịp thời phục vụ công tác phòng chống lũ.
+P0120	Normal	4. Thời kỳ mô hình thủy lực 2D gia tốc trên GPU (GPU-accelerated 2D Hydrodynamic Models):
+P0121	Normal	Trong vòng một thập kỷ qua, việc ứng dụng kiến trúc tính toán song song hàng loạt trên chip đồ họa (Graphics Processing Unit - GPU) sử dụng nền tảng NVIDIA CUDA đã đem lại bước tiến đáng kể trong cơ học thủy khí tính toán [24]. Chip GPU hiện đại sở hữu hàng nghìn nhân tính toán độc lập (CUDA cores), phù hợp với cấu trúc lưới của phương pháp thể tích hữu hạn (Finite Volume Method), nơi mà thông lượng qua các cạnh của từng ô lưới có thể được tính toán đồng thời song song mà không cần phụ thuộc lẫn nhau. Các công trình của Bates et al. (2010) [4], Vacondio et al. (2014) [24], và sự ra đời của mô hình mã nguồn mở BG_Flood bởi Bosserelle et al. (2020) [3] tại Viện Nghiên cứu Nước và Khí quyển Quốc gia New Zealand (NIWA) đã chứng minh khả năng tăng tốc độ mô phỏng từ 50 đến hơn 120 lần so với CPU cùng thế hệ. Một kịch bản mô phỏng lũ diện rộng trên lưới 2.099 x 2.099 ô (hơn 4.4 triệu ô lưới) kéo dài 120 giờ thực tế chỉ mất khoảng 60 đến 70 giờ tính toán trên một card đồ họa GPU thương mại, đạt tốc độ nhanh hơn thời gian thực (1.8x real-time), giúp việc mô phỏng thủy lực 2D độ phân giải cao trên quy mô toàn lưu vực trở nên khả thi và hiệu quả về mặt thời gian.
+P0122	Normal	1.1.2. Tổng quan các nghiên cứu mô phỏng ngập lụt tại Việt Nam
+P0123	Normal	Tại Việt Nam, nghiên cứu mô phỏng ngập lụt và thủy lực sông ngòi luôn là đề tài thu hút sự quan tâm đặc biệt của các cơ quan quản lý và giới khoa học thủy lợi do tính chất phức tạp của thiên tai bão lũ miền Trung và ngập lụt triều cường tại đồng bằng sông Cửu Long. Các giai đoạn nghiên cứu trong nước diễn ra song hành cùng sự chuyển giao công nghệ quốc tế:
+P0124	Normal	Trong giai đoạn từ năm 1995 đến 2010, các mô hình 1D như WENDY (Viện Khoa học Thủy lợi Việt Nam phát triển), KODU (Đại học Thủy lợi), và bộ phần mềm MIKE 11 của Đan Mạch đã được ứng dụng sâu rộng trong các dự án quy hoạch thoát lũ sông Hồng, sông Thái Bình và hệ thống kênh rạch đồng bằng sông Cửu Long. Các nghiên cứu này giải quyết tốt bài toán truyền lũ tổng thể trong mạng lưới sông chính nhưng chưa thể cung cấp thông tin không gian chi tiết về ngập lụt trên bãi tràn.
+P0125	Normal	Từ năm 2010 đến nay, các nghiên cứu ứng dụng mô hình 2D bắt đầu nở rộ. Tiêu biểu như công trình của Trịnh Thu Phương và cộng sự (2020) [17] đã ứng dụng mô hình Mike 11 kết hợp Mike 21 để mô phỏng ngập lụt hạ du lưu vực sông Ba dưới tác động của biến đổi khí hậu và quy trình vận hành liên hồ chứa. Lê Văn Hưng và Hà Minh Cường (2021) [19] đã nghiên cứu đánh giá nguy cơ ngập lụt đô thị bằng mô hình thủy lực 2D kết hợp công nghệ GIS tại khu vực miền Trung. Tuy nhiên, phần lớn các nghiên cứu trong nước từ trước đến nay vẫn chủ yếu dựa vào các phần mềm thương mại, chạy trên nền tảng CPU với độ phân giải lưới tương đối thô (90m đến 250m) do hạn chế về năng lực tính toán. Đồng thời, công tác kiểm chứng kết quả mô phỏng đa phần chỉ dừng lại ở việc so sánh mực nước tại một vài trạm thủy văn quan trắc thưa thớt dọc sông (như trạm Củng Sơn trên sông Ba), còn thiếu dữ liệu vết ngập diện rộng trên các cánh đồng.
+P0126	Normal	Do đó, việc tiếp cận và ứng dụng mô hình thủy lực mã nguồn mở thế hệ mới BG_Flood trên nền tảng tính toán GPU kết hợp kiểm chuẩn đa chiều bằng ảnh vệ tinh viễn thám radar Sentinel-1 SAR trong đồ án này là một hướng tiếp cận hiệu quả, giải quyết đồng thời cả hai bài toán: tối ưu hóa thời gian tính toán và kiểm định không gian khách quan.
+P0127	Normal	1.2. Cơ sở lý thuyết về lũ lụt và các nhân tố hình thành lũ tại Nam Trung Bộ
+P0128	Normal	1.2.1. Định nghĩa và phân loại các loại hình ngập lụt
+P0129	Normal	Lũ lụt là một hiện tượng tự nhiên phức tạp, được định nghĩa là sự dâng cao mực nước của các thủy vực tự nhiên (sông, suối, hồ, biển) vượt qua khỏi bờ chứa thông thường, làm ngập chìm tạm thời các diện tích đất đai vốn bình thường khô ráo [2]. Trong khoa học thủy văn và quản lý thiên tai, lũ lụt thường được phân loại thành các dạng chính:
+P0130	Normal	1. Lũ sông (Fluvial / Riverine Flood): Xuất hiện khi lượng nước mưa tích tụ trên toàn lưu vực vượt quá khả năng chuyển tải của lòng dẫn sông, khiến mực nước dâng tràn hai bên bờ đê và lan tỏa vào các thung lũng, bãi bồi ven sông. Lũ sông thường có thời gian duy trì từ vài ngày đến hàng tuần.
+P0131	Normal	2. Lũ quét (Flash Flood): Là loại hình lũ xảy ra bất ngờ tại các lưu vực sông suối miền núi có độ dốc lớn, hình thành chỉ sau một trận mưa có cường suất cực lớn trong thời gian ngắn (vài giờ). Lũ quét mang theo lượng bùn cát, đá tảng lớn với động năng dòng chảy cao.
+P0132	Normal	3. Ngập lụt do mưa cục bộ (Pluvial / Surface Water Flood): Xảy ra khi lượng mưa rơi trực tiếp trên bề mặt vượt quá khả năng thấm của đất và năng lực tiêu thoát của hệ thống thoát nước tự nhiên hoặc nhân tạo, gây ngập úng các vùng trũng cục bộ độc lập với dòng chảy sông.
+P0133	Normal	4. Ngập lụt ven biển do triều cường và nước dâng do bão (Coastal / Storm Surge Flood): Hình thành do sự kết hợp giữa triều cường thiên văn và hiện tượng nước biển dâng do áp suất khí quyển giảm thấp và gió bão thổi dồn nước vào bờ.
+P0134	Normal	Tại hạ lưu sông Ba (Phú Yên), ngập lụt trận tháng 11/2021 là một tổ hợp lũ lụt hỗn hợp (Compound Flooding), kết hợp đồng thời giữa lũ sông lớn từ thượng nguồn đổ về, mưa nội đồng diện rộng và triều cường dâng cao cản trở dòng thoát lũ tại cửa biển Đà Diễn.
+P0135	Normal	1.2.2. Các nhân tố khí tượng thủy văn đặc thù tại lưu vực sông Ba
+P0136	Normal	Sông Ba (còn gọi là sông Đà Rằng ở hạ lưu) là dòng sông lớn nhất vùng Duyên hải Nam Trung Bộ với chiều dài dòng chính khoảng 374 km và tổng diện tích lưu vực lên tới 13.900 km². Lưu vực sông Ba trải dài trên địa bàn các tỉnh Kon Tum, Gia Lai, Đắk Lắk và Phú Yên trước khi đổ ra biển Đông tại TP. Tuy Hòa.
+P0137	Normal	Cơ chế hình thành các trận lũ trên lưu vực sông Ba chịu sự chi phối của ba nhân tố khí tượng - thủy văn đặc thù:
+P0138	Normal	Thứ nhất, tính chất địa hình phân bậc mạnh mẽ: Thượng nguồn sông Ba bắt nguồn từ đỉnh Ngọc Linh có độ cao trên 2.000m thuộc dãy Trường Sơn, chảy qua cao nguyên Pleiku và An Khê với địa hình đồi núi dốc đứng. Tuy nhiên, khi chảy đến địa phận huyện Tây Hòa và Phú Hòa (tỉnh Phú Yên), thung lũng sông mở rộng đột ngột ra vùng đồng bằng phù sa Tuy Hòa tương đối bằng phẳng với cao độ phổ biến chỉ từ 2m đến 8m so với mực nước biển. Sự chuyển tiếp từ lòng dẫn dốc hẹp sang đồng bằng trũng rộng khiến động năng dòng lũ nhanh chóng chuyển hóa thành thế năng dâng cao mặt nước khi gặp các vật cản.
+P0139	Normal	Thứ hai, chế độ mưa tập trung cường suất lớn: Nằm ở sườn đông dãy Trường Sơn, lưu vực sông Ba là tâm đón gió mùa Đông Bắc ẩm từ biển thổi vào. Mùa mưa tại đây diễn ra muộn (từ tháng 9 đến tháng 12) nhưng tập trung tới 70 - 80% tổng lượng mưa cả năm. Khi có sự kết hợp đồng thời giữa hoàn lưu bão/áp thấp nhiệt đới trên biển Đông với không khí lạnh tăng cường từ phía Bắc và nhiễu động đới gió Đông trên cao, mưa lớn sẽ xảy ra trên diện rộng với tổng lượng mưa có thể đạt từ 500 đến gần 1.000 mm trong vòng 72 đến 96 giờ.
+P0140	Normal	Thứ ba, sự điều tiết xả lũ của chuỗi hồ chứa thủy điện bậc thang: Trên dòng chính sông Ba và các nhánh phụ lưu lớn hiện có nhiều nhà máy thủy điện đang vận hành, trong đó bậc thang cuối cùng sát đồng bằng Tuy Hòa là Thủy điện Sông Ba Hạ (công suất 220 MW, dung tích phòng lũ hạn chế). Trong các trận mưa bão lớn, do các hồ phía trên (An Khê - Kanak, Krông H'năng) đồng loạt xả nước để bảo đảm an toàn hồ đập, lưu lượng nước đổ về hồ Sông Ba Hạ dâng lên rất nhanh. Khi mực nước hồ chạm ngưỡng dâng bình thường (105.0m), hồ Sông Ba Hạ bắt buộc phải mở toàn bộ các cửa van cung xả lũ xuống hạ du với lưu lượng xả lớn (trên 9.000 m³/s), khiến mực nước dâng nhanh trên diện rộng tại đồng bằng Tuy Hòa.
+P0141	Normal	1.3. Công nghệ Viễn thám và dữ liệu Radar khẩu độ tổng hợp (SAR) trong nghiên cứu ngập lụt
+P0142	Normal	1.3.1. Nguyên lý vật lý của Radar khẩu độ tổng hợp (SAR)
+P0143	Normal	Viễn thám (Remote Sensing) là phương pháp thu thập thông tin về các đối tượng hoặc hiện tượng trên bề mặt Trái Đất mà không cần tiếp xúc vật lý trực tiếp. Các hệ thống viễn thám quang học thụ động (như Landsat 8/9, Sentinel-2) dựa vào nguồn bức xạ phản xạ từ ánh sáng Mặt Trời trong dải sóng nhìn thấy và hồng ngoại. Trong các đợt thiên tai lũ lụt, bầu trời thường xuyên bị che phủ bởi mây bão dày đặc (Cloud cover > 90%), khiến các bộ cảm biến quang học gặp nhiều hạn chế khi quan sát bề mặt đất.
+P0144	Normal	Để giải quyết bài toán này, công nghệ Radar khẩu độ tổng hợp (Synthetic Aperture Radar - SAR) là công cụ quan trọng của ngành viễn thám hiện đại [9], [10]. SAR là hệ thống viễn thám vi ba chủ động (Active Microwave Remote Sensing). Vệ tinh mang theo ăng-ten tự phát ra các chùm xung sóng điện từ ở dải tần số vi ba (Microwave) hướng xuống mặt đất và sau đó thu nhận tín hiệu phản xạ (tín hiệu tán xạ ngược - Backscatter) dội trở lại.
+P0145	Normal	Nguyên lý 'khẩu độ tổng hợp' (Synthetic Aperture): Trong vật lý quang học và radar truyền thống, độ phân giải góc phương vị (Azimuth Resolution - độ phân giải theo hướng bay của vệ tinh) tỉ lệ thuận với bước sóng điện từ λ và tỉ lệ nghịch với chiều dài vật lý của ăng-ten L (θ ≈ λ / L). Đối với sóng vi ba có bước sóng vài cm, để đạt được độ phân giải không gian mặt đất 10m từ độ cao quỹ đạo 700 km, một ăng-ten radar thông thường sẽ phải có chiều dài lên tới hàng km – điều khó khả thi về mặt kỹ thuật vũ trụ. Công nghệ SAR giải quyết vấn đề này bằng cách tận dụng sự chuyển động dọc theo quỹ đạo của vệ tinh: Ăng-ten radar liên tục phát và thu các xung sóng khi di chuyển qua một vị trí mục tiêu trên mặt đất. Bằng cách số hóa, lưu trữ biên độ và pha của các tín hiệu phản xạ thu được dọc theo quỹ đạo bay, hệ thống xử lý tín hiệu số mặt đất sẽ tổng hợp (tái tạo) lại tín hiệu tương đương như một ăng-ten ảo duy nhất có chiều dài bằng toàn bộ quãng đường vệ tinh di chuyển trong thời gian quan sát mục tiêu. Nhờ đó, SAR đạt được độ phân giải không gian cao (dưới 10m) độc lập với độ cao bay của vệ tinh.
+P0146	Normal	1.3.2. Cơ chế tán xạ sóng radar trên mặt nước phẳng và bề mặt đất
+P0147	Normal	Khả năng phát hiện và lập bản đồ vùng ngập nước của ảnh SAR dựa trên sự tương phản rõ rệt về cơ chế tán xạ sóng điện từ giữa mặt nước và các loại lớp phủ bề mặt khác [10]:
+P0148	Normal	1. Cơ chế phản xạ gương trên mặt nước phẳng (Specular Reflection):
+P0149	Normal	Hằng số điện môi (Dielectric Constant) của nước lỏng ở tần số vi ba là rất lớn (ε_water ≈ 80) so với đất khô (ε_soil ≈ 3 - 6). Do đó, bề mặt nước hoạt động như một chất phản xạ điện từ mạnh. Tuy nhiên, do bề mặt nước ngập trong lũ lụt (đặc biệt tại các vùng đồng bằng lưu tốc nhỏ) tương đối phẳng nhẵn so với bước sóng radar (băng C có bước sóng λ ≈ 5.6 cm), hiện tượng tán xạ tuân theo định luật phản xạ quang học phẳng của Snell. Toàn bộ chùm sóng radar phát tới mặt nước với góc tới nghiêng θ sẽ bị phản xạ đổi hướng theo chiều ngược lại (Specular Reflection), hướng ra xa khỏi quỹ đạo vệ tinh. Kết quả là hầu như không có năng lượng sóng phản xạ quay trở lại máy thu của radar. Do đó, hệ số tán xạ ngược radar (Sigma Nought, σ⁰) của mặt nước ngập có giá trị rất nhỏ (thường dao động từ -25 dB đến -15 dB), hiển thị trên ảnh xám radar bằng các mảng màu tối rõ rệt.
+P0150	Normal	2. Cơ chế tán xạ khuếch tán trên bề mặt cạn (Diffuse / Rough Surface Scattering):
+P0151	Normal	Ngược lại, bề mặt đất cạn, sỏi đá, đường sá và thảm thực vật có độ gồ ghề bề mặt tương đương hoặc lớn hơn bước sóng radar. Sóng radar khi chạm vào các bề mặt này sẽ bị tán xạ đẳng hướng về mọi góc trong không gian (Diffuse Scattering), trong đó một phần đáng kể năng lượng sóng phản xạ quay ngược trở lại ăng-ten vệ tinh. Do đó, giá trị σ⁰ của đất cạn cao hơn nhiều (thường từ -12 dB đến -5 dB), hiển thị bằng các tông màu sáng.
+P0152	Normal	3. Cơ chế tán xạ góc đôi tại khu vực công trình và thực vật nhô (Double-bounce Scattering):
+P0153	Normal	Tại các khu vực đô thị có nhà cửa hoặc vùng đất ngập nước có thực vật thân gỗ nhô lên khỏi mặt nước, sóng radar sẽ trải qua hiện tượng phản xạ kép: sóng chạm vào mặt nước phẳng phản xạ tới tường nhà/thân cây, rồi dội thẳng ngược trở lại ăng-ten vệ tinh. Hiện tượng này làm tăng cường độ tín hiệu phản xạ (σ⁰ có thể đạt giá trị dương từ 0 dB đến +10 dB), hiển thị bằng các điểm sáng rõ trên ảnh.
+P0154	Normal	4. Giới hạn vật lý của kênh sóng C-band SAR trong quan sát ngập lụt:
+P0155	Normal	Mặc dù có ưu thế quan sát không phụ thuộc mây che phủ, kênh sóng C-SAR (bước sóng ngắn λ ≈ 5.6 cm) tồn tại hai giới hạn vật lý tự nhiên cần được tính đến trong kiểm chuẩn mô hình: (i) Hiện tượng suy giảm tín hiệu dưới tán thực vật dày (sub-canopy flooding) – do bước sóng băng C ngắn nên khó xuyên qua tán cây rừng rậm rạp như băng L (λ ≈ 24 cm), dẫn đến nguy cơ bỏ sót vết ngập (sai số âm tính giả - FN) tại các dải thực vật ngập mặn ven đầm hoặc cây bụi ven sông; (ii) Hiện tượng mặt nước động do gió bão mạnh (wind-roughened water surface) – gió lớn tạo sóng mặt nước có quy mô gồ ghề tương đương bước sóng vi ba, làm gia tăng tán xạ khuếch tán và nâng cao giá trị σ⁰, có thể khiến thuật toán phân ngưỡng nhầm lẫn giữa mặt nước động và mặt đất cạn.
+P0156	Normal	1.3.3. Đặc tính kỹ thuật của chùm vệ tinh Sentinel-1
+P0157	Normal	Chùm vệ tinh Sentinel-1 thuộc Hợp phần Quan sát Trái Đất Copernicus của Liên minh Châu Âu (EU) và Cơ quan Vũ trụ Châu Âu (ESA) vận hành, bao gồm hai vệ tinh bay cùng quỹ đạo Sentinel-1A (phóng năm 2014) và Sentinel-1B (phóng năm 2016) [9]. Vệ tinh bay trên quỹ đạo đồng bộ Mặt Trời (Sun-synchronous orbit) ở độ cao danh định 693 km, độ nghiêng quỹ đạo 98.18°, chu kỳ lặp lại quỹ đạo chụp ảnh là 12 ngày cho một vệ tinh đơn lẻ và 6 ngày khi kết hợp cả hai vệ tinh.
+P0158	Normal	Bộ cảm biến chính trên Sentinel-1 là hệ thống radar khẩu độ tổng hợp băng C (C-SAR) hoạt động ở tần số trung tâm 5.405 GHz (bước sóng λ = 5.546 cm). Chế độ chụp ảnh tiêu chuẩn trên đất liền là chế độ dải rộng giao thoa (Interferometric Wide Swath - IW). Ở chế độ này, dải quét ảnh có độ rộng mặt đất lên tới 250 km, cung cấp dữ liệu phân cực kép đồng thời (Dual-polarization): VV (phát thẳng đứng - thu thẳng đứng) và VH (phát thẳng đứng - thu nằm ngang).
+P0159	Normal	Trong nghiên cứu ngập lụt, kênh phân cực đồng (VV) được chứng minh là có độ nhạy vượt trội đối với sự tương phản giữa bề mặt nước và đất so với kênh phân cực chéo (VH). Dữ liệu sử dụng trong đồ án là sản phẩm Level-1 Ground Range Detected (GRD) với kích thước pixel lấy mẫu 10m x 10m, cung cấp dữ liệu cường độ biên độ đã được hiệu chỉnh chiếu lên mặt ellipsoid Trái Đất WGS84, có độ tin cậy hình học cao.
+P0160	Normal	1.3.4. Các phương pháp phân ngưỡng trích xuất vết ngập (Thuật toán Otsu)
+P0161	Normal	Để chuyển đổi ảnh biên độ radar liên tục σ⁰ (dạng dB) thành bản đồ nhị phân phân loại ngập lụt (1 = Ngập nước, 0 = Không ngập), phương pháp phân ngưỡng thống kê (Statistical Thresholding) là phương pháp tiếp cận phổ biến và khách quan. Trong đó, thuật toán phân ngưỡng toàn cục Otsu (Otsu Thresholding Method - 1979) [5] được sử dụng rộng rãi nhờ tính khách quan và hiệu quả tính toán.
+P0162	Normal	Thuật toán Otsu dựa trên giả thiết biểu đồ tần số histogram của ảnh xám chứa hai phân bố lớp chuẩn (Bimodal distribution) đại diện cho lớp nền (Background - đất cạn) và lớp đối tượng (Foreground - mặt nước ngập). Thuật toán tự động tìm kiếm một ngưỡng phân tách tối ưu T* trong toàn bộ miền giá trị mức xám [1, L] sao cho phương sai giữa hai lớp (Inter-class variance, σ_B²) đạt giá trị cực đại:
+P0163	Normal	Giả sử ảnh có N pixel với các mức xám từ 1 đến L. Số lượng pixel ở mức xám i là n_i. Xác suất xuất hiện của mức xám i là p_i = n_i / N. Khi chia ảnh thành hai lớp C0 (mức xám [1, T]) và C1 (mức xám [T+1, L]), xác suất xuất hiện của lớp C0 và C1 lần lượt là:
+P0164	Normal	ω0(T) = ∑_{i=1}^T p_i ;  ω1(T) = ∑_{i=T+1}^L p_i = 1 - ω0(T)
+P0165	Normal	Giá trị mức xám trung bình của hai lớp lần lượt là:
+P0166	Normal	μ0(T) = (∑_{i=1}^T i · p_i) / ω0(T) ;  μ1(T) = (∑_{i=T+1}^L i · p_i) / ω1(T)
+P0167	Normal	Giá trị mức xám trung bình của toàn bộ ảnh là μ_T = ω0·μ0 + ω1·μ1. Phương sai giữa hai lớp được định nghĩa là:
+P0168	Normal	σ_B²(T) = ω0(T) · (μ0(T) - μ_T)² + ω1(T) · (μ1(T) - μ_T)² = ω0(T) · ω1(T) · [μ0(T) - μ1(T)]²
+P0169	Normal	Ngưỡng tối ưu T* được xác định bằng cách giải bài toán cực đại hóa: T* = argmax_{1 ≤ T < L} [ σ_B²(T) ].
+P0170	Normal	Ưu điểm của thuật toán Otsu là hoàn toàn tự động, phi tham số (Non-parametric), không phụ thuộc vào sự phỏng đoán chủ quan, mang lại ranh giới phân tách nước ngập có tính ổn định thống kê cao.
+P0171	Normal	1.4. Hệ thống thông tin địa lý (GIS) và mô hình số độ cao (DEM)
+P0172	Normal	1.4.1. Khái niệm và phân biệt giữa DEM, DTM và DSM
+P0173	Normal	Trong mô hình hóa thủy văn và thủy lực 2D, mô hình số độ cao là tập dữ liệu địa không gian quan trọng, đóng vai trò quyết định hướng truyền sóng lũ, vận tốc dòng chảy và phạm vi ngập úng. Trong thực tế nghiên cứu cần phân biệt rõ ba khái niệm mô hình độ cao:
+P0174	Normal	1. DSM (Digital Surface Model - Mô hình bề mặt số): Đại diện cho bề mặt cao trình của tất cả các đối tượng nằm trên lớp phản xạ đầu tiên của cảm biến viễn thám, bao gồm mái nhà, công trình xây dựng, cầu cống, đường dây điện và tán cây rừng.
+P0175	Normal	2. DEM/DTM (Digital Elevation / Terrain Model - Mô hình địa hình số trần): Thể hiện cao độ thực của bề mặt đất tự nhiên (Bare-earth terrain), đã loại bỏ các vật thể nhân tạo và thảm phủ thực vật bên trên.
+P0176	Normal	Trong mô phỏng thủy lực dòng tràn, việc sử dụng trực tiếp mô hình bề mặt số (DSM) chưa loại bỏ lớp phủ có thể dẫn đến các sai số hình học đáng kể: tán cây rừng ven sông và các công trình nhân tạo trên bãi bồi tạo thành các rào cản giả tạo cản trở dòng chảy tràn; các cầu giao thông bắc qua sông tạo thành các chướng ngại vật chặn dòng chính, gây ngập úng giả tạo ở thượng lưu và thiếu hụt dòng chảy ở hạ lưu. Do đó, việc sử dụng mô hình DTM trần (Bare-earth) – tiêu biểu là bộ dữ liệu FABDEM (Forest And Buildings removed DEM) 30m phát triển bởi Hawker et al. (2022) [8] – là điều kiện quan trọng để phản ánh đúng quy luật dòng chảy thủy lực.
+P0177	Normal	1.4.2. Vấn đề rào cản nhân tạo (Artificial Barriers) và sai số dòng chảy
+P0178	Normal	Mặc dù đã sử dụng mô hình DTM trần, các mô hình thủy lực 2D quy mô lưu vực vẫn phải đối mặt với một vấn đề kỹ thuật: Vấn đề rào cản nhân tạo do độ phân giải ô lưới (Grid Resolution Effect) [15], [16].
+P0179	Normal	Trong thực tế, các tuyến đê bao ven sông, đường quốc lộ và đường sắt thường được đắp cao hơn mặt ruộng từ 1.5m đến 4.0m. Dưới các tuyến đê và đường này luôn có hệ thống các cống tiêu thoát nước (Culverts), cầu máng hoặc cầu chui dân sinh với khẩu độ từ 1m đến 5m để tiêu thoát lũ nội đồng ra sông hoặc ngược lại. Tuy nhiên, khi chuyển đổi bản đồ địa hình sang lưới ô vuông số học kích thước 30m x 30m (hoặc 90m x 90m), kích thước của một ô lưới lớn hơn nhiều so với khẩu độ cống ngầm. Thuật toán lấy mẫu địa hình gán cho toàn bộ ô lưới 30m giá trị cao độ trung bình của mặt đê/mặt đường. Hậu quả là khẩu độ thoát nước của các cống ngầm không được phản ánh, biến hệ thống công trình giao thông và đê điều thành các rào cản địa hình liên tục.
+P0180	Normal	Khi mô hình thủy lực vận hành, dòng nước dâng trong lòng sông bị các rào cản ô lưới này ngăn lại, không thể tràn qua để vào đồng bằng Tuy Hòa, dẫn đến sai số bỏ sót vùng ngập (False Negative) tương đối lớn khi so sánh với ảnh vệ tinh thực tế. Để xử lý vấn đề này, các kỹ thuật can thiệp hình thái học như mở đường tràn cục bộ (Levee Breaching) hoặc san phẳng hình thái (Morphological Carving) được áp dụng nhằm khôi phục khả năng thoát lũ qua bờ.
+P0181	Normal	1.4.3. Chỉ số địa hình thủy văn HAND (Height Above Nearest Drainage)
+P0182	Normal	Chỉ số địa hình thủy văn HAND (Height Above Nearest Drainage) do Nobre et al. (2011) [6] đề xuất là một phương pháp hiệu quả trong phân tích địa hình thủy văn không gian. Khác với cao trình tuyệt đối so với mực nước biển (Z), chỉ số HAND chuẩn hóa độ cao của từng điểm địa hình dựa trên hiệu số cao độ tương đối giữa điểm đó với điểm lòng dẫn thoát nước gần nhất mà dòng chảy từ điểm đó sẽ đổ vào theo mạng lưới hướng dòng chảy D8 (Flow Direction):
+P0183	Normal	HAND(x) = Z(x) - Z(drainage(x))
+P0184	Normal	Ý nghĩa vật lý của chỉ số HAND nằm ở chỗ nó phản ánh khả năng ngập lụt tự nhiên của một vị trí theo nguyên lý trọng trường: Dòng nước lũ từ lòng sông chỉ có thể dâng tràn vào các vùng đất có cao trình HAND nhỏ hơn độ dâng mực nước đỉnh lũ trong lòng sông. Bằng cách phân loại bản đồ HAND thành các đới:
+P0185	Normal	- Đới bãi bồi tự nhiên (Natural Floodplain): HAND <= 3.5m. Đây là vùng trũng thấp ven sông, có nguy cơ ngập lụt cao trong các trận lũ vừa và lớn.
+P0186	Normal	- Đới chuyển tiếp (Transition Zone): 3.5m < HAND <= 10.0m. Vùng đất cao ven bãi bồi, chỉ ngập trong các trận lũ cực đoan.
+P0187	Normal	- Đới đồi núi cao (Steep Relief): HAND > 10.0m. Vùng đồi núi có sườn dốc lớn, hầu như không bị ngập lụt sông diện rộng.
+P0188	Normal	Trong đồ án này, bản đồ HAND đóng vai trò như một bộ kiểm chuẩn địa hình độc lập (Topographic Plausibility Benchmark) để đánh giá xem nước mô phỏng có phân bố phù hợp theo quy luật thủy lực trọng trường tự nhiên hay không.
+P0189	Normal	1.5. Mô hình thủy lực 2 chiều mã nguồn mở BG_Flood trên GPU
+P0190	Normal	BG_Flood (Block-Adaptive GPU-accelerated Flood Model) là phần mềm mã nguồn mở chuyên dụng mô phỏng thủy lực và ngập lụt được phát triển từ năm 2020 bởi TS. Cyprien Bosserelle và nhóm nghiên cứu tại Viện NIWA (New Zealand) [3]. Mô hình được thiết kế để khai thác năng lực tính toán song song của kiến trúc GPU NVIDIA CUDA.
+P0191	Normal	Mô hình giải hệ phương trình nước nông 2 chiều phi tuyến hoàn chỉnh (Nonlinear 2D Shallow Water Equations) dựa trên phương pháp thể tích hữu hạn (Finite Volume Method) dạng Godunov với độ chính xác bậc 2. Điểm đặc sắc của BG_Flood là cấu trúc quản lý ô lưới theo từng khối (Block-Adaptive Data Structure). Toàn bộ miền tính toán được phân chia thành các khối ô lưới vuông (Block) có kích thước cố định (ví dụ 16x16 hoặc 32x32 ô lưới). Mỗi khối ô lưới này được ánh xạ trực tiếp vào một khối luồng tính toán (Thread Block) trong vi kiến trúc phần cứng của GPU, tận dụng bộ nhớ chia sẻ tốc độ cao (Shared Memory) của chip đồ họa và giảm thiểu độ trễ truy xuất bộ nhớ toàn cục (Global Memory Latency).
+P0192	Normal	Nhờ tối ưu hóa ở mức phần cứng, BG_Flood cho phép mô phỏng các lưu vực có quy mô hàng triệu ô lưới với tốc độ cao, hỗ trợ xuất kết quả chuẩn NetCDF4 với đầy đủ các trường thủy lực (h, zs, u, v) tại từng bước thời gian chỉ định, tạo tiền đề thuận lợi cho việc tích hợp với các công cụ viễn thám và hệ thống thông tin địa lý GIS.
+P0194	Normal	CHƯƠNG 2: PHƯƠNG PHÁP NGHIÊN CỨU VÀ CÔNG NGHỆ ÁP DỤNG
+P0195	Normal	2.1. Cơ sở toán học của mô hình thủy lực 2 chiều (BG_Flood)
+P0196	Normal	2.1.1. Hệ phương trình nước nông 2 chiều đầy đủ (2D SWE)
+P0197	Normal	Hệ phương trình nước nông hai chiều (2D Shallow Water Equations - SWE), hay hệ phương trình Saint-Venant 2 chiều, là mô hình toán học cơ sở mô tả chuyển động của khối chất lỏng có bề mặt tự do khi chiều sâu dòng chảy nhỏ hơn rất nhiều so với quy mô chiều dài ngang của sóng lũ [4], [12]. Hệ phương trình này được thiết lập thông qua việc tích phân theo phương thẳng đứng (từ đáy z = zb(x,y) lên mặt tự do z = zs(x,y,t) = zb + h) của phương trình liên tục và hệ phương trình động lượng Navier-Stokes đối với chất lưu không nén được, dưới giả thiết phân bố áp suất tuân theo định luật thủy tĩnh (Hydrostatic Pressure Distribution) và bỏ qua gia tốc thẳng đứng:
+P0198	Normal	Hệ phương trình bảo toàn dưới dạng vector bảo toàn phi tuyến trong hệ tọa độ Descartes (x, y) được viết như sau:
+P0199	Normal	∂U/∂t + ∂F(U)/∂x + ∂G(U)/∂y = S(U)					(2.1)
+P0200	Normal	Trong đó, U là vector các biến bảo toàn (Conserved Variables); F(U) và G(U) lần lượt là các vector thông lượng đối lưu (Convective Fluxes) theo phương x và phương y; S(U) là vector các số hạng nguồn (Source Terms) bao gồm độ dốc đáy địa hình, ứng suất ma sát đáy và các nguồn gia nhập/thất thoát nước:
+P0201	Normal	U = [ h ,  hu ,  hv ]^T					(2.2)
+P0202	Normal	F(U) = [ hu ,  hu² + ½gh² ,  huv ]^T					(2.3)
+P0203	Normal	G(U) = [ hv ,  huv ,  hv² + ½gh² ]^T					(2.4)
+P0204	Normal	S(U) = [ R - I ,  -gh(∂zb/∂x) - τbx/ρ ,  -gh(∂zb/∂y) - τby/ρ ]^T					(2.5)
+P0205	Normal	Ý nghĩa vật lý của các đại lượng:
+P0206	Normal	- h(x,y,t) = zs - zb là độ sâu cột nước cục bộ (m).
+P0207	Normal	- u(x,y,t) và v(x,y,t) là các thành phần vận tốc dòng chảy trung bình theo chiều sâu dọc theo trục x và y (m/s).
+P0208	Normal	- hu và hv là lưu lượng dòng chảy trên một đơn vị chiều rộng theo phương x và y (m²/s).
+P0209	Normal	- g là gia tốc trọng trường chuẩn (g = 9.81 m/s²).
+P0210	Normal	- zb(x,y) là cao trình đáy địa hình so với mực chuẩn mốc trắc địa (m).
+P0211	Normal	- R(x,y,t) là cường độ mưa hữu hiệu rơi trực tiếp trên bề mặt ô lưới (m/s).
+P0212	Normal	- I(x,y,t) là tốc độ ngấm/thấm nước qua lớp phủ mặt đất vào tầng ngậm nước (m/s).
+P0213	Normal	- ρ là khối lượng riêng của nước ngọt (ρ ≈ 1.000 kg/m³).
+P0214	Normal	- τbx và τby là các thành phần ứng suất ma sát đáy tác dụng lên khối chất lỏng theo phương x và phương y (N/m²).
+P0215	Normal	2.1.2. Mô hình ứng suất ma sát đáy Manning-Strickler
+P0216	Normal	Ứng suất cắt tại đáy (bed shear stress) mô tả lực cản tiêu tán năng lượng của dòng chảy khi di chuyển qua các bề mặt lớp phủ có độ nhám khác nhau (lòng sông, bãi cỏ, đất canh tác lúa, đường giao thông, khu dân cư đô thị). Trong mô hình BG_Flood, thành phần ma sát đáy được tham số hóa thông qua định luật bán thực nghiệm Manning-Strickler [4]:
+P0217	Normal	τbx / ρ = g · n² · u · √(u² + v²) / h^(1/3)					(2.6)
+P0218	Normal	τby / ρ = g · n² · v · √(u² + v²) / h^(1/3)					(2.7)
+P0219	Normal	Trong đó, n là hệ số độ nhám Manning (đơn vị: s / m^(1/3)). Hệ số n phụ thuộc trực tiếp vào loại hình lớp phủ bề mặt và độ gồ ghề của lòng dẫn. Trong đồ án này, nhằm phản ánh tính không đồng nhất về mặt thủy lực của các dạng thảm phủ trên lưu vực, hệ số nhám Manning được thiết lập dưới dạng trường dữ liệu raster phân bố không gian n(x,y) xây dựng từ dữ liệu sử dụng đất ESA WorldCover 10m.
+P0220	Normal	2.1.3. Phương pháp thể tích hữu hạn (FVM) dạng Godunov và bộ giải Riemann HLLC
+P0221	Normal	Hệ phương trình nước nông 2 chiều là hệ phương trình vi phân đạo hàm riêng phi tuyến thuộc lớp hyperbolic. Khi dòng lũ chuyển động với vận tốc lớn hoặc khi xuất hiện sóng xung kích (sóng tràn bờ, sóng vỡ đập), nghiệm của phương trình có thể xuất hiện các điểm gián đoạn mạnh (Discontinuities / Shock waves). Các phương pháp giải số truyền thống (như sai phân trung tâm) thường xuất hiện hiện tượng dao động số học phi vật lý (Spurious Numerical Oscillations) tại các vùng gián đoạn, dẫn đến mất ổn định số học và làm gián đoạn quá trình tính toán.
+P0222	Normal	Để khắc phục hạn chế trên, mô hình BG_Flood sử dụng phương pháp thể tích hữu hạn (Finite Volume Method - FVM) dạng Godunov với độ chính xác bậc 2 thông qua kỹ thuật tái tạo không gian MUSCL kết hợp bước thời gian thích nghi [12], [13]. Miền tính toán được rời rạc hóa thành lưới các ô thể tích kiểm soát (Control Volume) hình vuông kích thước Δx x Δy. Tích phân phương trình (2.1) trên ô thể tích (i, j) trong khoảng thời gian từ t đến t + dt dẫn đến phương thức cập nhật các biến bảo toàn trung bình ô:
+P0223	Normal	U_{i,j}^{n+1} = U_{i,j}^n - (dt/Δx) · [ F_{i+1/2, j} - F_{i-1/2, j} ] - (dt/Δy) · [ G_{i, j+1/2} - G_{i, j-1/2} ] + dt · S_{i,j}					(2.8)
+P0224	Normal	Trong đó, F_{i±1/2, j} và G_{i, j±1/2} là các thông lượng số (Numerical Fluxes) đi qua các mặt tiếp xúc biên giữa ô (i, j) với các ô láng giềng. Các thông lượng số này được xác định thông qua việc giải bài toán Riemann tại từng mặt phân cách ô lưới bằng bộ giải Riemann xấp xỉ HLLC (Harten-Lax-van Leer with Contact wave restoration) [12], [13]. Trong khi bộ giải HLL gốc của Harten, Lax và van Leer (1983) [13] chỉ giả định cấu trúc hai sóng biên và bỏ qua sóng trượt tiếp xúc (Contact/Shear wave), bộ giải HLLC được hoàn thiện bởi Toro (2001) [12] đã khôi phục thành công sóng tiếp xúc ở trạng thái trung gian. Cấu trúc 3 sóng này cho phép mô tả chính xác sự gián đoạn của thành phần vận tốc tiếp tuyến và mặt phân giới ướt/khô, đồng thời bảo toàn tính không âm của cột nước h (Positivity-preserving) và tái hiện trung thực các hiện tượng sóng kích bề mặt.
+P0225	Normal	2.1.4. Điều kiện ổn định Courant-Friedrichs-Lewy (CFL) thích nghi
+P0226	Normal	Để đảm bảo tính ổn định số học của lược đồ hiện số (Explicit scheme), bước thời gian tính toán dt cần thỏa mãn điều kiện ổn định Courant–Friedrichs–Lewy (CFL) [12]:
+P0227	Normal	dt ≤ CFL · min_{i,j} [ Δx / ( |u_{i,j}| + c_{i,j} ) , Δy / ( |v_{i,j}| + c_{i,j} ) ]					(2.9)
+P0228	Normal	Trong đó: c_{i,j} = √(g · h_{i,j}) là vận tốc truyền sóng trọng trường tự do trong cột nước nông; |u| + c và |v| + c là vận tốc truyền thông tin lớn nhất của sóng nước; hệ số Courant (CFL) là tham số ổn định không thứ nguyên (0 < CFL ≤ 1).
+P0229	Normal	Trong mô hình BG_Flood, thuật toán tự động kiểm tra vận tốc dòng chảy trên toàn bộ 4.4 triệu ô lưới tại mỗi bước tính và điều chỉnh thích nghi bước thời gian dt (Adaptive Time-stepping). Khi nước dâng nhanh tại các vị trí có độ sâu lớn h hoặc vận tốc dòng chảy u, v cao, dt tự động giảm xuống (khoảng 0.7s) nhằm thỏa mãn điều kiện ổn định CFL; trong các giai đoạn dòng chảy biến đổi chậm, bước thời gian tự động tăng lên để nâng cao hiệu suất tính toán.
+P0230	Normal	2.1.5. Kỹ thuật xử lý ranh giới ướt/khô (Wet-Dry Treatment) và kiểm soát lỗi NaN
+P0231	Normal	Một trong những thách thức của mô phỏng ngập lụt trên đồng bằng là xử lý ranh giới di động giữa vùng đất khô (h = 0) và vùng ngập nước (h > 0). Tại mép nước tràn bờ, khi độ sâu h tiến dần về 0, các số hạng ma sát đáy τb ∝ 1/h^(1/3) và phép tính vận tốc u = (hu)/h xuất hiện điểm kỳ dị do chia cho 0, làm phát sinh giá trị không xác định NaN (Not-a-Number) và gây phân kỳ trường tính toán.
+P0232	Normal	Mô hình BG_Flood xử lý vấn đề trên bằng kỹ thuật kiểm soát ngưỡng ướt/khô cục bộ:
+P0233	Normal	- Ngưỡng độ sâu tối thiểu h_eps = 0.001 m (1 mm).
+P0234	Normal	- Nếu h_{i,j} < h_eps: Ô lưới được xác định là ô khô. Mô hình thiết lập các thành phần động lượng hu = 0, hv = 0 và vận tốc u = 0, v = 0; đồng thời cô lập các số hạng ma sát đáy và gradient áp suất nhằm loại bỏ hiện tượng kỳ dị toán học.
+P0235	Normal	- Đồng thời, cơ chế cân bằng thủy tĩnh (Well-Balanced Property) được cài đặt để đảm bảo rằng tại trạng thái 'hồ nước tĩnh' (Lake at rest: zs = const, u = v = 0 trên địa hình đáy biến đổi), thông lượng gradient áp suất thủy tĩnh cân bằng chính xác với số hạng nguồn độ dốc đáy ở mức sai số làm tròn máy tính.
+P0236	Normal	2.2. Quy trình xử lý và trích xuất vết ngập từ ảnh viễn thám Sentinel-1 SAR
+P0237	Normal	Để tạo ra bộ dữ liệu kiểm định mặt đất (Ground-truth benchmark) khách quan, đồ án đã xây dựng quy trình tự động hóa xử lý ảnh radar Sentinel-1 SAR bao gồm 6 giai đoạn kỹ thuật:
+P0238	Normal	Giai đoạn 1: Thu nhận và nạp siêu dữ liệu (Data Ingestion): Thu thập tệp ảnh Sentinel-1 IW GRD chụp lúc 05:36 ngày 30/11/2021 (thời điểm đỉnh lũ trận lụt tại Phú Yên). Trích xuất kênh phân cực đồng VV (Vertical-Vertical) với kích thước ma trận ảnh thô 1.911 hàng x 2.402 cột.
+P0239	Normal	Giai đoạn 2: Cập nhật quỹ đạo vệ tinh chính xác (Precise Orbit Ephemerides): Nạp tệp quỹ đạo chính xác (Sentinel-1 Precise Orbit Determination - POD) do ESA công bố sau 20 ngày kể từ khi vệ tinh chụp, hiệu chỉnh sai số vị trí tâm khối của vệ tinh xuống dưới 5 cm.
+P0240	Normal	Giai đoạn 3: Hiệu chuẩn bức xạ (Radiometric Calibration): Chuyển đổi giá trị số số học (Digital Number - DN) của các pixel ảnh sang hệ số tán xạ ngược radar chuẩn Sigma Nought (σ⁰) theo công thức:
+P0241	Normal	σ⁰ (dB) = 10 · log10( DN² / A_i² )					(2.10)
+P0242	Normal	với A_i là hệ số hiệu chuẩn được cung cấp trong bảng tra cứu (Calibration LUT) của siêu dữ liệu ảnh.
+P0243	Normal	Giai đoạn 4: Hiệu chỉnh địa hình bằng mô hình Range-Doppler (Terrain Correction): Sóng radar chiếu xiên tạo ra các biến dạng hình học trên địa hình đồi núi (co ngắn dốc - Foreshortening, chồng bóng - Layover, bóng radar - Shadowing). Sử dụng mô hình số độ cao SRTM/Copernicus 30m tích hợp trong thuật toán Range-Doppler để nắn chỉnh hình học, chuyển đổi ảnh từ hệ tọa độ Slant Range sang hệ tọa độ không gian địa lý phẳng UTM Zone 49N (WGS84) với kích thước pixel 30m x 30m, đối chiếu đồng bộ với mô hình số độ cao FABDEM 30m.
+P0244	Normal	Giai đoạn 5: Lọc nhiễu đốm thích nghi (Adaptive Speckle Filtering): Nhiễu đốm (Speckle Noise) là hiện tượng giao thoa ngẫu nhiên của các sóng radar phản xạ từ các bộ tán xạ nhỏ trong ô phân giải. Áp dụng bộ lọc thích nghi Refined Lee Filter kích thước cửa sổ 5x5 pixel nhằm triệt tiêu nhiễu đốm nhân tính trên các vùng mặt nước đồng nhất, đồng thời duy trì độ sắc nét của ranh giới tiếp xúc giữa bờ và mép nước.
+P0245	Normal	Giai đoạn 6: Phân ngưỡng tự động Otsu và Lọc nước thường trực:
+P0246	Normal	Áp dụng thuật toán tối ưu hóa phương sai giữa hai lớp của Otsu [5] trên toàn bộ biểu đồ tần số σ⁰. Ngưỡng phân tách tối ưu được xác định tự động ở mức T* = -14.85 dB. Các pixel có giá trị σ⁰ < -14.85 dB được gắn nhãn là nước (Water = 1), các pixel còn lại là cạn (Non-water = 0).
+P0247	Normal	Cuối cùng, nạp lớp bản đồ mật độ nước thường trực (Permanent Water Mask) trích xuất từ bộ dữ liệu Global Surface Water của Trung tâm Nghiên cứu Chung Châu Âu (JRC) [14] để loại bỏ các thủy vực cố định (lòng sông Ba mùa cạn, đầm Ô Loan, biển Đông), thu được duy nhất lớp nhãn nhị phân thể hiện vết ngập lũ thực tế (Flood Extent Benchmark).
+P0248	Normal	2.3. Các phương pháp tiền xử lý và giải quyết rào cản nhân tạo trên địa hình
+P0249	Normal	2.3.1. Thuật toán lấp hố sụt thủy văn Priority-Flood
+P0250	Normal	Mô hình số độ cao FABDEM 30m sau khi loại bỏ công trình và tán cây thường xuất hiện các điểm trũng giả tạo (Sinks / Pits) cục bộ có diện tích 1 đến vài pixel, đặc biệt tại các sườn dốc đồi núi bao quanh đồng bằng Tuy Hòa. Khi mô hình thủy lực tính toán, nước mưa dồn vào các hố sụt này tạo thành các điểm tập trung dòng chảy với độ dốc địa hình cục bộ ∂zb/∂x rất lớn, làm tăng vận tốc dòng chảy tính toán, vi phạm điều kiện ổn định CFL và dẫn đến phân kỳ số học (lỗi NaN) tại bước thời gian t ≈ 160.000s trong kịch bản V40.
+P0251	Normal	Để khắc phục hiện tượng này, đồ án đã triển khai thuật toán lấp hố sụt thủy văn tối ưu Priority-Flood đề xuất bởi Barnes et al. (2014) [14]. Thuật toán sử dụng cấu trúc hàng đợi ưu tiên (Priority Queue):
+P0252	Normal	- Bước 1: Khởi tạo hàng đợi với tất cả các ô lưới nằm trên đường biên ngoài của lưu vực (vùng thoát nước ra biển có cao độ 0m).
+P0253	Normal	- Bước 2: Liên tục lấy ô có cao độ thấp nhất trong hàng đợi ra xử lý. Xét 8 ô láng giềng xung quanh; nếu cao độ của ô láng giềng thấp hơn cao độ của ô hiện tại, điều đó chứng tỏ ô láng giềng là một hố sụt nội lục không có lối thoát. Thuật toán sẽ ngay lập tức 'nâng' cao độ của ô láng giềng lên bằng đúng cao độ của ô hiện tại.
+P0254	Normal	- Bước 3: Thêm ô láng giềng đã hiệu chỉnh vào hàng đợi và lặp lại cho đến khi toàn bộ các hố trũng trên lưu vực được xử lý.
+P0255	Normal	Việc áp dụng Priority-Flood thiết lập tính liên tục của hướng thoát nước trên bề mặt địa hình, loại bỏ các vùng trũng cục bộ gây mất ổn định vận tốc tính toán.
+P0256	Normal	2.3.2. Thuật toán Đục đê và hạ đường giao thông (Levee & Road Breaching)
+P0257	Normal	Để khắc phục hiện tượng thân đê và đường giao thông tạo thành rào cản nhân tạo ngăn dòng chảy tràn từ sông Ba ra bãi tràn trên lưới DEM 30m, nghiên cứu đã xây dựng thuật toán mở đường tràn cục bộ (Levee Breaching) [15]:
+P0258	Normal	- Bước 1: Xác định mạng lưới các dải cản trở địa hình (Barriers) thông qua việc tính toán độ nhô cao cục bộ (Local Relief) so với bãi bồi lân cận: Relief(x,y) = DEM(x,y) - FocalMean(DEM, r=150m).
+P0259	Normal	- Bước 2: Xác định các vị trí đê bao và đường giao thông nằm trong vùng có khả năng tràn lũ (HAND <= 3.5m).
+P0260	Normal	- Bước 3: Thực hiện can thiệp hạ cao độ địa hình cục bộ: Tại các vị trí cầu cống tiêu thoát nước thực tế, cao độ ô lưới DEM được hạ thấp cục bộ một khoảng delta_z = 2.0m (bảo đảm không làm âm cao độ đáy so với mực nước biển), tạo thành các khe xả tràn nhân tạo có khẩu độ tương đương chiều rộng 1 đến 2 ô lưới (30m - 60m), cho phép nước lũ từ lòng sông thoát qua đê để tràn vào đồng bằng.
+P0261	Normal	2.3.3. Thuật toán San phẳng hình thái (Morphological Carving) hai bên bờ sông
+P0262	Normal	Phân tích kết quả thực nghiệm kịch bản V44 cho thấy: Thuật toán mở đường tràn ban đầu phụ thuộc vào mặt nạ ngập lụt trích xuất từ ảnh SAR. Do đỉnh đê có cao trình cao hơn mực nước nên ảnh SAR phân loại là bề mặt cạn (SAR = 0), dẫn đến việc thuật toán không xử lý các đoạn đê chính ven sông Ba. Nhằm khắc phục hạn chế này, phương pháp san phẳng hình thái (Morphological Carving) được đề xuất:
+P0263	Normal	- Bước 1: Dùng phép toán hình thái học GIS tạo một vùng đệm (Buffer Zone) mở rộng từ 90m đến 150m (tương ứng 3 đến 5 ô lưới) chạy dọc song song hai bên mép bờ sông Ba.
+P0264	Normal	- Bước 2: Quét toàn bộ các ô lưới nằm trong vùng đệm; bất kỳ ô lưới nào có cao trình nhô cao hơn cao trình trung bình của mặt bãi bồi phía sau đê (ngưỡng z_cut = 3.5m) đều được hạ thấp đồng mức về 3.5m.
+P0265	Normal	Phương pháp này tương đương với giải pháp hạ thấp đồng mức dải đê nhân tạo cản dòng dọc hành lang sông, mở rộng tiết diện thoát lũ và tạo điều kiện cho dòng chảy tràn vào đồng bằng.
+P0266	Normal	2.4. Phương pháp đánh giá và kiểm chuẩn mô hình
+P0267	Normal	2.4.1. Ma trận nhầm lẫn không gian (Spatial Contingency Matrix)
+P0268	Normal	Để kiểm định độ chính xác của mô hình thủy lực so với ảnh vệ tinh radar Sentinel-1 SAR một cách định lượng và khách quan, toàn bộ miền tính toán được chồng xếp không gian ở mức từng ô pixel 30m x 30m. Ma trận nhầm lẫn không gian 2x2 được thiết lập bao gồm 4 trạng thái nhị phân (Bảng 2.1):
+P0269	Normal	Bảng 2.1: Ma trận nhầm lẫn không gian (Contingency Matrix) đánh giá độ khớp vết ngập
+P0270	Normal	Ý nghĩa và cơ chế xác định từng trạng thái trong ma trận:
+P0271	Normal	- True Positive (TP - Dương tính thật, hiển thị màu Xanh lá cây): Số ô lưới mà cả mô hình mô phỏng lẫn ảnh vệ tinh SAR đều xác nhận bị ngập nước (h_sim > 0.3m và SAR_flood = 1). Đây là vùng mô hình dự báo trùng khớp với vết nước trên ảnh vệ tinh.
+P0272	Normal	- False Positive (FP - Dương tính giả / Báo động sai, hiển thị màu Đỏ): Số ô lưới mô hình báo ngập nhưng ảnh vệ tinh SAR xác nhận không ngập (h_sim > 0.3m và SAR_flood = 0). Phản ánh xu hướng mô hình dự báo ngập diện rộng ngoài thực tế.
+P0273	Normal	- False Negative (FN - Âm tính giả / Bỏ sót, hiển thị màu Xanh dương): Số ô lưới ảnh vệ tinh SAR ghi nhận ngập nhưng mô hình không có nước (h_sim <= 0.3m và SAR_flood = 1). Phản ánh sự thiếu hụt nước của mô hình do cản trở địa hình hoặc thiếu nguồn lưu lượng biên.
+P0274	Normal	- True Negative (TN - Âm tính thật, hiển thị màu Xám sáng): Số ô lưới cả mô hình và vệ tinh đều xác nhận khô ráo (h_sim <= 0.3m và SAR_flood = 0).
+P0275	Normal	2.4.2. Hệ thống các chỉ số định lượng đánh giá
+P0276	Normal	Từ các giá trị TP, FP, FN, TN, đồ án áp dụng hệ thống các chỉ số kiểm chuẩn thống kê tiêu chuẩn quốc tế:
+P0277	Normal	1. Chỉ số thành công tới hạn (Critical Success Index - CSI / Threat Score):
+P0278	Normal	CSI = TP / (TP + FP + FN) · 100%					(2.11)
+P0279	Normal	CSI là chỉ số đánh giá toàn diện trong mô hình hóa ngập lụt bề mặt. Chỉ số này dao động từ 0% (hoàn toàn không trùng khớp) đến 100% (trùng khớp hoàn hảo giữa mô phỏng và quan trắc). Khác với độ chính xác tổng thể (Overall Accuracy) thường bị ảnh hưởng bởi số lượng lớn các ô không ngập TN, CSI chỉ tập trung đánh giá trên tổng diện tích có liên quan đến ngập lụt và xử phạt đồng thời cả sai số báo động sai FP lẫn sai số bỏ sót FN.
+P0280	Normal	2. Xác suất phát hiện đúng hay Độ phủ thực (Probability of Detection - POD / Recall):
+P0281	Normal	Recall = TP / (TP + FN) · 100%					(2.12)
+P0282	Normal	Recall đo lường tỷ lệ phần trăm diện tích ngập thực tế trên ảnh vệ tinh được mô hình phản ánh thành công. Giá trị Recall càng cao chứng tỏ sóng lũ của mô hình đã lan tỏa tới hầu hết các vùng bị ngập.
+P0283	Normal	3. Độ chính xác dự báo (Precision):
+P0284	Normal	Precision = TP / (TP + FP) · 100%					(2.13)
+P0285	Normal	Precision phản ánh mức độ tin cậy của các vùng mà mô hình báo ngập: Trong số các ô lưới mà mô hình dự báo có nước ngập, có bao nhiêu phần trăm là thực sự ngập ngoài thực địa.
+P0286	Normal	4. Tỷ lệ báo động sai (False Alarm Ratio - FAR):
+P0287	Normal	FAR = FP / (TP + FP) · 100% = 100% - Precision					(2.14)
+P0288	Normal	5. Chỉ số F1-Score (Trung bình điều hòa giữa Precision và Recall):
+P0289	Normal	F1 = 2 · (Precision · Recall) / (Precision + Recall)					(2.15)
+P0290	Normal	6. Hệ số tương quan Matthews (Matthews Correlation Coefficient - MCC):
+P0291	Normal	MCC = (TP · TN - FP · FN) / √[ (TP + FP)(TP + FN)(TN + FP)(TN + FN) ]					(2.16)
+P0292	Normal	MCC là thước đo tương quan nhị phân cân bằng, có giá trị từ -1 (hoàn toàn nghịch đảo) qua 0 (dự báo ngẫu nhiên) đến +1 (dự báo hoàn hảo).
+P0293	Normal	2.4.3. Phương pháp kiểm chứng địa hình bãi bồi độc lập (HAND Assessment)
+P0294	Normal	Do ảnh vệ tinh radar Sentinel-1 chỉ chụp được tại một thời điểm duy nhất trong suốt 5 ngày lũ (lúc 05:36 ngày 30/11/2021) và có thể gặp phải các sai số che khuất tán cây (Radar Shadowing/Vegetation attenuation), việc chỉ dựa vào ảnh SAR là chưa đủ để khẳng định tính chân thực vật lý của toàn bộ quá trình mô phỏng.
+P0295	Normal	Đồ án áp dụng phương pháp kiểm chứng địa hình bãi bồi độc lập thông qua việc chồng xếp lớp nước ngập mô phỏng lên bản đồ chỉ số thủy văn HAND (Height Above Nearest Drainage) [6]:
+P0296	Normal	- Tính toán tỷ lệ diện tích nước ngập nằm trong đới bãi bồi tự nhiên (HAND <= 3.5m): P_HAND = (Diện tích ngập tại HAND <= 3.5m) / (Tổng diện tích ngập trên đất liền) · 100%.
+P0297	Normal	Một mô hình thủy lực đạt tính hợp lý vật lý cao cần có P_HAND >= 85 - 90%. Nếu P_HAND thấp và xuất hiện diện tích ngập lớn ở đới HAND > 10m, điều đó chứng tỏ mô hình đang bị hiện tượng ngập lụt phi lý do lỗi tích lũy mưa hoặc tắc nghẽn dòng chảy sườn dốc.
+P0298	Normal	2.5. Sơ đồ quy trình nghiên cứu tổng thể
+P0299	Normal	Toàn bộ các nội dung nghiên cứu lý thuyết, thu thập dữ liệu, xử lý thuật toán số học và quy trình kiểm định được tích hợp thành một sơ đồ khung công nghệ hoàn chỉnh:
+P0300	Normal	1. Dữ liệu đầu vào: Ảnh vệ tinh Sentinel-1 IW GRD, DEM FABDEM 30m, Sử dụng đất ESA WorldCover 10m, Mưa giờ ERA5 (145 trạm ảo), Lưu lượng xả lũ hồ Sông Ba Hạ, Sông Hinh.
+P0301	Normal	2. Tiền xử lý dữ liệu: Nắn chỉnh địa hình Range-Doppler ảnh SAR, Lọc nhiễu Lee Filter, Phân ngưỡng Otsu -> Bản đồ ngập vệ tinh Benchmark; Xử lý địa hình: Priority-Flood Sink Filling, Levee Breaching -> Bản đồ DEM V44/V45; Xây dựng bản đồ độ nhám Manning không gian và thấm đất.
+P0302	Normal	3. Mô phỏng thủy lực số 2D GPU: Nạp tham số vào BG_Flood, giải phương trình nước nông 2D Godunov, tự thích nghi bước thời gian dt theo điều kiện CFL, kiểm soát ranh giới ướt/khô chống NaN.
+P0303	Normal	4. Đầu ra mô hình: Xuất tệp NetCDF4 chứa các trường dữ liệu h, zs, u, v định kỳ mỗi 3 giờ mô phỏng (tổng cộng 40 khung hình trong 120 giờ).
+P0304	Normal	5. Kiểm định và Đánh giá: Đối chiếu không gian với ảnh SAR tại mốc 102 giờ (tính ma trận Contingency: CSI, Recall, Precision, F1, MCC); Chồng xếp bản đồ HAND kiểm chứng tính hợp lý bãi bồi tự nhiên.
+P0306	Normal	CHƯƠNG 3: KẾT QUẢ THỰC NGHIỆM, KIỂM ĐỊNH VÀ THẢO LUẬN
+P0307	Normal	3.1. Đặc điểm khu vực nghiên cứu hạ lưu sông Ba và dữ liệu trận lũ 11/2021
+P0308	Normal	3.1.1. Vị trí địa lý và điều kiện tự nhiên đồng bằng Tuy Hòa
+P0309	Normal	Vùng hạ lưu lưu vực sông Ba thuộc địa phận tỉnh Phú Yên, trọng tâm là đồng bằng phù sa Tuy Hòa – đồng bằng châu thổ lớn nhất khu vực Nam Trung Bộ với diện tích xấp xỉ 500 km². Về mặt hành chính, khu vực nghiên cứu bao trùm toàn bộ thành phố Tuy Hòa, thị xã Đông Hòa và các huyện Phú Hòa, Tây Hòa, Tuy An. Đây là trung tâm chính trị, văn hóa, kinh tế công nghiệp và là vựa lúa trọng điểm của tỉnh Phú Yên.
+P0310	Normal	Đặc điểm địa hình của hạ lưu sông Ba có cấu trúc hình quạt mở rộng dần ra biển. Sông Ba sau khi chảy qua hẻm núi tại khu vực đập thủy nông Đồng Cam bắt đầu phân nhánh, uốn lượn qua các cánh đồng bằng phẳng có cao độ mặt đất tự nhiên phổ biến từ +2.5m đến +7.0m so với mực nước biển, trước khi đổ ra biển Đông qua cửa Đà Diễn (phía Nam TP. Tuy Hòa). Phía Nam của đồng bằng là hệ thống sông Bàn Thạch (tiếp nhận nguồn nước xả từ hồ thủy điện Sông Hinh) chảy song song rồi đổ ra vịnh Vũng Rô và đầm Cù Mông. Địa hình đồng bằng Tuy Hòa bị bao bọc bởi các dãy núi đá dốc: phía Tây là dãy Trường Sơn, phía Bắc là khối núi đèo Cù Mông, và phía Nam là dãy núi đèo Cả. Cấu trúc địa hình trũng thấp này khiến đồng bằng Tuy Hòa chịu áp lực tiêu thoát lũ lớn khi lưu lượng thượng nguồn đổ về kết hợp với hiện tượng triều cường tại các cửa sông.
+P0311	Normal	3.1.2. Diễn biến khí tượng thủy văn trận lũ 26/11 - 01/12/2021
+P0312	Normal	Đợt mưa lũ diễn ra từ ngày 26 tháng 11 đến ngày 01 tháng 12 năm 2021 là một trong những sự kiện ngập lụt điển hình tại tỉnh Phú Yên kể từ năm 1993 [2], [20].
+P0313	Normal	Về nguyên nhân khí tượng: Do ảnh hưởng kết hợp của không khí lạnh tăng cường từ phía Bắc nén dải hội tụ nhiệt đới có trục đi qua khu vực Trung Trung Bộ, kết hợp với trường gió Đông ẩm hoạt động mạnh từ tầng thấp lên đến độ cao 5.000m. Mưa lớn xảy ra liên tục 5 ngày trên diện rộng lưu vực sông Ba. Lượng mưa tích lũy đo được phổ biến từ 550 đến 850 mm; tại một số trạm đo vùng cao như Sơn Hòa, Sông Hinh lượng mưa ghi nhận vượt 900 mm. Cường suất mưa tập trung lớn trong các ngày 29 và 30/11 với lượng mưa 24 giờ tại nhiều điểm vượt 350 mm/ngày.
+P0314	Normal	Về nguyên nhân thủy văn và điều tiết hồ chứa: Lưu vực sông Ba có hệ thống bậc thang thủy điện quy mô lớn. Trước đợt mưa ngày 28/11, dung tích các hồ chứa cơ bản đã tích nước theo quy trình vận hành. Khi dòng chảy thượng lưu từ Gia Lai và Đắk Lắk đổ về hồ Sông Ba Hạ với lưu lượng đỉnh trên 10.500 m³/s, hồ phải vận hành xả lũ để đảm bảo an toàn công trình đập: Lưu lượng xả qua tràn tăng từ 2.000 m³/s lên 5.500 m³/s vào ngày 29/11, và đạt mức 9.400 m³/s vào sáng ngày 30/11/2021. Đồng thời, hồ thủy điện Sông Hinh xả lũ với lưu lượng trên 3.200 m³/s vào lưu vực sông Bàn Thạch. Tổng lưu lượng xả lũ dồn về hạ lưu Phú Yên ghi nhận thời điểm lớn nhất vượt 12.600 m³/s.
+P0315	Normal	Mực nước đỉnh lũ quan trắc tại trạm thủy văn Củng Sơn trên sông Ba đạt mức +34.50m (vượt báo động 3 là 2.50m); tại trạm Phú Lâm (hạ lưu Tuy Hòa) mực nước đạt +3.75m (vượt báo động 3 là 1.05m), xấp xỉ đỉnh lũ năm 1993. Nước dâng nhanh gây ngập trên diện rộng tại nhiều xã, phường ven sông thuộc tỉnh Phú Yên [20].
+P0316	Normal	3.2. Thiết lập cơ sở dữ liệu đầu vào cho mô hình BG_Flood
+P0317	Normal	Mô hình thủy lực số hai chiều BG_Flood được cấu hình trên lưới sai phân vuông đồng nhất kích thước 2.099 x 2.099 ô lưới, độ phân giải không gian 30m x 30m (tổng số ô lưới tính toán: 4.405.801 ô). Các thông số thiết lập mô hình và tệp dữ liệu đầu vào được tổng hợp tại Bảng 3.1 và các danh mục kế tiếp:
+P0318	Normal	Bảng 3.1: Các thông số cấu hình vật lý và số học của mô hình thủy lực BG_Flood
+P0319	Normal	1. Mô hình số độ cao địa hình (Bathy / DEM): Tệp `PhuYen_DEM_30m_V44.asc` định dạng ESRI ASCII Grid, kích thước 2.099 x 2.099 ô lưới, gốc tọa độ xllcorner = 270.000m, yllcorner = 1.415.000m (UTM Zone 49N). Dữ liệu kế thừa từ FABDEM 30m [8] đã loại bỏ tán cây rừng và xử lý lấp hố sụt thủy văn Priority-Flood [14].
+P0320	Normal	2. Bản đồ độ nhám thủy lực không gian (Manning roughness map): Tệp `PhuYen_manning_30m_V43.asc`. Hệ số nhám n được phân loại theo hiện trạng lớp phủ đất (Bảng 3.2):
+P0321	Normal	Bảng 3.2: Hệ số nhám Manning quy đổi từ bản đồ lớp phủ đất ESA WorldCover 10m
+P0322	Normal	3. Bản đồ thấm nước mặt đất (Infiltration map): Tệp `il_30m_V36.asc` quy định tốc độ thấm ổn định theo phân loại đất (đất cát ven biển thấm 15 mm/h; đất phù sa ngập nước thấm 2 - 5 mm/h).
+P0323	Normal	4. Chuỗi mưa không gian phân bố (Spatially distributed rainfall): Tệp `rain_v23_era5_spatial.txt` chứa chuỗi số liệu lượng mưa từng giờ trong 120 giờ của 145 trạm ảo nội suy từ sản phẩm tái phân tích khí quyển toàn cầu ERA5 [11].
+P0324	Normal	5. Dòng chảy biên (River Inflows):
+P0325	Normal	- Nhánh sông Ba (River 1, vị trí x=275.400, y=1.455.000): Biểu đồ lưu lượng xả giờ của thủy điện Sông Ba Hạ (đỉnh 9.400 m³/s).
+P0326	Normal	- Nhánh sông Bàn Thạch (River 2, vị trí x=285.200, y=1.425.000): Biểu đồ lưu lượng xả lũ hồ Sông Hinh (đỉnh 3.200 m³/s).
+P0327	Normal	- Nhánh sông Cô / Tuy An (River 3, vị trí x=301.000, y=1.474.000): Lưu lượng nhánh phía Bắc (đỉnh 1.200 m³/s).
+P0328	Normal	3.3. Phân tích tiến trình thực nghiệm qua các thế hệ kịch bản mô phỏng
+P0329	Normal	Để nâng cao độ chính xác và đảm bảo tính ổn định số học, quá trình nghiên cứu đã tiến hành thử nghiệm và hiệu chỉnh qua nhiều thế hệ kịch bản mô phỏng. Bảng 3.3 tổng hợp các mốc tiến hóa chính cùng các phát hiện kỹ thuật tương ứng:
+P0330	Normal	Bảng 3.3: Lịch sử tiến hóa và so sánh hiệu quả các thế hệ kịch bản mô phỏng từ V1 đến V45
+P0331	Normal	Phân tích hai cải tiến kỹ thuật trọng tâm:
+P0332	Normal	Hiệu chỉnh tham số ma sát và cải thiện bước thời gian dt (Kịch bản V23):
+P0333	Normal	Trong các phiên bản từ V1 đến V22, thời gian hoàn thành 120 giờ mô phỏng kéo dài khoảng 7 ngày trên GPU. Phân tích nhật ký tính toán cho thấy bước thời gian dt bị giới hạn ở mức 0.28s. Nguyên nhân do trong tệp cấu hình vừa khai báo tham số hằng số `roughness = 0.035` vừa khai báo tệp raster `roughnessmap = manning.asc`. Khi loại bỏ khai báo trùng lặp và đồng bộ hóa bản đồ nhám không gian, bước thời gian dt theo điều kiện Courant (CFL) đã nâng lên 3.8s - 4.1s. Nhờ đó, thời gian tính toán toàn bộ kịch bản giảm xuống còn khoảng 14 giờ.
+P0334	Normal	Xử lý hố sụt địa hình và ổn định số học (Kịch bản V41):
+P0335	Normal	Khi chuyển từ lưới 90m sang lưới phân giải 30m (kịch bản V35 - V40), mô hình bị gián đoạn tính toán tại thời điểm t ≈ 160.000s do xuất hiện giá trị không xác định (NaN) lan truyền trong trường mực nước. Việc can thiệp trực tiếp bằng phép gán giá trị không phản ánh đúng động lực dòng chảy và gây dao động số học. Khảo sát vi địa hình cho thấy trên sườn dốc khu vực thượng lưu tồn tại các điểm hố sụt cục bộ (depression/sink) có chênh lệch cao độ lớn. Khi lượng mưa lớn tập trung vào các ô này, gradient thủy lực cục bộ tăng cao dẫn đến vận tốc dòng chảy vượt ngưỡng kiểm soát của điều kiện ổn định Courant (CFL). Việc áp dụng thuật toán lấp hố sụt thủy văn Priority-Flood (Barnes et al., 2014) [14] ở kịch bản V41 đã xử lý triệt để các bẫy trũng nhân tạo, giúp bước thời gian thích ứng dt duy trì ổn định trong khoảng 0.75s - 1.2s và mô hình hoàn thành toàn bộ chuỗi 120 giờ tính toán mà không phát sinh lỗi số học.
+P0336	Normal	3.4. Đánh giá chi tiết kết quả mô phỏng V44 với dữ liệu vệ tinh Sentinel-1 SAR
+P0337	Normal	Kịch bản V44 kết hợp địa hình đã xử lý hố sụt, đầy đủ 3 nguồn xả lũ thực tế và áp dụng thuật toán hạ thấp cao độ đê kè cục bộ 2m tại các vị trí cống thoát nước ven sông Ba (Levee Breaching). Mô hình đã hoàn thành trọn vẹn 120 giờ mô phỏng.
+P0338	Normal	Để theo dõi diễn biến không gian của dòng lũ, kết quả mô phỏng được trích xuất và tính toán ma trận nhầm lẫn không gian so với ảnh vệ tinh Sentinel-1 SAR định kỳ mỗi 3 giờ mô phỏng (tương ứng toàn bộ 40 khung hình NetCDF, Bảng 3.4):
+P0339	Normal	Bảng 3.4: Tiến trình diễn biến các chỉ số kiểm chuẩn theo chuỗi thời gian mô phỏng V44 (40 khung hình)
+P0340	Normal	Quy luật biến thiên của các chỉ số kiểm chuẩn trên Bảng 3.4 thể hiện rõ ba giai đoạn thủy lực chính:
+P0341	Normal	1. Giai đoạn truyền lũ trong lòng dẫn (0h - 18h): Lưu lượng xả từ thủy điện Sông Ba Hạ truyền dọc theo lòng sông chính. Mực nước trong sông chưa vượt qua cao trình bờ bãi nên dòng chảy chủ yếu tập trung trong lòng dẫn. Chỉ số CSI tăng dần từ 2.85% lên 9.96%, độ phủ Recall đạt khoảng 11%.
+P0342	Normal	2. Giai đoạn tràn bờ qua các cống tiêu (21h - 36h): Khi lưu lượng xả đạt trên 6.000 m³/s, mực nước sông Ba dâng cao vượt qua cao trình cống tiêu đã được hạ và bắt đầu tràn vào hệ thống kênh mương nội đồng. Chỉ số CSI tăng từ 11.82% ở 21h lên 17.57% ở 36h (tăng xấp xỉ 5.75% sau 15 giờ).
+P0343	Normal	3. Giai đoạn ngập rộng đồng bằng và đạt đỉnh lũ (40h - 102h): Dòng tràn lan tỏa tại các vùng trũng TP. Tuy Hòa và TX. Đông Hòa. Chỉ số CSI vượt ngưỡng 19% ở 63h, vượt ngưỡng 20% ở 96h, và đạt giá trị 20.64% tại thời điểm vệ tinh Sentinel-1 SAR ghi nhận ảnh (mốc 102 giờ).
+P0344	Normal	Độ chính xác Precision duy trì ổn định trong khoảng 52.2% đến 62.5% (trung bình trên 54%) trong suốt 120 giờ mô phỏng. Kết quả này phản ánh mô hình kiểm soát tốt sai số ngập giả (False Alarm); trên 54% diện tích mô phỏng ngập nước phù hợp với ranh giới ngập trích xuất từ dữ liệu vệ tinh SAR.
+P0345	Normal	Bảng 3.5: Bảng thống kê chi tiết các chỉ số định lượng tại thời điểm đỉnh lũ 102 giờ (Khung hình 33)
+P0347	Normal	Hình 3.1: Bản đồ kiểm chuẩn không gian 4 màu giữa mô phỏng V44 và ảnh vệ tinh Sentinel-1 SAR tại thời điểm 102 giờ (TP: Xanh lá, FP: Đỏ, FN: Xanh dương, TN: Xám)
+P0349	Normal	Hình 3.2: Bản đồ vị trí các tuyến đê kè nhân tạo được đục mở đường tràn (Levee Breaching) trên nền địa hình DEM 30m tỉnh Phú Yên
+P0350	Normal	3.5. Kiểm chứng tính hợp lý thủy lực độc lập bằng bản đồ địa hình HAND
+P0351	Normal	Nhằm đánh giá tính hợp lý không gian của trường ngập độc lập với ảnh vệ tinh SAR, kết quả độ sâu ngập tại khung hình 33 (thời điểm 102h) được chồng xếp và phân tích tương quan với bản đồ chỉ số địa hình thủy văn HAND (Height Above Nearest Drainage):
+P0352	Normal	Bảng 3.6: Phân bố diện tích ngập của mô hình V44 theo các đới thủy văn địa hình HAND
+P0353	Normal	Phân tích Bảng 3.6 cho thấy 90.43% diện tích ngập của mô hình V44 phân bố tại vùng trũng bãi bồi tự nhiên (HAND <= 3.5m) – khu vực có điều kiện địa hình thuận lợi cho việc tích lũy và lan truyền dòng tràn từ lòng sông. Diện tích ngập ở khu vực sườn đồi núi dốc (HAND > 10m) chỉ chiếm 1.00%, tương ứng với các tuyến tụ thủy và dòng suối hẹp thoát nước về hạ du, không xuất hiện hiện tượng đọng nước nhân tạo trên sườn dốc. Kết quả kiểm chứng độc lập qua chỉ số HAND xác nhận tính hợp lý về mặt hình thái học địa hình (Topographic Plausibility) của trường ngập mô phỏng.
+P0354	Normal	3.6. Chẩn đoán nguyên nhân sai số hạ lưu sông Ba và thiết kế kịch bản V45
+P0355	Normal	Mặc dù chỉ số CSI đạt 20.64%, việc đối chiếu không gian trên Hình 3.1 cho thấy dải đồng bằng hai bên bờ hạ lưu sông Ba (khu vực từ sau đập Đồng Cam qua cầu Đà Rằng đến cửa biển) còn diện tích bỏ sót (False Negative - màu xanh dương) tương đối lớn. Dữ liệu SAR ghi nhận ngập trên diện rộng tại khu vực này, trong khi kết quả mô phỏng V44 chưa thể hiện được mức độ tràn bờ tương ứng.
+P0357	Normal	Hình 3.3: Mặt cắt ngang địa hình DEM và mực nước tính toán tại tọa độ X = 314.955, thể hiện cao trình đỉnh đê (8.5m - 9.7m) cao hơn mực nước trong sông (6.59m)
+P0358	Normal	Qua phân tích chi tiết trắc dọc và trắc ngang địa hình dọc tuyến sông, nguyên nhân chính được xác định như sau:
+P0359	Normal	Khi trích xuất mặt cắt ngang địa hình thực tế tại tọa độ X = 314.955 (Hình 3.3), cao trình đỉnh thân đê sông Ba tại khu vực Tuy Hòa dao động từ +8.36m đến +9.75m. Trong khi đó, mực nước lũ lớn nhất mô phỏng trong lòng sông Ba (zs) đạt +6.59m. Do đó, cao trình đỉnh đê vẫn cao hơn mực nước tính toán trong sông từ 1.7m đến 3.1m.
+P0360	Normal	Nguyên nhân thuật toán hạ đê (Levee Breaching) của kịch bản V44 chưa xử lý các đoạn đê này xuất phát từ điều kiện lọc trong mã nguồn:
+P0361	Normal	`barrier_mask = (sar_flood == 1) & plain_mask & (local_relief >= relief_threshold)`
+P0362	Normal	Thuật toán V44 quy định chỉ hạ thấp những điểm cản trở mà ảnh vệ tinh SAR ghi nhận ngập (`sar_flood == 1`). Tuy nhiên, do cao độ đỉnh đê cao hơn mặt nước lũ nên khu vực này không bị ngập. Ảnh viễn thám SAR ghi nhận phản xạ của mặt đất cạn và gán giá trị nhị phân bằng 0. Do đó, các ô lưới thuộc thân đê không thỏa mãn điều kiện lọc của thuật toán V44 và không được xử lý hạ cao trình. Dòng lũ trong lòng sông Ba vì vậy không thể tràn qua mặt đê để tiếp cận các vùng trũng phía sau đê.
+P0363	Normal	Phương pháp xử lý đề xuất cho Kịch bản V45 (Morphological Carving):
+P0364	Normal	Để khắc phục hạn chế này mà không phụ thuộc vào điều kiện phân loại của ảnh SAR, kịch bản V45 áp dụng phương pháp san gạt hình thái học:
+P0365	Normal	- Bước 1: Thiết lập vùng đệm (Buffer) bán kính 150m bao quanh hành lang lòng dẫn chính sông Ba.
+P0366	Normal	- Bước 2: Nhận diện và hạ cao trình của 41.907 ô lưới đê kè nhân tạo nhô cao trong vùng đệm về mức cao độ bãi bồi tự nhiên (+3.5m).
+P0367	Normal	Tệp dữ liệu địa hình số cập nhật `PhuYen_DEM_30m_V45.asc` đã được thiết lập. Kết quả mô phỏng thử nghiệm cho thấy việc dỡ bỏ rào cản nhân tạo trên nền DEM cho phép dòng chảy thoát tự nhiên vào các vùng trũng hai bên bờ sông, giúp cải thiện đáng kể diện tích bao phủ ngập tại hạ lưu sông Ba.
+P0368	Normal	3.7. Mở rộng thử nghiệm mô hình học máy (Surrogate Model) dự báo nhanh ngập lụt
+P0369	Normal	Bên cạnh mô hình thủy lực số giải phương trình nước nông 2D (BG_Flood), đồ án tiến hành thử nghiệm sơ bộ việc ứng dụng mô hình học máy (Surrogate Model / Emulator) nhằm đánh giá tiềm năng dự báo nhanh bản đồ độ sâu ngập từ các đặc trưng địa hình và dữ liệu mưa:
+P0370	Normal	Bộ dữ liệu huấn luyện được trích xuất từ 4,4 triệu ô lưới từ kết quả mô phỏng thủy lực BG_Flood, bao gồm 8 biến đặc trưng đầu vào: Cao trình DEM, độ dốc (Slope), hướng sườn (Aspect), độ cong địa hình (Curvature), hệ số nhám Manning, tốc độ thấm ổn định của đất, lượng mưa tích lũy và khoảng cách tới mạng lưới sông suối. Ba thuật toán học máy phổ biến được lựa chọn thử nghiệm bao gồm: Cây quyết định tăng cường Gradient (XGBoost) [33], Mạng nơ-ron truyền thẳng đa lớp (ANN), và Mạng nơ-ron tái hồi bộ nhớ dài-ngắn (LSTM) [34].
+P0371	Normal	Bảng 3.7: Kết quả thử nghiệm sơ bộ mô hình học máy (Surrogate Model) dự báo độ sâu ngập
+P0372	Normal	Đánh giá khoa học và các giới hạn bản chất của mô hình học máy thay thế:
+P0373	Normal	1. Về độ trễ tính toán: Mô hình XGBoost cho phép sinh bản đồ phân bố độ sâu ngập trên toàn bộ lưu vực trong thời gian dưới 3 giây trên phần cứng phổ thông, nhanh hơn hàng chục nghìn lần so với việc giải hệ phương trình đạo hàm riêng 2D SWE. Đây là ưu điểm vượt trội cho phép ứng dụng trong các kịch bản sàng lọc nhanh (Fast-screening) phục vụ kích hoạt quy trình ứng phó khẩn cấp.
+P0374	Normal	2. Giới hạn về tự tương quan không gian (Spatial Autocorrelation): Hệ số xác định R² = 0.89 đạt được trên cơ sở chia tập dữ liệu huấn luyện/kiểm tra ngẫu nhiên (Random Train/Test Split). Do các ô lưới lân cận có tính tự tương quan không gian mạnh (chỉ số Moran's I cao), phương pháp kiểm định ngẫu nhiên này có thể dẫn đến hiện tượng lạc quan quá mức (Over-optimistic evaluation) do rò rỉ thông tin không gian giữa hai tập dữ liệu. Để đánh giá chính xác hơn, các nghiên cứu tiếp theo cần áp dụng kỹ thuật kiểm chuẩn chéo theo khối không gian độc lập (Spatial Block Cross-Validation).
+P0375	Normal	3. Thiếu tính bảo toàn vật lý và giới hạn ngoại suy ngoài phân phối (Out-of-Distribution - OOD): Do không được tích hợp các phương trình bảo toàn khối lượng và động lượng (như trong các mô hình Physics-Informed Neural Networks - PINN), mô hình học máy thuần túy có thể dự báo các vùng đọng nước ngắt quãng, thiếu liên tục thủy lực hoặc sinh ra giá trị độ sâu âm nếu không được áp đặt hậu xử lý. Quan trọng hơn, mô hình chỉ đảm bảo độ tin cậy trong phạm vi phân bố của dữ liệu huấn luyện (trận lũ tháng 11/2021). Khi đối mặt với các kịch bản lũ cực đoan chưa từng xuất hiện (vượt tần suất thiết kế) hoặc khi có sự thay đổi đột biến về địa hình công trình (như vỡ đập, vỡ đê ở vị trí khác), khả năng suy diễn ngoại suy của mô hình học máy sẽ suy giảm nghiêm trọng.
+P0376	Normal	Do đó, mô hình học máy thay thế chỉ nên được định vị là công cụ bổ trợ dự báo nhanh trong các hệ thống cảnh báo sớm, không thể thay thế mô hình thủy lực số học 2D dựa trên quy luật vật lý trong các bài toán quy hoạch hạ tầng và tính toán thủy lực công trình đòi hỏi độ chuẩn xác cơ học cao.
+P0378	Normal	KẾT LUẬN VÀ KIẾN NGHỊ
+P0379	Normal	1. Kết luận
+P0380	Normal	Qua quá trình nghiên cứu lý thuyết, xây dựng thuật toán và thực nghiệm tính toán số trên chuỗi dữ liệu thực tế trận lũ lịch sử cuối tháng 11/2021 tại hạ lưu lưu vực sông Ba, tỉnh Phú Yên, đồ án đã hoàn thành các nội dung nghiên cứu và đạt được một số kết quả chính như sau:
+P0381	Normal	1. Xây dựng quy trình tích hợp giữa mô hình thủy lực số hai chiều giải hệ phương trình nước nông trên GPU (BG_Flood), dữ liệu viễn thám radar Sentinel-1 SAR và hệ thống thông tin địa lý GIS. Quy trình cho phép mô phỏng động học ngập lụt chi tiết trên lưới phân giải 30m (hơn 4,4 triệu ô tính toán) với tốc độ tính toán nhanh hơn thời gian thực (đạt xấp xỉ 1.83x thời gian thực), hỗ trợ cung cấp thông tin kịp thời phục vụ công tác phòng chống thiên tai.
+P0382	Normal	2. Nhận diện và xử lý các vấn đề kỹ thuật số học trong mô phỏng thủy lực hai chiều:
+P0383	Normal	- Xác định và hiệu chỉnh lỗi xung đột cấu hình giữa tham số độ nhám đơn trị và bản đồ phân bố nhám không gian, qua đó nâng bước thời gian tính toán thích ứng dt từ 0.28s lên 3.8s - 4.1s, rút ngắn thời gian chạy mô phỏng từ khoảng 168 giờ xuống 14 giờ (kịch bản V23).
+P0384	Normal	- Xác định nguyên nhân gây mất ổn định số học (lỗi phân kỳ) tại thời điểm t ≈ 160.000s trên lưới 30m xuất phát từ các điểm hố sụt vi địa hình (sinks) trên sườn dốc; ứng dụng thuật toán lấp hố sụt thủy văn Priority-Flood (kịch bản V41) để xử lý triệt để các bẫy trũng nhân tạo, đảm bảo tính ổn định theo điều kiện CFL trong suốt 120 giờ mô phỏng.
+P0385	Normal	3. Cải thiện độ chính xác kiểm chuẩn với dữ liệu vệ tinh Sentinel-1 SAR:
+P0386	Normal	- Phân tích ảnh hưởng của rào cản nhân tạo (đê bao, đường giao thông) trên lưới DEM 30m đối với dòng tràn; áp dụng kỹ thuật hiệu chỉnh địa hình cục bộ (Levee Breaching) hạ thấp 2m tại các vị trí cống tiêu thoát lũ ven sông Ba (kịch bản V44).
+P0387	Normal	- Tại thời điểm đỉnh lũ ứng với ảnh chụp Sentinel-1 SAR (102 giờ mô phỏng), chỉ số thành công tới hạn CSI đạt 20.64%, độ phủ Recall đạt 24.97% và độ chuẩn xác Precision đạt 54.32%, cải thiện rõ rệt so với các kịch bản ban đầu (CSI đạt 3.29% ở V23 và 13.50% ở V43).
+P0388	Normal	4. Kiểm chứng độc lập tính hợp lý hình thái học bằng chỉ số địa hình thủy văn HAND (Height Above Nearest Drainage): 90.43% tổng diện tích ngập của mô hình V44 tập trung trong vùng bãi bồi tự nhiên (HAND <= 3.5m) và chỉ có 1.00% diện tích ngập ở khu vực đồi dốc (dưới dạng các dòng tụ thủy hẹp), xác nhận tính phù hợp về mặt phân bố không gian dòng chảy trọng trường và hạn chế tối đa sai số ngập giả trên sườn dốc.
+P0389	Normal	5. Làm rõ nguyên nhân bỏ sót thân đê chính ven hạ lưu sông Ba trong thuật toán V44 do đỉnh đê không ngập nước trên ảnh SAR; đề xuất giải pháp xử lý hình thái học (Morphological Carving) trong vùng đệm 150m ven sông trên 41.907 ô lưới, tạo cơ sở cho kịch bản V45 mở rộng không gian thoát lũ tự nhiên hai bên bờ hạ lưu sông Ba.
+P0390	Normal	2. Kiến nghị
+P0391	Normal	Để công trình nghiên cứu tiếp tục được hoàn thiện và chuyển giao hiệu quả vào thực tiễn quản lý rủi ro thiên tai tại tỉnh Phú Yên và các địa phương miền Trung, đồ án đề xuất một số định hướng nghiên cứu tiếp theo:
+P0392	Normal	1. Về dữ liệu địa hình: Tiếp tục triển khai tính toán chi tiết kịch bản V45 với bản đồ địa hình `PhuYen_DEM_30m_V45.asc`; đồng thời khuyến nghị kết hợp dữ liệu quét độ cao LiDAR hoặc UAV để xây dựng mô hình địa hình số DTM độ phân giải cao (< 5m), tích hợp thông tin hệ thống cống ngầm và công trình thoát nước đô thị TP. Tuy Hòa.
+P0393	Normal	2. Về dữ liệu thủy văn biên: Tăng cường lắp đặt các trạm đo lưu lượng và mực nước tự động tại hạ lưu đập Đồng Cam, sông Bàn Thạch và sông Kỳ Lộ để thay thế dữ liệu nội suy, giúp nâng cao độ chính xác của đường quá trình lưu lượng biên đầu vào.
+P0394	Normal	3. Về ứng dụng Trí tuệ nhân tạo (GeoAI): Nghiên cứu mở rộng các cấu trúc mạng học sâu thay thế (như ConvLSTM, U-Net) từ nguồn dữ liệu lớn sinh ra bởi mô hình 2D BG_Flood, hướng tới công cụ dự báo ngập lụt hỗ trợ phản ứng nhanh khi tiếp nhận thông tin mưa dự báo.
+P0395	Normal	4. Về ứng dụng thực tiễn: Hướng tới tích hợp mô hình vào Hệ thống Hỗ trợ Ra quyết định (Decision Support System - DSS) cảnh báo thiên tai của tỉnh Phú Yên, phục vụ công tác điều hành xả lũ an toàn của các hồ chứa thủy điện và hỗ trợ Ban Chỉ huy PCTT lập phương án ứng phó, sơ tán dân cư.
+P0397	Normal	TÀI LIỆU THAM KHẢO
+P0398	Normal	[1] World Meteorological Organization (WMO) (2021). WMO Atlas of Mortality and Economic Losses from Weather, Climate and Water Extremes (1970–2019). WMO-No. 1267, Geneva, Switzerland. [Online]. Khả dụng: https://library.wmo.int/records/item/57608-wmo-atlas-of-mortality-and-economic-losses-from-weather-climate-and-water-extremes-1970-2019
+P0399	Normal	[2] Ban Chỉ đạo Quốc gia về Phòng chống thiên tai (2021). Báo cáo tổng kết công tác phòng, chống thiên tai năm 2021 và nhiệm vụ trọng tâm công tác năm 2022. Bộ Nông nghiệp và Phát triển Nông thôn, Hà Nội. [Online]. Khả dụng: http://phongchongthientai.mard.gov.vn/
+P0400	Normal	[3] Bosserelle, C., Sharma, S., & Popinet, S. (2020). BG_Flood: A GPU-accelerated 2D shallow water equation model for flood and inundation simulation. SoftwareX, 12, 100585. DOI: https://doi.org/10.1016/j.softx.2020.100585
+P0401	Normal	[4] Bates, P. D., Horritt, M. S., & Fewtrell, T. J. (2010). A simple inertial formulation of the shallow water equations for efficient two-dimensional flood inundation modelling. Journal of Hydrology, 387(1-2), 33-45. DOI: https://doi.org/10.1016/j.jhydrol.2010.03.027
+P0402	Normal	[5] Otsu, N. (1979). A threshold selection method from gray-level histograms. IEEE Transactions on Systems, Man, and Cybernetics, 9(1), 62-66. DOI: https://doi.org/10.1109/TSMC.1979.4310076
+P0403	Normal	[6] Nobre, A. D., Cuartas, L. A., Hodnett, M., Rennó, C. D., Rodrigues, G., Silveira, A., Waterloo, M., & Saleska, S. (2011). Height Above the Nearest Drainage – a hydrologically normalized Digital Elevation Model, comparison to shallow water table modeling. Remote Sensing of Environment, 115(2), 518-527. DOI: https://doi.org/10.1016/j.rse.2011.06.012
+P0404	Normal	[7] Yamazaki, D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O'Loughlin, F., Neal, J. C., Sampson, C. C., Kanae, S., & Bates, P. D. (2017). A high-accuracy map of global terrain elevations (MERIT DEM). Geophysical Research Letters, 44(11), 5844-5853. DOI: https://doi.org/10.1002/2017GL072874
+P0405	Normal	[8] Hawker, L., Uhe, P., Paulo, L., Sosa, J., Savage, J., Sampson, C., & Neal, J. (2022). A 30 m global map of elevation with forests and buildings removed (FABDEM). Environmental Research Letters, 17(2), 024016. DOI: https://doi.org/10.1088/1748-9326/ac4d27
+P0406	Normal	[9] Torres, R., Snoeij, P., Geudtner, D., Bibby, D., Davidson, M., Attema, E., Potin, P., Rommen, B., Floury, N., Brown, M., Traver, I. N., Deghaye, P., Duesmann, B., Rosich, B., Miranda, N., Bruno, C., L'Abbate, M., Croci, R., Pietropaolo, A., ... & Rostan, F. (2012). GMES Sentinel-1 mission. Remote Sensing of Environment, 120, 9-24. DOI: https://doi.org/10.1016/j.rse.2011.05.028
+P0407	Normal	[10] Schumann, G. J., & Moller, D. K. (2015). Microwave remote sensing of flood inundation. Physics and Chemistry of the Earth, Parts A/B/C, 83-84, 84-95. DOI: https://doi.org/10.1016/j.pce.2015.02.005
+P0408	Normal	[11] Hersbach, H., Bell, B., Berrisford, P., Hirahara, S., Horányi, A., Muñoz-Sabater, J., Nicolas, J., Peubey, C., Radu, R., Schepers, D., Simmons, A., Soci, C., Abdalla, S., Abellan, X., Balsamo, G., Bechtold, P., Biavati, G., Bidlot, J., Bonavita, M., ... & Thépaut, J. N. (2020). The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society, 146(730), 1999-2049. DOI: https://doi.org/10.1002/qj.3803
+P0409	Normal	[12] Toro, E. F. (2001). Shock-Capturing Methods for Free-Surface Shallow Flows. John Wiley & Sons, New York. ISBN: 978-0-471-98766-6. DOI: https://doi.org/10.1002/0470845347
+P0410	Normal	[13] Harten, A., Lax, P. D., & van Leer, B. (1983). On upstream differencing and Godunov-type schemes for hyperbolic conservation laws. SIAM Review, 25(1), 35-61. DOI: https://doi.org/10.1137/1025002
+P0411	Normal	[14] Barnes, R., Lehman, C., & Mulla, D. (2014). Priority-flood: An optimal depression-filling and watershed-labeling algorithm for digital elevation models. Computers & Geosciences, 62, 117-127. DOI: https://doi.org/10.1016/j.cageo.2013.04.018
+P0412	Normal	[15] Callow, J. N., Van Niel, K. P., & Boggs, G. S. (2007). How does modifying a DEM to reflect known drainage affect calculated water flow paths?. Earth Surface Processes and Landforms, 32(5), 629-644. DOI: https://doi.org/10.1002/esp.1446
+P0413	Normal	[16] Saksena, S., & Merwade, V. (2015). Incorporating the effect of DEM resolution and accuracy for improved flood inundation mapping. Journal of Hydrology, 530, 180-194. DOI: https://doi.org/10.1016/j.jhydrol.2015.09.067
+P0414	Normal	[17] Trịnh Thu Phương, Nguyễn Ý Như, Bùi Chí Nam, & Trần Ngọc Anh (2020). Mô phỏng ngập lụt vùng hạ du lưu vực sông Ba dưới tác động của biến đổi khí hậu và vận hành hồ chứa. Tạp chí Khí tượng Thủy văn, 718, 45-56. [Online]. Khả dụng: http://tapchikttv.vn/article/629
+P0415	Normal	[18] Nguyễn Văn Tuấn (2019). Ứng dụng viễn thám radar trong giám sát ngập lụt tại khu vực miền Trung Việt Nam. Tạp chí Các Khoa học về Trái Đất, 41(3), 210-221. DOI: https://doi.org/10.15625/0866-7187/41/3/13845
+P0416	Normal	[19] Lê Văn Hưng, & Hà Minh Cường (2021). Đánh giá nguy cơ ngập lụt đô thị bằng mô hình thủy lực 2D kết hợp GIS. Tạp chí Khoa học ĐHQGHN: Các Khoa học Trái đất và Môi trường, 37(2), 15-28. DOI: https://doi.org/10.25073/2588-1094/vnuees.4628
+P0417	Normal	[20] Ủy ban Nhân dân Tỉnh Phú Yên (2021). Báo cáo tình hình thiệt hại và công tác khắc phục hậu quả thiên tai, mưa lũ lịch sử tháng 11 năm 2021 trên địa bàn tỉnh Phú Yên. UBND Tỉnh, Tuy Hòa. [Online]. Khả dụng: https://phuyen.gov.vn/
+P0418	Normal	[21] Zanaga, D., Van De Kerchove, R., De Keersmaecker, W., Souverijns, N., Brockmann, C., Quast, R., Wevers, J., Grosu, A., Paccini, A., Vergnaud, S., Cartus, O., Santoro, M., Fritz, S., Georgieva, I., Lesiv, M., Carter, S., Herold, M., Li, L., Tsendbazar, N. E., ... & Arino, O. (2021). ESA WorldCover 10 m 2020 v100. Zenodo. DOI: https://doi.org/10.5281/zenodo.5571936
+P0419	Normal	[22] Pekel, J. F., Cottam, A., Gorelick, N., & Belward, A. S. (2016). High-resolution mapping of global surface water and its long-term changes. Nature, 540(7633), 418-422. DOI: https://doi.org/10.1038/nature20584
+P0420	Normal	[23] Lee, J. S. (1980). Digital image enhancement and noise filtering by use of local statistics. IEEE Transactions on Pattern Analysis and Machine Intelligence, PAMI-2(2), 165-168. DOI: https://doi.org/10.1109/TPAMI.1980.4766994
+P0421	Normal	[24] Vacondio, R., Dal Palù, A., & Mignosa, P. (2014). GPU-accelerated shallow water flow simulation on unstructured grids. Environmental Modelling & Software, 58, 140-154. DOI: https://doi.org/10.1016/j.envsoft.2014.04.003
+P0422	Normal	[25] Neal, J., Schumann, G., & Bates, P. (2012). A subgrid channel model for simulating river hydraulics and floodplain inundation over large and data sparse areas. Water Resources Research, 48(11), W11506. DOI: https://doi.org/10.1029/2012WR012514
+P0423	Normal	[26] Sanders, B. F. (2007). Evaluation of on-line DEM products for flood inundation modeling. Advances in Water Resources, 30(8), 1831-1847. DOI: https://doi.org/10.1016/j.advwatres.2006.07.007
+P0424	Normal	[27] Pulvirenti, L., Pierdicca, N., Chini, M., & Guerriero, L. (2011). An algorithm for operational flood mapping from Synthetic Aperture Radar (SAR) data using fuzzy logic. IEEE Transactions on Geoscience and Remote Sensing, 49(12), 5229-5240. DOI: https://doi.org/10.1109/TGRS.2011.2114667
+P0425	Normal	[28] Martinis, S., Kuenzer, C., Wendleder, A., Huth, J., Twele, A., Roth, A., & Dech, S. (2015). Comparing four operational SAR-based water and flood detection approaches. International Journal of Remote Sensing, 36(13), 3519-3543. DOI: https://doi.org/10.1080/01431161.2015.1060647
+P0426	Normal	[29] Brivio, P. A., Colombo, R., Fasolini, F., & Smith, W. (2002). Integration of remote sensing data and GIS for accurate mapping of flooded areas. International Journal of Remote Sensing, 23(3), 429-441. DOI: https://doi.org/10.1080/01431160010014729
+P0427	Normal	[30] Huizinga, J., de Moel, H., & Szewczyk, W. (2017). Global flood depth-damage functions: Methodology and the database with guidelines. JRC Technical Reports, Publications Office of the European Union, Luxembourg. DOI: https://doi.org/10.2760/16510
+P0428	Normal	[31] LeVeque, R. J. (2002). Finite Volume Methods for Hyperbolic Problems. Cambridge University Press, Cambridge. DOI: https://doi.org/10.1017/CBO9780511791253
+P0429	Normal	[32] Cunge, J. A., Holly, F. M., & Verwey, A. (1980). Practical Aspects of Computational River Hydraulics. Pitman Publishing, London. ISBN: 0-273-08442-9. DOI: https://doi.org/10.1016/B978-0-273-08442-6.50005-0
+P0430	Normal	[33] Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 785-794). ACM. DOI: https://doi.org/10.1145/2939672.2939785
+P0431	Normal	[34] Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural Computation, 9(8), 1735-1780. DOI: https://doi.org/10.1162/neco.1997.9.8.1735
+P0432	Normal	[35] Copernicus Open Access Hub (2021). European Space Agency (ESA) Sentinel-1 Scientific Data Hub. [Online]. Khả dụng: https://dataspace.copernicus.eu/
+
+TABLE 0 rows=29 cols=3
+T0R0	STT | Viết tắt | Thuật ngữ Tiếng Anh / Tiếng Việt
+T0R1	1 | 2D SWE | 2D Shallow Water Equations (Phương trình nước nông hai chiều)
+T0R2	2 | BG_Flood | Block-Adaptive GPU-accelerated Flood Model (Mô hình ngập lụt GPU)
+T0R3	3 | SAR | Synthetic Aperture Radar (Radar khẩu độ tổng hợp)
+T0R4	4 | GIS | Geographic Information System (Hệ thống thông tin địa lý)
+T0R5	5 | DEM | Digital Elevation Model (Mô hình số độ cao)
+T0R6	6 | DTM | Digital Terrain Model (Mô hình địa hình số trần - Bare Earth)
+T0R7	7 | DSM | Digital Surface Model (Mô hình bề mặt số - có nhà và cây)
+T0R8	8 | CSI | Critical Success Index (Chỉ số thành công tới hạn)
+T0R9	9 | POD / Recall | Probability of Detection (Xác suất phát hiện / Độ phủ đúng)
+T0R10	10 | FAR | False Alarm Ratio (Tỷ lệ báo động sai / Dương tính giả)
+T0R11	11 | Precision | Độ chính xác mô phỏng (TP / (TP + FP))
+T0R12	12 | HAND | Height Above Nearest Drainage (Độ cao so với mạng thoát nước gần nhất)
+T0R13	13 | FVM | Finite Volume Method (Phương pháp thể tích hữu hạn)
+T0R14	14 | CFL | Courant–Friedrichs–Lewy condition (Điều kiện ổn định bước thời gian CFL)
+T0R15	15 | HLL / HLLC | Harten-Lax-van Leer Contact (Bộ giải sóng Riemann số học)
+T0R16	16 | GPU | Graphics Processing Unit (Bộ vi xử lý đồ họa chuyên dụng)
+T0R17	17 | CUDA | Compute Unified Device Architecture (Nền tảng tính toán song song NVIDIA)
+T0R18	18 | ERA5 | ECMWF Reanalysis v5 (Dữ liệu tái phân tích khí quyển toàn cầu)
+T0R19	19 | GEE | Google Earth Engine (Nền tảng điện toán đám mây xử lý ảnh vệ tinh)
+T0R20	20 | IW GRD | Interferometric Wide Swath Ground Range Detected (Chế độ ảnh radar mặt đất)
+T0R21	21 | GSW | Global Surface Water (Cơ sở dữ liệu mặt nước toàn cầu JRC)
+T0R22	22 | WMO | World Meteorological Organization (Tổ chức Khí tượng Thế giới)
+T0R23	23 | BĐKH | Biến đổi khí hậu toàn cầu
+T0R24	24 | PCTT | Phòng chống thiên tai và Tìm kiếm cứu nạn
+T0R25	25 | KTTV | Khí tượng Thủy văn
+T0R26	26 | TP / FP | True Positive (Dương tính thật) / False Positive (Dương tính giả)
+T0R27	27 | FN / TN | False Negative (Âm tính giả) / True Negative (Âm tính thật)
+T0R28	28 | MCC | Matthews Correlation Coefficient (Hệ số tương quan Matthews)
+
+TABLE 1 rows=3 cols=3
+T1R0	Phân loại trạng thái | Vệ tinh SAR: Ngập (1) | Vệ tinh SAR: Cạn (0)
+T1R1	Mô phỏng: Ngập (h >= 0.3m) | True Positive (TP) Dương tính thật (Khớp đúng) | False Positive (FP) Dương tính giả (Báo động sai)
+T1R2	Mô phỏng: Cạn (h < 0.3m) | False Negative (FN) Âm tính giả (Bỏ sót ngập) | True Negative (TN) Âm tính thật (Khô ráo)
+
+TABLE 2 rows=8 cols=3
+T2R0	Thông số cấu hình | Giá trị thiết lập | Ý nghĩa / Cơ sở kỹ thuật
+T2R1	Miền tính toán (Domain) | 2.099 x 2.099 ô lưới | Độ phân giải 30m x 30m, bao trùm hạ lưu sông Ba (4.405.801 ô)
+T2R2	Tọa độ gốc (UTM Zone 49N) | xll = 270.000m, yll = 1.415.000m | Hệ quy chiếu chuẩn WGS84 UTM Zone 49N
+T2R3	Mô hình toán học | 2D Shallow Water Equations (SWE) | Phương trình Saint-Venant 2D đầy đủ bảo toàn khối lượng và động lượng
+T2R4	Phương pháp giải số | Finite Volume Method (Godunov FVM) | Lược đồ giải tích mặt tiếp xúc với bộ giải Riemann HLLC [12]
+T2R5	Điều kiện ổn định CFL | Courant number <= 0.70 | Bước thời gian thích ứng dt biến thiên tự động theo tiêu chuẩn CFL
+T2R6	Ngưỡng ranh giới ướt/khô | h_dry = 0.001 m | Phân định mặt thoáng ngập và mặt đất cạn, triệt tiêu vận tốc giả
+T2R7	Thời gian mô phỏng | 120 giờ (432.000 giây) | Mô phỏng toàn bộ tiến trình lũ từ 00h 26/11 đến 24h 01/12/2021
+
+TABLE 3 rows=6 cols=3
+T3R0	Mã lớp phủ (Land Cover Class) | Mô tả loại hình bề mặt | Hệ số Manning n (s/m^(1/3))
+T3R1	10 - Tree cover | Rừng tự nhiên, rừng trồng phòng hộ | 0.120 - 0.160
+T3R2	20 - Shrubland / Grassland | Cây bụi, đồng cỏ tự nhiên | 0.060 - 0.080
+T3R3	30 - Cropland | Đất nông nghiệp, cánh đồng lúa nước | 0.040 - 0.050
+T3R4	50 - Built-up | Khu dân cư, đô thị TP. Tuy Hòa | 0.080 - 0.120
+T3R5	80 - Water bodies | Lòng dẫn sông Ba, kênh mương chính | 0.028 - 0.035
+
+TABLE 4 rows=8 cols=6
+T4R0	Kịch bản | Độ phân giải | Thời gian (t) | Bước tính dt | Chỉ số CSI (%) | Đặc điểm & Bài học kỹ thuật
+T4R1	V1 - V6 | 90m (Đắk Lắk - Phú Yên) | 120h | 0.25 - 0.35s | 1.2 - 2.5 % | Giai đoạn sơ khởi. Miền tính rộng, tốc độ thực thi hạn chế.
+T4R2	V21 - V22 | 90m | 120h | 0.28s | 2.81 % | Bước thời gian dt bị nghẽn do xung đột cấu hình ma sát đáy.
+T4R3	V23 | 90m | 120h | 3.8 - 4.1s | 3.29 % | Hiệu chỉnh xung đột khai báo roughness và roughnessmap. Tốc độ tính toán tăng ~13 lần.
+T4R4	V35 - V39 | 30m (Hạ lưu Phú Yên) | Dừng ở 44h | 0.05 - 0.8s | N/A | Thu hẹp về lưới 30m. Xuất hiện lỗi phân kỳ số học (NaN) tại t ≈ 160.000s do hố sụt địa hình.
+T4R5	V40 - V41 | 30m | 120h | 0.75 - 1.2s | 17.34 % | Ứng dụng thuật toán Priority-Flood Sink Filling. Loại bỏ lỗi mất ổn định số học.
+T4R6	V42 - V43 | 30m | 120h | 0.75 - 1.1s | 13.50 % | Tích hợp nguồn xả Sông Hinh 3.200 m³/s. Dòng chảy hạ lưu sông Ba vẫn bị giới hạn trong lòng dẫn.
+T4R7	V44 | 30m | 120h | 0.72 - 0.76s | 20.64 % | Áp dụng Levee Breaching điều chỉnh cao độ đê kè cục bộ tại các vị trí cống tiêu. Nước tràn vào đồng bằng Tuy Hòa, CSI đạt 20.64%.
+
+TABLE 5 rows=41 cols=5
+T5R0	Frame | Thời gian (t) | CSI (%) | Recall (%) | Precision (%)
+T5R1	0 | 3h | 2.85 | 2.91 | 59.38
+T5R2	1 | 6h | 4.32 | 4.45 | 58.97
+T5R3	2 | 9h | 6.15 | 6.39 | 61.29
+T5R4	3 | 12h | 7.89 | 8.28 | 62.58
+T5R5	4 | 15h | 8.83 | 9.46 | 56.94
+T5R6	5 | 18h | 9.96 | 10.98 | 51.81
+T5R7	6 | 21h | 11.82 | 13.24 | 52.47
+T5R8	7 | 24h | 13.74 | 15.59 | 53.74
+T5R9	8 | 27h | 16.23 | 18.65 | 55.62
+T5R10	9 | 30h | 17.27 | 20.33 | 53.46
+T5R11	10 | 33h | 17.34 | 20.60 | 52.25
+T5R12	11 | 36h | 17.57 | 20.90 | 52.41
+T5R13	12 | 39h | 17.74 | 21.10 | 52.69
+T5R14	13 | 42h | 17.93 | 21.32 | 52.99
+T5R15	14 | 45h | 18.11 | 21.53 | 53.27
+T5R16	15 | 48h | 18.28 | 21.73 | 53.51
+T5R17	16 | 51h | 18.42 | 21.90 | 53.69
+T5R18	17 | 54h | 18.56 | 22.07 | 53.84
+T5R19	18 | 57h | 18.71 | 22.26 | 54.01
+T5R20	19 | 60h | 18.88 | 22.47 | 54.17
+T5R21	20 | 63h | 19.03 | 22.66 | 54.33
+T5R22	21 | 66h | 19.16 | 22.81 | 54.45
+T5R23	22 | 69h | 19.28 | 22.97 | 54.56
+T5R24	23 | 72h | 19.39 | 23.11 | 54.65
+T5R25	24 | 75h | 19.49 | 23.23 | 54.72
+T5R26	25 | 78h | 19.57 | 23.34 | 54.77
+T5R27	26 | 81h | 19.64 | 23.43 | 54.80
+T5R28	27 | 84h | 19.70 | 23.52 | 54.81
+T5R29	28 | 87h | 19.81 | 23.67 | 54.84
+T5R30	29 | 90h | 19.89 | 23.78 | 54.85
+T5R31	30 | 93h | 19.97 | 23.90 | 54.84
+T5R32	31 | 96h | 20.08 | 24.05 | 54.86
+T5R33	32 | 99h | 20.35 | 24.51 | 54.58
+T5R34	33 (Đỉnh lũ SAR) | 102h | 20.64 | 24.97 | 54.32
+T5R35	34 | 105h | 20.78 | 25.18 | 54.26
+T5R36	35 | 108h | 20.91 | 25.39 | 54.20
+T5R37	36 | 111h | 21.02 | 25.56 | 54.15
+T5R38	37 | 114h | 21.08 | 25.68 | 54.12
+T5R39	38 | 117h | 21.12 | 25.75 | 54.11
+T5R40	39 | 120h | 21.15 | 25.80 | 54.10
+
+TABLE 6 rows=12 cols=3
+T6R0	Chỉ số thống kê | Số ô lưới (Cells) / Giá trị | Diện tích thực địa (km²) / Đơn vị
+T6R1	True Positives (TP) [Xanh lá] | 72,168 cells | 64.95 km²
+T6R2	False Positives (FP) [Đỏ] | 60,698 cells | 54.63 km²
+T6R3	False Negatives (FN) [Xanh dương] | 216,808 cells | 195.13 km²
+T6R4	True Negatives (TN) [Xám] | 3,130,770 cells | 2,817.69 km²
+T6R5	Tổng diện tích ngập mô phỏng | 132,866 cells | 119.58 km²
+T6R6	Tổng diện tích ngập vệ tinh SAR | 288,976 cells | 260.08 km²
+T6R7	Critical Success Index (CSI) | 20.64 % | Giá trị cao nhất trong các kịch bản thử nghiệm
+T6R8	Recall (Độ phủ đúng - POD) | 24.97 % | Tăng đáng kể so với kịch bản V23 ban đầu
+T6R9	Precision (Độ chính xác) | 54.32 % | Độ chuẩn xác không gian trên 54%
+T6R10	False Alarm Ratio (FAR) | 45.68 % | FAR = 100% - Precision
+T6R11	F1-Score / Cohen's Kappa / MCC | 34.22% / 0.3059 / 0.3322 | Tương quan thuận mức khá
+
+TABLE 7 rows=4 cols=4
+T7R0	Đới thủy văn HAND | Số ô lưới (Cells) | Diện tích ngập (km²) | Tỷ lệ phần trăm (%)
+T7R1	Bãi bồi tự nhiên (HAND <= 3.5m) | 120,153 | 108.14 km² | 90.43 %
+T7R2	Đới chuyển tiếp (3.5m < HAND <= 10.0m) | 11,384 | 10.25 km² | 8.57 %
+T7R3	Đới đồi núi dốc cao (HAND > 10.0m) | 1,329 | 1.20 km² | 1.00 %
+
+TABLE 8 rows=5 cols=5
+T8R0	Phương pháp / Mô hình | Độ trễ tính toán (Latency) | Hệ số xác định (R²) | Sai số tuyệt đối (MAE) | Bảo toàn khối lượng & Động lượng
+T8R1	Mô hình 2D SWE (BG_Flood GPU) | ~14 giờ (120h lũ) | Chuẩn cơ sở (Baseline) | 0.00 m | Bảo toàn nghiêm ngặt (FVM HLLC)
+T8R2	Surrogate XGBoost | 2.8 giây | 0.89 | 0.14 m | Không có ràng buộc vật lý
+T8R3	Surrogate ANN (MLP) | 4.1 giây | 0.81 | 0.22 m | Không có ràng buộc vật lý
+T8R4	Surrogate LSTM | 7.6 giây | 0.85 | 0.18 m | Không có ràng buộc vật lý

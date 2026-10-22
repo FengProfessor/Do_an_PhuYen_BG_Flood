@@ -1,0 +1,7 @@
+{
+  "converter": "Microsoft Word 16 native COM export",
+  "managed_renderer": "C:\\Users\\CuongHM\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.909.12148\\skills\\documents\\render_docx.py",
+  "returncode": 0,
+  "stdout": "{\"Pages\":50,\"TOCs\":1,\"FigureLists\":2,\"Equations\":22,\"Output\":\"D:\\\\VTP\\\\Do_an_tot_nghiep_PhuYen_BG_Flood_SAR_chinh_sua_20261005.docx\",\"PDF\":\"C:\\\\Users\\\\CuongHM\\\\AppData\\\\Local\\\\Temp\\\\soffice_convert_9zqe7a57\\\\Do_an_tot_nghiep_PhuYen_BG_Flood_SAR_chinh_sua_20261005.pdf\"}\n",
+  "stderr": ""
+}

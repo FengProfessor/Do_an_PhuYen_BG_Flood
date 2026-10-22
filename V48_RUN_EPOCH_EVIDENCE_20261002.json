@@ -1,0 +1,18 @@
+{
+  "status": "PASS_V48_RUN_EPOCH_FROZEN",
+  "date": "2026-10-02",
+  "formal_bg_flood_run_started": false,
+  "candidate_model_t0_local": "2021-11-26T00:00:00+07:00",
+  "candidate_model_t0_timezone": "Asia/Ho_Chi_Minh",
+  "candidate_model_t0_utc": "2021-11-25T17:00:00Z",
+  "timezone_verified": true,
+  "provenance_manifest": {
+    "path": "D:\\VTP\\V48_RUN_EPOCH_PROVENANCE_20261002.json",
+    "sha256": "9c1ab1246cd7c1fd28d7b7a0f297dc570c1f057f75737bff4cfaba7849cd4d57"
+  },
+  "frozen_run_manifest": {
+    "path": "D:\\VTP\\V48_BG_Flood_RUN_MANIFEST_20261002.json",
+    "sha256": "f5c546177da9d2cc66d8c11c94f62c934328625b1b87fdad8068a454e9c422e9"
+  },
+  "finding": "The exact rain_v23 generator requested Asia/Ho_Chi_Minh; the later monotonicity fix removed only a backward duplicate terminal row; rain_v34 preserves the time vector. Therefore model t=0 is frozen as 2021-11-26 00:00 ICT = 2021-11-25 17:00 UTC."
+}

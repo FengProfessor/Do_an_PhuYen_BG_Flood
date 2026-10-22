@@ -1,0 +1,82 @@
+# Environments & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.agents/
+.idea/
+.vscode/
+
+# Temporary & Lock files
+~$*
+*.tmp
+*.log
+temp/
+*AutoRecovered*
+
+# Local utility / UI automation scripts
+auto_accept*
+auto_approve*
+capture_and_approve*
+accept_button*
+move_gemini.bat
+move_ollama.bat
+powershell.cmd
+run_auto_accept.bat
+0.01
+DxDiag.txt
+
+# Large Datasets & Archives
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+*.nc
+*.tif
+*.tiff
+*.asc
+*.dem
+
+# Heavy Simulation Folders & Raw GIS
+05-Du-lieu-GIS/
+BG_Flood/
+BG_Flood_Project/
+River_Bathymetry_Project/
+V45_runs/
+V48_runs/
+V49_C1_sources_20261012/
+V46_inputs/
+V46_dryrun_sensitivity/
+V46_dryrun_20260930/
+V46_flow_evidence_20260930/
+V46_hydro_evidence_20260930/
+V46_legacy_current_osm_dryrun_20260930/
+V46_legacy_current_osm_sensitivity/
+V46_legacy_current_osm_stable_core_20260930/
+V46_seed55_historical_validated_20260930/
+V46_stable_core_20260930/
+V46_topology_20260930/
+V47_candidate_sensitivity_20261001/
+V47_topology_historical407_20261001/
+V48_closed_loop_convergence_20261002/
+V48_closed_loop_direct_20261002/
+V48_closed_loop_topology_20261002/
+V48_research_20261002/
+_v46_deps/
+_audit_read_20260930_1020/
+_qa_*/
+_render_*/
+Bao_cao_tien_do_20261009/
+codex-chatgpt-web/
+Do_an_research_20261005/
+
+# Executables & Binaries
+*.exe
+*.dll
+*.obj
+*.o
+*.bin
+
+# Large Reference PDFs > 10MB
+V45_ThienTaiVietNam2021.pdf

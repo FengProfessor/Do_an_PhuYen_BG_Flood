@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "source": "Copernicus DEM GLO-30 public AWS objects used by local download_dem30m_fixed.py",
+  "tiles": [
+    {
+      "file": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\N12_00_E108_00_DEM.tif",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N12_00_E108_00_DEM/Copernicus_DSM_COG_10_N12_00_E108_00_DEM.tif",
+      "size": 44464694,
+      "sha256": "810f6f6e535633b3486f31337cb07e8a92e6b8f07a87d8f68ad64e04f152b9f4",
+      "md5": "c1add98ab2fcdd9ba47b8d73812d947e",
+      "remote_status": 200,
+      "remote_size": 44464694,
+      "remote_etag": "c1add98ab2fcdd9ba47b8d73812d947e",
+      "remote_last_modified": "Mon, 09 May 2022 14:04:34 GMT",
+      "crs": "EPSG:4326",
+      "shape": [
+        3600,
+        3600
+      ],
+      "transform": [
+        0.0002777777777777778,
+        0.0,
+        107.99986111111112,
+        0.0,
+        -0.0002777777777777778,
+        13.00013888888889,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "file": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\N12_00_E109_00_DEM.tif",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N12_00_E109_00_DEM/Copernicus_DSM_COG_10_N12_00_E109_00_DEM.tif",
+      "size": 14581660,
+      "sha256": "c403edf672bd212c70f47e2cdc2f0505ae5e7df9d4f17b21fea3c5f9d1d02db4",
+      "md5": "82dbef5ba56a24fb7cef548037a8ff02",
+      "remote_status": 200,
+      "remote_size": 14581660,
+      "remote_etag": "82dbef5ba56a24fb7cef548037a8ff02",
+      "remote_last_modified": "Mon, 09 May 2022 14:04:34 GMT",
+      "crs": "EPSG:4326",
+      "shape": [
+        3600,
+        3600
+      ],
+      "transform": [
+        0.0002777777777777778,
+        0.0,
+        108.99986111111112,
+        0.0,
+        -0.0002777777777777778,
+        13.00013888888889,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "file": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\N13_00_E108_00_DEM.tif",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N13_00_E108_00_DEM/Copernicus_DSM_COG_10_N13_00_E108_00_DEM.tif",
+      "size": 45484832,
+      "sha256": "a6772373d92007b26b8b1b1d24f26b567c40a49f15e2c4c5d8cc02ba286617e2",
+      "md5": "bbeb4980e00dae72d4ad38bcdccf16e6",
+      "remote_status": 200,
+      "remote_size": 45484832,
+      "remote_etag": "bbeb4980e00dae72d4ad38bcdccf16e6",
+      "remote_last_modified": "Mon, 09 May 2022 14:04:58 GMT",
+      "crs": "EPSG:4326",
+      "shape": [
+        3600,
+        3600
+      ],
+      "transform": [
+        0.0002777777777777778,
+        0.0,
+        107.99986111111112,
+        0.0,
+        -0.0002777777777777778,
+        14.00013888888889,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "file": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\N13_00_E109_00_DEM.tif",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N13_00_E109_00_DEM/Copernicus_DSM_COG_10_N13_00_E109_00_DEM.tif",
+      "size": 14249460,
+      "sha256": "61c16c17c83b5315ed393b7a8d664d106a3e0f9e0f381021ada5613f57216eb4",
+      "md5": "868d6d4e51ec0094998eb2e7a6db1032",
+      "remote_status": 200,
+      "remote_size": 14249460,
+      "remote_etag": "868d6d4e51ec0094998eb2e7a6db1032",
+      "remote_last_modified": "Mon, 09 May 2022 14:04:58 GMT",
+      "crs": "EPSG:4326",
+      "shape": [
+        3600,
+        3600
+      ],
+      "transform": [
+        0.0002777777777777778,
+        0.0,
+        108.99986111111112,
+        0.0,
+        -0.0002777777777777778,
+        14.00013888888889,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "local_reprojection": {
+    "dst_crs": "EPSG:32649",
+    "bounds": [
+      270000,
+      1415000,
+      333000,
+      1478000
+    ],
+    "shape": [
+      2100,
+      2100
+    ],
+    "resampling": "bilinear"
+  },
+  "output": {
+    "file": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m.tif",
+    "sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508",
+    "valid_compared": 4410000,
+    "exact_equal_cells": 4410000,
+    "max_abs_diff_m": 0.0
+  }
+}

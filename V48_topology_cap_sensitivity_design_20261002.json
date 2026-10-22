@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_BEFORE_V48_TOPOLOGY_CAP_SENSITIVITY",
+  "date": "2026-10-02",
+  "purpose": "Test topology decision stability around the V48 raw-Copernicus baseline without Sentinel-1 tuning.",
+  "base_dem": "D:/VTP/05-Du-lieu-GIS/PhuYen_DEM_30m.tif",
+  "core": "D:/VTP/V48_research_20261002/topology_raw815/V48_baseline815_core.tif",
+  "core_manifest": "D:/VTP/V48_research_20261002/topology_raw815/V48_baseline815_core_manifest.json",
+  "strict_csv": "D:/VTP/V48_research_20261002/candidate_baseline_strict_1_2/V46_obstruction_candidates.csv",
+  "osm_dir": "D:/VTP/V46_inputs/osm_historical_20211125",
+  "hydro_dir": "D:/VTP/V48_research_20261002/hydro_evidence_raw",
+  "sentinel1_2021_used": false,
+  "runs": [
+    {"run_id":"baseline","max_cut_m":3.0,"max_modified_cells":8,"max_path_span_cells":20},
+    {"run_id":"cut_2m","max_cut_m":2.0,"max_modified_cells":8,"max_path_span_cells":20},
+    {"run_id":"cut_4m","max_cut_m":4.0,"max_modified_cells":8,"max_path_span_cells":20},
+    {"run_id":"cells_4","max_cut_m":3.0,"max_modified_cells":4,"max_path_span_cells":20},
+    {"run_id":"cells_12","max_cut_m":3.0,"max_modified_cells":12,"max_path_span_cells":20},
+    {"run_id":"span_10","max_cut_m":3.0,"max_modified_cells":8,"max_path_span_cells":10},
+    {"run_id":"span_30","max_cut_m":3.0,"max_modified_cells":8,"max_path_span_cells":30}
+  ]
+}

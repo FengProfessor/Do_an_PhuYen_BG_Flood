@@ -1,0 +1,239 @@
+{
+  "status": "READY_PRE_FORMAL_EVALUATION_PENDING_VALIDATOR",
+  "date": "2026-10-02",
+  "sentinel_evaluation_run": false,
+  "bg_flood_run_started_by_this_preregistration": false,
+  "interpretation": "Held out from the V48 conditioning pipeline / retrospective confirmatory comparison. This preregistration does not claim fully independent external validation because the 2021 SAR event was viewed in earlier V39-V45 work.",
+  "candidate_observation_product": {
+    "preferred_candidate": {
+      "product_id": "S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0_rtc",
+      "source_grd_product_id": "S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0",
+      "provider": "Microsoft Planetary Computer Sentinel-1 RTC",
+      "platform": "SENTINEL-1A",
+      "mode": "IW",
+      "product_type": "Sentinel-1 RTC derived from GRD",
+      "polarization": [
+        "VV"
+      ],
+      "orbit_direction": "DESCENDING",
+      "relative_path": 120,
+      "acquisition_start_utc": "2021-11-29T22:36:38.799806Z",
+      "acquisition_stop_utc": "2021-11-29T22:37:03.797720Z",
+      "acquisition_midpoint_utc": "2021-11-29T22:36:51.298763Z",
+      "acquisition_start_ict": "2021-11-30T05:36:38.799806+07:00",
+      "acquisition_stop_ict": "2021-11-30T05:37:03.797720+07:00",
+      "acquisition_midpoint_ict": "2021-11-30T05:36:51.298763+07:00",
+      "source_asset_href": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2021/11/29/IW/DV/S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0_7891/measurement/iw-vv.rtc.tiff",
+      "source_asset_http": {
+        "etag": "\"0x8D9DD56FCF91069\"",
+        "content_length": 1849931261,
+        "last_modified": "Sat, 22 Jan 2022 03:26:33 GMT"
+      },
+      "catalog_provenance": "Microsoft Planetary Computer sentinel-1-rtc STAC item pinned in V48_SAR_OBSERVATION_RELEASE_20261002.json",
+      "processing_manifest_path": "D:\\VTP\\V48_SAR_OBSERVATION_RELEASE_20261002.json",
+      "processing_manifest_sha256": "d433cf1e5e50f0bbef7398e66251b72056a89b565b396c57d0abde7a2e573739",
+      "product_to_local_observation_lineage_verified": true
+    },
+    "adjacent_candidate": {
+      "product_id": "S1A_IW_GRDH_1SDV_20211129T223703_20211129T223728_040792_04D7A0_E47F",
+      "acquisition_start_utc": "2021-11-29T22:37:03Z",
+      "acquisition_stop_utc": "2021-11-29T22:37:28Z",
+      "product_to_local_observation_lineage_verified": false
+    }
+  },
+  "local_observation": {
+    "tif": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.tif",
+      "sha256": "9c1ad68908c220456c82a2459380e14193242a3daa32c0001989c4ffd8292db6",
+      "width": 2100,
+      "height": 2100,
+      "crs": "EPSG:32649",
+      "resolution_m": 30.0,
+      "nodata": 255,
+      "band_description": "S1_RTC_VV_OTSU_FLOOD_CLASS"
+    },
+    "asc": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.asc",
+      "sha256": "8a9370c7585130d7c26acb5bc66f8850a1c09b9d732d9f20301779d4e12e69a7"
+    },
+    "prj": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.prj",
+      "sha256": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060"
+    },
+    "release_manifest": {
+      "path": "D:\\VTP\\V48_SAR_OBSERVATION_RELEASE_20261002.json",
+      "sha256": "d433cf1e5e50f0bbef7398e66251b72056a89b565b396c57d0abde7a2e573739"
+    },
+    "validation_manifest": {
+      "path": "D:\\VTP\\V48_SAR_OBSERVATION_VALIDATION_20261002.json",
+      "sha256": "cbe48f77ec35128c4fe617cb3f227bcac721ebee3cef304c0402bccc8a884d9d"
+    },
+    "acquisition_start_utc": "2021-11-29 22:36:38.799806+00:00",
+    "acquisition_end_utc": "2021-11-29 22:37:03.797720+00:00",
+    "acquisition_midpoint_utc": "2021-11-29T22:36:51.298763Z",
+    "class_semantics_required": {
+      "0": "observed dry candidate (VV dB > Otsu threshold)",
+      "1": "observed water/flood candidate (VV dB <= Otsu threshold), before permanent-water exclusion",
+      "255": "NoData/excluded"
+    },
+    "class_semantics_verified_from_product_lineage": true,
+    "acquisition_utc_verified_for_this_local_raster": true,
+    "source_product_to_local_observation_lineage_verified": true,
+    "reconstruction_note": "New V48 observation reconstructed directly from the pinned public Sentinel-1 RTC VV asset before formal BG_Flood/SAR evaluation. This does not retroactively prove provenance of the older Otsu TIFF."
+  },
+  "model_arms": {
+    "V48_BASE_COPERNICUS": {
+      "terrain_reference": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+      "terrain_sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+    },
+    "V48_CONDITIONED": {
+      "current_pre_closed_loop_reference": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_FROZEN.tif",
+      "current_pre_closed_loop_sha256": "f47dfc68bdc70d7f2107b11e538832ca3e4f9788c92667e6fbb761cbfec8ad0e",
+      "formal_run_terrain_path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.tif",
+      "formal_run_terrain_sha256": "e75019ce5d0c02996bfab421623bda33ab3d56ff5bfd8a06e51f2ca2b3cd4feb",
+      "status": "FROZEN_CLOSED_LOOP_PRE_SAR",
+      "closed_loop_release_manifest": {
+        "path": "D:\\VTP\\V48_CLOSED_LOOP_FROZEN_RELEASE_20261002.json",
+        "sha256": "db599a2446e08803cbfecd1dd124592e7e4e13b44f6f559c6cbafbd66c08aced"
+      }
+    }
+  },
+  "hydrodynamic_contract": {
+    "path": "D:\\VTP\\V48_BG_Flood_contract_20261002.json",
+    "sha256": "6771f361ce8cf44dbcb3632946af8325c1c06a9b3c4774883b8cd98cc8fe4c8b",
+    "output_timestep_s": 10800,
+    "run_epoch_utc": "2021-11-25T17:00:00Z",
+    "run_epoch_timezone_verified": true,
+    "run_epoch_local": "2021-11-26T00:00:00+07:00",
+    "run_epoch_timezone": "Asia/Ho_Chi_Minh",
+    "run_epoch_provenance": {
+      "path": "D:\\VTP\\V48_RUN_EPOCH_PROVENANCE_20261002.json",
+      "sha256": "9c1ab1246cd7c1fd28d7b7a0f297dc570c1f057f75737bff4cfaba7849cd4d57"
+    },
+    "frozen_run_manifest": {
+      "path": "D:\\VTP\\V48_BG_Flood_RUN_MANIFEST_20261002.json",
+      "sha256": "f5c546177da9d2cc66d8c11c94f62c934328625b1b87fdad8068a454e9c422e9"
+    }
+  },
+  "frame_selection_rule": {
+    "observation_time": "Use the midpoint of the lineage-verified Sentinel acquisition start/stop times in UTC.",
+    "elapsed_time": "t_obs_s = observation_midpoint_utc - frozen_bg_flood_run_epoch_utc.",
+    "frame_choice": "Choose the available model output frame minimizing abs(t_frame_s - t_obs_s). On an exact tie, choose the earlier frame.",
+    "maximum_allowed_offset_s": 5400,
+    "block_if_offset_exceeds_limit": true,
+    "preselected_frame_index": null,
+    "preselected_elapsed_s": null
+  },
+  "evaluation_design": {
+    "common_grid_crs": "EPSG:32649",
+    "common_grid_resolution_m": 30,
+    "observation_resampling": "nearest-neighbour",
+    "wet_depth_rule": "simulated_wet = h > 0.30 m",
+    "wet_depth_threshold_m": 0.3,
+    "threshold_tuning_after_observation_review_forbidden": true,
+    "permanent_water_mask": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\water_density_30m.tif",
+      "sha256": "fb353f257db606fac5d4470a16ce494da4597e288f5e64832536c0f0305aa39d",
+      "exclude_where": "water_density > 0.5",
+      "threshold": 0.5
+    },
+    "hand_validity_mask": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\Teamwork_Validation\\PhuYen_HAND_30m.tif",
+      "sha256": "2e19b6f669717d310fc4c1af96dffdd0df8037786faf3f55d6b8d08f73cfecfd",
+      "include_where": "HAND >= 0.0 m"
+    },
+    "evaluation_mask": "Use exactly the intersection of: common valid model domain for both arms; lineage-verified observation pixels with class in {0,1}; water_density <= 0.5; HAND >= 0.0. Use the identical mask for BASE and CONDITIONED.",
+    "observation_binary_rule": "observed_flood = class == 1; observed_dry = class == 0; other values excluded",
+    "cell_area_km2_at_30m": 0.0009
+  },
+  "metrics": {
+    "contingency": [
+      "TP",
+      "FP",
+      "FN",
+      "TN"
+    ],
+    "precision": "TP / (TP + FP)",
+    "recall": "TP / (TP + FN)",
+    "csi_iou": "TP / (TP + FP + FN)",
+    "f1": "2 * precision * recall / (precision + recall)",
+    "observed_area_km2": "(TP + FN) * 0.0009",
+    "simulated_area_km2": "(TP + FP) * 0.0009",
+    "area_bias": "(simulated_area_km2 - observed_area_km2) / observed_area_km2"
+  },
+  "one_shot_comparison": {
+    "arms": [
+      "V48_BASE_COPERNICUS",
+      "V48_CONDITIONED"
+    ],
+    "shared_inputs_required": [
+      "BG_Flood engine",
+      "forcing",
+      "minmask",
+      "zsinit",
+      "run epoch",
+      "output schedule",
+      "frame rule",
+      "evaluation mask",
+      "wet threshold"
+    ],
+    "report": "Report each arm's preregistered metrics and CONDITIONED minus BASE deltas. Do not modify threshold, frame, mask, forcing, initial state, or metric definitions after inspecting SAR results."
+  },
+  "terrain_selection_provenance": {
+    "rule_9_of_11_is_not_a_sar_pass_fail_rule": true,
+    "historical_sensitivity_note": "Among the prior 40 components, 25 were exactly 9/11; >=10/11 retained 15/40; 11/11 retained 1/40. This belongs to upstream terrain-selection sensitivity only.",
+    "closed_loop_summary": {
+      "path": "D:\\VTP\\V48_closed_loop_topology_20261002\\V48_closed_loop_summary.json",
+      "sha256": "f00063038c23f91b04220d1c373ddc04b96502fcadfaf1689f2d5cab9b3da8b8"
+    }
+  },
+  "source_provenance": {
+    "scene_research": {
+      "path": "D:\\VTP\\V45_Sentinel1_scene_research_20260928.md",
+      "sha256": "3802c3b897395183d4f4483b666b37c11fa055084a2f159ab223f215943aa8d2"
+    },
+    "historical_evaluator": {
+      "path": "D:\\VTP\\eval_v45.py",
+      "sha256": "e6c8ed60766ba3033c8fe4a221f2e6dd69aa90dbf5c3925fd682b54f3b92e5f2",
+      "role": "provenance for the pre-existing 0.30 m wet threshold, permanent-water threshold 0.5, nearest-neighbour SAR resampling, and HAND-validity mask"
+    },
+    "legacy_unverified_observation": {
+      "role": "historical V39-V45 observation reference only; exact product lineage, acquisition UTC, and class semantics were not proven for this raster",
+      "tif": {
+        "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_20211130_05h36.tif",
+        "sha256": "74599050bcfa20aaddca4ea716bc83edba8715cdd829b6cc2f2a3b24182808b9",
+        "width": 1911,
+        "height": 2402,
+        "crs": "EPSG:32649",
+        "resolution_m": 90,
+        "band_description": "VV"
+      },
+      "asc": {
+        "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_20211130_05h36.asc",
+        "sha256": "23f935f75ef0f44ba2314c34fdcb2621798b4c0d82f70280df81e134ff33c0d4"
+      },
+      "engineering_alignment_raster": {
+        "path": "D:\\VTP\\V45_runs\\20260928_engine_r1\\results\\V45_SAR_mask_30m_engineering_unverified.tif",
+        "sha256": "21389f46d28bf14311c49caba8d61df4ac541d1a7b0f604734dd6fd4e468d005",
+        "role": "spatial engineering reference only; observation semantics and acquisition lineage remain unverified"
+      },
+      "product_to_local_observation_lineage_verified": false,
+      "acquisition_utc_verified_for_this_local_raster": false,
+      "class_semantics_verified_from_product_lineage": false
+    },
+    "sar_observation_release": {
+      "path": "D:\\VTP\\V48_SAR_OBSERVATION_RELEASE_20261002.json",
+      "sha256": "d433cf1e5e50f0bbef7398e66251b72056a89b565b396c57d0abde7a2e573739"
+    },
+    "sar_observation_validation": {
+      "path": "D:\\VTP\\V48_SAR_OBSERVATION_VALIDATION_20261002.json",
+      "sha256": "cbe48f77ec35128c4fe617cb3f227bcac721ebee3cef304c0402bccc8a884d9d"
+    },
+    "run_epoch_provenance": {
+      "path": "D:\\VTP\\V48_RUN_EPOCH_PROVENANCE_20261002.json",
+      "sha256": "9c1ab1246cd7c1fd28d7b7a0f297dc570c1f057f75737bff4cfaba7849cd4d57"
+    }
+  },
+  "formal_evaluation_blockers": [],
+  "formal_evaluation_allowed": true
+}

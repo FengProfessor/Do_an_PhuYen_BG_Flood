@@ -1,0 +1,77 @@
+{
+  "status": "V48_SAR_OBSERVATION_FROZEN_PRE_FORMAL_EVALUATION",
+  "date": "2026-10-02",
+  "formal_bg_flood_run": false,
+  "formal_sar_evaluation_run": false,
+  "sentinel1_used_for_terrain_conditioning": false,
+  "source": {
+    "provider": "Microsoft Planetary Computer Sentinel-1 RTC",
+    "stac_item_id": "S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0_rtc",
+    "platform": "SENTINEL-1A",
+    "orbit_state": "descending",
+    "relative_orbit": 120,
+    "start_datetime_utc": "2021-11-29 22:36:38.799806+00:00",
+    "end_datetime_utc": "2021-11-29 22:37:03.797720+00:00",
+    "vv_asset_href": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2021/11/29/IW/DV/S1A_IW_GRDH_1SDV_20211129T223638_20211129T223703_040792_04D7A0_7891/measurement/iw-vv.rtc.tiff",
+    "vv_asset_http": {
+      "etag": "\"0x8D9DD56FCF91069\"",
+      "content_length": 1849931261,
+      "last_modified": "Sat, 22 Jan 2022 03:26:33 GMT"
+    },
+    "stac_probe": {
+      "path": "D:\\VTP\\V48_PLANETARY_S1_STAC_PROBE_20261002.json",
+      "sha256": "da62d56182ac396067931d6721830165d86b8ddd5b1bc73c4c3b1e1d39f78c58"
+    },
+    "range_read_probe": {
+      "path": "D:\\VTP\\V48_PLANETARY_S1_RTC_READ_PROBE_20261002.json",
+      "sha256": "229c7baa3f7207fb55385927178c3989d046057c54b6d75c0f5a4ff9a14461b6"
+    }
+  },
+  "processing": {
+    "script": {
+      "path": "D:\\VTP\\v48_build_s1_rtc_observation.py",
+      "sha256": "54e432bcec543296b4bbd691ae65f205cf81e50d4dd94087250570bc16555371"
+    },
+    "target_grid_reference": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+      "sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+    },
+    "input_polarization": "VV",
+    "rtc_to_target_resampling": "average",
+    "target_crs": "EPSG:32649",
+    "target_resolution_m": 30.0,
+    "backscatter_transform": "10*log10(linear_RTC_VV)",
+    "otsu_bins": 512,
+    "otsu_threshold_db": -8.834193476225742,
+    "classification": {
+      "0": "observed dry candidate (VV dB > Otsu threshold)",
+      "1": "observed water/flood candidate (VV dB <= Otsu threshold), before permanent-water exclusion",
+      "255": "NoData/excluded"
+    },
+    "threshold_tuning_after_build": false
+  },
+  "observation": {
+    "tif": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.tif",
+      "sha256": "9c1ad68908c220456c82a2459380e14193242a3daa32c0001989c4ffd8292db6"
+    },
+    "asc": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.asc",
+      "sha256": "8a9370c7585130d7c26acb5bc66f8850a1c09b9d732d9f20301779d4e12e69a7"
+    },
+    "prj": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\DakLak_PhuYen_FloodExtent_Otsu_S1RTC_20211130_05h36_V48.prj",
+      "sha256": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060"
+    },
+    "width": 2100,
+    "height": 2100,
+    "crs": "EPSG:32649",
+    "resolution_m": 30.0,
+    "nodata": 255,
+    "counts": {
+      "class_0_dry_candidate": 2330567,
+      "class_1_water_flood_candidate": 1345926,
+      "nodata": 733507
+    }
+  }
+}

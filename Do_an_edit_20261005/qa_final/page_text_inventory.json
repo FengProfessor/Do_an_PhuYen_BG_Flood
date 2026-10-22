@@ -1,0 +1,700 @@
+[
+  {
+    "page": 1,
+    "characters": 490,
+    "first_lines": [
+      "ĐẠI HỌC QUỐC GIA HÀ NỘI",
+      "TRƯỜNG ĐẠI HỌC CÔNG NGHỆ",
+      "VIỆN CÔNG NGHỆ HÀNG KHÔNG VŨ TRỤ"
+    ],
+    "last_lines": [
+      "Cán bộ hướng dẫn: TS. Hà Minh Cường",
+      "Cơ quan công tác: Viện Công nghệ Hàng không Vũ trụ",
+      "Hà Nội – Năm 2026"
+    ]
+  },
+  {
+    "page": 2,
+    "characters": 549,
+    "first_lines": [
+      "ii",
+      "Lời cam đoan",
+      "Tôi xin cam đoan đồ án này được thực hiện dưới sự hướng dẫn của TS. Hà Minh"
+    ],
+    "last_lines": [
+      "Hà Nội, ngày … tháng … năm 2026",
+      "Sinh viên cam đoan",
+      "[Họ và tên Sinh viên]"
+    ]
+  },
+  {
+    "page": 3,
+    "characters": 1088,
+    "first_lines": [
+      "iii",
+      "Lời cảm ơn",
+      "Trong quá trình thực hiện đồ án, em đã nhận được sự hướng dẫn và hỗ trợ của"
+    ],
+    "last_lines": [
+      "Hà Nội, ngày … tháng … năm 2026",
+      "Sinh viên thực hiện",
+      "[Họ và tên Sinh viên]"
+    ]
+  },
+  {
+    "page": 4,
+    "characters": 1882,
+    "first_lines": [
+      "iv",
+      "Tóm tắt",
+      "Đồ án thiết lập quy trình kết hợp dữ liệu địa hình, viễn thám radar và mô hình"
+    ],
+    "last_lines": [
+      "kiểm tra bằng cặp thí nghiệm có đối chứng và quan trắc độc lập.",
+      "Từ khóa: mô hình thủy lực hai chiều; BG_Flood; SAR; Phú Yên; phạm vi ngập;",
+      "hiệu chỉnh địa hình."
+    ]
+  },
+  {
+    "page": 5,
+    "characters": 2235,
+    "first_lines": [
+      "v",
+      "Abstract",
+      "This study establishes a workflow combining terrain data, radar remote sensing"
+    ],
+    "last_lines": [
+      "independent observations.",
+      "Keywords: two-dimensional hydraulic modelling; BG_Flood; SAR; Phu Yen;",
+      "flood extent; terrain modification."
+    ]
+  },
+  {
+    "page": 6,
+    "characters": 1607,
+    "first_lines": [
+      "vi",
+      "Danh mục từ viết tắt",
+      "STT Viết tắt Thuật ngữ Tiếng Anh / Tiếng Việt"
+    ],
+    "last_lines": [
+      "đất)",
+      "21 GSW Global Surface Water (Cơ sở dữ liệu mặt nước toàn cầu JRC)",
+      "22 WMO World Meteorological Organization (Tổ chức Khí tượng Thế giới)"
+    ]
+  },
+  {
+    "page": 7,
+    "characters": 383,
+    "first_lines": [
+      "vii",
+      "STT Viết tắt Thuật ngữ Tiếng Anh / Tiếng Việt",
+      "23 BĐKH Biến đổi khí hậu toàn cầu"
+    ],
+    "last_lines": [
+      "26 TP / FP True Positive (Dương tính thật) / False Positive (Dương tính giả)",
+      "27 FN / TN False Negative (Âm tính giả) / True Negative (Âm tính thật)",
+      "28 MCC Matthews Correlation Coefficient (Hệ số tương quan Matthews)"
+    ]
+  },
+  {
+    "page": 8,
+    "characters": 4788,
+    "first_lines": [
+      "viii",
+      "MỤC LỤC",
+      "Lời cam đoan.................................................................................................................................... ii"
+    ],
+    "last_lines": [
+      "2.1.4 Điều kiện ổn định Courant-Friedrichs-Lewy (CFL) thích nghi................................... 15",
+      "2.1.5 Kỹ thuật xử lý ranh giới ướt/khô (Wet-Dry Treatment) và kiểm soát lỗi NaN........... 15",
+      "2.2 Quy trình xử lý và trích xuất vết ngập từ ảnh viễn thám Sentinel-1 SAR........................... 16"
+    ]
+  },
+  {
+    "page": 9,
+    "characters": 3084,
+    "first_lines": [
+      "ix",
+      "2.3 Các phương pháp tiền xử lý và giải quyết rào cản nhân tạo trên địa hình .......................... 17",
+      "2.3.1 Thuật toán lấp hố sụt thủy văn Priority-Flood............................................................. 17"
+    ],
+    "last_lines": [
+      "PHỤ LỤC HỒ SƠ DỮ LIỆU VÀ THỰC THI............................................................................... 39",
+      "Danh mục tệp truy vết ............................................................................................................... 39",
+      "Quy tắc đánh giá lịch sử ............................................................................................................ 39"
+    ]
+  },
+  {
+    "page": 10,
+    "characters": 369,
+    "first_lines": [
+      "x",
+      "Danh mục hình ảnh",
+      "Hình 3.1 Phân bố các nhóm đối chiếu V44 với SAR tại khoảng 102 giờ ...................................... 29"
+    ],
+    "last_lines": [
+      "Hình 3.1 Phân bố các nhóm đối chiếu V44 với SAR tại khoảng 102 giờ ...................................... 29",
+      "Hình 3.2 Chuỗi chỉ số V44 đối chiếu với cùng mặt nạ SAR.......................................................... 30",
+      "Hình 3.3 Tỷ lệ ô ngập V44 theo các nhóm chỉ số địa hình ............................................................ 31"
+    ]
+  },
+  {
+    "page": 11,
+    "characters": 921,
+    "first_lines": [
+      "xi",
+      "Danh mục bảng biểu",
+      "Bảng 2.1 Ma trận nhầm lẫn không gian (Contingency Matrix) đánh giá độ khớp vết ngập .......... 19"
+    ],
+    "last_lines": [
+      "Bảng 3.5 Ma trận và chỉ số đối chiếu V44 tại frame 33................................................................. 28",
+      "Bảng 3.6 Phân bố ô ngập theo chênh cao tới mạng thoát nước...................................................... 30",
+      "Bảng 3.7 Nội dung cần kiểm tra khi xây dựng mô hình học máy thay thế .................................... 33"
+    ]
+  },
+  {
+    "page": 12,
+    "characters": 1962,
+    "first_lines": [
+      "1",
+      "MỞ ĐẦU",
+      "1. Đặt vấn đề và tính cấp thiết của đề tài"
+    ],
+    "last_lines": [
+      "GPU.",
+      "BG_Flood là mô hình mã nguồn mở phục vụ tính toán thủy lực hai chiều và hỗ",
+      "trợ thực thi trên GPU [3]. Ảnh Sentinel-1 SAR cung cấp thông tin bề mặt trong điều"
+    ]
+  },
+  {
+    "page": 13,
+    "characters": 1580,
+    "first_lines": [
+      "2",
+      "kiện có mây [4]. Việc kết hợp hai nguồn cho phép đối chiếu không gian, với điều kiện",
+      "ghi rõ sai số quan sát và mức độc lập giữa dữ liệu hiệu chỉnh với dữ liệu đánh giá."
+    ],
+    "last_lines": [
+      "và các chỉ số CSI, Recall, Precision.",
+      "4. Phân tích phân bố sai khác và vai trò có thể có của kết nối địa hình; đề xuất thí",
+      "nghiệm có đối chứng và dữ liệu bổ sung."
+    ]
+  },
+  {
+    "page": 14,
+    "characters": 1682,
+    "first_lines": [
+      "3",
+      "3. Đối tượng và phạm vi nghiên cứu",
+      "Đối tượng nghiên cứu:"
+    ],
+    "last_lines": [
+      "Đối chiếu quan sát: sử dụng sản phẩm SAR làm lớp ngập tham chiếu. Khi SAR",
+      "đã tham gia hiệu chỉnh địa hình, phép chấm điểm với cùng lớp chưa phải kiểm định",
+      "độc lập."
+    ]
+  },
+  {
+    "page": 15,
+    "characters": 1665,
+    "first_lines": [
+      "4",
+      "Phân tích không gian: kiểm tra đồng đăng ký raster, miền hợp lệ và phân bố ngập",
+      "theo chênh cao tới mạng thoát nước."
+    ],
+    "last_lines": [
+      "hình và quy tắc đối chiếu.",
+      "Chương 3 trình bày cấu hình V44, kết quả tái lập tại 102 giờ và chuỗi 120 giờ,",
+      "chẩn đoán địa hình, các giới hạn và thiết kế nghiên cứu V45/V48."
+    ]
+  },
+  {
+    "page": 16,
+    "characters": 1849,
+    "first_lines": [
+      "5",
+      "CHƯƠNG 1 TỔNG QUAN TÀI LIỆU VÀ CƠ SỞ LÝ LUẬN",
+      "1.1 Tổng quan nghiên cứu mô phỏng ngập lụt trên thế giới và tại Việt Nam"
+    ],
+    "last_lines": [
+      "GPU cung cấp khả năng xử lý song song nhiều phép tính ô lưới. Vacondio và",
+      "cộng sự trình bày bộ giải thể tích hữu hạn tăng tốc bằng GPU [8]; BG_Flood cũng hỗ",
+      "trợ cách tổ chức tính toán trên GPU [3]. Hiệu suất phụ thuộc thuật toán và phần cứng."
+    ]
+  },
+  {
+    "page": 17,
+    "characters": 1919,
+    "first_lines": [
+      "6",
+      "Đồ án báo cáo thời gian solver của V44, không chuyển hệ số tăng tốc của công trình",
+      "khác thành kết quả đo của dự án."
+    ],
+    "last_lines": [
+      "lưu vực vượt quá khả năng chuyển tải của lòng dẫn sông, khiến mực nước dâng tràn",
+      "hai bên bờ đê và lan tỏa vào các thung lũng, bãi bồi ven sông. Lũ sông thường có thời",
+      "gian duy trì từ vài ngày đến hàng tuần."
+    ]
+  },
+  {
+    "page": 18,
+    "characters": 2017,
+    "first_lines": [
+      "7",
+      "2. Lũ quét (Flash Flood): Là loại hình lũ xảy ra bất ngờ tại các lưu vực sông suối miền",
+      "núi có độ dốc lớn, hình thành chỉ sau một trận mưa có cường suất cực lớn trong thời"
+    ],
+    "last_lines": [
+      "Mưa là đầu vào biến đổi theo không gian và thời gian. Chuỗi ERA5 thuộc dữ liệu",
+      "tái phân tích, không phải tập trạm đo độc lập. Việc tổng hợp mưa trên miền hoặc nhân",
+      "hệ số cần được mô tả và kiểm tra bằng dữ liệu phù hợp [9]."
+    ]
+  },
+  {
+    "page": 19,
+    "characters": 1844,
+    "first_lines": [
+      "8",
+      "Lưu lượng sau hồ chứa cần được mô tả bằng chuỗi theo thời gian và đúng vị trí",
+      "trong mạng sông. Cần phân biệt lưu lượng đến hồ, qua tràn, qua tua-bin và lưu lượng"
+    ],
+    "last_lines": [
+      "Mặt nước tương đối nhẵn có thể phản xạ phần lớn năng lượng ra xa cảm biến, tạo",
+      "tín hiệu tán xạ ngược thấp. Tuy nhiên, giá trị dB phụ thuộc góc tới, phân cực, gió và",
+      "điều kiện bề mặt; không áp dụng một khoảng tín hiệu cố định cho mọi vùng ngập [10]."
+    ]
+  },
+  {
+    "page": 20,
+    "characters": 1801,
+    "first_lines": [
+      "9",
+      "2. Cơ chế tán xạ khuếch tán trên bề mặt cạn (Diffuse / Rough Surface Scattering):",
+      "Độ nhám và cấu trúc lớp phủ làm thay đổi tán xạ ngược của đất cạn. Một số bề"
+    ],
+    "last_lines": [
+      "Lựa chọn VV hoặc VH cần căn cứ dữ liệu, mặt phủ và phép đánh giá. Đồ án",
+      "chưa có so sánh độc lập hai phân cực để kết luận VV luôn tốt hơn VH. Metadata scene",
+      "và chuỗi xử lý của sản phẩm SAR được xem là nội dung cần hoàn thiện."
+    ]
+  },
+  {
+    "page": 21,
+    "characters": 1672,
+    "first_lines": [
+      "10",
+      "1.3.4 Các phương pháp phân ngưỡng trích xuất vết ngập (Thuật toán Otsu)",
+      "Otsu là phương pháp chọn ngưỡng từ histogram bằng cách tối đa hóa phương sai"
+    ],
+    "last_lines": [
+      "1.4.1 Khái niệm và phân biệt giữa DEM, DTM và DSM",
+      "Trong mô hình hóa thủy văn và thủy lực 2D, mô hình số độ cao là tập dữ liệu địa",
+      "không gian quan trọng, đóng vai trò quyết định hướng truyền sóng lũ, vận tốc dòng"
+    ]
+  },
+  {
+    "page": 22,
+    "characters": 2023,
+    "first_lines": [
+      "11",
+      "chảy và phạm vi ngập úng. Trong thực tế nghiên cứu cần phân biệt rõ ba khái niệm mô",
+      "hình độ cao:"
+    ],
+    "last_lines": [
+      "al. (2011) [16] đề xuất là một phương pháp hiệu quả trong phân tích địa hình thủy văn",
+      "không gian. Khác với cao trình tuyệt đối so với mực nước biển (Z), chỉ số HAND",
+      "chuẩn hóa độ cao của từng điểm địa hình dựa trên hiệu số cao độ tương đối giữa điểm"
+    ]
+  },
+  {
+    "page": 23,
+    "characters": 1708,
+    "first_lines": [
+      "12",
+      "đó với điểm lòng dẫn thoát nước gần nhất mà dòng chảy từ điểm đó sẽ đổ vào theo",
+      "mạng lưới hướng dòng chảy D8 (Flow Direction):"
+    ],
+    "last_lines": [
+      "Kết quả được lưu dạng NetCDF với các trường độ sâu h, mực nước zs, địa hình",
+      "zb và vận tốc u, v. Thời gian frame và tọa độ phải được đọc từ tệp, kiểm tra với lưới",
+      "đầu vào trước khi tính diện tích hoặc chồng xếp SAR."
+    ]
+  },
+  {
+    "page": 24,
+    "characters": 1678,
+    "first_lines": [
+      "13",
+      "CHƯƠNG 2 PHƯƠNG PHÁP NGHIÊN CỨU VÀ CÔNG NGHỆ ÁP",
+      "DỤNG"
+    ],
+    "last_lines": [
+      "- h(x,y,t) = zs - zb là độ sâu cột nước cục bộ (m).",
+      "- u(x,y,t) và v(x,y,t) là các thành phần vận tốc dòng chảy trung bình theo chiều sâu dọc",
+      "theo trục x và y (m/s)."
+    ]
+  },
+  {
+    "page": 25,
+    "characters": 1736,
+    "first_lines": [
+      "14",
+      "- hu và hv là lưu lượng dòng chảy trên một đơn vị chiều rộng theo phương x và y",
+      "(m²/s)."
+    ],
+    "last_lines": [
+      "Hệ phương trình nước nông 2 chiều là hệ phương trình vi phân đạo hàm riêng phi",
+      "tuyến thuộc lớp hyperbolic. Khi dòng lũ chuyển động với vận tốc lớn hoặc khi xuất",
+      "hiện sóng xung kích (sóng tràn bờ, sóng vỡ đập), nghiệm của phương trình có thể xuất"
+    ]
+  },
+  {
+    "page": 26,
+    "characters": 2028,
+    "first_lines": [
+      "15",
+      "hiện các điểm gián đoạn mạnh (Discontinuities / Shock waves). Các phương pháp giải",
+      "số truyền thống (như sai phân trung tâm) thường xuất hiện hiện tượng dao động số học"
+    ],
+    "last_lines": [
+      "2.1.5 Kỹ thuật xử lý ranh giới ướt/khô (Wet-Dry Treatment) và kiểm soát lỗi NaN",
+      "Ranh giới giữa vùng khô và vùng ngập thay đổi theo thời gian. Khi h tiến về 0,",
+      "phép tính u=(hu)/h và các số hạng ma sát có thể trở nên nhạy hoặc không xác định do"
+    ]
+  },
+  {
+    "page": 27,
+    "characters": 1657,
+    "first_lines": [
+      "16",
+      "mẫu số nhỏ. Bộ giải cần ngưỡng độ sâu, quy tắc cập nhật vận tốc và xử lý khô–ướt phù",
+      "hợp để hạn chế giá trị không hữu hạn và duy trì độ sâu không âm."
+    ],
+    "last_lines": [
+      "Đối với dữ liệu cường độ, hệ số tán xạ ngược dạng tuyến tính có thể biểu diễn ở",
+      "dB theo:",
+      "𝜎⁰(𝑑𝐵) = 10 𝑙𝑜𝑔₁₀[𝜎⁰(𝑙𝑖𝑛𝑒𝑎𝑟)] (2.10)"
+    ]
+  },
+  {
+    "page": 28,
+    "characters": 1776,
+    "first_lines": [
+      "17",
+      "Việc chuyển DN sang hệ số tán xạ ngược phải tuân theo sản phẩm và metadata",
+      "hiệu chuẩn. Không tự bổ sung một công thức LUT hoặc chuỗi xử lý khi chưa có dữ"
+    ],
+    "last_lines": [
+      "Priority-Flood dùng hàng đợi ưu tiên để xử lý vùng trũng theo kết nối từ biên",
+      "[19]. Phần dưới mô tả nguyên lý thuật toán; cấu hình xử lý thực tế phải được xác định",
+      "từ script và raster đầu vào/đầu ra."
+    ]
+  },
+  {
+    "page": 29,
+    "characters": 1878,
+    "first_lines": [
+      "18",
+      "Bước 1: đưa các ô biên hợp lệ vào hàng đợi theo cao độ, với cách xử lý",
+      "NODATA và cửa thoát được quy định. Không gán mọi biên lưu vực hoặc cửa thoát"
+    ],
+    "last_lines": [
+      "lang sông. Việc bỏ điều kiện chọn theo SAR có thể thay đổi phạm vi ô được tác động,",
+      "nhưng cũng có nguy cơ mở rộng dòng chảy quá mức. Cần đặt giới hạn và đánh giá cả",
+      "mức bỏ sót lẫn báo ngập ngoài tham chiếu."
+    ]
+  },
+  {
+    "page": 30,
+    "characters": 1530,
+    "first_lines": [
+      "19",
+      "Bước 1: xác định hành lang và vùng đệm từ mạng sông có provenance, ghi rõ",
+      "kích thước và lưới."
+    ],
+    "last_lines": [
+      "nguyên nhân cần được phân tích theo vị trí và dữ liệu.",
+      "TN: ô mô hình và SAR đều không ngập trong miền hợp lệ. NODATA và nước",
+      "thường trực bị loại không được tính như TN."
+    ]
+  },
+  {
+    "page": 31,
+    "characters": 1682,
+    "first_lines": [
+      "20",
+      "2.4.2 Hệ thống các chỉ số định lượng đánh giá",
+      "Các chỉ số được tính từ cùng ma trận và cùng miền đánh giá. Định nghĩa CSI,"
+    ],
+    "last_lines": [
+      "MCC tổng hợp cả bốn nhóm trong ma trận nhị phân, có miền giá trị từ −1 đến",
+      "+1. Cần báo cáo giá trị và điều kiện tính, không tự gán nhãn chất lượng khi chưa có",
+      "tiêu chí phù hợp."
+    ]
+  },
+  {
+    "page": 32,
+    "characters": 1540,
+    "first_lines": [
+      "21",
+      "2.4.3 Chẩn đoán phân bố ngập theo chênh cao tới mạng thoát nước",
+      "Một lớp SAR tại một thời điểm chưa xác nhận diễn biến ngập của toàn chuỗi."
+    ],
+    "last_lines": [
+      "đọc thời gian frame thực tế khi hậu xử lý.",
+      "Đánh giá: khóa miền hợp lệ và ngưỡng h>0,3 m, chọn khung theo thời gian quan",
+      "sát, tính chỉ số và chẩn đoán địa hình bổ trợ."
+    ]
+  },
+  {
+    "page": 33,
+    "characters": 1839,
+    "first_lines": [
+      "22",
+      "CHƯƠNG 3 KẾT QUẢ THỰC NGHIỆM VÀ THẢO LUẬN",
+      "3.1 Đặc điểm khu vực nghiên cứu hạ lưu sông Ba và dữ liệu trận lũ 11/2021"
+    ],
+    "last_lines": [
+      "DEM đầu vào V44 có 2.100×2.100 ô, bước ô 30 m. NetCDF lịch sử có",
+      "2.099×2.099 ô; cần phân biệt kích thước thiết kế với kích thước đầu ra cũ. Bảng 3.1",
+      "tổng hợp những thông số đã đối chiếu từ cấu hình và log."
+    ]
+  },
+  {
+    "page": 34,
+    "characters": 1230,
+    "first_lines": [
+      "23",
+      "Bảng 3.1 Các thông số cấu hình vật lý và số học của mô hình thủy lực BG_Flood",
+      "Thông số Giá trị Ghi chú"
+    ],
+    "last_lines": [
+      "Nhám: cấu hình nạp PhuYen_manning_30m_V43.asc theo mô hình Manning.",
+      "Mã lớp WorldCover và tên lớp phải được kiểm tra theo bảng phân loại chính thức",
+      "[21]. Hệ số n trong raster là tham số mô hình, không phải phép đo do ESA cung cấp."
+    ]
+  },
+  {
+    "page": 35,
+    "characters": 1663,
+    "first_lines": [
+      "24",
+      "Bảng 3.2 Các mã lớp WorldCover liên quan tới mô tả bề mặt",
+      "Mã lớp Tên lớp chính thức Vai trò khi thiết lập nhám"
+    ],
+    "last_lines": [
+      "Kỳ Lộ: xa_lu_KyLo_V40_sync.txt; X=[289.000;290.000] m,",
+      "Y=[1.476.500;1.477.500] m; đỉnh 5.000 m³/s. Tuy An: xa_lu_TuyAn_V40_sync.txt;",
+      "X=[301.000;302.000] m, Y=[1.473.500;1.474.500] m; đỉnh 2.000 m³/s."
+    ]
+  },
+  {
+    "page": 36,
+    "characters": 1520,
+    "first_lines": [
+      "25",
+      "3.3 Các nhánh thực nghiệm và phạm vi so sánh",
+      "Các nhánh có thay đổi dữ liệu, runtime và quy tắc đánh giá. Bảng 3.3 chỉ tổng"
+    ],
+    "last_lines": [
+      "chênh lệch chỉ số riêng cho DEM, cần cùng forcing, runtime, điều kiện biên và phép",
+      "đánh giá. Các phiên bản lịch sử chưa đáp ứng đồng thời các điều kiện này nên không",
+      "dùng để khẳng định một nguyên nhân duy nhất."
+    ]
+  },
+  {
+    "page": 37,
+    "characters": 1356,
+    "first_lines": [
+      "26",
+      "3.4 Đánh giá chi tiết kết quả mô phỏng V44 với dữ liệu vệ tinh Sentinel-1",
+      "SAR"
+    ],
+    "last_lines": [
+      "15 172800,406 48,000113 18,28 21,73 53,51",
+      "16 183600,641 51,000178 18,42 21,90 53,69",
+      "17 194400,078 54,000022 18,56 22,07 53,84"
+    ]
+  },
+  {
+    "page": 38,
+    "characters": 1356,
+    "first_lines": [
+      "27",
+      "Frame Thời gian thực s Giờ mô hình CSI % Recall % Precision %",
+      "18 205200,344 57,000095 18,71 22,26 54,01"
+    ],
+    "last_lines": [
+      "Trong khoảng 21–36 giờ, CSI tăng từ 11,82% tới 17,57%. Việc liên hệ mức tăng",
+      "với một nguồn lưu lượng hoặc vị trí cống cần kiểm tra riêng chuỗi forcing và trường",
+      "dòng chảy."
+    ]
+  },
+  {
+    "page": 39,
+    "characters": 1243,
+    "first_lines": [
+      "28",
+      "Tại khoảng 102 giờ, khung 33 cho CSI 20,64%, Recall 24,97% và Precision",
+      "54,32%. Ma trận và diện tích tương ứng được trình bày ở Bảng 3.5 và Hình 3.1."
+    ],
+    "last_lines": [
+      "Ngập mô hình 119,5794 km² Trong miền đánh giá",
+      "Ngập SAR 260,0784 km² Trong miền đánh giá",
+      "Ô hợp lệ 3.480.444 Không tính ô loại khỏi mask"
+    ]
+  },
+  {
+    "page": 40,
+    "characters": 70,
+    "first_lines": [
+      "29",
+      "Hình 3.1 Phân bố các nhóm đối chiếu V44 với SAR tại khoảng 102 giờ"
+    ],
+    "last_lines": [
+      "29",
+      "Hình 3.1 Phân bố các nhóm đối chiếu V44 với SAR tại khoảng 102 giờ"
+    ]
+  },
+  {
+    "page": 41,
+    "characters": 818,
+    "first_lines": [
+      "30",
+      "Hình 3.2 Chuỗi chỉ số V44 đối chiếu với cùng mặt nạ SAR",
+      "3.5 Chẩn đoán phân bố ngập theo địa hình"
+    ],
+    "last_lines": [
+      "ô nằm trong nhóm 3,5–10 m và 1.329 ô trong nhóm >10 m. Hình 3.3 biểu diễn tỷ lệ",
+      "các nhóm. Không suy ra độ sâu, độ dốc, cân bằng nước hoặc độ đúng thủy lực từ các",
+      "tỷ lệ này."
+    ]
+  },
+  {
+    "page": 42,
+    "characters": 1178,
+    "first_lines": [
+      "31",
+      "3.6 Giới hạn của kết quả và thiết kế thực nghiệm tiếp theo",
+      "Hình 3.1 cho thấy phần mô hình không ngập/SAR ngập lớn trong miền đánh giá."
+    ],
+    "last_lines": [
+      "Nó có thể bỏ qua một dải cao độ khô, nhưng chưa chứng minh dải ấy là đê thật hay",
+      "nguyên nhân chính của mọi FN. Đồng thời, dùng lại lớp SAR để chấm điểm làm hạn",
+      "chế tính độc lập của đánh giá."
+    ]
+  },
+  {
+    "page": 43,
+    "characters": 1635,
+    "first_lines": [
+      "32",
+      "Thiết kế đánh giá V45 và V48",
+      "Đối soát V45 ngày 04/10 ghi CSI≈32,40%, Recall≈72,95%, Precision≈36,83%"
+    ],
+    "last_lines": [
+      "và mạng bộ nhớ dài–ngắn hạn (LSTM) [23]. Thiết kế phải xác định biến đầu vào và",
+      "thời điểm chúng có sẵn; nếu dùng độ sâu ở thời điểm trước, cần mô tả nguồn và điều",
+      "kiện vận hành của biến đó."
+    ]
+  },
+  {
+    "page": 44,
+    "characters": 1598,
+    "first_lines": [
+      "33",
+      "Bảng 3.7 Nội dung cần kiểm tra khi xây dựng mô hình học máy thay thế",
+      "Nội dung Cần xác định Cách đánh giá Giới hạn"
+    ],
+    "last_lines": [
+      "Chỉ báo cáo kết quả học máy khi có chuỗi tái lập gồm dữ liệu, mã, split, mô hình",
+      "và phép đo. Trong phạm vi bản đồ án này, học máy được đặt là hướng phát triển, chưa",
+      "coi là công cụ dự báo đã được xác nhận."
+    ]
+  },
+  {
+    "page": 45,
+    "characters": 1811,
+    "first_lines": [
+      "34",
+      "KẾT LUẬN VÀ KIẾN NGHỊ",
+      "1. Kết luận"
+    ],
+    "last_lines": [
+      "2. Kiến nghị",
+      "Các kiến nghị tập trung vào dữ liệu, kiểm tra số học và thiết kế đánh giá độc lập",
+      "trước khi chuyển sang ứng dụng vận hành."
+    ]
+  },
+  {
+    "page": 46,
+    "characters": 727,
+    "first_lines": [
+      "35",
+      "Dữ liệu địa hình: bổ sung khảo sát cao độ, mặt cắt và công trình; kiểm tra datum,",
+      "phạm vi sửa DEM và ảnh hưởng tới dung tích chứa. Dữ liệu LiDAR/UAV có thể được"
+    ],
+    "last_lines": [
+      "Ứng dụng: chỉ đánh giá khả năng cảnh báo sau khi có quan trắc độc lập, đầu vào",
+      "dự báo và thời gian toàn quy trình. Kết quả hiện tại phục vụ nghiên cứu phương pháp",
+      "và kế hoạch cải thiện."
+    ]
+  },
+  {
+    "page": 47,
+    "characters": 2100,
+    "first_lines": [
+      "36",
+      "TÀI LIỆU THAM KHẢO",
+      "[1] World Meteorological Organization (2021). WMO Atlas of Mortality and"
+    ],
+    "last_lines": [
+      "[9] Hersbach, H. và cộng sự (2020). The ERA5 global reanalysis. Quarterly Journal of",
+      "the Royal Meteorological Society, 146(730), 1999–2049.",
+      "https://doi.org/10.1002/qj.3803."
+    ]
+  },
+  {
+    "page": 48,
+    "characters": 2404,
+    "first_lines": [
+      "37",
+      "[10] European Commission Joint Research Centre. Global flood monitoring. Report",
+      "JRC119812, mục 5.1.1–5.1.5."
+    ],
+    "last_lines": [
+      "depression-filling and watershed-labeling algorithm for digital elevation models.",
+      "Computers & Geosciences, 62, 117–127.",
+      "https://doi.org/10.1016/j.cageo.2013.04.024."
+    ]
+  },
+  {
+    "page": 49,
+    "characters": 772,
+    "first_lines": [
+      "38",
+      "[20] Welles, E. (2004). Hydrology and Verification. NOAA National Weather Service,",
+      "tr. 24. https://www.weather.gov/media/owp/oh/rfcdev/docs/dohVerif_edwin.pdf."
+    ],
+    "last_lines": [
+      "https://doi.org/10.1145/2939672.2939785",
+      "[23] Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural",
+      "Computation, 9(8), 1735-1780. DOI: https://doi.org/10.1162/neco.1997.9.8.1735"
+    ]
+  },
+  {
+    "page": 50,
+    "characters": 1512,
+    "first_lines": [
+      "39",
+      "PHỤ LỤC HỒ SƠ DỮ LIỆU VÀ THỰC THI",
+      "Các tệp dưới đây xác định bộ V44 được đối soát. Kết quả của nhánh khác phải có"
+    ],
+    "last_lines": [
+      "ngoài miền không được tính là TN. Diện tích tính với 900 m²/ô. Transform được giữ",
+      "theo eval_v44.py để tái lập lịch sử, chưa được chứng nhận là phương pháp căn chỉnh",
+      "tối ưu."
+    ]
+  }
+]

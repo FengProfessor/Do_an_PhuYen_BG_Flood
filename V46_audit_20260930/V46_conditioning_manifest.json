@@ -1,0 +1,20 @@
+{
+  "algorithm": "D:\\VTP\\v46_apply_conditioning.py",
+  "algorithm_sha256": "0983d856b27310a967af3f39eda626eef0fc5c69f752f9ef8abf4608a1d2dd81",
+  "inputs": {
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V41.asc": "9fb70773a96fc2d52521aa803c3aa08537a5e379d9592754541365ad32e15488",
+    "D:\\VTP\\V46_topology_20260930\\V46_proposed_cut_cells.csv": "db910eaa11b3cbbd74e6b3705c58a2385939fb113cf1fddc55e842181d87e806",
+    "D:\\VTP\\V46_topology_20260930\\V46_topology_summary.json": "e7726c31d2012a855974fee8ae758aef1d3b7904acdae34ee022347e2374e3ea",
+    "D:\\VTP\\V46_inputs\\osm_historical_20211125\\historical_osm_manifest.json": "da152750960e504c544c0b2d205e593ecc163ec910bbdd90622bdc02389c6e82",
+    "D:\\VTP\\V46_inputs\\JRC_GSW1_3_occurrence_1984_2020_manifest.json": "cfaba2ed673ae59ab078a8d82986d72b9ed2a9478bb2efa652df7cb7889b72de",
+    "D:\\VTP\\V46_hydro_evidence_20260930\\V46_hydro_evidence_manifest.json": "e8601fce3905a28d01445fcc3cc1656e7321f0f345436b66ab897a756f76251e",
+    "D:\\VTP\\V46_seed55_historical_validated_20260930\\V46_seed55_validation_manifest.json": "7e183f8a3dcd4b59d70dab7acdc4d89f7aa8253a4081ab956f4cf27009a9fe9f",
+    "D:\\VTP\\V46_topology_20260930\\V46_topology_manifest.json": "9be6f994fcd873ab41496979b4180c5abc9136fe8eb3c8c94af1a6314245a175"
+  },
+  "outputs": {
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V46.asc": "bbfe4be06347d014fefd958aff7af33d518593120e0bfeca4e1e7b9e9f3676ac",
+    "D:\\VTP\\V46_audit_20260930\\V46_applied_cells.csv": "1950622b4caa36753cb681647ac0293538409600a036163e46f4ccd717d40e21",
+    "D:\\VTP\\V46_audit_20260930\\V46_conditioning_summary.json": "5266b35669c41de42165a95eece12639a9d085e6a520a70531ca391db5753b07",
+    "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V46.prj": "f091cc5695962ce8d7807e3c43aa152ee62e419212c0fab878c56782910f2080"
+  }
+}
