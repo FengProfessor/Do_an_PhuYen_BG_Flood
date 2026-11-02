@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "target_sar_time_h": 101.614,
+    "matched_frame_h": 102.00007629394531,
+    "peak_frame_h": 90.00008392333984,
+    "total_frames": 35,
+    "domain_pixel_area_km2": 0.0009,
+    "eval_domain_km2": 2563.4339999999997,
+    "sar_flood_area_km2": 516.8403
+  },
+  "hydraulic_expert": {
+    "dredged_volume_m3": 10198256.8359375,
+    "dredged_volume_million_m3": 10.198,
+    "modified_channel_cells": 17373,
+    "modified_channel_area_km2": 15.636,
+    "in_channel_sar_time": {
+      "v48_base_depth_m": 4.685,
+      "v49_method1_depth_m": 5.231,
+      "v48_base_vel_mean_ms": 1.016,
+      "v49_method1_vel_mean_ms": 0.999,
+      "v48_base_vel_max_ms": 8.46,
+      "v49_method1_vel_max_ms": 9.334,
+      "v48_base_wse_m": 14.27,
+      "v49_method1_wse_m": 14.163,
+      "wse_lowering_cm": 10.62
+    },
+    "in_channel_peak_time": {
+      "v48_base_depth_m": 4.332,
+      "v49_method1_depth_m": 4.869,
+      "v48_base_vel_mean_ms": 0.915,
+      "v49_method1_vel_mean_ms": 0.895,
+      "v48_base_vel_max_ms": 7.681,
+      "v49_method1_vel_max_ms": 8.194,
+      "v48_base_wse_m": 13.916,
+      "v49_method1_wse_m": 13.801,
+      "peak_wse_lowering_cm": 11.52
+    },
+    "floodplain_sar_time": {
+      "v48_base_depth_m": 1.332,
+      "v49_method1_depth_m": 1.314,
+      "v48_base_vel_mean_ms": 0.106,
+      "v49_method1_vel_mean_ms": 0.105
+    },
+    "da_dien_sea_outlet": {
+      "v48_base_vel_mean_ms": 0.207,
+      "v49_method1_vel_mean_ms": 0.206,
+      "v48_base_vel_max_ms": 22.929,
+      "v49_method1_vel_max_ms": 22.929,
+      "v48_base_depth_m": 1.0,
+      "v49_method1_depth_m": 0.998
+    },
+    "da_rang_transect_discharge_cms": {
+      "sar_time_v48_cms": 513.2,
+      "sar_time_v49_cms": 517.9,
+      "sar_time_delta_pct": 0.92,
+      "peak_time_v48_cms": 518.0,
+      "peak_time_v49_cms": 522.8,
+      "peak_time_delta_pct": 0.92
+    }
+  },
+  "remote_sensing_expert": {
+    "contingency_h03": {
+      "v48_base": {
+        "TP": 314637,
+        "FP": 241912,
+        "FN": 259630,
+        "TN": 2032081,
+        "precision": 0.5653356667606986,
+        "recall": 0.5478932273663645,
+        "csi_iou": 0.38549999448650357,
+        "f1": 0.5564778001018733,
+        "tp_km2": 283.1733,
+        "fp_km2": 217.7208,
+        "fn_km2": 233.667,
+        "sim_area_km2": 500.8941,
+        "obs_area_km2": 516.8403,
+        "area_bias": -0.030853244222635117
+      },
+      "v49_method1": {
+        "TP": 311478,
+        "FP": 239542,
+        "FN": 262789,
+        "TN": 2034451,
+        "precision": 0.5652753076113389,
+        "recall": 0.5423923018386918,
+        "csi_iou": 0.38274091340842875,
+        "f1": 0.5535974378091989,
+        "tp_km2": 280.3302,
+        "fp_km2": 215.5878,
+        "fn_km2": 236.5101,
+        "sim_area_km2": 495.918,
+        "obs_area_km2": 516.8403,
+        "area_bias": -0.04048116990877066
+      },
+      "difference": {
+        "csi_iou": -0.002759081078074821,
+        "f1": -0.00288036229267441,
+        "precision": -6.035914935964559e-05,
+        "recall": -0.005500925527672673,
+        "tp_km2": -2.8430999999999926,
+        "fp_km2": -2.1330000000000098,
+        "fn_km2": 2.8430999999999926,
+        "sim_area_km2": -4.976099999999974
+      }
+    },
+    "contingency_h01": {
+      "v48_base": {
+        "TP": 349683,
+        "FP": 345126,
+        "FN": 224584,
+        "TN": 1928867,
+        "precision": 0.503279318488966,
+        "recall": 0.60892058920328,
+        "csi_iou": 0.38034115987396033,
+        "f1": 0.5510828350705552,
+        "tp_km2": 314.7147,
+        "fp_km2": 310.6134,
+        "fn_km2": 202.1256,
+        "sim_area_km2": 625.3281,
+        "obs_area_km2": 516.8403,
+        "area_bias": 0.2099058451904776
+      },
+      "v49_method1": {
+        "TP": 347620,
+        "FP": 343210,
+        "FN": 226647,
+        "TN": 1930783,
+        "precision": 0.5031918127469855,
+        "recall": 0.6053281835801116,
+        "csi_iou": 0.37888688217797284,
+        "f1": 0.549554698177294,
+        "tp_km2": 312.858,
+        "fp_km2": 308.889,
+        "fn_km2": 203.98229999999998,
+        "sim_area_km2": 621.747,
+        "obs_area_km2": 516.8403,
+        "area_bias": 0.20297701243498234
+      }
+    },
+    "tuy_hoa_plain_contingency": {
+      "v48_base": {
+        "TP": 259063,
+        "FP": 93627,
+        "FN": 78882,
+        "TN": 167486,
+        "precision": 0.7345345771073748,
+        "recall": 0.7665833197709686,
+        "csi_iou": 0.600277589834373,
+        "f1": 0.7502168294395737,
+        "tp_km2": 233.1567,
+        "fp_km2": 84.26429999999999,
+        "fn_km2": 70.9938,
+        "sim_area_km2": 317.421,
+        "obs_area_km2": 304.15049999999997,
+        "area_bias": 0.04363136013256595
+      },
+      "v49_method1": {
+        "TP": 256257,
+        "FP": 91682,
+        "FN": 81688,
+        "TN": 169431,
+        "precision": 0.736499788756075,
+        "recall": 0.7582801935226147,
+        "csi_iou": 0.5964639093911696,
+        "f1": 0.747231310250713,
+        "tp_km2": 230.63129999999998,
+        "fp_km2": 82.5138,
+        "fn_km2": 73.5192,
+        "sim_area_km2": 313.1451,
+        "obs_area_km2": 304.15049999999997,
+        "area_bias": 0.029572859488970097
+      }
+    },
+    "hand_elevation_tiers": [
+      {
+        "hand_range": "0.0-1.0m",
+        "cells": 651815,
+        "area_km2": 586.6335,
+        "obs_wet_km2": 257.3073,
+        "tp_base_km2": 198.0621,
+        "tp_v49_km2": 196.767,
+        "fp_base_km2": 93.21209999999999,
+        "fp_v49_km2": 92.49119999999999,
+        "delta_fp_km2": -0.7209,
+        "fn_base_km2": 59.2452,
+        "fn_v49_km2": 60.540299999999995
+      },
+      {
+        "hand_range": "1.0-2.0m",
+        "cells": 111251,
+        "area_km2": 100.1259,
+        "obs_wet_km2": 41.949,
+        "tp_base_km2": 27.398699999999998,
+        "tp_v49_km2": 26.956799999999998,
+        "fp_base_km2": 10.575,
+        "fp_v49_km2": 10.162799999999999,
+        "delta_fp_km2": -0.4122,
+        "fn_base_km2": 14.5503,
+        "fn_v49_km2": 14.9922
+      },
+      {
+        "hand_range": "2.0-5.0m",
+        "cells": 261965,
+        "area_km2": 235.7685,
+        "obs_wet_km2": 68.5629,
+        "tp_base_km2": 38.1078,
+        "tp_v49_km2": 37.26,
+        "fp_base_km2": 29.4255,
+        "fp_v49_km2": 28.7712,
+        "delta_fp_km2": -0.6543,
+        "fn_base_km2": 30.455099999999998,
+        "fn_v49_km2": 31.302899999999998
+      },
+      {
+        "hand_range": "5.0-10.0m",
+        "cells": 261187,
+        "area_km2": 235.0683,
+        "obs_wet_km2": 30.1896,
+        "tp_base_km2": 8.6463,
+        "tp_v49_km2": 8.3898,
+        "fp_base_km2": 21.182399999999998,
+        "fp_v49_km2": 20.8323,
+        "delta_fp_km2": -0.35009999999999997,
+        "fn_base_km2": 21.5433,
+        "fn_v49_km2": 21.7998
+      },
+      {
+        "hand_range": "10.0-50.0m",
+        "cells": 732107,
+        "area_km2": 658.8963,
+        "obs_wet_km2": 56.774699999999996,
+        "tp_base_km2": 5.5683,
+        "tp_v49_km2": 5.571,
+        "fp_base_km2": 29.0943,
+        "fp_v49_km2": 29.096999999999998,
+        "delta_fp_km2": 0.0027,
+        "fn_base_km2": 51.2064,
+        "fn_v49_km2": 51.2037
+      }
+    ]
+  },
+  "disaster_risk_expert": {
+    "hazard_levels_sar_time": [
+      {
+        "level": "Level 1 (0.1 - 0.3m, Warning)",
+        "v48_base_km2": 124.434,
+        "v49_method1_km2": 125.829,
+        "delta_km2": 1.395,
+        "pct_change": 1.12
+      },
+      {
+        "level": "Level 2 (0.3 - 1.0m, Moderate Danger)",
+        "v48_base_km2": 199.489,
+        "v49_method1_km2": 197.954,
+        "delta_km2": -1.535,
+        "pct_change": -0.77
+      },
+      {
+        "level": "Level 3 (1.0 - 2.0m, High Danger)",
+        "v48_base_km2": 119.359,
+        "v49_method1_km2": 116.678,
+        "delta_km2": -2.681,
+        "pct_change": -2.25
+      },
+      {
+        "level": "Level 4 (>= 2.0m, Extreme Danger)",
+        "v48_base_km2": 182.046,
+        "v49_method1_km2": 181.286,
+        "delta_km2": -0.76,
+        "pct_change": -0.42
+      }
+    ],
+    "hazard_levels_peak_time": [
+      {
+        "level": "Level 1 (0.1 - 0.3m, Warning)",
+        "v48_base_km2": 129.53,
+        "v49_method1_km2": 130.837,
+        "delta_km2": 1.307,
+        "pct_change": 1.01
+      },
+      {
+        "level": "Level 2 (0.3 - 1.0m, Moderate Danger)",
+        "v48_base_km2": 208.333,
+        "v49_method1_km2": 206.106,
+        "delta_km2": -2.227,
+        "pct_change": -1.07
+      },
+      {
+        "level": "Level 3 (1.0 - 2.0m, High Danger)",
+        "v48_base_km2": 117.877,
+        "v49_method1_km2": 116.582,
+        "delta_km2": -1.295,
+        "pct_change": -1.1
+      },
+      {
+        "level": "Level 4 (>= 2.0m, Extreme Danger)",
+        "v48_base_km2": 170.014,
+        "v49_method1_km2": 168.803,
+        "delta_km2": -1.21,
+        "pct_change": -0.71
+      }
+    ],
+    "inhabited_lowlands_sar_time": {
+      "total_inundated_v48_base_km2": 259.558,
+      "total_inundated_v49_method1_km2": 256.341,
+      "total_reduction_km2": 3.218,
+      "severe_danger_v48_base_km2": 183.359,
+      "severe_danger_v49_method1_km2": 181.05,
+      "severe_reduction_km2": 2.309
+    }
+  }
+}

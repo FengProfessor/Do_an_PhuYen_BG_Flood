@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-10-29T01:42:43.251671",
+  "evaluation_time_h": 102.000078125,
+  "target_sar_time_h": 101.614,
+  "status": "OFFICIAL_SAR_VALIDATION_MATCHED",
+  "metrics_v49_method1": {
+    "TP": 311478,
+    "FP": 239542,
+    "FN": 262789,
+    "TN": 2034451,
+    "precision": 0.5652753076113389,
+    "recall": 0.5423923018386918,
+    "csi_iou": 0.38274091340842875,
+    "f1": 0.5535974378091989,
+    "observed_area_km2": 516.8403,
+    "simulated_area_km2": 495.918,
+    "area_bias": -0.04048116990877066
+  },
+  "metrics_v48_base": {
+    "TP": 314637,
+    "FP": 241912,
+    "FN": 259630,
+    "TN": 2032081,
+    "precision": 0.5653356667606986,
+    "recall": 0.5478932273663645,
+    "csi_iou": 0.38549999448650357,
+    "f1": 0.5564778001018733,
+    "observed_area_km2": 516.8403,
+    "simulated_area_km2": 500.8941,
+    "area_bias": -0.030853244222635117
+  },
+  "difference_method1_minus_base": {
+    "delta_csi_iou": -0.002759081078074821,
+    "delta_csi_percent": -0.2759081078074821,
+    "delta_f1": -0.00288036229267441,
+    "delta_f1_percent": -0.288036229267441,
+    "delta_precision": -6.035914935964559e-05,
+    "delta_recall": -0.005500925527672673,
+    "delta_tp_km2": -2.8430999999999997,
+    "delta_fp_km2": -2.133,
+    "delta_fn_km2": 2.8430999999999997,
+    "delta_simulated_area_km2": -4.976099999999974
+  }
+}

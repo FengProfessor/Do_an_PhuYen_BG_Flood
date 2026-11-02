@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-10-28T01:28:55.318104",
+  "evaluation_time_h": 87.00006944444445,
+  "target_sar_time_h": 101.61,
+  "status": "PRELIMINARY_DIAGNOSTIC_AT_T60H",
+  "note": "So sanh so bo tai t=60h giup chan doan huong lan truyen song lu truoc khi mo phong dat moc chinh thuc t=101.61h",
+  "metrics_v49_method1": {
+    "TP": 303929,
+    "FP": 237214,
+    "FN": 270338,
+    "TN": 2036779,
+    "precision": 0.5616426711608576,
+    "recall": 0.5292468485913346,
+    "csi_iou": 0.37453618753858686,
+    "f1": 0.544963735308093,
+    "observed_area_km2": 516.8403,
+    "simulated_area_km2": 487.0287,
+    "area_bias": -0.05768048660292164
+  },
+  "metrics_v48_base": {
+    "TP": 261248,
+    "FP": 205780,
+    "FN": 313019,
+    "TN": 2068213,
+    "precision": 0.5593840198018106,
+    "recall": 0.45492427738316843,
+    "csi_iou": 0.33491315266900584,
+    "f1": 0.5017751933890012,
+    "observed_area_km2": 516.8403,
+    "simulated_area_km2": 420.3252,
+    "area_bias": -0.18674066244447268
+  },
+  "difference_method1_minus_base": {
+    "delta_csi_iou": 0.03962303486958102,
+    "delta_f1": 0.043188541919091716,
+    "delta_precision": 0.0022586513590470148,
+    "delta_recall": 0.07432257120816621,
+    "delta_simulated_area_km2": 66.70350000000002
+  }
+}

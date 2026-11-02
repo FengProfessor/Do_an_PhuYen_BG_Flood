@@ -14,8 +14,11 @@ ROOT = Path(__file__).resolve().parent
 RBP = ROOT / "River_Bathymetry_Project"
 
 def run_cmd(cmd: list[str], cwd: Path = ROOT) -> tuple[int, str, str]:
-    p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
-    return p.returncode, p.stdout.strip(), p.stderr.strip()
+    try:
+        p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=60)
+        return p.returncode, p.stdout.strip(), p.stderr.strip()
+    except subprocess.TimeoutExpired:
+        return 1, "", "Command timed out after 60s"
 
 def check_for_remote_dem() -> dict:
     # 1. Fetch remote origin

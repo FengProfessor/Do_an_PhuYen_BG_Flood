@@ -1,0 +1,48 @@
+# ==============================================================================
+# BG_Flood Configuration - V49 Method 1 Scope B1 (CENTRAL)
+# Production Tier: 41 Reaches (W >= 60m) + V48 66 Cuts
+# Generated: 2026-10-23T00:34:59.305292+00:00
+# ==============================================================================
+
+# Terrain input
+bathy = D:/VTP/River_Bathymetry_Project/V49_Method1_Runs/V49_Method1_ScopeB1_CENTRAL.asc;
+dx = 30;
+dy = 30;
+
+# Mask policy
+mask = 9999.0;
+minmask = -4.0;
+
+# Manning roughness map
+frictionmodel = -1;
+roughnessmap = ../../05-Du-lieu-GIS/PhuYen_manning_30m_V43.asc;
+
+# River forcings
+river = xa_lu_BaHa_Nov2021_V40_sync.txt, 270030, 270630, 1441000, 1443000;
+river = xa_lu_BanThach_V43.txt, 276000, 277000, 1424500, 1425500;
+river = xa_lu_KyLo_V40_sync.txt, 289000, 290000, 1476500, 1477500;
+river = xa_lu_TuyAn_V40_sync.txt, 301000, 302000, 1473500, 1474500;
+
+# Rainfall and infiltration
+rainfile = ../../Scenarios/rain_v34_era5_x2.txt;
+rainunits = m/s;
+il = ../../05-Du-lieu-GIS/il_30m_V36.asc;
+cl = ../../05-Du-lieu-GIS/cl_30m_V36.asc;
+
+# Cold-start water-surface policy
+zsinit = 1.0;
+zsoffset = 0.0;
+
+# Boundary conditions
+left = 0;
+right = 2;
+top = 2;
+bottom = 2;
+
+# Simulation window: 120 h, output every 3 h (41 frames)
+endtime = 432000;
+outputtimestep = 10800;
+
+# Output
+outfile = D:/VTP/River_Bathymetry_Project/V49_Method1_Runs/results/V49_Method1_ScopeB1_CENTRAL.nc;
+outvars = zs, h, zb, u, v;
