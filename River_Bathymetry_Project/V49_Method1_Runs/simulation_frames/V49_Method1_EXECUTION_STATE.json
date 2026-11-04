@@ -1,0 +1,32 @@
+{
+  "schema_version": "V49-Method1-execution-1",
+  "status": "STOPPED_BY_USER",
+  "queue": [
+    "LOW",
+    "HIGH"
+  ],
+  "active_arm": "CENTRAL",
+  "runs": {
+    "CENTRAL": {
+      "status": "STOPPED_AT_T105H",
+      "started_at_utc": "2026-10-23T00:35:42.593880+00:00",
+      "log": "D:\\VTP\\River_Bathymetry_Project\\V49_Method1_Runs\\results\\V49_Method1_ScopeB1_CENTRAL_run.log",
+      "result": "D:\\VTP\\River_Bathymetry_Project\\V49_Method1_Runs\\results\\V49_Method1_ScopeB1_CENTRAL.nc",
+      "vram_start_gb": 14.886,
+      "progress": {
+        "simulated_time_s": 378703.3,
+        "endtime_s": 432000.0,
+        "progress_pct": 87.7,
+        "dt_s": 0.3294,
+        "engine_elapsed_s": 537965.8
+      }
+    }
+  },
+  "supervisor_pid": null,
+  "worker_pid": null,
+  "started_at_utc": "2026-10-23T00:35:42.592895+00:00",
+  "updated_at_utc": "2026-10-29T06:06:08.099169+00:00",
+  "supervisor_alive": false,
+  "worker_alive": false,
+  "stopped_at_utc": "2026-10-29T06:06:12.865131+00:00"
+}
