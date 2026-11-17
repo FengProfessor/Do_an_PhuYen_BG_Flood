@@ -10,6 +10,8 @@
 
 ## 📌 Giới Thiệu (Overview)
 
+**Bộ thử nhỏ bổ sung (17/11/2026):** [Small_Benchmarks — hướng dẫn chạy trên máy mô phỏng](River_Bathymetry_Project/Small_Benchmarks/README.md). Có kiểm tra mưa/lưới/nước tĩnh/nguồn sông, so sánh bốn DEM trên miền giả lập, và các kịch bản vùng bảo vệ/độ nhạy. Kết quả kiểm chứng R1 sẽ được tạo khi chạy trên máy có runtime tương ứng.
+
 Repository này chứa toàn bộ tài liệu thuyết minh đồ án tốt nghiệp, báo cáo tiến độ, hệ thống mã nguồn tự động hóa biên soạn văn bản, thư viện hình ảnh bản đồ mô phỏng khoa học, các kịch bản phân tích - xử lý địa hình số (Hydro-conditioning DEM), kịch bản hiệu chỉnh và kiểm chứng kết quả mô phỏng ngập lụt cho vùng hạ lưu sông Ba, tỉnh Phú Yên (sự kiện lũ lụt lịch sử tháng 11 - 12 năm 2021).
 
 - **Cán bộ hướng dẫn:** TS. Hà Minh Cường (Viện Công nghệ Hàng không Vũ trụ, Trường Đại học Công nghệ – ĐHQGHN)
