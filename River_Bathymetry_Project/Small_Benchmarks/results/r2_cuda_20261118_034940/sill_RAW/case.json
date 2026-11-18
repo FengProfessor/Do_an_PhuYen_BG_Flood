@@ -1,0 +1,24 @@
+{
+  "name": "sill_RAW",
+  "kind": "sill",
+  "shape": [
+    64,
+    128
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": false,
+  "rain_units": null,
+  "river_peak_m3_s": 200.0,
+  "inputs": {
+    "bed.asc": "3579772744b4a008df00b770f5d425190d82181f1bf42f96be9a39661ce4a17d",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "6d2e6459c6f56526d506852b3bea85776f287ff8bb5d572cd1c8bdd49c6e17b4",
+    "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+    "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+    "protected.npy": "ae3bcaa3a04ca221c422fc22764959065ef4eff0baca3f9c4f159c467b42a49f"
+  }
+}

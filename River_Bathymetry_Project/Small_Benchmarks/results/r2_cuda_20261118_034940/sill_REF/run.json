@@ -1,0 +1,12 @@
+{
+  "case": "sill_REF",
+  "status": "COMPLETED",
+  "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "c35221204acc5d6193fb24e5683ba864a1743510066d42d5fab8461ca09b9895",
+  "started_utc": "2026-11-17T21:16:02.271492+00:00",
+  "output_sha256": "a29f307f67cffeb40a3bc3e3219b57c5d4161eb06a5cf0c3a16ea1e805427425",
+  "wall_seconds": 331.594
+}

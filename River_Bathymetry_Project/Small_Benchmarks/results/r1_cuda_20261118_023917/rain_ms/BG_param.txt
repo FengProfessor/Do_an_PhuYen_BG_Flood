@@ -1,0 +1,25 @@
+# Synthetic verification only; no Phu Yen observation or calibrated bathymetry.
+bathy = bed.asc;
+dx = 30;
+dy = 30;
+mask = 9999;
+minmask = -4;
+frictionmodel = -1;
+cf = 0.035;
+il = 0;
+cl = 0;
+zsinit = -100.0;
+zsoffset = 0;
+left = 0;
+right = 0;
+top = 0;
+bottom = 0;
+CFL = 0.4;
+eps = 0.0001;
+smallnc = 0;
+endtime = 3600.0;
+outputtimestep = 60.0;
+outfile = result.nc;
+outvars = zb, h, zs, u, v;
+rainfile = rain.txt;
+rainunits = m/s;

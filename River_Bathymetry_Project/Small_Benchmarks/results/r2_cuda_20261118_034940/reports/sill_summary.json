@@ -1,0 +1,178 @@
+{
+  "suite": "sill",
+  "status": "PASS",
+  "cases": {
+    "sill_REF": {
+      "case": "sill_REF",
+      "kind": "sill",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 331.594,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 4.656612873077393e-10,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 503905.34073439,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 2.2103476524353027,
+        "area_h_gt_0_3_m2": 360000.0,
+        "budget_physical_residual_m3": 1.1641532182693481e-10,
+        "budget_relative_residual": 2.310261720066928e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "sill_RAW": {
+      "case": "sill_RAW",
+      "kind": "sill",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 231.187,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 506878.01836938865,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 0.7749359011650085,
+        "area_h_gt_0_3_m2": 0.0,
+        "budget_physical_residual_m3": 0.0,
+        "budget_relative_residual": 0.0,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "sill_SIMPLE": {
+      "case": "sill_SIMPLE",
+      "kind": "sill",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 289.187,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 503924.8267629495,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 1.3862903118133545,
+        "area_h_gt_0_3_m2": 568800.0,
+        "budget_physical_residual_m3": 1.1641532182693481e-10,
+        "budget_relative_residual": 2.3101723826756305e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "sill_V49": {
+      "case": "sill_V49",
+      "kind": "sill",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 357.922,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 4.656612873077393e-10,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 503963.5461581946,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 2.402480363845825,
+        "area_h_gt_0_3_m2": 334800.0,
+        "budget_physical_residual_m3": 0.1339068920351565,
+        "budget_relative_residual": 2.657075666697401e-07,
+        "clamp_added_m3": 0.13390689319261082,
+        "clamp_removed_m3": 0.0
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "case": "sill_REF",
+      "reference": "sill_REF",
+      "bed_rmse_m": 0.0,
+      "common_wet_cells": 934,
+      "zs_rmse_common_wet_m": 0.0,
+      "h_rmse_all_cells_m": 0.0,
+      "wet_iou_at_0_3": 1.0,
+      "wet_union_cells": 400,
+      "area_h_gt_0_3_m2": 360000.0,
+      "bed_lowering_volume_m3": 1199353.8369476795
+    },
+    {
+      "case": "sill_RAW",
+      "reference": "sill_REF",
+      "bed_rmse_m": 0.5228323936462402,
+      "common_wet_cells": 638,
+      "zs_rmse_common_wet_m": 0.48205851556485046,
+      "h_rmse_all_cells_m": 0.30758021907659083,
+      "wet_iou_at_0_3": 0.0,
+      "wet_union_cells": 400,
+      "area_h_gt_0_3_m2": 0.0,
+      "bed_lowering_volume_m3": 0.0
+    },
+    {
+      "case": "sill_SIMPLE",
+      "reference": "sill_REF",
+      "bed_rmse_m": 0.32716602087020874,
+      "common_wet_cells": 732,
+      "zs_rmse_common_wet_m": 0.6165020340375326,
+      "h_rmse_all_cells_m": 0.17345311643754674,
+      "wet_iou_at_0_3": 0.6329113924050633,
+      "wet_union_cells": 632,
+      "area_h_gt_0_3_m2": 568800.0,
+      "bed_lowering_volume_m3": 1785600.0
+    },
+    {
+      "case": "sill_V49",
+      "reference": "sill_REF",
+      "bed_rmse_m": 0.14210210740566254,
+      "common_wet_cells": 922,
+      "zs_rmse_common_wet_m": 0.15435981302171586,
+      "h_rmse_all_cells_m": 0.07462082469296125,
+      "wet_iou_at_0_3": 0.84688995215311,
+      "wet_union_cells": 418,
+      "area_h_gt_0_3_m2": 334800.0,
+      "bed_lowering_volume_m3": 886758.0138623714
+    }
+  ],
+  "meaning_of_PASS": "Predeclared numerical/input checks passed; not proof that V49 is more accurate",
+  "interpretation": "Synthetic module/solver verification, not independent Phu Yen validation. Depth is supplied equally to SIMPLE and V49; DHG estimation is not tested. REF is same-solver reference, not an exact hydraulic solution. SIMPLE has the same width/depth but no taper/protection; volumes differ."
+}

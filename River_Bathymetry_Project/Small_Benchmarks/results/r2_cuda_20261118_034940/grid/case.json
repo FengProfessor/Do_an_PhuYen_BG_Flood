@@ -1,0 +1,22 @@
+{
+  "name": "grid",
+  "kind": "grid",
+  "shape": [
+    32,
+    48
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 1.0,
+  "zsinit_m": -100.0,
+  "closed": true,
+  "rain_units": null,
+  "river_peak_m3_s": 0.0,
+  "inputs": {
+    "bed.asc": "bf3e35add8f8fd20968a25c9290042c6a86d9eed6d23f5b61ca341217c0fd280",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "7101aaaf7a241fd6e4b448c4cd72537ac8b54739ab0f22644fa9774eb4f5f420",
+    "BG_param.txt": "4cb99dc9e33641d576b76a647df9d7807f3644fd7b2a6c930598d0997808174d"
+  }
+}

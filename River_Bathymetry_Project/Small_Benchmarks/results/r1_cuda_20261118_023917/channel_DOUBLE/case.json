@@ -1,0 +1,23 @@
+{
+  "name": "channel_DOUBLE",
+  "kind": "channel",
+  "shape": [
+    64,
+    128
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": false,
+  "rain_units": null,
+  "river_peak_m3_s": 200.0,
+  "inputs": {
+    "bed.asc": "a8ad17a5736f3d2dd6bfeec7c8bd9cd4a93f8e3242a996a9e1e5f1d06eafe6c9",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "b62cb52ba216512c878499ec2426d652ddd90c4a4aaa4022198bdf3ecce74b49",
+    "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+    "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188"
+  }
+}

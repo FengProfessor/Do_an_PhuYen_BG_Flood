@@ -1,0 +1,22 @@
+{
+  "name": "lake",
+  "kind": "lake",
+  "shape": [
+    32,
+    32
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 120.0,
+  "zsinit_m": 1.0,
+  "closed": true,
+  "rain_units": null,
+  "river_peak_m3_s": 0.0,
+  "inputs": {
+    "bed.asc": "173dc58adc632e0c0a16168537dafd032b7b2dd7c78f9dd5a33421bd07fc7d1e",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "bb1e942249eb7b055da168349286bb7465c59960a9424a5a7c49560ab50ae2a4",
+    "BG_param.txt": "5073faddd6656e30d6ac5e49f16a30f7dfbd487e398b4d12c66899faebd93fc3"
+  }
+}

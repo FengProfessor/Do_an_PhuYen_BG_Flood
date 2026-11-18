@@ -1,0 +1,178 @@
+{
+  "suite": "channel",
+  "status": "PASS",
+  "cases": {
+    "channel_REF": {
+      "case": "channel_REF",
+      "kind": "channel",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 332.64,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 4.656612873077393e-10,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 503912.21256365615,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 1.6111557483673096,
+        "area_h_gt_0_3_m2": 527400.0,
+        "budget_physical_residual_m3": 2.3283064365386963e-10,
+        "budget_relative_residual": 4.620460430184552e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "channel_RAW": {
+      "case": "channel_RAW",
+      "kind": "channel",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 229.813,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 506878.01836938865,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 0.7749359011650085,
+        "area_h_gt_0_3_m2": 0.0,
+        "budget_physical_residual_m3": 0.0,
+        "budget_relative_residual": 0.0,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "channel_SIMPLE": {
+      "case": "channel_SIMPLE",
+      "kind": "channel",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 275.078,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 503937.49245370086,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 1.1870228052139282,
+        "area_h_gt_0_3_m2": 662400.0,
+        "budget_physical_residual_m3": 5.238689482212067e-10,
+        "budget_relative_residual": 1.0395514446369777e-15,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "channel_V49": {
+      "case": "channel_V49",
+      "kind": "channel",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 360.735,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 4.656612873077393e-10,
+        "identity_max_error_m": 1.1920928955078125e-07,
+        "min_h_m": 0.0,
+        "final_volume_m3": 503963.49830337183,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 1.9231380224227905,
+        "area_h_gt_0_3_m2": 432000.0,
+        "budget_physical_residual_m3": 0.13390689325751737,
+        "budget_relative_residual": 2.6570759421007547e-07,
+        "clamp_added_m3": 0.13390689319261082,
+        "clamp_removed_m3": 0.0
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "case": "channel_REF",
+      "reference": "channel_REF",
+      "bed_rmse_m": 0.0,
+      "common_wet_cells": 972,
+      "zs_rmse_common_wet_m": 0.0,
+      "h_rmse_all_cells_m": 0.0,
+      "wet_iou_at_0_3": 1.0,
+      "wet_union_cells": 586,
+      "area_h_gt_0_3_m2": 527400.0,
+      "bed_lowering_volume_m3": 1219015.3753101826
+    },
+    {
+      "case": "channel_RAW",
+      "reference": "channel_REF",
+      "bed_rmse_m": 0.5271004438400269,
+      "common_wet_cells": 582,
+      "zs_rmse_common_wet_m": 0.7915263020258004,
+      "h_rmse_all_cells_m": 0.2634067080688999,
+      "wet_iou_at_0_3": 0.0,
+      "wet_union_cells": 586,
+      "area_h_gt_0_3_m2": 0.0,
+      "bed_lowering_volume_m3": 0.0
+    },
+    {
+      "case": "channel_SIMPLE",
+      "reference": "channel_REF",
+      "bed_rmse_m": 0.31757161021232605,
+      "common_wet_cells": 864,
+      "zs_rmse_common_wet_m": 0.39956457154275765,
+      "h_rmse_all_cells_m": 0.174984945959237,
+      "wet_iou_at_0_3": 0.6004842615012107,
+      "wet_union_cells": 826,
+      "area_h_gt_0_3_m2": 662400.0,
+      "bed_lowering_volume_m3": 1785600.0
+    },
+    {
+      "case": "channel_V49",
+      "reference": "channel_REF",
+      "bed_rmse_m": 0.1432621330022812,
+      "common_wet_cells": 950,
+      "zs_rmse_common_wet_m": 0.29167471637386816,
+      "h_rmse_all_cells_m": 0.08007797187667694,
+      "wet_iou_at_0_3": 0.7532894736842105,
+      "wet_union_cells": 608,
+      "area_h_gt_0_3_m2": 432000.0,
+      "bed_lowering_volume_m3": 901295.0305402279
+    }
+  ],
+  "meaning_of_PASS": "Predeclared numerical/input checks passed; not proof that V49 is more accurate",
+  "interpretation": "Synthetic module/solver verification, not independent Phu Yen validation. Depth is supplied equally to SIMPLE and V49; DHG estimation is not tested. REF is same-solver reference, not an exact hydraulic solution. SIMPLE has the same width/depth but no taper/protection; volumes differ."
+}

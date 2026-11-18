@@ -1,0 +1,172 @@
+{
+  "suite": "smoke",
+  "status": "PASS",
+  "cases": {
+    "grid": {
+      "case": "grid",
+      "kind": "grid",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 7.078,
+      "metrics": {
+        "final_time_s": 1.0,
+        "frames": 1,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 0.0,
+        "min_h_m": 0.0,
+        "final_volume_m3": 0.0,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 0.0,
+        "area_h_gt_0_3_m2": 0.0,
+        "budget_physical_residual_m3": 0.0,
+        "budget_relative_residual": 0.0,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "rain_mm": {
+      "case": "rain_mm",
+      "kind": "rain",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "rain_analytic_depth": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 119.844,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 0.0,
+        "min_h_m": 0.00016666666488163173,
+        "final_volume_m3": 9215.999794006348,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 0.009999999776482582,
+        "area_h_gt_0_3_m2": 0.0,
+        "expected_depth_m": 0.01,
+        "rain_max_error_m": 2.2351741811588166e-10,
+        "budget_physical_residual_m3": 1.0913936421275139e-11,
+        "budget_relative_residual": 1.1842378929335014e-15,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "rain_ms": {
+      "case": "rain_ms",
+      "kind": "rain",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "rain_analytic_depth": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 117.687,
+      "metrics": {
+        "final_time_s": 3600.0,
+        "frames": 60,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 0.0,
+        "min_h_m": 0.00016666666488163173,
+        "final_volume_m3": 9215.999794006348,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 0.009999999776482582,
+        "area_h_gt_0_3_m2": 0.0,
+        "expected_depth_m": 0.01,
+        "rain_max_error_m": 2.2351741811588166e-10,
+        "budget_physical_residual_m3": 7.275957614183426e-12,
+        "budget_relative_residual": 7.89491928622334e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "lake": {
+      "case": "lake",
+      "kind": "lake",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "lake_level": true,
+        "lake_velocity": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 16.829,
+      "metrics": {
+        "final_time_s": 120.0,
+        "frames": 2,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 5.960464477539063e-08,
+        "min_h_m": 1.2001279592514038,
+        "final_volume_m3": 1382358.3249092102,
+        "theoretical_initial_volume_m3": 1382358.325767517,
+        "max_h_m": 1.7998719215393066,
+        "area_h_gt_0_3_m2": 921600.0,
+        "lake_max_zs_error_m": 0.0,
+        "lake_max_speed_m_s": 4.178363702105706e-15,
+        "budget_physical_residual_m3": -4.695791308734694e-10,
+        "budget_relative_residual": 3.3969421845570507e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    },
+    "river_volume": {
+      "case": "river_volume",
+      "kind": "river_volume",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "closed_river_mass": true,
+        "budget_complete": true,
+        "budget_residual": true
+      },
+      "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+      "device": "cuda",
+      "wall_seconds": 7.375,
+      "metrics": {
+        "final_time_s": 60.0,
+        "frames": 1,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 0.0,
+        "min_h_m": 0.0,
+        "final_volume_m3": 600.0000011175871,
+        "theoretical_initial_volume_m3": 0.0,
+        "max_h_m": 0.07399765402078629,
+        "area_h_gt_0_3_m2": 0.0,
+        "expected_added_volume_m3": 600.0,
+        "river_relative_volume_error": 1.862645149230957e-09,
+        "budget_physical_residual_m3": 1.1368683772161603e-13,
+        "budget_relative_residual": 1.8947806286936009e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0
+      }
+    }
+  },
+  "comparisons": [],
+  "meaning_of_PASS": "Predeclared numerical/input checks passed; not proof that V49 is more accurate",
+  "interpretation": "Synthetic module/solver verification, not independent Phu Yen validation. Depth is supplied equally to SIMPLE and V49; DHG estimation is not tested. REF is same-solver reference, not an exact hydraulic solution. SIMPLE has the same width/depth but no taper/protection; volumes differ."
+}

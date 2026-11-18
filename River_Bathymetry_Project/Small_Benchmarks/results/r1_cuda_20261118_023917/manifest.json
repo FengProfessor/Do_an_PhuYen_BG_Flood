@@ -1,0 +1,407 @@
+{
+  "schema": "small-benchmarks-1",
+  "status": "PREPARED_NOT_SIMULATED",
+  "suites": {
+    "smoke": [
+      "grid",
+      "rain_mm",
+      "rain_ms",
+      "lake",
+      "river_volume"
+    ],
+    "channel": [
+      "channel_REF",
+      "channel_RAW",
+      "channel_SIMPLE",
+      "channel_V49"
+    ],
+    "sill": [
+      "sill_REF",
+      "sill_RAW",
+      "sill_SIMPLE",
+      "sill_V49"
+    ],
+    "depth": [
+      "channel_REF",
+      "channel_V49",
+      "channel_HALF",
+      "channel_DOUBLE"
+    ]
+  },
+  "method": {
+    "path": "D:\\VTP\\River_Bathymetry_Project\\V49_Method1_DHG_Clamped\\v49_method1_dhg_clamped.py",
+    "sha256": "dc740450a53e899c2db687f8899cc706271b1ef9470f42e4437c6655dd4793f0"
+  },
+  "benchmark_code": {
+    "analyze_cases.py": "9449cd7ae14fe4bda2d30a106d932bb8ea3698fe284cc0b63c726c430024d779",
+    "build_cases.py": "e4ad791477bbf0eb92df4f67a7f79a6db108d86d202f4a26d6aba8f67adc010f",
+    "run_benchmarks.py": "28d58ada15eb1f02c1fd8385e0e4467284e48e94d135419560807ce80344a481",
+    "test_small_benchmarks.py": "98aa10970e0ede8ea7aba072765d38f493426a6617a018bd011d361e40389ff0"
+  },
+  "cases": {
+    "grid": {
+      "name": "grid",
+      "kind": "grid",
+      "shape": [
+        32,
+        48
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 1.0,
+      "zsinit_m": -100.0,
+      "closed": true,
+      "rain_units": null,
+      "river_peak_m3_s": 0.0,
+      "inputs": {
+        "bed.asc": "bf3e35add8f8fd20968a25c9290042c6a86d9eed6d23f5b61ca341217c0fd280",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "7101aaaf7a241fd6e4b448c4cd72537ac8b54739ab0f22644fa9774eb4f5f420",
+        "BG_param.txt": "4cb99dc9e33641d576b76a647df9d7807f3644fd7b2a6c930598d0997808174d"
+      }
+    },
+    "rain_mm": {
+      "name": "rain_mm",
+      "kind": "rain",
+      "shape": [
+        32,
+        32
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": true,
+      "rain_units": "mm/h",
+      "river_peak_m3_s": 0.0,
+      "inputs": {
+        "bed.asc": "af0bb168a60f69595c06cbeb9aa8a01bbe519ffdc9d4090fb89fab46b5cbee71",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "7c47698ffea2d322733b704e935c8b6e5004d2dc29d766b802f3ff42f57416cb",
+        "BG_param.txt": "a15545cbb41eb867bccb02d96002dc16755e75af50ea9a88570c460029c518d2",
+        "rain.txt": "299ebf7bc1d5c961bbeb9d5e953ef7c04bdd886eaf9290343e76486e296132ca"
+      }
+    },
+    "rain_ms": {
+      "name": "rain_ms",
+      "kind": "rain",
+      "shape": [
+        32,
+        32
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": true,
+      "rain_units": "m/s",
+      "river_peak_m3_s": 0.0,
+      "inputs": {
+        "bed.asc": "af0bb168a60f69595c06cbeb9aa8a01bbe519ffdc9d4090fb89fab46b5cbee71",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "7c47698ffea2d322733b704e935c8b6e5004d2dc29d766b802f3ff42f57416cb",
+        "BG_param.txt": "92bdfc5f8aee78acea83fd321154340c26ed6c08d0281fbc8d077608eede4b82",
+        "rain.txt": "21256f5faaae1bfdf758bc62d79f087aba86c93c1c399cc0fc2bc947c7303930"
+      }
+    },
+    "lake": {
+      "name": "lake",
+      "kind": "lake",
+      "shape": [
+        32,
+        32
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 120.0,
+      "zsinit_m": 1.0,
+      "closed": true,
+      "rain_units": null,
+      "river_peak_m3_s": 0.0,
+      "inputs": {
+        "bed.asc": "173dc58adc632e0c0a16168537dafd032b7b2dd7c78f9dd5a33421bd07fc7d1e",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "bb1e942249eb7b055da168349286bb7465c59960a9424a5a7c49560ab50ae2a4",
+        "BG_param.txt": "5073faddd6656e30d6ac5e49f16a30f7dfbd487e398b4d12c66899faebd93fc3"
+      }
+    },
+    "river_volume": {
+      "name": "river_volume",
+      "kind": "river_volume",
+      "shape": [
+        32,
+        32
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 60.0,
+      "zsinit_m": -100.0,
+      "closed": true,
+      "rain_units": null,
+      "river_peak_m3_s": 10.0,
+      "inputs": {
+        "bed.asc": "af0bb168a60f69595c06cbeb9aa8a01bbe519ffdc9d4090fb89fab46b5cbee71",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "7c47698ffea2d322733b704e935c8b6e5004d2dc29d766b802f3ff42f57416cb",
+        "BG_param.txt": "5a16a30e3ef87f2be72ce07834ecdde369c2c164472f684604563f47cb0ad6f9",
+        "river.txt": "4b073d7f91364e21e3db884467e1305b889d0470d2bf934ecf4d4f31b248b4cd"
+      }
+    },
+    "channel_REF": {
+      "name": "channel_REF",
+      "kind": "channel",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "65d1028924b3278cc40022360ffb337cc098942ef4c17f564b0b21184e4f0984",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "c510d8b8e82ae3b78b70026d0af827ac95e56603f9c8a8ffadfdf542a78e686a",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "1e0abb1ffb89c82b578555f0b861a64eed210c1b564f971de0493c6f6d6dc6a0"
+      }
+    },
+    "channel_RAW": {
+      "name": "channel_RAW",
+      "kind": "channel",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "336ac5530c10a419b21089e39f24f0b6fa921c062b47dbc46cfa49490061bc81",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "d7fb51c9d544f8ebcfb6fd0e5f322a808eee85cc1a191bfece1a7949d48fd5ac",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "1e0abb1ffb89c82b578555f0b861a64eed210c1b564f971de0493c6f6d6dc6a0"
+      }
+    },
+    "channel_SIMPLE": {
+      "name": "channel_SIMPLE",
+      "kind": "channel",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "33f20b5e17a2fa9835d39d989fe9e0bee68acb1a8da11e3bf18acb599ae87a99",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "89b7d19aa9b6302a3ad083a9b76eea3e98920d40571e130598d30f54ff2f70ad",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "1e0abb1ffb89c82b578555f0b861a64eed210c1b564f971de0493c6f6d6dc6a0"
+      }
+    },
+    "channel_V49": {
+      "name": "channel_V49",
+      "kind": "channel",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "2d11def57b61713cd02a1013131c02f5341b1bfa13def1a1ab65b322bff69c61",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "0932384a31fd4418583f14ddf7380130046e8914ab75a7364d99d1d01262e535",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "1e0abb1ffb89c82b578555f0b861a64eed210c1b564f971de0493c6f6d6dc6a0"
+      }
+    },
+    "channel_HALF": {
+      "name": "channel_HALF",
+      "kind": "channel",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "813b4a58f5511cfab7d4407dfaf8e22bdbe383093243f711b4f0b74ef1c60fc1",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "a81531632345e152fc85939ff291eaad4b6688c41ae8689692886003221b80e5",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188"
+      }
+    },
+    "channel_DOUBLE": {
+      "name": "channel_DOUBLE",
+      "kind": "channel",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "a8ad17a5736f3d2dd6bfeec7c8bd9cd4a93f8e3242a996a9e1e5f1d06eafe6c9",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "b62cb52ba216512c878499ec2426d652ddd90c4a4aaa4022198bdf3ecce74b49",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188"
+      }
+    },
+    "sill_REF": {
+      "name": "sill_REF",
+      "kind": "sill",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "7a802def4367d09848644dfa0bb3cba367e51fea990a903c6e8ed97e3ef5febb",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "b6975542e46e4923cf6be19335e5970febca90d92145827240d51e6add7885b4",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "ae3bcaa3a04ca221c422fc22764959065ef4eff0baca3f9c4f159c467b42a49f"
+      }
+    },
+    "sill_RAW": {
+      "name": "sill_RAW",
+      "kind": "sill",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "3579772744b4a008df00b770f5d425190d82181f1bf42f96be9a39661ce4a17d",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "6d2e6459c6f56526d506852b3bea85776f287ff8bb5d572cd1c8bdd49c6e17b4",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "ae3bcaa3a04ca221c422fc22764959065ef4eff0baca3f9c4f159c467b42a49f"
+      }
+    },
+    "sill_SIMPLE": {
+      "name": "sill_SIMPLE",
+      "kind": "sill",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "630a0a22c98db6d75fb662b61040e476df8d842643be2f994bc8be183a424d7c",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "111ec3c1031eb190a56441c8f0c6f74c1cdfb7e181fe630f7acd30847dae55b5",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "ae3bcaa3a04ca221c422fc22764959065ef4eff0baca3f9c4f159c467b42a49f"
+      }
+    },
+    "sill_V49": {
+      "name": "sill_V49",
+      "kind": "sill",
+      "shape": [
+        64,
+        128
+      ],
+      "dx": 30.0,
+      "x0": 270000.0,
+      "ytop": 1478000.0,
+      "endtime_s": 3600.0,
+      "zsinit_m": -100.0,
+      "closed": false,
+      "rain_units": null,
+      "river_peak_m3_s": 200.0,
+      "inputs": {
+        "bed.asc": "a0564cb15cee8f78941d49b4a19e91581523f86aedd7d638d602564f77b4d8a7",
+        "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+        "bed.npy": "67d4210c518c8a2116da9e1c74562308e6381e392c5e7aeb1f373a75a5e1fc10",
+        "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+        "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+        "protected.npy": "ae3bcaa3a04ca221c422fc22764959065ef4eff0baca3f9c4f159c467b42a49f"
+      }
+    }
+  },
+  "tolerances": {
+    "bed_abs_m": 1e-05,
+    "coordinate_abs_m": 1e-05,
+    "rain_abs_m": 1e-05,
+    "lake_zs_abs_m": 0.0001,
+    "lake_speed_m_s": 0.0001,
+    "river_relative_volume": 0.01,
+    "identity_abs_m": 0.0001,
+    "negative_depth_m": -1e-06,
+    "time_abs_s": 1.0,
+    "budget_relative_residual": 0.01
+  },
+  "interpretation": "Synthetic module/solver verification, not independent Phu Yen validation. Depth is supplied equally to SIMPLE and V49; DHG estimation is not tested. REF is same-solver reference, not an exact hydraulic solution. SIMPLE has the same width/depth but no taper/protection; volumes differ."
+}

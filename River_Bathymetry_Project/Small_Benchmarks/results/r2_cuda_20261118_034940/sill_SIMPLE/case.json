@@ -1,0 +1,24 @@
+{
+  "name": "sill_SIMPLE",
+  "kind": "sill",
+  "shape": [
+    64,
+    128
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": false,
+  "rain_units": null,
+  "river_peak_m3_s": 200.0,
+  "inputs": {
+    "bed.asc": "630a0a22c98db6d75fb662b61040e476df8d842643be2f994bc8be183a424d7c",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "111ec3c1031eb190a56441c8f0c6f74c1cdfb7e181fe630f7acd30847dae55b5",
+    "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+    "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+    "protected.npy": "ae3bcaa3a04ca221c422fc22764959065ef4eff0baca3f9c4f159c467b42a49f"
+  }
+}

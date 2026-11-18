@@ -1,0 +1,34 @@
+{
+  "channel": {
+    "status": "PASS",
+    "checks": {
+      "no_raised_cells": true,
+      "protected_unchanged": true,
+      "duplicate_reach_unchanged": true,
+      "crossing_not_sum_depth": true,
+      "crossing_adds_new_cells": true,
+      "below_floor_unchanged": true,
+      "above_floor_not_lower_than_floor": true,
+      "taper_center_half_edge": true
+    },
+    "protected_cells": 0,
+    "method_sha256": "dc740450a53e899c2db687f8899cc706271b1ef9470f42e4437c6655dd4793f0",
+    "scope": "Production raster functions on synthetic supplied depth; not DHG depth calibration"
+  },
+  "sill": {
+    "status": "PASS",
+    "checks": {
+      "no_raised_cells": true,
+      "protected_unchanged": true,
+      "duplicate_reach_unchanged": true,
+      "crossing_not_sum_depth": true,
+      "crossing_adds_new_cells": true,
+      "below_floor_unchanged": true,
+      "above_floor_not_lower_than_floor": true,
+      "taper_center_half_edge": true
+    },
+    "protected_cells": 24,
+    "method_sha256": "dc740450a53e899c2db687f8899cc706271b1ef9470f42e4437c6655dd4793f0",
+    "scope": "Production raster functions on synthetic supplied depth; not DHG depth calibration"
+  }
+}

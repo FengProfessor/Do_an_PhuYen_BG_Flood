@@ -1,0 +1,120 @@
+  [GPU] CuPy detected — using NVIDIA GPU acceleration
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks\results\r1_cuda_20261118_023917\lake\BG_param.txt...
+	Đã đọc xong file tham số
+	Đọc file địa hình: bed.asc
+		nx=32, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=270945.0, ymax=1477985.0
+============================================================
+  BG_Flood - Mô hình lũ lụt Godunov khối-cấu trúc
+  (Block-structured Godunov-type Flood Model)
+============================================================
+  Giải phương trình nước nông 2D (SWE)
+  Thuật toán: Kurganov-Petrova (2007)
+  Lưới: Block-structured adaptive mesh
+============================================================
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks\results\r1_cuda_20261118_023917\lake\BG_param.txt...
+	Đã đọc xong file tham số
+Đọc dữ liệu đầu vào...
+	Đọc file địa hình: bed.asc
+		nx=32, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=270945.0, ymax=1477985.0
+
+
+--- Tổng kết tham số ---
+  Lưới: 32 x 32
+  dx = 30.0
+  Miền: x=[270000.0, 270960.0], y=[1477040.0, 1478000.0]
+  Thời gian kết thúc: 120.0 s
+  Bước xuất: 60.0 s
+  CFL = 0.4
+  eps = 0.0001
+  Ma sát (cf) = 0.035 (Constant)
+  Thấm: IL=0.0, CL=0.0 (Constant)
+  Block width = 16
+  Halo width = 1
+  Block mem width = 18
+  Block size = 324
+  File xuất: result.nc
+  Biến xuất: ['zb', 'h', 'zs', 'u', 'v']
+  Biên trái: Có
+  Biên phải: Có
+  Biên trên: Có
+  Biên dưới: Có
+---
+
+Khởi tạo lưới...
+	Số block ban đầu: 4; Sẽ cấp phát 5 block trong bộ nhớ.
+	Khởi tạo vị trí và lân cận của các blocks...
+	Xây dựng chỉ số vector hóa (block index)...
+	Hoàn tất khởi tạo lưới.
+
+Khởi tạo điều kiện ban đầu...
+	Hoàn tất khởi tạo điều kiện ban đầu.
+	Chuyển dữ liệu lên GPU...
+
+Thời gian khởi tạo: 0.03 giây
+
+Initialising model main loop...
+Model Running... [GPU mode]
+t = 2.86/120s (2.4%) | dt = 2.857e+00 | elapsed = 0.2s
+t = 5.71/120s (4.8%) | dt = 2.855e+00 | elapsed = 0.3s
+t = 8.57/120s (7.1%) | dt = 2.853e+00 | elapsed = 0.4s
+t = 11.42/120s (9.5%) | dt = 2.851e+00 | elapsed = 0.5s
+t = 14.27/120s (11.9%) | dt = 2.849e+00 | elapsed = 0.6s
+t = 17.11/120s (14.3%) | dt = 2.847e+00 | elapsed = 0.7s
+t = 19.96/120s (16.6%) | dt = 2.845e+00 | elapsed = 0.9s
+t = 22.78/120s (19.0%) | dt = 2.819e+00 | elapsed = 1.0s
+t = 25.56/120s (21.3%) | dt = 2.784e+00 | elapsed = 1.1s
+t = 28.31/120s (23.6%) | dt = 2.750e+00 | elapsed = 1.2s
+t = 31.03/120s (25.9%) | dt = 2.718e+00 | elapsed = 1.3s
+t = 33.72/120s (28.1%) | dt = 2.688e+00 | elapsed = 1.4s
+t = 36.38/120s (30.3%) | dt = 2.659e+00 | elapsed = 1.6s
+t = 39.01/120s (32.5%) | dt = 2.632e+00 | elapsed = 1.7s
+t = 41.61/120s (34.7%) | dt = 2.605e+00 | elapsed = 1.8s
+t = 44.19/120s (36.8%) | dt = 2.580e+00 | elapsed = 1.9s
+t = 46.75/120s (39.0%) | dt = 2.557e+00 | elapsed = 2.0s
+t = 49.28/120s (41.1%) | dt = 2.534e+00 | elapsed = 2.1s
+t = 51.80/120s (43.2%) | dt = 2.513e+00 | elapsed = 2.3s
+t = 54.29/120s (45.2%) | dt = 2.492e+00 | elapsed = 2.4s
+t = 56.76/120s (47.3%) | dt = 2.473e+00 | elapsed = 2.5s
+t = 59.22/120s (49.3%) | dt = 2.455e+00 | elapsed = 2.6s
+NetCDF frame t=61.655s saved in 0.82s (vectorized)
+t = 61.65/120s (51.4%) | dt = 2.437e+00 | elapsed = 3.5s
+t = 64.08/120s (53.4%) | dt = 2.421e+00 | elapsed = 3.7s
+t = 66.48/120s (55.4%) | dt = 2.405e+00 | elapsed = 3.8s
+t = 68.87/120s (57.4%) | dt = 2.390e+00 | elapsed = 3.9s
+t = 71.24/120s (59.4%) | dt = 2.375e+00 | elapsed = 4.0s
+t = 73.61/120s (61.3%) | dt = 2.362e+00 | elapsed = 4.1s
+t = 75.96/120s (63.3%) | dt = 2.349e+00 | elapsed = 4.2s
+t = 78.29/120s (65.2%) | dt = 2.337e+00 | elapsed = 4.4s
+t = 80.62/120s (67.2%) | dt = 2.325e+00 | elapsed = 4.5s
+t = 82.93/120s (69.1%) | dt = 2.314e+00 | elapsed = 4.6s
+t = 85.23/120s (71.0%) | dt = 2.303e+00 | elapsed = 4.7s
+t = 87.53/120s (72.9%) | dt = 2.293e+00 | elapsed = 4.8s
+t = 89.81/120s (74.8%) | dt = 2.284e+00 | elapsed = 5.0s
+t = 92.09/120s (76.7%) | dt = 2.275e+00 | elapsed = 5.1s
+t = 94.35/120s (78.6%) | dt = 2.266e+00 | elapsed = 5.2s
+t = 96.61/120s (80.5%) | dt = 2.258e+00 | elapsed = 5.3s
+t = 98.86/120s (82.4%) | dt = 2.250e+00 | elapsed = 5.4s
+t = 101.10/120s (84.3%) | dt = 2.242e+00 | elapsed = 5.6s
+t = 103.34/120s (86.1%) | dt = 2.235e+00 | elapsed = 5.7s
+t = 105.57/120s (88.0%) | dt = 2.229e+00 | elapsed = 5.8s
+t = 107.79/120s (89.8%) | dt = 2.222e+00 | elapsed = 5.9s
+t = 110.00/120s (91.7%) | dt = 2.216e+00 | elapsed = 6.0s
+t = 112.21/120s (93.5%) | dt = 2.210e+00 | elapsed = 6.2s
+t = 114.42/120s (95.3%) | dt = 2.205e+00 | elapsed = 6.3s
+t = 116.62/120s (97.2%) | dt = 2.199e+00 | elapsed = 6.4s
+t = 118.81/120s (99.0%) | dt = 2.194e+00 | elapsed = 6.5s
+NetCDF frame t=120.000s saved in 0.21s (vectorized)
+t = 120.00/120s (100.0%) | dt = 1.188e+00 | elapsed = 6.9s
+
+
+Simulation completed.
+Runtime: 6.88 s
+
+Tổng thời gian chạy: 7.04 giây
+BG_Flood hoàn tất thành công!

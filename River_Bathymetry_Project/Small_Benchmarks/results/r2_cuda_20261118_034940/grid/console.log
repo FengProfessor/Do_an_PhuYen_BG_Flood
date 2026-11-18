@@ -1,0 +1,71 @@
+  [GPU] CuPy detected — using NVIDIA GPU acceleration
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks\results\r2_cuda_20261118_034940\grid\BG_param.txt...
+	Đã đọc xong file tham số
+	Đọc file địa hình: bed.asc
+		nx=48, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=271425.0, ymax=1477985.0
+============================================================
+  BG_Flood - Mô hình lũ lụt Godunov khối-cấu trúc
+  (Block-structured Godunov-type Flood Model)
+============================================================
+  Giải phương trình nước nông 2D (SWE)
+  Thuật toán: Kurganov-Petrova (2007)
+  Lưới: Block-structured adaptive mesh
+============================================================
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks\results\r2_cuda_20261118_034940\grid\BG_param.txt...
+	Đã đọc xong file tham số
+Đọc dữ liệu đầu vào...
+	Đọc file địa hình: bed.asc
+		nx=48, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=271425.0, ymax=1477985.0
+
+
+--- Tổng kết tham số ---
+  Lưới: 48 x 32
+  dx = 30.0
+  Miền: x=[270000.0, 271440.0], y=[1477040.0, 1478000.0]
+  Thời gian kết thúc: 1.0 s
+  Bước xuất: 1.0 s
+  CFL = 0.4
+  eps = 0.0001
+  Ma sát (cf) = 0.035 (Constant)
+  Thấm: IL=0.0, CL=0.0 (Constant)
+  Block width = 16
+  Halo width = 1
+  Block mem width = 18
+  Block size = 324
+  File xuất: result.nc
+  Biến xuất: ['zb', 'h', 'zs', 'u', 'v']
+  Biên trái: Có
+  Biên phải: Có
+  Biên trên: Có
+  Biên dưới: Có
+---
+
+Khởi tạo lưới...
+	Số block ban đầu: 6; Sẽ cấp phát 7 block trong bộ nhớ.
+	Khởi tạo vị trí và lân cận của các blocks...
+	Xây dựng chỉ số vector hóa (block index)...
+	Hoàn tất khởi tạo lưới.
+
+Khởi tạo điều kiện ban đầu...
+	Hoàn tất khởi tạo điều kiện ban đầu.
+	Chuyển dữ liệu lên GPU...
+
+Thời gian khởi tạo: 0.05 giây
+
+Initialising model main loop...
+Model Running... [GPU mode]
+NetCDF frame t=1.000s saved in 1.40s (vectorized)
+t = 1.00/1s (100.0%) | dt = 1.000e+00 | elapsed = 1.6s
+
+
+Simulation completed.
+Runtime: 1.62 s
+
+Tổng thời gian chạy: 1.93 giây
+BG_Flood hoàn tất thành công!

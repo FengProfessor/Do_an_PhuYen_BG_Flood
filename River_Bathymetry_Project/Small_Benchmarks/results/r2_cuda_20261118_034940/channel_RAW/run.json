@@ -1,0 +1,12 @@
+{
+  "case": "channel_RAW",
+  "status": "COMPLETED",
+  "runtime_digest": "33781f051537e5f56d59d26733df799a0a3e8414c9cb2cbec4fe760b30b95161",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "c35221204acc5d6193fb24e5683ba864a1743510066d42d5fab8461ca09b9895",
+  "started_utc": "2026-11-17T21:00:41.626540+00:00",
+  "output_sha256": "447f62983e1e1a7aa5141ab453f9d7605ac26c79f08d4ebb29316a23abfa9f7c",
+  "wall_seconds": 229.813
+}

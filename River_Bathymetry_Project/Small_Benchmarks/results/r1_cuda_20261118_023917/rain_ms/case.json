@@ -1,0 +1,23 @@
+{
+  "name": "rain_ms",
+  "kind": "rain",
+  "shape": [
+    32,
+    32
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": true,
+  "rain_units": "m/s",
+  "river_peak_m3_s": 0.0,
+  "inputs": {
+    "bed.asc": "af0bb168a60f69595c06cbeb9aa8a01bbe519ffdc9d4090fb89fab46b5cbee71",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "7c47698ffea2d322733b704e935c8b6e5004d2dc29d766b802f3ff42f57416cb",
+    "BG_param.txt": "92bdfc5f8aee78acea83fd321154340c26ed6c08d0281fbc8d077608eede4b82",
+    "rain.txt": "21256f5faaae1bfdf758bc62d79f087aba86c93c1c399cc0fc2bc947c7303930"
+  }
+}

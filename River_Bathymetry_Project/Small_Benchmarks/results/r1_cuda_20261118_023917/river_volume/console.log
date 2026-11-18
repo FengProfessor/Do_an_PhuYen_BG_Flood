@@ -1,0 +1,78 @@
+  [GPU] CuPy detected — using NVIDIA GPU acceleration
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks\results\r1_cuda_20261118_023917\river_volume\BG_param.txt...
+	Đã đọc xong file tham số
+	Đọc file địa hình: bed.asc
+		nx=32, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=270945.0, ymax=1477985.0
+============================================================
+  BG_Flood - Mô hình lũ lụt Godunov khối-cấu trúc
+  (Block-structured Godunov-type Flood Model)
+============================================================
+  Giải phương trình nước nông 2D (SWE)
+  Thuật toán: Kurganov-Petrova (2007)
+  Lưới: Block-structured adaptive mesh
+============================================================
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks\results\r1_cuda_20261118_023917\river_volume\BG_param.txt...
+	Đã đọc xong file tham số
+Đọc dữ liệu đầu vào...
+	Đọc file địa hình: bed.asc
+		nx=32, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=270945.0, ymax=1477985.0
+
+Preparing River forcing: river.txt
+  Time range: 0.0 - 3660.0 s
+  Q range: 10.0 - 10.0 m3/s
+  Data points: 2
+
+
+--- Tổng kết tham số ---
+  Lưới: 32 x 32
+  dx = 30.0
+  Miền: x=[270000.0, 270960.0], y=[1477040.0, 1478000.0]
+  Thời gian kết thúc: 60.0 s
+  Bước xuất: 60.0 s
+  CFL = 0.4
+  eps = 0.0001
+  Ma sát (cf) = 0.035 (Constant)
+  Thấm: IL=0.0, CL=0.0 (Constant)
+  Block width = 16
+  Halo width = 1
+  Block mem width = 18
+  Block size = 324
+  File xuất: result.nc
+  Biến xuất: ['zb', 'h', 'zs', 'u', 'v']
+  Biên trái: Có
+  Biên phải: Có
+  Biên trên: Có
+  Biên dưới: Có
+---
+
+Khởi tạo lưới...
+	Số block ban đầu: 4; Sẽ cấp phát 5 block trong bộ nhớ.
+	Khởi tạo vị trí và lân cận của các blocks...
+	Xây dựng chỉ số vector hóa (block index)...
+	Hoàn tất khởi tạo lưới.
+
+Khởi tạo điều kiện ban đầu...
+	Hoàn tất khởi tạo điều kiện ban đầu.
+	Chuyển dữ liệu lên GPU...
+
+Thời gian khởi tạo: 0.04 giây
+
+Initialising model main loop...
+Model Running... [GPU mode]
+River initialized: disarea = 8100.0 m2
+t = 1.00/60s (1.7%) | dt = 1.000e+00 | elapsed = 0.1s
+NetCDF frame t=60.000s saved in 0.83s (vectorized)
+t = 60.00/60s (100.0%) | dt = 5.900e+01 | elapsed = 1.1s
+
+
+Simulation completed.
+Runtime: 1.09 s
+
+Tổng thời gian chạy: 1.25 giây
+BG_Flood hoàn tất thành công!
