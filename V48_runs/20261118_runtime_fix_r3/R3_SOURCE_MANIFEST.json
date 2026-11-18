@@ -1,0 +1,127 @@
+{
+  "base_git_commit": "6c21583863ef843c7bdd2d693da8f87a765db373",
+  "base_runtime": "20261118_runtime_fix_r2",
+  "runtime": "20261118_runtime_fix_r3",
+  "scope": "Small synthetic uniform-grid wall0/outflow2 tests only",
+  "modified_sources": [
+    "bg_flood/flow_gpu.py"
+  ],
+  "python_sources": {
+    "bg_flood/__init__.py": {
+      "r2": "07c2bee11b5b2f8207fcf008959744de79ad55c5bc43dcca56fd9024cb4345a0",
+      "r3": "07c2bee11b5b2f8207fcf008959744de79ad55c5bc43dcca56fd9024cb4345a0"
+    },
+    "bg_flood/advection.py": {
+      "r2": "25170d9edf7e10667fad21ec3c62b615533cec74d99ce8501b46a02c6ac11904",
+      "r3": "25170d9edf7e10667fad21ec3c62b615533cec74d99ce8501b46a02c6ac11904"
+    },
+    "bg_flood/block_index.py": {
+      "r2": "76c84778c98147b934d2a194b482a431b4cb52b479bb2e2b0f7552009287da04",
+      "r3": "76c84778c98147b934d2a194b482a431b4cb52b479bb2e2b0f7552009287da04"
+    },
+    "bg_flood/boundary.py": {
+      "r2": "8179ef78f0d2e8e1f69e7fe986ce93e0c4b9deb1e99663fa4a863594468444ef",
+      "r3": "8179ef78f0d2e8e1f69e7fe986ce93e0c4b9deb1e99663fa4a863594468444ef"
+    },
+    "bg_flood/deform.py": {
+      "r2": "ac39e1cea08771878e0df31cb3135f11c93c781fd05936664a5d8de1b25877a9",
+      "r3": "ac39e1cea08771878e0df31cb3135f11c93c781fd05936664a5d8de1b25877a9"
+    },
+    "bg_flood/flow_cpu.py": {
+      "r2": "e643e0f9f3cddd8745be57b5fbcd3277dec3caa10f09e1a764741604dc7507b5",
+      "r3": "e643e0f9f3cddd8745be57b5fbcd3277dec3caa10f09e1a764741604dc7507b5"
+    },
+    "bg_flood/flow_gpu.py": {
+      "r2": "5daabee2f9bcbceabaa3474f7d3a210f2a2adf3519243ed537981722037af788",
+      "r3": "7d7bec679630c285db93a0ac6daffc456aeacebfc7671928351c9facb3040b1a"
+    },
+    "bg_flood/forcing.py": {
+      "r2": "8b97f09228e1f8c1cea16121e2e192d26447e04eeea646d6d7e141865a2da3bd",
+      "r3": "8b97f09228e1f8c1cea16121e2e192d26447e04eeea646d6d7e141865a2da3bd"
+    },
+    "bg_flood/forcing_update.py": {
+      "r2": "49b3dd4cc0c0f2c3226c00618ae819dc0052e830ef985e03a2ba1703b466c50c",
+      "r3": "49b3dd4cc0c0f2c3226c00618ae819dc0052e830ef985e03a2ba1703b466c50c"
+    },
+    "bg_flood/friction.py": {
+      "r2": "3ea77e55ff1d4cace8c619677fd69ee7c31543ab6b9ec6d81811c9d2871da037",
+      "r3": "3ea77e55ff1d4cace8c619677fd69ee7c31543ab6b9ec6d81811c9d2871da037"
+    },
+    "bg_flood/gpu_backend.py": {
+      "r2": "18cfa0815627f7d98e8aea6e0559a930a0e897d4bd7c033e386bd733ac870c96",
+      "r3": "18cfa0815627f7d98e8aea6e0559a930a0e897d4bd7c033e386bd733ac870c96"
+    },
+    "bg_flood/gradients.py": {
+      "r2": "10bc8a96b2c527a8fc0bbea84edc7adffd3b0ed9c869bcc449039d6944b0348c",
+      "r3": "10bc8a96b2c527a8fc0bbea84edc7adffd3b0ed9c869bcc449039d6944b0348c"
+    },
+    "bg_flood/halo.py": {
+      "r2": "66ffcc65774ccfde93971db2ff1390ebc6385715b67ba58a38018fba5a655967",
+      "r3": "66ffcc65774ccfde93971db2ff1390ebc6385715b67ba58a38018fba5a655967"
+    },
+    "bg_flood/init_evolv.py": {
+      "r2": "fa7f83a42fcf2824addb453706d763af4e967c99befd1005d02a9f0da888a35f",
+      "r3": "fa7f83a42fcf2824addb453706d763af4e967c99befd1005d02a9f0da888a35f"
+    },
+    "bg_flood/initial_conditions.py": {
+      "r2": "c99babc083cfa98611591de434ecf9eaff6bf2b99008c56c2c90b17de83c244c",
+      "r3": "c99babc083cfa98611591de434ecf9eaff6bf2b99008c56c2c90b17de83c244c"
+    },
+    "bg_flood/input.py": {
+      "r2": "3ba7f9a57b44cdc4571690a8c882b12b580816a3a6471bef1655698d6ef8187d",
+      "r3": "3ba7f9a57b44cdc4571690a8c882b12b580816a3a6471bef1655698d6ef8187d"
+    },
+    "bg_flood/kurganov.py": {
+      "r2": "c2979e79ec2de264c3d3204d48a560f283a8eb9a1e7ad32df16aeb904a9bf725",
+      "r3": "c2979e79ec2de264c3d3204d48a560f283a8eb9a1e7ad32df16aeb904a9bf725"
+    },
+    "bg_flood/mainloop.py": {
+      "r2": "14799c096b00c97c9842707f8e932a74844931c9f8482a3a00b348d94e2313e5",
+      "r3": "14799c096b00c97c9842707f8e932a74844931c9f8482a3a00b348d94e2313e5"
+    },
+    "bg_flood/meanmax.py": {
+      "r2": "34fbf1c74e0dd25242e18cb6a9a521fbfa9be22999cc02d5e74f0e6cbf019712",
+      "r3": "34fbf1c74e0dd25242e18cb6a9a521fbfa9be22999cc02d5e74f0e6cbf019712"
+    },
+    "bg_flood/mesh.py": {
+      "r2": "df5c4c1c3961812ec17bc11afb696771137dcdec290eb7c6758b88e376328351",
+      "r3": "df5c4c1c3961812ec17bc11afb696771137dcdec290eb7c6758b88e376328351"
+    },
+    "bg_flood/model.py": {
+      "r2": "8f56ebc845e38158e6eb0352f70e94f3ac8b13c5e98cfade580576a7fe61fce9",
+      "r3": "8f56ebc845e38158e6eb0352f70e94f3ac8b13c5e98cfade580576a7fe61fce9"
+    },
+    "bg_flood/param.py": {
+      "r2": "60fcfd45b25a57ab509497e03d30fadda472b444297cf80d5fa7b63032681307",
+      "r3": "60fcfd45b25a57ab509497e03d30fadda472b444297cf80d5fa7b63032681307"
+    },
+    "bg_flood/read_forcing.py": {
+      "r2": "0758f81fec8e9b100418c302277eb235f5996768b88ddd6af32db5c33bde71a7",
+      "r3": "0758f81fec8e9b100418c302277eb235f5996768b88ddd6af32db5c33bde71a7"
+    },
+    "bg_flood/read_input.py": {
+      "r2": "7f4563c2b53d3af3ff0a9c00b4313a94c7aa41907cceebe12ffa29f5672e4651",
+      "r3": "7f4563c2b53d3af3ff0a9c00b4313a94c7aa41907cceebe12ffa29f5672e4651"
+    },
+    "bg_flood/updateforcing.py": {
+      "r2": "b5a67ef98e281c539f507973388d4bf80941ec0cc4326bc4fd6fba7422a86311",
+      "r3": "b5a67ef98e281c539f507973388d4bf80941ec0cc4326bc4fd6fba7422a86311"
+    },
+    "bg_flood/utils.py": {
+      "r2": "b341301767d39feeb63e25b09a1ff8a91cdb940ed9abae7208bc3a68bbbe46b2",
+      "r3": "b341301767d39feeb63e25b09a1ff8a91cdb940ed9abae7208bc3a68bbbe46b2"
+    },
+    "bg_flood/write_output.py": {
+      "r2": "8d33463448a4b346cfac8bc5e3d17e1f556d6afae58cff9d59d96682147cc662",
+      "r3": "8d33463448a4b346cfac8bc5e3d17e1f556d6afae58cff9d59d96682147cc662"
+    },
+    "bg_flood/write_txtlog.py": {
+      "r2": "f114f7077e193cf2abd4606fba3b735ab09185aafcd34becfc829ec0d7d0e8e3",
+      "r3": "f114f7077e193cf2abd4606fba3b735ab09185aafcd34becfc829ec0d7d0e8e3"
+    },
+    "run_bgflood.py": {
+      "r2": "4d599a53bbb04c02b05726b0353bc83900400c097c4886afba0db60f7fa3c2e2",
+      "r3": "4d599a53bbb04c02b05726b0353bc83900400c097c4886afba0db60f7fa3c2e2"
+    }
+  }
+}

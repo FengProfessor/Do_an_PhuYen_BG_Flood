@@ -1,0 +1,66 @@
+diff --git a/V48_runs/20261118_runtime_fix_r2/python/bg_flood/flow_gpu.py b/V48_runs/20261118_runtime_fix_r3/python/bg_flood/flow_gpu.py
+index 4ed61e5..37f6b36 100644
+--- a/V48_runs/20261118_runtime_fix_r2/python/bg_flood/flow_gpu.py
++++ b/V48_runs/20261118_runtime_fix_r3/python/bg_flood/flow_gpu.py
+@@ -112,6 +112,36 @@ def gradient_vec(idx, param, evolv, grad, zb):
+         dady[i] = minmod2_vec(theta, arr[ib], a_c, arr[it]) * inv_delta
+ 
+ 
++def fill_gradient_halo_vec(idx, forcing, grad):
++    """Complete reconstructed states on a uniform grid with wall/outflow boundaries."""
++    sides = (("left", forcing.left, "x"), ("right", forcing.right, "x"),
++             ("bot", forcing.bot, "y"), ("top", forcing.top, "y"))
++    for name, side, _ in sides:
++        if len(getattr(idx, f"bnd_{name}_i")) and side.type not in (0, 2):
++            raise NotImplementedError("R3 small-test runtime supports wall=0/outflow=2 only")
++    # Gradient nội bộ phải thuộc đúng ô láng giềng, giống các giá trị h/zs/u/v.
++    for field in ("h", "zs", "u", "v"):
++        for axis in ("x", "y"):
++            _fill_halo_flux_arr_vec(idx, getattr(grad, f"d{field}d{axis}"))
++    for name, side, normal_axis in sides:
++        halo = getattr(idx, f"bnd_{name}_i")
++        inside = getattr(idx, f"bnd_{name}_inside")
++        normal_velocity = "u" if normal_axis == "x" else "v"
++        for field in ("h", "zs", "u", "v"):
++            # Qua tường: vận tốc pháp tuyến lẻ, các trường còn lại chẵn.
++            # Lấy đạo hàm pháp tuyến đổi dấu parity; đạo hàm tiếp tuyến giữ dấu.
++            parity = -1. if field == normal_velocity else 1.
++            for axis in ("x", "y"):
++                derivative = getattr(grad, f"d{field}d{axis}")
++                if side.type == 0:
++                    sign = -parity if axis == normal_axis else parity
++                    derivative[halo] = sign * derivative[inside]
++                elif axis == normal_axis:
++                    derivative[halo] = 0.
++                else:
++                    derivative[halo] = derivative[inside]
++
++
+ # ================================================================
+ # KURGANOV X (vectorized)
+ # ================================================================
+@@ -462,6 +492,8 @@ def flow_gpu(param, loop, forcing, model):
+ def _flow_gpu_inner(param, loop, forcing, model):
+     """Inner implementation (wrapped to suppress RuntimeWarnings)."""
+     idx = model.block_index
++    if idx.hw != 1 or not bool(xp.all(idx.delta == param.dx)):
++        raise NotImplementedError("R3 small-test runtime requires a uniform grid and one halo cell")
+     
+     # ============================================================
+     # PREDICTOR STEP
+@@ -478,6 +510,7 @@ def _flow_gpu_inner(param, loop, forcing, model):
+     
+     # 3. Gradient
+     gradient_vec(idx, param, model.evolv, model.grad, model.zb)
++    fill_gradient_halo_vec(idx, forcing, model.grad)
+     
+     # 4-5. Kurganov X & Y
+     kurganov_x_vec(idx, param, model.evolv, model.grad, model.flux, model.time.dtmax)
+@@ -595,6 +628,7 @@ def _flow_gpu_inner(param, loop, forcing, model):
+ 
+     # 12. Gradient again
+     gradient_vec(idx, param, model.evolv_o, model.grad, model.zb)
++    fill_gradient_halo_vec(idx, forcing, model.grad)
+     
+     # 13-14. Kurganov X & Y again
+     kurganov_x_vec(idx, param, model.evolv_o, model.grad, model.flux, model.time.dtmax)

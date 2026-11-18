@@ -1,3 +1,4 @@
 # Preserve exact byte-for-byte SHA-256 hashes for hash-locked runtimes and benchmark results
 V48_runs/** -text
 River_Bathymetry_Project/Small_Benchmarks/results/** -text
+River_Bathymetry_Project/Small_Benchmarks_R3/** -text
