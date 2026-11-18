@@ -1,0 +1,12 @@
+# Kich ban xa lu Song Ky Lo V40 - Dong bo thoi gian voi mua (t=0 tai 2021-11-26 00:00)
+# Offset: +345,600s (+96h). 96h dau dem luu luong mua kiet 500 m3/s.
+# Thoi_gian(s)   Luu_luong_Q(m3/s)
+0               500
+345600          500
+392400          1500
+405000          3000
+417600          5000
+432000          3500
+453600          2000
+604800          500
+777600          150

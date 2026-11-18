@@ -101,7 +101,7 @@ def check_case(folder: Path, case: dict, tol: dict, *, require_run: bool = True)
                    "max_h_m": float(data["h"].max()),
                    "area_h_gt_0_3_m2": float((final_h > .3).sum() * area)}
         if case["kind"] == "rain":
-            target = 10. / 3_600_000 * data["times"][-1]
+            target = float(10. / 3_600_000 * data["times"][-1])
             error = float(abs(final_h - target).max())
             metrics.update(expected_depth_m=target, rain_max_error_m=error)
             checks["rain_analytic_depth"] = error <= tol["rain_abs_m"]
@@ -111,10 +111,10 @@ def check_case(folder: Path, case: dict, tol: dict, *, require_run: bool = True)
             metrics.update(lake_max_zs_error_m=error, lake_max_speed_m_s=speed)
             checks.update(lake_level=error <= tol["lake_zs_abs_m"], lake_velocity=speed <= tol["lake_speed_m_s"])
         if case["kind"] == "river_volume":
-            expected_volume = case["river_peak_m3_s"] * data["times"][-1]
-            error = abs(final_volume - initial_volume - expected_volume) / max(expected_volume, 1.)
+            expected_volume = float(case["river_peak_m3_s"] * data["times"][-1])
+            error = float(abs(final_volume - initial_volume - expected_volume) / max(expected_volume, 1.))
             metrics.update(expected_added_volume_m3=float(expected_volume), river_relative_volume_error=error)
-            checks["closed_river_mass"] = error <= tol["river_relative_volume"]
+            checks["closed_river_mass"] = bool(error <= tol["river_relative_volume"])
         budget_path = folder / "budget.json"
         if budget_path.exists():
             budget = json.loads(budget_path.read_text(encoding="utf-8"))

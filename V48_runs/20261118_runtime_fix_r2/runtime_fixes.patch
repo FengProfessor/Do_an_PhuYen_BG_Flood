@@ -1,0 +1,584 @@
+--- legacy/python/bg_flood/forcing.py
++++ runtime_r1/python/bg_flood/forcing.py
+@@ -74,6 +74,7 @@
+     extension: str = ""
+ 
+     nt: int = 0          # Số bước thời gian trong file forcing
++    units: str = ""      # Rainfall source units; normalized to m/s by the loader.
+     uniform: bool = False  # True nếu forcing đồng nhất toàn miền
+ 
+     to: float = 0.0      # Thời điểm bắt đầu
+@@ -196,4 +197,4 @@
+     right: BndParam = field(default_factory=lambda: BndParam(side=1, isright=1))
+     left: BndParam = field(default_factory=lambda: BndParam(side=3, isright=-1))
+     top: BndParam = field(default_factory=lambda: BndParam(side=0, istop=1))
+-    bot: BndParam = field(default_factory=lambda: BndParam(side=2, istop=-1))+    bot: BndParam = field(default_factory=lambda: BndParam(side=2, istop=-1))
+--- legacy/python/bg_flood/initial_conditions.py
++++ runtime_r1/python/bg_flood/initial_conditions.py
+@@ -11,7 +11,7 @@
+ from .param import Param
+ from .model import Model, EvolvingP, BlockP
+ from .forcing import Forcing
+-from .utils import calcres, bilinear_interpolation, memloc
++from .utils import calcres, bilinear_interpolation, memloc, raster_cell_valid
+ from .init_evolv import cold_start, warm_start
+ 
+ 
+@@ -21,26 +21,25 @@
+ 
+ def setedges(param: Param, blocks: BlockP, arr: np.ndarray):
+     """
+-    Sao chép giá trị biên ngoài cùng từ cell thứ 2 sang cell ngoài cùng.
+-    Áp dụng cho block ở biên miền tính (không có hàng xóm).
++    Extend the physical edge cell into ghost halos for a zero-gradient boundary.
++    Never overwrite a real cell: doing so changes input DEM and raster values.
++    Apply only where the block has no neighboring block on that side.
+     """
+     blkwidth = param.blkwidth
+ 
+     for bl in range(param.nblk):
+         ib = blocks.active[bl]
+ 
+-        # Left edge
+-        _setedges_side_lr(param, ib, blocks.LeftBot[ib], blocks.LeftTop[ib],
+-                          1, 0, arr)
+-        # Right edge
+-        _setedges_side_lr(param, ib, blocks.RightBot[ib], blocks.RightTop[ib],
+-                          blkwidth - 2, blkwidth - 1, arr)
+-        # Top edge
+-        _setedges_side_bt(param, ib, blocks.TopLeft[ib], blocks.TopRight[ib],
+-                          blkwidth - 2, blkwidth - 1, arr)
+-        # Bot edge
+-        _setedges_side_bt(param, ib, blocks.BotLeft[ib], blocks.BotRight[ib],
+-                          1, 0, arr)
++        for k in range(param.halowidth):
++            # Source is always the closest real cell; destination is halo.
++            _setedges_side_lr(param, ib, blocks.LeftBot[ib], blocks.LeftTop[ib],
++                              0, -1 - k, arr)
++            _setedges_side_lr(param, ib, blocks.RightBot[ib], blocks.RightTop[ib],
++                              blkwidth - 1, blkwidth + k, arr)
++            _setedges_side_bt(param, ib, blocks.TopLeft[ib], blocks.TopRight[ib],
++                              blkwidth - 1, blkwidth + k, arr)
++            _setedges_side_bt(param, ib, blocks.BotLeft[ib], blocks.BotRight[ib],
++                              0, -1 - k, arr)
+ 
+ 
+ def _setedges_side_lr(param, ib, blkA, blkB, iread, iwrite, arr):
+@@ -130,7 +129,8 @@
+                                raster_val: np.ndarray, raster_nx: int, raster_ny: int, 
+                                raster_xo: float, raster_yo: float, raster_dx: float, 
+                                raster_xmax: float, raster_ymax: float,
+-                               is_manning: bool = False):
++                               is_manning: bool = False,
++                               preserve_nodata: bool = False):
+     """
+     Nội suy dữ liệu từ một raster sang lưới tính toán của model.
+     Sử dụng bilinear interpolation.
+@@ -148,6 +148,12 @@
+ 
+                 x = param.xo + blocks.xo[ib] + i * levdx
+                 y = param.yo + blocks.yo[ib] + j * levdx
++
++                if preserve_nodata and not raster_cell_valid(
++                        x, y, raster_val, raster_nx, raster_ny,
++                        raster_xo, raster_yo, raster_dx, param.mask):
++                    model_array[n] = param.mask
++                    continue
+ 
+                 x = max(min(x, raster_xmax), raster_xo)
+                 y = max(min(y, raster_ymax), raster_yo)
+@@ -202,7 +208,8 @@
+     interpolate_raster_to_model(param, blocks, zb, 
+                                 bathy.val, bathy.nx, bathy.ny, 
+                                 bathy.xo, bathy.yo, bathy.dx, 
+-                                bathy.xmax, bathy.ymax)
++                                bathy.xmax, bathy.ymax,
++                                preserve_nodata=True)
+ 
+ 
+ # ============================================================
+@@ -215,9 +222,9 @@
+ 
+     Thứ tự:
+       1. Nội suy địa hình (interp2BUQ → zb)
+-      2. setedges(zb)
++      2. Extend zb into physical ghost halos; preserve physical edge cells
+       3. Khởi tạo ma sát (cf)
+-      4. setedges(cf)
++      4. Extend static raster values into physical ghost halos
+       5. initevolv (cold/warm start)
+       6. CopyArrayBUQ(evolv → evolv_o)
+       7. Calcbndblks + Findbndblks
+@@ -227,7 +234,7 @@
+     # 1. Nội suy địa hình (zb) từ dữ liệu bathy sang lưới tính toán
+     interpolate_bathy(param, forcing, model.blocks, model.zb)
+ 
+-    # 2. Set edges cho zb (sao chép biên ngoài cùng)
++    # 2. Only initialize zb ghost halos. Never overwrite real terrain cells.
+     setedges(param, model.blocks, model.zb)
+ 
+     # 3. Khởi tạo ma sát (cf)
+@@ -277,7 +284,7 @@
+     else:
+         model.cl[:] = param.cl
+ 
+-    # 4. Set edges cho các mảng tĩnh
++    # 4. Initialize physical ghost halos for static rasters.
+     setedges(param, model.blocks, model.cf)
+     setedges(param, model.blocks, model.il)
+     setedges(param, model.blocks, model.cl)
+--- legacy/python/bg_flood/mesh.py
++++ runtime_r1/python/bg_flood/mesh.py
+@@ -7,7 +7,7 @@
+ from .param import Param
+ from .forcing import Forcing
+ from .model import Model, BlockP
+-from .utils import calcres, bilinear_interpolation, memloc
++from .utils import calcres, memloc, raster_cell_valid
+ from .block_index import build_block_index, BlockIndex
+ from .gpu_backend import xp, is_gpu, to_device
+ 
+@@ -31,26 +31,9 @@
+                     x = param.xo + (float(i) + param.blkwidth * nblkx) * levdx + 0.5 * levdx
+                     y = param.yo + (float(j) + param.blkwidth * nblky) * levdx + 0.5 * levdx
+ 
+-                    x = max(min(x, bathy.xmax), bathy.xo)
+-                    y = max(min(y, bathy.ymax), bathy.yo)
+-
+-                    cfi = min(max(int(math.floor((x - bathy.xo) / bathy.dx)), 0), bathy.nx - 2)
+-                    cfip = cfi + 1
+-                    x1 = bathy.xo + bathy.dx * cfi
+-                    x2 = bathy.xo + bathy.dx * cfip
+-
+-                    cfj = min(max(int(math.floor((y - bathy.yo) / bathy.dx)), 0), bathy.ny - 2)
+-                    cfjp = cfj + 1
+-                    y1 = bathy.yo + bathy.dx * cfj
+-                    y2 = bathy.yo + bathy.dx * cfjp
+-
+-                    q11 = bathy.val[cfi + cfj * bathy.nx]
+-                    q12 = bathy.val[cfi + cfjp * bathy.nx]
+-                    q21 = bathy.val[cfip + cfj * bathy.nx]
+-                    q22 = bathy.val[cfip + cfjp * bathy.nx]
+-
+-                    q = bilinear_interpolation(q11, q12, q21, q22, x1, x2, y1, y2, x, y)
+-                    if q >= param.mask:
++                    if not raster_cell_valid(
++                            x, y, bathy.val, bathy.nx, bathy.ny,
++                            bathy.xo, bathy.yo, bathy.dx, param.mask):
+                         nmask += 1
+ 
+             if nmask < param.blkwidth * param.blkwidth:
+@@ -78,26 +61,9 @@
+                     x = param.xo + (float(i) + param.blkwidth * nblkx) * levdx + 0.5 * levdx
+                     y = param.yo + (float(j) + param.blkwidth * nblky) * levdx + 0.5 * levdx
+ 
+-                    x = max(min(x, bathy.xmax), bathy.xo)
+-                    y = max(min(y, bathy.ymax), bathy.yo)
+-
+-                    cfi = min(max(int(math.floor((x - bathy.xo) / bathy.dx)), 0), bathy.nx - 2)
+-                    cfip = cfi + 1
+-                    x1 = bathy.xo + bathy.dx * cfi
+-                    x2 = bathy.xo + bathy.dx * cfip
+-
+-                    cfj = min(max(int(math.floor((y - bathy.yo) / bathy.dx)), 0), bathy.ny - 2)
+-                    cfjp = cfj + 1
+-                    y1 = bathy.yo + bathy.dx * cfj
+-                    y2 = bathy.yo + bathy.dx * cfjp
+-
+-                    q11 = bathy.val[cfi + cfj * bathy.nx]
+-                    q12 = bathy.val[cfi + cfjp * bathy.nx]
+-                    q21 = bathy.val[cfip + cfj * bathy.nx]
+-                    q22 = bathy.val[cfip + cfjp * bathy.nx]
+-
+-                    q = bilinear_interpolation(q11, q12, q21, q22, x1, x2, y1, y2, x, y)
+-                    if q >= param.mask:
++                    if not raster_cell_valid(
++                            x, y, bathy.val, bathy.nx, bathy.ny,
++                            bathy.xo, bathy.yo, bathy.dx, param.mask):
+                         nmask += 1
+ 
+             if nmask < param.blkwidth * param.blkwidth:
+--- legacy/python/bg_flood/read_forcing.py
++++ runtime_r1/python/bg_flood/read_forcing.py
+@@ -3,8 +3,32 @@
+ """
+ 
+ import os
++import re
+ from .input import Windin
+ from .forcing import Forcing
++
++
++def _rain_unit_factor(filename: str, configured_units: str = ""):
++    """Resolve source units explicitly and normalize rainfall exactly once."""
++    header_units = ""
++    with open(filename, "r", encoding="utf-8-sig") as source:
++        for line in source:
++            if not line.strip():
++                continue
++            if not line.lstrip().startswith("#"):
++                break
++            match = re.search(r"(?<![a-z])(?:mm/h|mm/hr|m/s)(?![a-z])", line, re.I)
++            if match:
++                header_units = match.group(0).lower().replace("mm/hr", "mm/h")
++                break
++    configured_units = configured_units.strip().lower().replace("mm/hr", "mm/h")
++    if configured_units and header_units and configured_units != header_units:
++        raise ValueError(f"Rain units conflict: config={configured_units}, header={header_units} in {filename}")
++    units = configured_units or header_units
++    factors = {"m/s": 1.0, "mm/h": 1.0/3600000.0}
++    if units not in factors:
++        raise ValueError(f"Rain units missing/unsupported in {filename}; set rainunits = m/s or mm/h")
++    return units, factors[units]
+ 
+ 
+ def read_uni_forcing_file(filename: str):
+@@ -54,6 +78,13 @@
+     if forcing.Rain.inputfile:
+         print(f"\nPreparing Rain forcing: {forcing.Rain.inputfile}")
+         forcing.Rain.unidata = read_uni_forcing_file(forcing.Rain.inputfile)
++        source_units, factor = _rain_unit_factor(forcing.Rain.inputfile, forcing.Rain.units)
++        for row in forcing.Rain.unidata:
++            row.all_vals = [value * factor for value in row.all_vals]
++            row.wspeed = row.all_vals[0]
++        forcing.Rain.units = "m/s"
++        forcing.Rain.source_units = source_units
++        print(f"  Rain units: {source_units} -> m/s (factor={factor:g})")
+         forcing.Rain.nowvalue = 0.0
+ 
+         if forcing.Rain.unidata:
+--- legacy/python/bg_flood/read_input.py
++++ runtime_r1/python/bg_flood/read_input.py
+@@ -365,6 +365,10 @@
+     if val:
+         forcing.Rain.inputfile = val
+ 
++    val = find_parameter("rainunits", line)
++    if val:
++        forcing.Rain.units = val.strip().lower()
++
+     val = find_parameter("atmpfile", line)
+     if val:
+         forcing.Atmp.inputfile = val
+@@ -494,9 +498,12 @@
+ 
+         nx = int(header.get('ncols', 0))
+         ny = int(header.get('nrows', 0))
+-        xo = header.get('xllcorner', header.get('xllcenter', 0.0))
+-        yo = header.get('yllcorner', header.get('yllcenter', 0.0))
+         dx = header.get('cellsize', 0.0)
++        if nx <= 0 or ny <= 0 or dx <= 0:
++            raise ValueError(f"Invalid ASC dimensions or cellsize in {filename}")
++        # Raster samples are at cell centers. Model bounds are outer edges.
++        xo = header['xllcenter'] if 'xllcenter' in header else header['xllcorner'] + 0.5*dx
++        yo = header['yllcenter'] if 'yllcenter' in header else header['yllcorner'] + 0.5*dx
+         nodata = header.get('nodata_value', -9999.0)
+ 
+         # Đọc dữ liệu
+@@ -506,6 +513,8 @@
+             data.append(row)
+ 
+         data = np.array(data, dtype=np.float64)
++        if data.shape != (ny, nx):
++            raise ValueError(f"ASC shape {data.shape} differs from ({ny}, {nx}) in {filename}")
+ 
+         # ASC lưu từ trên xuống (hàng đầu = y cao nhất), đảo lại cho đúng hệ tọa độ
+         data = np.flipud(data)
+@@ -651,19 +660,19 @@
+         if math.isnan(param.dx):
+             param.dx = b.dx
+         if math.isnan(param.xo):
+-            param.xo = b.xo
++            param.xo = b.xo - 0.5*b.dx
+         if math.isnan(param.yo):
+-            param.yo = b.yo
++            param.yo = b.yo - 0.5*b.dx
+         if math.isnan(param.xmax):
+-            param.xmax = b.xmax
++            param.xmax = b.xmax + 0.5*b.dx
+         if math.isnan(param.ymax):
+-            param.ymax = b.ymax
++            param.ymax = b.ymax + 0.5*b.dx
+ 
+         # Tính nx, ny nếu chưa có
+         if param.nx == 0:
+-            param.nx = int(round((param.xmax - param.xo) / param.dx)) + 1
++            param.nx = int(round((param.xmax - param.xo) / param.dx))
+         if param.ny == 0:
+-            param.ny = int(round(abs(param.ymax - param.yo) / param.dx)) + 1
++            param.ny = int(round(abs(param.ymax - param.yo) / param.dx))
+ 
+ 
+     # Đọc file biên nếu có
+--- legacy/python/bg_flood/updateforcing.py
++++ runtime_r1/python/bg_flood/updateforcing.py
+@@ -199,7 +199,7 @@
+                     else:
+                         rainhh = rain.nowvalue
+ 
+-                adv.dh[i] += (rainhh / 1000.0 / 3600.0)
++                adv.dh[i] += rainhh  # prepare_forcing already normalized rainfall to m/s
+ 
+ 
+ 
+@@ -211,7 +211,7 @@
+     valid_mask = zb_interior < mask_val - 1.0
+ 
+     if rain.uniform and hasattr(rain, 'nowvalue'):
+-        rain_ms = rain.nowvalue / 1000.0 / 3600.0
++        rain_ms = rain.nowvalue
+         adv.dh[idx.interior] = xp.where(valid_mask, adv.dh[idx.interior] + rain_ms, adv.dh[idx.interior])
+     
+     elif not rain.uniform and getattr(rain, 'is_grid', False) and rain.multi_val is not None:
+@@ -248,12 +248,12 @@
+             r_vals = r_interp[idx00] * w00 + r_interp[idx10] * w10 + \
+                      r_interp[idx01] * w01 + r_interp[idx11] * w11
+             
+-            rain_ms_all = r_vals[idx.interior] / 1000.0 / 3600.0
++            rain_ms_all = r_vals[idx.interior]
+             adv.dh[idx.interior] = xp.where(valid_mask, adv.dh[idx.interior] + rain_ms_all, adv.dh[idx.interior])
+         else:
+             # Fallback to mean if not initialized (should not happen with flow_gpu fix)
+             rain_val = xp.mean(xp.asarray(rain.multi_val[0]))
+-            rain_ms = rain_val / 1000.0 / 3600.0
++            rain_ms = rain_val
+             adv.dh[idx.interior] = xp.where(valid_mask, adv.dh[idx.interior] + rain_ms, adv.dh[idx.interior])
+ 
+     elif not rain.uniform and rain.station_coords and rain.multi_val is not None:
+@@ -271,7 +271,7 @@
+             r_prev = xp.asarray(rain.multi_val[step-1])
+             r_interp = r_prev + (r_now - r_prev) * frac
+             
+-            rain_ms_all = r_interp[istat[idx.interior]] / 1000.0 / 3600.0
++            rain_ms_all = r_interp[istat[idx.interior]]
+             adv.dh[idx.interior] = xp.where(valid_mask, adv.dh[idx.interior] + rain_ms_all, adv.dh[idx.interior])
+ 
+ 
+--- legacy/python/bg_flood/utils.py
++++ runtime_r1/python/bg_flood/utils.py
+@@ -28,6 +28,26 @@
+         return dx * (1 << abs(level))
+     else:
+         return dx / (1 << level)
++
++
++def raster_cell_valid(x, y, val, nx, ny, xo, yo, dx, mask):
++    """Check source footprint and nearest source-cell validity.
++
++    NoData is categorical: interpolating it with valid elevations invents
++    terrain. The half-cell extent allows finer model cells inside the raster
++    footprint, but never extends data into padding outside that footprint.
++    """
++    tolerance = dx * 1e-9
++    if (not math.isfinite(x) or not math.isfinite(y)
++            or x < xo - 0.5 * dx - tolerance
++            or x > xo + (nx - 0.5) * dx + tolerance
++            or y < yo - 0.5 * dx - tolerance
++            or y > yo + (ny - 0.5) * dx + tolerance):
++        return False
++    i = max(0, min(nx - 1, math.floor((x - xo) / dx + 0.5)))
++    j = max(0, min(ny - 1, math.floor((y - yo) / dx + 0.5)))
++    v = val[i + j * nx]
++    return math.isfinite(v) and v < mask
+ 
+ 
+ def minmod2(theta: float, s0: float, s1: float, s2: float) -> float:
+--- legacy/python/bg_flood/write_output.py
++++ runtime_r1/python/bg_flood/write_output.py
+@@ -1,11 +1,55 @@
+ import numpy as np
+ import os
++from time import perf_counter
+ from .param import Param
+ from .model import Model, Loop
+ from .utils import calcres, memloc
+ 
+ # Bien toan cuc giu file NetCDF mo
+ _nc_dataset = None
++
++
++def _fixed_grid_output_indices(param, model, nx_out, ny_out, levdx):
++    """Map active block interiors to output pixels once per frame.
++
++    The R1 full-grid run has one level with cell centers aligned to the
++    output raster. For mixed levels, overlapping or misaligned blocks, use
++    the original per-cell writer to preserve its assignment semantics.
++    """
++    active = np.asarray(model.blocks.active[:param.nblk], dtype=np.int64)
++    if not len(active):
++        empty = np.empty(0, dtype=np.int64)
++        return empty, empty
++
++    levels = np.asarray(model.blocks.level[active])
++    if np.any(levels != param.initlevel):
++        return None
++
++    origin_x = (np.asarray(model.blocks.xo[active]) - 0.5 * levdx) / levdx
++    origin_y = (np.asarray(model.blocks.yo[active]) - 0.5 * levdx) / levdx
++    x_round = np.rint(origin_x)
++    y_round = np.rint(origin_y)
++    if (np.any(np.abs(origin_x - x_round) > 1e-7)
++            or np.any(np.abs(origin_y - y_round) > 1e-7)):
++        return None
++
++    offsets = np.arange(param.blkwidth, dtype=np.int64)
++    ix, iy = np.meshgrid(offsets, offsets, indexing='xy')
++    ix = ix.ravel()
++    iy = iy.ravel()
++    gi = x_round.astype(np.int64)[:, None] + ix[None, :]
++    gj = y_round.astype(np.int64)[:, None] + iy[None, :]
++    inside = ((gi >= 0) & (gi < nx_out) & (gj >= 0) & (gj < ny_out)).ravel()
++    local = ((iy + param.halowidth) * param.blkmemwidth
++             + ix + param.halowidth)
++    source = (active[:, None] * param.blksize + local[None, :]).ravel()[inside]
++    destination = (gj * nx_out + gi).ravel()[inside]
++
++    # Repeated destinations require the scalar writer's ordered assignments.
++    ordered = np.sort(destination)
++    if np.any(ordered[1:] == ordered[:-1]):
++        return None
++    return source, destination
+ 
+ 
+ def init_save_to_netcdf(param: Param, model: Model):
+@@ -28,16 +72,18 @@
+     ds.setncattr('maxlevel', param.maxlevel)
+     ds.setncattr('minlevel', param.minlevel)
+     ds.setncattr('xmin', param.xo)
+-    ds.setncattr('xmax', param.xmax)
++    ds.setncattr('xmax', param.xo + param.nx * param.dx)
+     ds.setncattr('ymin', param.yo)
+-    ds.setncattr('ymax', param.ymax)
++    ds.setncattr('ymax', param.yo + param.ny * param.dx)
+ 
+     ds.createDimension('time', None)
+     time_var = ds.createVariable('time', 'f4', ('time',))
++    time_var.units = 's'
++    time_var.long_name = 'elapsed time since simulation start'
+ 
+     levdx = calcres(param.dx, param.initlevel)
+-    nx_out = int(round(abs(param.xmax - param.xo) / levdx))
+-    ny_out = int(round(abs(param.ymax - param.yo) / levdx))
++    nx_out = param.nx
++    ny_out = param.ny
+ 
+     ds.createDimension('x', nx_out)
+     ds.createDimension('y', ny_out)
+@@ -46,10 +92,8 @@
+     y_var = ds.createVariable('y', 'f8', ('y',))
+     x_var.units = 'm'
+     y_var.units = 'm'
+-    x_start, x_end = min(param.xo, param.xmax), max(param.xo, param.xmax)
+-    y_start, y_end = min(param.yo, param.ymax), max(param.yo, param.ymax)
+-    x_var[:] = np.linspace(x_start + 0.5 * levdx, x_end - 0.5 * levdx, nx_out)
+-    y_var[:] = np.linspace(y_start + 0.5 * levdx, y_end - 0.5 * levdx, ny_out)
++    x_var[:] = param.xo + (np.arange(nx_out) + 0.5) * levdx
++    y_var[:] = param.yo + (np.arange(ny_out) + 0.5) * levdx
+ 
+     crs_var = ds.createVariable('spatial_ref', 'i4')
+     crs_var.spatial_ref = "EPSG:32649"
+@@ -59,13 +103,14 @@
+     for varname in param.outvars:
+         var = ds.createVariable(varname, 'f4', ('time', 'y', 'x'), zlib=True, fill_value=-9999.0)
+         var.grid_mapping = 'spatial_ref'
+-        var.units = 'm'
++        var.units = 'm/s' if varname in ('u', 'v') else 'm'
+ 
+     ds.sync()
+     ds.close() # Close immediately after init!
+ 
+ 
+ def save_to_netcdf(param: Param, loop: Loop, model: Model):
++    frame_started = perf_counter()
+     try:
+         import netCDF4 as nc4
+         import matplotlib.pyplot as plt
+@@ -87,6 +132,14 @@
+ 
+     # Dictionary luu tam data de ve
+     vars_2d = {}
++    from .gpu_backend import to_numpy
++    terrain = to_numpy(model.zb)
++    raster_indices = _fixed_grid_output_indices(param, model, nx_out, ny_out, levdx)
++    if raster_indices is not None:
++        source, destination = raster_indices
++        fluid = terrain[source] < param.mask - 1.0
++        fluid_source = source[fluid]
++        fluid_destination = destination[fluid]
+ 
+     for varname in param.outvars:
+         if varname not in ds.variables:
+@@ -104,31 +157,37 @@
+         else:
+             continue
+ 
+-        levdx_cache = {}
+-        for ibl in range(param.nblk):
+-            ib = model.blocks.active[ibl]
+-            lev = model.blocks.level[ib]
+-            
+-            if lev not in levdx_cache:
+-                levdx_cache[lev] = calcres(param.dx, lev)
+-            blk_levdx = levdx_cache[lev]
+-            
+-            xo_base = param.xo + model.blocks.xo[ib]
+-            yo_base = param.yo + model.blocks.yo[ib]
+-
+-            for iy in range(param.blkwidth):
+-                for ix in range(param.blkwidth):
+-                    n = memloc(param.halowidth, param.blkmemwidth, ix, iy, ib)
+-                    x = xo_base + ix * blk_levdx
+-                    y = yo_base + iy * blk_levdx
+-                    
+-                    x_min = min(param.xo, param.xmax)
+-                    y_min = min(param.yo, param.ymax)
+-                    gi = int(round((x - x_min - 0.5 * levdx) / levdx))
+-                    gj = int(round((y - y_min - 0.5 * levdx) / levdx))
+-
+-                    if 0 <= gi < nx_out and 0 <= gj < ny_out:
+-                        data_2d[gj, gi] = var_data[n]
++        if raster_indices is not None:
++            # zb retains the terrain sentinel; other variables skip masked
++            # cells, matching the original per-cell writer.
++            indices = (source, destination) if varname == 'zb' else (fluid_source, fluid_destination)
++            data_2d.reshape(-1)[indices[1]] = var_data[indices[0]]
++        else:
++            levdx_cache = {}
++            for ibl in range(param.nblk):
++                ib = model.blocks.active[ibl]
++                lev = model.blocks.level[ib]
++
++                if lev not in levdx_cache:
++                    levdx_cache[lev] = calcres(param.dx, lev)
++                blk_levdx = levdx_cache[lev]
++
++                xo_base = param.xo + model.blocks.xo[ib]
++                yo_base = param.yo + model.blocks.yo[ib]
++
++                for iy in range(param.blkwidth):
++                    for ix in range(param.blkwidth):
++                        n = memloc(param.halowidth, param.blkmemwidth, ix, iy, ib)
++                        if varname != 'zb' and terrain[n] >= param.mask - 1.0:
++                            continue
++                        x = xo_base + ix * blk_levdx
++                        y = yo_base + iy * blk_levdx
++
++                        gi = int(round((x - param.xo - 0.5 * levdx) / levdx))
++                        gj = int(round((y - param.yo - 0.5 * levdx) / levdx))
++
++                        if 0 <= gi < nx_out and 0 <= gj < ny_out:
++                            data_2d[gj, gi] = var_data[n]
+ 
+         ds.variables[varname][step, :, :] = data_2d
+         vars_2d[varname] = data_2d
+@@ -147,6 +206,10 @@
+         plt.savefig(out_png, dpi=100)
+         plt.close()
+ 
++    print(f"NetCDF frame t={loop.totaltime:.3f}s saved in "
++          f"{perf_counter() - frame_started:.2f}s "
++          f"({'vectorized' if raster_indices is not None else 'scalar'})", flush=True)
++
+ 
+ def close_netcdf():
+     pass

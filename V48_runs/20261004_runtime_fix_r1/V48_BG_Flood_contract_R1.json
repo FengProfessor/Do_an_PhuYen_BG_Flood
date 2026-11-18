@@ -1,0 +1,255 @@
+{
+  "status": "FROZEN_BG_FLOOD_INPUT_CONTRACT_PRE_SAR_NOT_EXECUTED",
+  "date": "2026-10-04",
+  "bg_flood_run": false,
+  "sentinel1_2021_used": false,
+  "config": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\BG_param_PhuYen_30m_V48_FORMAL_CONDITIONED_R1.txt",
+    "sha256": "2d31e550f4d398403c483b3a72e2149c1a72c22c86b8532631ee404ddcbc5225"
+  },
+  "terrain": {
+    "asc": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.asc",
+      "sha256": "71b99c74541fd1efddb4d7a67d05c387e973f113ce730c3f97a70463f2613784"
+    },
+    "tif": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.tif",
+      "sha256": "e75019ce5d0c02996bfab421623bda33ab3d56ff5bfd8a06e51f2ca2b3cd4feb"
+    },
+    "prj": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.prj",
+      "sha256": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060"
+    },
+    "stats": {
+      "ncols": 2100,
+      "nrows": 2100,
+      "cellsize_m": 30.0,
+      "nodata_value": -9999.0,
+      "nodata_cells": 0,
+      "valid_cells": 4410000,
+      "valid_min_m": -3.0,
+      "valid_max_m": 1449.032470703125,
+      "valid_negative_cells": 760,
+      "valid_le_minus_1m_cells": 509,
+      "valid_cells_le_minmask": 0
+    },
+    "minmask": -4.0,
+    "minmask_policy": "Pin minmask 1.0 m below the exact frozen DEM valid minimum (-3.0 m). This preserves every valid negative terrain cell while masking the -9999 ASC NoData sentinel under the pinned reader semantics."
+  },
+  "initial_state": {
+    "zsinit_m": 1.0,
+    "zsoffset_m": 0.0,
+    "semantics": "Cold start uses global water-surface elevation: zs=max(zsinit+zsoffset, zb), h=max(zs-zb, 0).",
+    "lineage": "Inherited from BG_param_PhuYen_30m_V45.txt; this freeze records the previously used value and does not claim an independent V48 calibration."
+  },
+  "parameters": {
+    "dx_m": 30,
+    "dy_m": 30,
+    "frictionmodel": -1,
+    "boundaries": {
+      "left": 0,
+      "right": 2,
+      "top": 2,
+      "bottom": 2
+    },
+    "endtime_s": 432000,
+    "outputtimestep_s": 10800,
+    "outvars": [
+      "zs",
+      "h",
+      "zb",
+      "u",
+      "v"
+    ],
+    "rainunits": "m/s"
+  },
+  "forcing": {
+    "river_ba_ha": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_BaHa_Nov2021_V40_sync.txt",
+      "sha256": "c756075697ab44ca5341fc45b1dd892e680e2360fea1247351ad953028cfaede"
+    },
+    "river_ban_thach": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_BanThach_V43.txt",
+      "sha256": "bb81bfbda9deb4fad66f81d357c00ac22bff513fd40b08fb892c8d6cf5da6a88"
+    },
+    "river_ky_lo": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_KyLo_V40_sync.txt",
+      "sha256": "c53c460fda3d97ee839b6f95f891854f7d4d4e88e179e9fd30006fec3f5a7bb5"
+    },
+    "river_tuy_an": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\xa_lu_TuyAn_V40_sync.txt",
+      "sha256": "07a8fd949965e35ec682acdd652b13e436bbd24539367facb9a030794c72e61e"
+    },
+    "rainfall": {
+      "path": "D:\\VTP\\Scenarios\\rain_v34_era5_x2.txt",
+      "sha256": "02e569860a840fdccc3f36efbd4fa3096bed11acedb1be480252f0d8b6f5184e"
+    },
+    "initial_loss": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\il_30m_V36.asc",
+      "sha256": "3f7f0d59f09b69efdb7bf928e0075104e5357ad183a882f83de854184a95083f"
+    },
+    "continuous_loss": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\cl_30m_V36.asc",
+      "sha256": "8ac18cdd54dc36c6b0c9c1745ccf1cac9d9baf1b5ba5096551f9ded5df46002b"
+    },
+    "manning": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_manning_30m_V43.asc",
+      "sha256": "d2ecf20017cb70d747ba2820075edc1dc0229bbc98dfa1eb4d2922113a34aab3"
+    }
+  },
+  "engine_semantics": {
+    "bg_flood\\__init__.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\__init__.py",
+      "sha256": "07c2bee11b5b2f8207fcf008959744de79ad55c5bc43dcca56fd9024cb4345a0"
+    },
+    "bg_flood\\advection.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\advection.py",
+      "sha256": "25170d9edf7e10667fad21ec3c62b615533cec74d99ce8501b46a02c6ac11904"
+    },
+    "bg_flood\\block_index.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\block_index.py",
+      "sha256": "c91ca624bca90a19f80f81ad210a9a32e22a7595455c9b185d9027e96108412f"
+    },
+    "bg_flood\\boundary.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\boundary.py",
+      "sha256": "332f5ff187b13daca1abec360552758a9d9fad0ac9a2762aa9731a1bd69e8149"
+    },
+    "bg_flood\\deform.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\deform.py",
+      "sha256": "ac39e1cea08771878e0df31cb3135f11c93c781fd05936664a5d8de1b25877a9"
+    },
+    "bg_flood\\flow_cpu.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\flow_cpu.py",
+      "sha256": "e643e0f9f3cddd8745be57b5fbcd3277dec3caa10f09e1a764741604dc7507b5"
+    },
+    "bg_flood\\flow_gpu.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\flow_gpu.py",
+      "sha256": "e4e46bd6547a03e89bae0d802c2d1122f0d1faf8b11cd298df6a7f57354e73c7"
+    },
+    "bg_flood\\forcing.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\forcing.py",
+      "sha256": "8b97f09228e1f8c1cea16121e2e192d26447e04eeea646d6d7e141865a2da3bd"
+    },
+    "bg_flood\\forcing_update.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\forcing_update.py",
+      "sha256": "49b3dd4cc0c0f2c3226c00618ae819dc0052e830ef985e03a2ba1703b466c50c"
+    },
+    "bg_flood\\friction.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\friction.py",
+      "sha256": "3ea77e55ff1d4cace8c619677fd69ee7c31543ab6b9ec6d81811c9d2871da037"
+    },
+    "bg_flood\\gpu_backend.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\gpu_backend.py",
+      "sha256": "18cfa0815627f7d98e8aea6e0559a930a0e897d4bd7c033e386bd733ac870c96"
+    },
+    "bg_flood\\gradients.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\gradients.py",
+      "sha256": "10bc8a96b2c527a8fc0bbea84edc7adffd3b0ed9c869bcc449039d6944b0348c"
+    },
+    "bg_flood\\halo.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\halo.py",
+      "sha256": "443b134a23ab99cb6e016fb4262cfb45b4cd225c8fefc8c30f6aaadef3a4851e"
+    },
+    "bg_flood\\init_evolv.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\init_evolv.py",
+      "sha256": "fa7f83a42fcf2824addb453706d763af4e967c99befd1005d02a9f0da888a35f"
+    },
+    "bg_flood\\initial_conditions.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\initial_conditions.py",
+      "sha256": "c99babc083cfa98611591de434ecf9eaff6bf2b99008c56c2c90b17de83c244c"
+    },
+    "bg_flood\\input.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\input.py",
+      "sha256": "3ba7f9a57b44cdc4571690a8c882b12b580816a3a6471bef1655698d6ef8187d"
+    },
+    "bg_flood\\kurganov.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\kurganov.py",
+      "sha256": "c2979e79ec2de264c3d3204d48a560f283a8eb9a1e7ad32df16aeb904a9bf725"
+    },
+    "bg_flood\\mainloop.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\mainloop.py",
+      "sha256": "14799c096b00c97c9842707f8e932a74844931c9f8482a3a00b348d94e2313e5"
+    },
+    "bg_flood\\meanmax.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\meanmax.py",
+      "sha256": "34fbf1c74e0dd25242e18cb6a9a521fbfa9be22999cc02d5e74f0e6cbf019712"
+    },
+    "bg_flood\\mesh.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\mesh.py",
+      "sha256": "df5c4c1c3961812ec17bc11afb696771137dcdec290eb7c6758b88e376328351"
+    },
+    "bg_flood\\model.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\model.py",
+      "sha256": "8f56ebc845e38158e6eb0352f70e94f3ac8b13c5e98cfade580576a7fe61fce9"
+    },
+    "bg_flood\\param.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\param.py",
+      "sha256": "60fcfd45b25a57ab509497e03d30fadda472b444297cf80d5fa7b63032681307"
+    },
+    "bg_flood\\read_forcing.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\read_forcing.py",
+      "sha256": "0758f81fec8e9b100418c302277eb235f5996768b88ddd6af32db5c33bde71a7"
+    },
+    "bg_flood\\read_input.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\read_input.py",
+      "sha256": "7f4563c2b53d3af3ff0a9c00b4313a94c7aa41907cceebe12ffa29f5672e4651"
+    },
+    "bg_flood\\updateforcing.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\updateforcing.py",
+      "sha256": "b5a67ef98e281c539f507973388d4bf80941ec0cc4326bc4fd6fba7422a86311"
+    },
+    "bg_flood\\utils.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\utils.py",
+      "sha256": "b341301767d39feeb63e25b09a1ff8a91cdb940ed9abae7208bc3a68bbbe46b2"
+    },
+    "bg_flood\\write_output.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\write_output.py",
+      "sha256": "8d33463448a4b346cfac8bc5e3d17e1f556d6afae58cff9d59d96682147cc662"
+    },
+    "bg_flood\\write_txtlog.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\bg_flood\\write_txtlog.py",
+      "sha256": "f114f7077e193cf2abd4606fba3b735ab09185aafcd34becfc829ec0d7d0e8e3"
+    },
+    "run_bgflood.py": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\run_bgflood.py",
+      "sha256": "4d599a53bbb04c02b05726b0353bc83900400c097c4886afba0db60f7fa3c2e2"
+    }
+  },
+  "provenance": {
+    "source_v45_config": {
+      "path": "D:\\VTP\\BG_Flood_Project\\BG_Flood\\BG_param_PhuYen_30m_V45.txt",
+      "sha256": "5d2dd71bfa30a61ca3f7690107f89e534ea666a8d94661f74ff30e45e89af83d"
+    },
+    "forcing_lineage_note": "The exact files are frozen here because they are directly referenced by the evidenced V45 configuration. Their scientific lineage into V48 remains inherited rather than independently re-derived for V48.",
+    "closed_loop_summary": {
+      "path": "D:\\VTP\\V48_closed_loop_direct_20261002\\V48_closed_loop_direct_summary.json",
+      "sha256": "493a8832b2ebbbd0bd9c7172df23e4fc401cc0e9aaa2e13d62549f1816422405"
+    },
+    "closed_loop_release": {
+      "path": "D:\\VTP\\V48_CLOSED_LOOP_FROZEN_RELEASE_20261002.json",
+      "sha256": "db599a2446e08803cbfecd1dd124592e7e4e13b44f6f559c6cbafbd66c08aced"
+    },
+    "previous_contract": {
+      "path": "D:\\VTP\\V48_BG_Flood_contract_20261002.json",
+      "sha256": "6771f361ce8cf44dbcb3632946af8325c1c06a9b3c4774883b8cd98cc8fe4c8b"
+    }
+  },
+  "release_gate": {
+    "closed_loop_status": "PASS_CLOSED_LOOP_DIRECT_CONVERGED_CANDIDATE_PRE_SAR",
+    "closed_loop_final_strict_components": 0,
+    "closed_loop_iterations_with_new_cuts": 16,
+    "formal_bg_flood_run_allowed": true,
+    "reason": "Runtime R1 fixes verified; launch requires matching release hashes and READY_FOR_FORMAL_EVALUATION from the R1 preregistration validation. No formal run has been started."
+  },
+  "runtime_release": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_RUNTIME_MANIFEST_R1.json",
+    "sha256": "06cde91087b4d482df580c956b9a9ea6e212fa1f3c688a304ad24b0c3ae3e8ed"
+  },
+  "grid_semantics": {
+    "raster_coordinates": "cell centers",
+    "model_bounds": "outer edges",
+    "output_ncols": 2100,
+    "output_nrows": 2100,
+    "terrain_samples_preserved_without_half_cell_interpolation": true
+  }
+}

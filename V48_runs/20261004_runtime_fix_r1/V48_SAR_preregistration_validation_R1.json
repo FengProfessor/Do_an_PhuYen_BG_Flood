@@ -1,0 +1,10 @@
+{
+  "status": "READY_FOR_FORMAL_EVALUATION",
+  "preregistration": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_SAR_preregistration_R1.json",
+  "preregistration_sha256": "c5605ec7d26a79fd3ecdb6c27d1e21aaaaa1a4d0f946887685f1a9478c2fa71b",
+  "integrity_failures": [],
+  "formal_evaluation_blockers": [],
+  "formal_evaluation_allowed": true,
+  "sentinel_evaluation_run": false,
+  "bg_flood_run_started": false
+}

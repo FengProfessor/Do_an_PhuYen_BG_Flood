@@ -10,7 +10,7 @@
 
 ## 📌 Giới Thiệu (Overview)
 
-**Bộ thử nhỏ bổ sung (17/11/2026):** [Small_Benchmarks — hướng dẫn chạy trên máy mô phỏng](River_Bathymetry_Project/Small_Benchmarks/README.md). Có kiểm tra mưa/lưới/nước tĩnh/nguồn sông, so sánh bốn DEM trên miền giả lập, và các kịch bản vùng bảo vệ/độ nhạy. Kết quả kiểm chứng R1 sẽ được tạo khi chạy trên máy có runtime tương ứng.
+**Bộ thử nhỏ bổ sung (17–18/11/2026):** [Small_Benchmarks — hướng dẫn chạy](River_Bathymetry_Project/Small_Benchmarks/README.md) và [Báo cáo kết quả thực thi CUDA GPU R1 → R2 (15/15 PASS)](River_Bathymetry_Project/Small_Benchmarks/CUDA_EXECUTION_REPORT_20261118.md). Đã hoàn tất kiểm tra mưa/lưới/nước tĩnh/nguồn sông, đối sánh bốn DEM (`REF`, `RAW`, `SIMPLE`, `V49`), vùng bảo vệ (`sill`) và độ nhạy độ sâu (`depth`) trên GPU `NVIDIA RTX A4000`.
 
 Repository này chứa toàn bộ tài liệu thuyết minh đồ án tốt nghiệp, báo cáo tiến độ, hệ thống mã nguồn tự động hóa biên soạn văn bản, thư viện hình ảnh bản đồ mô phỏng khoa học, các kịch bản phân tích - xử lý địa hình số (Hydro-conditioning DEM), kịch bản hiệu chỉnh và kiểm chứng kết quả mô phỏng ngập lụt cho vùng hạ lưu sông Ba, tỉnh Phú Yên (sự kiện lũ lụt lịch sử tháng 11 - 12 năm 2021).
 

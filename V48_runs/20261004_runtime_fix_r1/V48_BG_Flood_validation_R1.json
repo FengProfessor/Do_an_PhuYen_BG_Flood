@@ -1,0 +1,16 @@
+{
+  "status": "PASS_V48_BG_FLOOD_CONTRACT_VALIDATION",
+  "contract": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_BG_Flood_contract_R1.json",
+  "contract_sha256": "12c2e0bf5774f20f33a130dbeb248cb1125e9286919c3d634cf537945c860db4",
+  "bg_flood_run": false,
+  "sentinel1_2021_used": false,
+  "checks": {
+    "valid_dem_cells_masked_by_minmask": 0,
+    "nodata_sentinel": -9999.0,
+    "nodata_is_masked": true,
+    "valid_min_m": -3.0,
+    "minmask": -4.0,
+    "zsinit_m": 1.0
+  },
+  "failures": []
+}

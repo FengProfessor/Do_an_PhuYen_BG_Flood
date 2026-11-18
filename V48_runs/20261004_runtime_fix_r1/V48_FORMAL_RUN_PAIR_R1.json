@@ -1,0 +1,119 @@
+{
+  "status": "READY_TO_START_FORMAL_BG_FLOOD_PAIR_RUNTIME_R1",
+  "date": "2026-10-04",
+  "formal_bg_flood_run_started": false,
+  "formal_sar_evaluation_run": false,
+  "preregistration": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_SAR_preregistration_R1.json",
+    "sha256": "c5605ec7d26a79fd3ecdb6c27d1e21aaaaa1a4d0f946887685f1a9478c2fa71b"
+  },
+  "preregistration_validation": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_SAR_preregistration_validation_R1.json",
+    "sha256": "fd2b7a1d5da26add74c8199513fbcc614d8b62548e947c93ab48a98e54cae3c7"
+  },
+  "contract": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_BG_Flood_contract_R1.json",
+    "sha256": "12c2e0bf5774f20f33a130dbeb248cb1125e9286919c3d634cf537945c860db4"
+  },
+  "frozen_run_manifest": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_BG_Flood_RUN_MANIFEST_R1.json",
+    "sha256": "e14f3347aeb6db91fa523bbccf73eeae80a162364c30292a8014764390569992"
+  },
+  "run_epoch_utc": "2021-11-25T17:00:00Z",
+  "observation_midpoint_utc": "2021-11-29T22:36:51.298763Z",
+  "expected_observation_elapsed_s": 365811.298763,
+  "planned_nearest_output_elapsed_s": 367200,
+  "planned_frame_offset_s": 1388.7012370000011,
+  "maximum_allowed_frame_offset_s": 5400,
+  "shared_config_normalized_sha256": "25439ae70602664d58b6f56ccf07a4c443a346b06b556c3bf4e1e3a611b60dca",
+  "base": {
+    "terrain_tif": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS.tif",
+      "sha256": "0c3c6ca6f299b00dd22a91a26c66e8c784f0e70c445412216f01efdd76504508"
+    },
+    "terrain_ascii_materialization": {
+      "asc": {
+        "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS_FORMAL.asc",
+        "sha256": "d9eac9b33d7781ce26e65e7cf24155360bd0e6bffd22f1227fd38b59fc24f62b"
+      },
+      "prj": {
+        "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_BASE_COPERNICUS_FORMAL.prj",
+        "sha256": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060"
+      },
+      "roundtrip_max_abs_diff_m": 0.0
+    },
+    "config": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\BG_param_PhuYen_30m_V48_FORMAL_BASE_R1.txt",
+      "sha256": "5a18db148338d9d066ee41788e3235f3fdfca15b594bbb3570815e262302e9f3"
+    },
+    "planned_output": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\results\\V48_FORMAL_BASE_R1.nc",
+    "command": "& \"C:\\Users\\CuongHM\\anaconda3\\python.exe\" -X utf8 \"D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\launch_formal.py\" --arm BASE",
+    "argv": [
+      "C:\\Users\\CuongHM\\anaconda3\\python.exe",
+      "-X",
+      "utf8",
+      "-u",
+      "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\run_bgflood.py",
+      "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\BG_param_PhuYen_30m_V48_FORMAL_BASE_R1.txt"
+    ],
+    "cwd": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1"
+  },
+  "conditioned": {
+    "terrain_tif": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.tif",
+      "sha256": "e75019ce5d0c02996bfab421623bda33ab3d56ff5bfd8a06e51f2ca2b3cd4feb"
+    },
+    "terrain_asc": {
+      "path": "D:\\VTP\\05-Du-lieu-GIS\\PhuYen_DEM_30m_V48_CONDITIONED_CLOSED_LOOP_FROZEN.asc",
+      "sha256": "71b99c74541fd1efddb4d7a67d05c387e973f113ce730c3f97a70463f2613784"
+    },
+    "config": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\BG_param_PhuYen_30m_V48_FORMAL_CONDITIONED_R1.txt",
+      "sha256": "2d31e550f4d398403c483b3a72e2149c1a72c22c86b8532631ee404ddcbc5225"
+    },
+    "planned_output": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\results\\V48_FORMAL_CONDITIONED_R1.nc",
+    "command": "& \"C:\\Users\\CuongHM\\anaconda3\\python.exe\" -X utf8 \"D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\launch_formal.py\" --arm CONDITIONED",
+    "argv": [
+      "C:\\Users\\CuongHM\\anaconda3\\python.exe",
+      "-X",
+      "utf8",
+      "-u",
+      "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\python\\run_bgflood.py",
+      "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\BG_param_PhuYen_30m_V48_FORMAL_CONDITIONED_R1.txt"
+    ],
+    "cwd": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1"
+  },
+  "verified": {
+    "gate_ready": true,
+    "zero_prereg_blockers": true,
+    "zero_prereg_integrity_failures": true,
+    "terrain_grids_identical": true,
+    "base_ascii_roundtrip_within_1e_6_m": true,
+    "arm_configs_identical_except_terrain_output_and_arm_comment": true,
+    "planned_frame_within_preregistered_offset": true,
+    "formal_runs_not_started": true
+  },
+  "runtime_manifest": {
+    "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_RUNTIME_MANIFEST_R1.json",
+    "sha256": "06cde91087b4d482df580c956b9a9ea6e212fa1f3c688a304ad24b0c3ae3e8ed"
+  },
+  "cwd": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1",
+  "previous_pair": {
+    "path": "D:\\VTP\\V48_FORMAL_RUN_PAIR_PREP_20261002.json",
+    "sha256": "641ec485bba07e3d177c761000e95f35051f06321b22eda0b493c5f58d9a1aea"
+  },
+  "gate": {
+    "runtime_verification": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\results\\formal_input_verification.json",
+      "sha256": "b10f29e807ee25a3bc69f8795030f4236f6f965137b13ee829573384f34aff05"
+    },
+    "contract_validation": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_BG_Flood_validation_R1.json",
+      "sha256": "90b0808a66695c3386896a73b825ec71d6b0165a265e2cf616f9d07aca7926ff"
+    },
+    "preregistration_validation": {
+      "path": "D:\\VTP\\V48_runs\\20261004_runtime_fix_r1\\V48_SAR_preregistration_validation_R1.json",
+      "sha256": "fd2b7a1d5da26add74c8199513fbcc614d8b62548e947c93ab48a98e54cae3c7"
+    }
+  }
+}

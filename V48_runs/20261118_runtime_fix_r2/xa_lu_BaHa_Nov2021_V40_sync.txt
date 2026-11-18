@@ -1,0 +1,13 @@
+# Kich ban xa lu Song Ba Ha V40 - Dong bo thoi gian voi mua (t=0 tai 2021-11-26 00:00)
+# Offset: +345,600s (+96h). 96h dau dem luu luong dong co so 400 -> 2000 m3/s.
+# Thoi_gian(s)   Luu_luong_Q(m3/s)
+0               400
+345600          2000
+374400          6000
+387000          9000
+399600          11000
+405000          6400
+410400          6400
+453600          6400
+604800          6400
+777600          6400
