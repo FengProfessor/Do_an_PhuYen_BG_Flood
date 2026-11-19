@@ -1,0 +1,10 @@
+{
+  "case": "channel_DOUBLE",
+  "status": "RUNNING",
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": null,
+  "manifest_sha256": "d9502a90f709bf9864c386742de040ac1dd06f3af08c8f54e41e00be8e679e0a",
+  "started_utc": "2026-11-19T01:50:36.722885+00:00"
+}

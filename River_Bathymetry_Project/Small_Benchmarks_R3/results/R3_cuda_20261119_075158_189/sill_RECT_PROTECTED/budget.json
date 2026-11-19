@@ -1,0 +1,22 @@
+{
+  "schema_version": "V49-discrete-budget-1",
+  "interpretation": "Observed discrete numerical budget; not an external hydraulic validation",
+  "step_count": 1135,
+  "simulated_time_s": 3600.0,
+  "initial_volume_m3": 0.0,
+  "current_volume_m3": 503343.3425943069,
+  "boundary_reset_volume_m3": 0.0,
+  "flux_divergence_volume_m3": -1.3024203962499113e-12,
+  "rain_volume_m3": 0.0,
+  "river_volume_m3": 503343.34259430703,
+  "infiltration_volume_m3": 0.0,
+  "clamp_added_volume_m3": 0.0,
+  "clamp_removed_volume_m3": 0.0,
+  "accumulated_signed_update_residual_m3": 4.098760220117015e-11,
+  "accumulated_absolute_update_residual_m3": 3.1068970895997694e-08,
+  "component_rate_mismatch_max_m3_s": 2.842170943040401e-14,
+  "corrector_negative_raw_depth_cell_steps": 0,
+  "corrector_depth_above_100m_cell_steps": 0,
+  "hydraulic_promotion_ready": false,
+  "unexplained_closure_residual_m3": -1.5740292402810496e-10
+}

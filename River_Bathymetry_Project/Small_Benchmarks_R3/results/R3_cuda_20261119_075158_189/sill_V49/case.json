@@ -1,0 +1,24 @@
+{
+  "name": "sill_V49",
+  "kind": "sill",
+  "shape": [
+    64,
+    128
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": false,
+  "rain_units": null,
+  "river_peak_m3_s": 200.0,
+  "inputs": {
+    "bed.asc": "a0564cb15cee8f78941d49b4a19e91581523f86aedd7d638d602564f77b4d8a7",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "67d4210c518c8a2116da9e1c74562308e6381e392c5e7aeb1f373a75a5e1fc10",
+    "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+    "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+    "protected.npy": "ae3bcaa3a04ca221c422fc22764959065ef4eff0baca3f9c4f159c467b42a49f"
+  }
+}

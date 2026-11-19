@@ -1,0 +1,17 @@
+{
+  "case": "closed_one",
+  "status": "COMPLETED",
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "d9502a90f709bf9864c386742de040ac1dd06f3af08c8f54e41e00be8e679e0a",
+  "started_utc": "2026-11-19T00:57:13.397234+00:00",
+  "output_sha256": "b20ff59cdafc6dec17807727b80379c0f37398c20e4b4d3fae5d04258fa1cae8",
+  "auxiliary_sha256": {
+    "budget.json": "71312e3013193076a20c6122bfb04b35c32b01a648e05d25a389f6bd5e412b51",
+    "boundary_budget.json": "86f0f6af455d61e2b3a768e121ae71daac3390b64d79a1ffcc2a44173651e1fa",
+    "worker_metadata.json": "69ddc053613dfea4e43eb214a6823afef7ffd2bfb10cc6a2d647032047af70da"
+  },
+  "wall_seconds": 40.359
+}

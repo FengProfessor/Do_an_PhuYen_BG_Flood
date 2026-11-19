@@ -1,0 +1,24 @@
+{
+  "name": "channel_SIMPLE",
+  "kind": "channel",
+  "shape": [
+    64,
+    128
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": false,
+  "rain_units": null,
+  "river_peak_m3_s": 200.0,
+  "inputs": {
+    "bed.asc": "33f20b5e17a2fa9835d39d989fe9e0bee68acb1a8da11e3bf18acb599ae87a99",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "89b7d19aa9b6302a3ad083a9b76eea3e98920d40571e130598d30f54ff2f70ad",
+    "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+    "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188",
+    "protected.npy": "1e0abb1ffb89c82b578555f0b861a64eed210c1b564f971de0493c6f6d6dc6a0"
+  }
+}

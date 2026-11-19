@@ -1,0 +1,38 @@
+{
+  "case": "sill_V49_UNPROTECTED",
+  "kind": "sill",
+  "status": "PASS",
+  "checks": {
+    "bed_preserved": true,
+    "h_zs_zb_identity": true,
+    "nonnegative_h": true,
+    "budget_complete": true,
+    "budget_residual": true,
+    "boundary_budget_complete": true,
+    "wall_mass_flux": true,
+    "internal_flux_cancellation": true,
+    "nc_matches_observed_volume": true
+  },
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "wall_seconds": 277.719,
+  "metrics": {
+    "final_time_s": 3600.0,
+    "frames": 60,
+    "bed_max_error_m": 4.656612873077393e-10,
+    "identity_max_error_m": 1.1920928955078125e-07,
+    "min_h_m": 0.0,
+    "final_volume_m3": 503418.0702171073,
+    "theoretical_initial_volume_m3": 0.0,
+    "max_h_m": 2.073233127593994,
+    "area_h_gt_0_3_m2": 450900.0,
+    "budget_physical_residual_m3": 0.1339068643283099,
+    "budget_relative_residual": 2.6599541831628245e-07,
+    "clamp_added_m3": 0.13390686478316022,
+    "clamp_removed_m3": 0.0,
+    "wall_max_abs_m3_s": 0.0,
+    "internal_flux_mismatch_m3_s": 5.3290705182007514e-14,
+    "closed_max_relative_drift": 503418.06935824733,
+    "boundary_depth_change_max_m": 0.24049903805056738
+  }
+}

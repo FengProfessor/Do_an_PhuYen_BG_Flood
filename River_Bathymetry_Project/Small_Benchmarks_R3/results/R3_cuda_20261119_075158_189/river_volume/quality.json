@@ -1,0 +1,41 @@
+{
+  "case": "river_volume",
+  "kind": "river_volume",
+  "status": "PASS",
+  "checks": {
+    "bed_preserved": true,
+    "h_zs_zb_identity": true,
+    "nonnegative_h": true,
+    "closed_river_mass": true,
+    "budget_complete": true,
+    "budget_residual": true,
+    "boundary_budget_complete": true,
+    "wall_mass_flux": true,
+    "internal_flux_cancellation": true,
+    "nc_matches_observed_volume": true
+  },
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "wall_seconds": 7.047,
+  "metrics": {
+    "final_time_s": 60.0,
+    "frames": 1,
+    "bed_max_error_m": 0.0,
+    "identity_max_error_m": 0.0,
+    "min_h_m": 0.0,
+    "final_volume_m3": 600.0000044703484,
+    "theoretical_initial_volume_m3": 0.0,
+    "max_h_m": 0.07399582862854004,
+    "area_h_gt_0_3_m2": 0.0,
+    "expected_added_volume_m3": 600.0,
+    "river_relative_volume_error": 7.450580596923828e-09,
+    "budget_physical_residual_m3": -1.1368683772161603e-13,
+    "budget_relative_residual": 1.8947806286936006e-16,
+    "clamp_added_m3": 0.0,
+    "clamp_removed_m3": 0.0,
+    "wall_max_abs_m3_s": 0.0,
+    "internal_flux_mismatch_m3_s": 4.440892098500626e-16,
+    "closed_max_relative_drift": 599.9999999999999,
+    "boundary_depth_change_max_m": 0.0
+  }
+}

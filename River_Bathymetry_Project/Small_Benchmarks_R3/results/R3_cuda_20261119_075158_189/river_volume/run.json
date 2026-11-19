@@ -1,0 +1,17 @@
+{
+  "case": "river_volume",
+  "status": "COMPLETED",
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "d9502a90f709bf9864c386742de040ac1dd06f3af08c8f54e41e00be8e679e0a",
+  "started_utc": "2026-11-19T00:57:02.642706+00:00",
+  "output_sha256": "e1f13405f5351e3764e0ab7cefeb44975794bb9665846da25d5cc2c4933a5a0a",
+  "auxiliary_sha256": {
+    "budget.json": "049bbf65f525ff3a01cf1b88283e7ffe42bfd3003b44d47c424a18ad3da98525",
+    "boundary_budget.json": "57b9bad8d2aefa12c4d302259b94c3d23dda950cd23e37d086f0f7232cfc8e2a",
+    "worker_metadata.json": "6fccfc3a248400c84617b41fccdc5f20f0cd381874705b293c1833f8db5fc177"
+  },
+  "wall_seconds": 7.047
+}

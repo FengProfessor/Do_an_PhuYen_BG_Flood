@@ -1,0 +1,23 @@
+{
+  "name": "sill_RECT_PROTECTED",
+  "kind": "sill",
+  "shape": [
+    64,
+    128
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": false,
+  "rain_units": null,
+  "river_peak_m3_s": 200.0,
+  "inputs": {
+    "bed.asc": "78d4c30532a83c4b36abe28e00fc4dbd2b845f3bb209206eda78397160f4b349",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "1a976c271068a77ba9c79e3fbd4d351b0c4b24293ea4d8c247f3bd492454c4b2",
+    "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+    "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "case": "lake",
+  "status": "COMPLETED",
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "d9502a90f709bf9864c386742de040ac1dd06f3af08c8f54e41e00be8e679e0a",
+  "started_utc": "2026-11-19T00:56:44.550839+00:00",
+  "output_sha256": "543a55e6d0b5acbe6f2636464234c4b175ce618bb8d4d74546d75162f2b3f235",
+  "auxiliary_sha256": {
+    "budget.json": "d62ba91103c7dcb41641b6fa6dd5196aec2c7b0724f8b7cff6654d10c70589c3",
+    "boundary_budget.json": "3216e49cb9840dfa0b9f681366b2310b43f9d904f2c719d2c6a007678d09aa06",
+    "worker_metadata.json": "6fccfc3a248400c84617b41fccdc5f20f0cd381874705b293c1833f8db5fc177"
+  },
+  "wall_seconds": 17.953
+}

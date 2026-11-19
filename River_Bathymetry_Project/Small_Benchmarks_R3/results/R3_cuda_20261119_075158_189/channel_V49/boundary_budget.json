@@ -1,0 +1,26 @@
+{
+  "schema": "r3-boundary-budget-1",
+  "step_count": 1474,
+  "simulated_time_s": 3600.0,
+  "initial_volume_m3": 0.0,
+  "current_volume_m3": 503429.0009440108,
+  "max_relative_volume_drift": 503429.0009440108,
+  "max_abs_wall_flux_m3_s": 0.0,
+  "max_abs_internal_flux_mismatch_m3_s": 6.039613253960852e-14,
+  "boundary_depth_change_max_m": 0.24049903805056738,
+  "clamp_added_m3": 0.13390686478316022,
+  "clamp_removed_m3": 0.0,
+  "boundary_net_inflow_volume_m3": {
+    "left": 0.0,
+    "right": 0.0,
+    "bot": 0.0,
+    "top": 0.0
+  },
+  "boundary_max_abs_net_rate_m3_s": {
+    "left": 0.0,
+    "right": 0.0,
+    "bot": 0.0,
+    "top": 0.0
+  },
+  "all_values_finite": true
+}

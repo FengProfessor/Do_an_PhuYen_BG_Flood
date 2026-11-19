@@ -1,0 +1,211 @@
+  [GPU] CuPy detected — using NVIDIA GPU acceleration
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks_R3\results\R3_cuda_20261119_075158_189\closed_multi\BG_param.txt...
+	Đã đọc xong file tham số
+	Đọc file địa hình: bed.asc
+		nx=32, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=270945.0, ymax=1477985.0
+============================================================
+  BG_Flood - Mô hình lũ lụt Godunov khối-cấu trúc
+  (Block-structured Godunov-type Flood Model)
+============================================================
+  Giải phương trình nước nông 2D (SWE)
+  Thuật toán: Kurganov-Petrova (2007)
+  Lưới: Block-structured adaptive mesh
+============================================================
+
+Đọc file D:\VTP\River_Bathymetry_Project\Small_Benchmarks_R3\results\R3_cuda_20261119_075158_189\closed_multi\BG_param.txt...
+	Đã đọc xong file tham số
+Đọc dữ liệu đầu vào...
+	Đọc file địa hình: bed.asc
+		nx=32, ny=32, dx=30.0
+		xo=270015.0, yo=1477055.0
+		xmax=270945.0, ymax=1477985.0
+
+
+--- Tổng kết tham số ---
+  Lưới: 32 x 32
+  dx = 30.0
+  Miền: x=[270000.0, 270960.0], y=[1477040.0, 1478000.0]
+  Thời gian kết thúc: 300.0 s
+  Bước xuất: 10.0 s
+  CFL = 0.4
+  eps = 0.0001
+  Ma sát (cf) = 0.0 (Constant)
+  Thấm: IL=0.0, CL=0.0 (Constant)
+  Block width = 16
+  Halo width = 1
+  Block mem width = 18
+  Block size = 324
+  File xuất: result.nc
+  Biến xuất: ['zb', 'h', 'zs', 'u', 'v']
+  Biên trái: Có
+  Biên phải: Có
+  Biên trên: Có
+  Biên dưới: Có
+---
+
+Khởi tạo lưới...
+	Số block ban đầu: 4; Sẽ cấp phát 5 block trong bộ nhớ.
+	Khởi tạo vị trí và lân cận của các blocks...
+	Xây dựng chỉ số vector hóa (block index)...
+	Hoàn tất khởi tạo lưới.
+
+Khởi tạo điều kiện ban đầu...
+	Hoàn tất khởi tạo điều kiện ban đầu.
+	Chuyển dữ liệu lên GPU...
+
+Thời gian khởi tạo: 0.08 giây
+
+Initialising model main loop...
+Model Running... [GPU mode]
+t = 2.68/300s (0.9%) | dt = 2.677e+00 | elapsed = 0.3s
+t = 5.35/300s (1.8%) | dt = 2.675e+00 | elapsed = 0.6s
+t = 8.02/300s (2.7%) | dt = 2.672e+00 | elapsed = 0.8s
+NetCDF frame t=10.696s saved in 1.25s (vectorized)
+t = 10.70/300s (3.6%) | dt = 2.673e+00 | elapsed = 2.4s
+t = 13.37/300s (4.5%) | dt = 2.673e+00 | elapsed = 2.7s
+t = 16.04/300s (5.3%) | dt = 2.675e+00 | elapsed = 2.9s
+t = 18.72/300s (6.2%) | dt = 2.678e+00 | elapsed = 3.1s
+NetCDF frame t=21.402s saved in 0.35s (vectorized)
+t = 21.40/300s (7.1%) | dt = 2.680e+00 | elapsed = 3.8s
+t = 24.08/300s (8.0%) | dt = 2.682e+00 | elapsed = 4.0s
+t = 26.77/300s (8.9%) | dt = 2.684e+00 | elapsed = 4.3s
+t = 29.45/300s (9.8%) | dt = 2.686e+00 | elapsed = 4.5s
+NetCDF frame t=32.141s saved in 0.35s (vectorized)
+t = 32.14/300s (10.7%) | dt = 2.687e+00 | elapsed = 5.2s
+t = 34.83/300s (11.6%) | dt = 2.688e+00 | elapsed = 5.4s
+t = 37.52/300s (12.5%) | dt = 2.689e+00 | elapsed = 5.7s
+NetCDF frame t=40.209s saved in 0.34s (vectorized)
+t = 40.21/300s (13.4%) | dt = 2.690e+00 | elapsed = 6.3s
+t = 42.90/300s (14.3%) | dt = 2.691e+00 | elapsed = 6.5s
+t = 45.59/300s (15.2%) | dt = 2.692e+00 | elapsed = 6.8s
+t = 48.28/300s (16.1%) | dt = 2.693e+00 | elapsed = 7.0s
+NetCDF frame t=50.978s saved in 0.36s (vectorized)
+t = 50.98/300s (17.0%) | dt = 2.693e+00 | elapsed = 7.6s
+t = 53.67/300s (17.9%) | dt = 2.694e+00 | elapsed = 7.9s
+t = 56.37/300s (18.8%) | dt = 2.694e+00 | elapsed = 8.1s
+t = 59.06/300s (19.7%) | dt = 2.695e+00 | elapsed = 8.4s
+NetCDF frame t=61.757s saved in 0.31s (vectorized)
+t = 61.76/300s (20.6%) | dt = 2.695e+00 | elapsed = 8.9s
+t = 64.45/300s (21.5%) | dt = 2.696e+00 | elapsed = 9.2s
+t = 67.15/300s (22.4%) | dt = 2.695e+00 | elapsed = 9.5s
+t = 69.84/300s (23.3%) | dt = 2.695e+00 | elapsed = 9.7s
+NetCDF frame t=72.537s saved in 0.36s (vectorized)
+t = 72.54/300s (24.2%) | dt = 2.694e+00 | elapsed = 10.3s
+t = 75.23/300s (25.1%) | dt = 2.693e+00 | elapsed = 10.6s
+t = 77.92/300s (26.0%) | dt = 2.693e+00 | elapsed = 10.8s
+NetCDF frame t=80.616s saved in 0.32s (vectorized)
+t = 80.62/300s (26.9%) | dt = 2.693e+00 | elapsed = 11.4s
+t = 83.31/300s (27.8%) | dt = 2.693e+00 | elapsed = 11.6s
+t = 86.00/300s (28.7%) | dt = 2.692e+00 | elapsed = 11.9s
+t = 88.69/300s (29.6%) | dt = 2.692e+00 | elapsed = 12.2s
+NetCDF frame t=91.386s saved in 0.36s (vectorized)
+t = 91.39/300s (30.5%) | dt = 2.692e+00 | elapsed = 12.7s
+t = 94.08/300s (31.4%) | dt = 2.692e+00 | elapsed = 13.0s
+t = 96.77/300s (32.3%) | dt = 2.692e+00 | elapsed = 13.2s
+t = 99.46/300s (33.2%) | dt = 2.693e+00 | elapsed = 13.5s
+NetCDF frame t=102.156s saved in 0.34s (vectorized)
+t = 102.16/300s (34.1%) | dt = 2.693e+00 | elapsed = 14.1s
+t = 104.85/300s (34.9%) | dt = 2.693e+00 | elapsed = 14.3s
+t = 107.54/300s (35.8%) | dt = 2.693e+00 | elapsed = 14.6s
+NetCDF frame t=110.235s saved in 0.34s (vectorized)
+t = 110.24/300s (36.7%) | dt = 2.693e+00 | elapsed = 15.2s
+t = 112.93/300s (37.6%) | dt = 2.693e+00 | elapsed = 15.5s
+t = 115.62/300s (38.5%) | dt = 2.694e+00 | elapsed = 15.7s
+t = 118.31/300s (39.4%) | dt = 2.693e+00 | elapsed = 15.9s
+NetCDF frame t=121.008s saved in 0.36s (vectorized)
+t = 121.01/300s (40.3%) | dt = 2.693e+00 | elapsed = 16.6s
+t = 123.70/300s (41.2%) | dt = 2.693e+00 | elapsed = 16.8s
+t = 126.39/300s (42.1%) | dt = 2.693e+00 | elapsed = 17.1s
+t = 129.09/300s (43.0%) | dt = 2.694e+00 | elapsed = 17.4s
+NetCDF frame t=131.781s saved in 0.36s (vectorized)
+t = 131.78/300s (43.9%) | dt = 2.694e+00 | elapsed = 17.9s
+t = 134.47/300s (44.8%) | dt = 2.694e+00 | elapsed = 18.2s
+t = 137.17/300s (45.7%) | dt = 2.694e+00 | elapsed = 18.4s
+t = 139.86/300s (46.6%) | dt = 2.695e+00 | elapsed = 18.7s
+NetCDF frame t=142.559s saved in 0.29s (vectorized)
+t = 142.56/300s (47.5%) | dt = 2.695e+00 | elapsed = 19.2s
+t = 145.25/300s (48.4%) | dt = 2.695e+00 | elapsed = 19.5s
+t = 147.95/300s (49.3%) | dt = 2.695e+00 | elapsed = 19.8s
+NetCDF frame t=150.645s saved in 0.45s (vectorized)
+t = 150.64/300s (50.2%) | dt = 2.696e+00 | elapsed = 20.4s
+t = 153.34/300s (51.1%) | dt = 2.695e+00 | elapsed = 20.7s
+t = 156.04/300s (52.0%) | dt = 2.695e+00 | elapsed = 21.0s
+t = 158.73/300s (52.9%) | dt = 2.695e+00 | elapsed = 21.2s
+NetCDF frame t=161.424s saved in 0.37s (vectorized)
+t = 161.42/300s (53.8%) | dt = 2.695e+00 | elapsed = 21.9s
+t = 164.12/300s (54.7%) | dt = 2.695e+00 | elapsed = 22.2s
+t = 166.81/300s (55.6%) | dt = 2.695e+00 | elapsed = 22.4s
+t = 169.51/300s (56.5%) | dt = 2.695e+00 | elapsed = 22.7s
+NetCDF frame t=172.205s saved in 0.35s (vectorized)
+t = 172.21/300s (57.4%) | dt = 2.696e+00 | elapsed = 23.3s
+t = 174.90/300s (58.3%) | dt = 2.695e+00 | elapsed = 23.5s
+t = 177.60/300s (59.2%) | dt = 2.696e+00 | elapsed = 23.8s
+NetCDF frame t=180.292s saved in 0.32s (vectorized)
+t = 180.29/300s (60.1%) | dt = 2.696e+00 | elapsed = 24.4s
+t = 182.99/300s (61.0%) | dt = 2.696e+00 | elapsed = 24.6s
+t = 185.68/300s (61.9%) | dt = 2.696e+00 | elapsed = 24.9s
+t = 188.38/300s (62.8%) | dt = 2.697e+00 | elapsed = 25.1s
+NetCDF frame t=191.079s saved in 0.35s (vectorized)
+t = 191.08/300s (63.7%) | dt = 2.697e+00 | elapsed = 25.7s
+t = 193.78/300s (64.6%) | dt = 2.697e+00 | elapsed = 26.0s
+t = 196.47/300s (65.5%) | dt = 2.697e+00 | elapsed = 26.2s
+t = 199.17/300s (66.4%) | dt = 2.697e+00 | elapsed = 26.5s
+NetCDF frame t=201.868s saved in 0.30s (vectorized)
+t = 201.87/300s (67.3%) | dt = 2.698e+00 | elapsed = 27.0s
+t = 204.57/300s (68.2%) | dt = 2.698e+00 | elapsed = 27.3s
+t = 207.26/300s (69.1%) | dt = 2.698e+00 | elapsed = 27.6s
+t = 209.96/300s (70.0%) | dt = 2.698e+00 | elapsed = 27.8s
+NetCDF frame t=212.660s saved in 0.35s (vectorized)
+t = 212.66/300s (70.9%) | dt = 2.698e+00 | elapsed = 28.4s
+t = 215.36/300s (71.8%) | dt = 2.698e+00 | elapsed = 28.6s
+t = 218.06/300s (72.7%) | dt = 2.698e+00 | elapsed = 28.9s
+NetCDF frame t=220.755s saved in 0.29s (vectorized)
+t = 220.76/300s (73.6%) | dt = 2.698e+00 | elapsed = 29.5s
+t = 223.45/300s (74.5%) | dt = 2.698e+00 | elapsed = 29.7s
+t = 226.15/300s (75.4%) | dt = 2.698e+00 | elapsed = 30.0s
+t = 228.85/300s (76.3%) | dt = 2.698e+00 | elapsed = 30.2s
+NetCDF frame t=231.546s saved in 0.36s (vectorized)
+t = 231.55/300s (77.2%) | dt = 2.698e+00 | elapsed = 30.9s
+t = 234.24/300s (78.1%) | dt = 2.698e+00 | elapsed = 31.2s
+t = 236.94/300s (79.0%) | dt = 2.698e+00 | elapsed = 31.4s
+t = 239.64/300s (79.9%) | dt = 2.698e+00 | elapsed = 31.7s
+NetCDF frame t=242.339s saved in 0.29s (vectorized)
+t = 242.34/300s (80.8%) | dt = 2.698e+00 | elapsed = 32.3s
+t = 245.04/300s (81.7%) | dt = 2.698e+00 | elapsed = 32.5s
+t = 247.74/300s (82.6%) | dt = 2.698e+00 | elapsed = 32.8s
+NetCDF frame t=250.434s saved in 0.34s (vectorized)
+t = 250.43/300s (83.5%) | dt = 2.699e+00 | elapsed = 33.4s
+t = 253.13/300s (84.4%) | dt = 2.699e+00 | elapsed = 33.7s
+t = 255.83/300s (85.3%) | dt = 2.699e+00 | elapsed = 33.9s
+t = 258.53/300s (86.2%) | dt = 2.699e+00 | elapsed = 34.1s
+NetCDF frame t=261.228s saved in 0.33s (vectorized)
+t = 261.23/300s (87.1%) | dt = 2.698e+00 | elapsed = 34.8s
+t = 263.93/300s (88.0%) | dt = 2.697e+00 | elapsed = 35.0s
+t = 266.62/300s (88.9%) | dt = 2.697e+00 | elapsed = 35.2s
+t = 269.32/300s (89.8%) | dt = 2.697e+00 | elapsed = 35.5s
+NetCDF frame t=272.015s saved in 0.37s (vectorized)
+t = 272.02/300s (90.7%) | dt = 2.696e+00 | elapsed = 36.1s
+t = 274.71/300s (91.6%) | dt = 2.696e+00 | elapsed = 36.3s
+t = 277.41/300s (92.5%) | dt = 2.696e+00 | elapsed = 36.5s
+NetCDF frame t=280.104s saved in 0.44s (vectorized)
+t = 280.10/300s (93.4%) | dt = 2.696e+00 | elapsed = 37.3s
+t = 282.80/300s (94.3%) | dt = 2.696e+00 | elapsed = 37.6s
+t = 285.50/300s (95.2%) | dt = 2.696e+00 | elapsed = 37.8s
+t = 288.19/300s (96.1%) | dt = 2.696e+00 | elapsed = 38.1s
+NetCDF frame t=290.888s saved in 0.28s (vectorized)
+t = 290.89/300s (97.0%) | dt = 2.696e+00 | elapsed = 38.7s
+t = 293.58/300s (97.9%) | dt = 2.696e+00 | elapsed = 38.9s
+t = 296.28/300s (98.8%) | dt = 2.696e+00 | elapsed = 39.2s
+t = 298.97/300s (99.7%) | dt = 2.696e+00 | elapsed = 39.5s
+NetCDF frame t=300.000s saved in 0.36s (vectorized)
+t = 300.00/300s (100.0%) | dt = 1.025e+00 | elapsed = 40.1s
+
+
+Simulation completed.
+Runtime: 40.07 s
+
+Tổng thời gian chạy: 40.28 giây
+BG_Flood hoàn tất thành công!

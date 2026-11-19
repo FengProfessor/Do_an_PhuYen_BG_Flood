@@ -1,0 +1,17 @@
+{
+  "case": "sill_REF",
+  "status": "COMPLETED",
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "d9502a90f709bf9864c386742de040ac1dd06f3af08c8f54e41e00be8e679e0a",
+  "started_utc": "2026-11-19T01:21:37.094642+00:00",
+  "output_sha256": "ed5926825ebe5ff92fa459425bcf7059329af24295f71786d5dba83f798e21a4",
+  "auxiliary_sha256": {
+    "budget.json": "e340329ca80708bc8ca32ac48ae5e03e92aaea175c18c0e9940f63662c878a22",
+    "boundary_budget.json": "df905151f0fe86fce9a303aba49436af0024c7d21146d2e1c92074bcdb479db7",
+    "worker_metadata.json": "f6a443a26e9ecd19b7fcdb4506b9b8ef20a21b7618962dc5f7e7f923d2311224"
+  },
+  "wall_seconds": 381.11
+}

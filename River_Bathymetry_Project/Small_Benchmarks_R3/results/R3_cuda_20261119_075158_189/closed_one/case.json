@@ -1,0 +1,24 @@
+{
+  "name": "closed_one",
+  "kind": "closed_dynamic",
+  "shape": [
+    16,
+    16
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 300.0,
+  "zsinit_m": 2.0,
+  "closed": true,
+  "rain_units": null,
+  "river_peak_m3_s": 0.0,
+  "inputs": {
+    "bed.asc": "e6ead5ed497cc2d1c24e82fd8f0e204f8db7ed14d88b91639d2fae705eeeec25",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "bf8efc67fbfe047eb9e07e3c5953859d5fec74ce22f923b3db2a35e19ed6764e",
+    "BG_param.txt": "dd897dfb7174c20c8ddfb96b37bbc6baa0899d8edcb7223554b318f04cf869b6",
+    "initial_h.npy": "4c59a21ce8e088c869029fafef5dc59b2cf54f91c8f8b35637e7a8b706a37391"
+  },
+  "initial_field": "initial_h.npy"
+}

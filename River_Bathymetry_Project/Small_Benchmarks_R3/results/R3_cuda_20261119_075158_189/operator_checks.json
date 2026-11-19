@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "runtime": "D:\\VTP\\V48_runs\\20261118_runtime_fix_r3\\python",
+  "device": "cuda",
+  "gradient_halo_api": true,
+  "meaning": "Instantaneous real-runtime operators, not full-time simulations or field validation",
+  "cases": [
+    {
+      "shape": [
+        16,
+        16
+      ],
+      "axis": "x",
+      "mode": "uniform",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 0.0,
+      "interface_mismatch_m3_s": 0.0,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        16,
+        16
+      ],
+      "axis": "x",
+      "mode": "increasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 0.0,
+      "interface_mismatch_m3_s": 0.0,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        16,
+        16
+      ],
+      "axis": "x",
+      "mode": "decreasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 0.0,
+      "interface_mismatch_m3_s": 0.0,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        16,
+        16
+      ],
+      "axis": "y",
+      "mode": "increasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": -1.2490009027033011e-14,
+      "interface_mismatch_m3_s": -1.2490009027033011e-14,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        16,
+        16
+      ],
+      "axis": "y",
+      "mode": "decreasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 0.0,
+      "interface_mismatch_m3_s": 0.0,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        16,
+        16
+      ],
+      "axis": "x",
+      "mode": "depth_slope",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": -2.4980018054066022e-14,
+      "interface_mismatch_m3_s": -2.4980018054066022e-14,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "axis": "x",
+      "mode": "uniform",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 0.0,
+      "interface_mismatch_m3_s": 0.0,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "axis": "x",
+      "mode": "increasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 0.0,
+      "interface_mismatch_m3_s": 0.0,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "axis": "x",
+      "mode": "decreasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 0.0,
+      "interface_mismatch_m3_s": 0.0,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "axis": "y",
+      "mode": "increasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": -1.9984014443252818e-13,
+      "interface_mismatch_m3_s": -1.9984014443252818e-13,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "axis": "y",
+      "mode": "decreasing",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": 4.9960036108132044e-14,
+      "interface_mismatch_m3_s": 4.9960036108132044e-14,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "axis": "x",
+      "mode": "depth_slope",
+      "wall_max_abs_m3_s": 0.0,
+      "net_dV_dt_m3_s": -9.992007221626409e-14,
+      "interface_mismatch_m3_s": -9.992007221626409e-14,
+      "checks": {
+        "wall_mass_flux_zero": true,
+        "interfaces_cancel": true,
+        "wall_momentum_not_erased": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2"
+}

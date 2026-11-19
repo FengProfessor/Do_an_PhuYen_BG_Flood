@@ -1,0 +1,29 @@
+{
+  "name": "channel_RECT_EQVOL",
+  "kind": "channel",
+  "shape": [
+    64,
+    128
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 3600.0,
+  "zsinit_m": -100.0,
+  "closed": false,
+  "rain_units": null,
+  "river_peak_m3_s": 200.0,
+  "inputs": {
+    "bed.asc": "a9ebd083ec6943d3686557c146e850566c884a13a80c9459b3b5ffd8d1ef16eb",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "50dcbfe2f559f9edab45833d30a098f46a90dbf74a9a21386c01dc90a3cc8090",
+    "BG_param.txt": "2027f110ac6125b68b2e4c857c9c015f4921ea623a3ed4123ad7e0ab4d79ff4e",
+    "river.txt": "b0505633f9b4373d31a5f238493fae98281a283c1bc93074174a81b03d09a188"
+  },
+  "control": {
+    "uniform_depth_m": 1.0095150432504354,
+    "target_volume_m3": 901295.0306139886,
+    "actual_volume_m3": 901295.0309962034,
+    "footprint_cells": 992
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "case": "grid",
+  "status": "COMPLETED",
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "d9502a90f709bf9864c386742de040ac1dd06f3af08c8f54e41e00be8e679e0a",
+  "started_utc": "2026-11-19T00:52:18.464713+00:00",
+  "output_sha256": "b617ca0283c9ad3b8c09d1aa401060a9994211e23c474944d9664ba1ef70a57a",
+  "auxiliary_sha256": {
+    "budget.json": "1b4550c128eead50541894b89ccb331e1f159b87f4a636f286e03a96ba797c88",
+    "boundary_budget.json": "7fb0a1a32b36bdb721af6220a815abef0f47fd47faa1a02e851727108003a17c",
+    "worker_metadata.json": "bb9a8ec82ae0c75ae73dd7761f53f31ff63001a883d1fc98260d86820ed5700a"
+  },
+  "wall_seconds": 7.594
+}

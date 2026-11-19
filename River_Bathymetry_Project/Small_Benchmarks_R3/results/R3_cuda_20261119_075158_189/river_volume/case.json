@@ -1,0 +1,23 @@
+{
+  "name": "river_volume",
+  "kind": "river_volume",
+  "shape": [
+    32,
+    32
+  ],
+  "dx": 30.0,
+  "x0": 270000.0,
+  "ytop": 1478000.0,
+  "endtime_s": 60.0,
+  "zsinit_m": -100.0,
+  "closed": true,
+  "rain_units": null,
+  "river_peak_m3_s": 10.0,
+  "inputs": {
+    "bed.asc": "af0bb168a60f69595c06cbeb9aa8a01bbe519ffdc9d4090fb89fab46b5cbee71",
+    "bed.prj": "2d6b3ec79ee22e1a77fd1252fc9017e7253410b77df63e219ec6492fb92a6060",
+    "bed.npy": "7c47698ffea2d322733b704e935c8b6e5004d2dc29d766b802f3ff42f57416cb",
+    "BG_param.txt": "5a16a30e3ef87f2be72ce07834ecdde369c2c164472f684604563f47cb0ad6f9",
+    "river.txt": "4b073d7f91364e21e3db884467e1305b889d0470d2bf934ecf4d4f31b248b4cd"
+  }
+}

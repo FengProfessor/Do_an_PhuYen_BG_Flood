@@ -1,0 +1,38 @@
+{
+  "case": "channel_HALF",
+  "kind": "channel",
+  "status": "PASS",
+  "checks": {
+    "bed_preserved": true,
+    "h_zs_zb_identity": true,
+    "nonnegative_h": true,
+    "budget_complete": true,
+    "budget_residual": true,
+    "boundary_budget_complete": true,
+    "wall_mass_flux": true,
+    "internal_flux_cancellation": true,
+    "nc_matches_observed_volume": true
+  },
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "wall_seconds": 361.297,
+  "metrics": {
+    "final_time_s": 3600.0,
+    "frames": 60,
+    "bed_max_error_m": 4.656612873077393e-10,
+    "identity_max_error_m": 1.7881393432617188e-07,
+    "min_h_m": 0.0,
+    "final_volume_m3": 503418.38025209674,
+    "theoretical_initial_volume_m3": 0.0,
+    "max_h_m": 1.383080005645752,
+    "area_h_gt_0_3_m2": 450000.0,
+    "budget_physical_residual_m3": -5.820766091346741e-11,
+    "budget_relative_residual": 1.1562482264650124e-16,
+    "clamp_added_m3": 0.0,
+    "clamp_removed_m3": 0.0,
+    "wall_max_abs_m3_s": 0.0,
+    "internal_flux_mismatch_m3_s": 7.815970093361102e-14,
+    "closed_max_relative_drift": 503418.38007765147,
+    "boundary_depth_change_max_m": 0.3970112188242937
+  }
+}

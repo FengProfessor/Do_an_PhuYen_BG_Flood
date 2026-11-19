@@ -1,0 +1,17 @@
+{
+  "case": "channel_RECT_EQVOL",
+  "status": "COMPLETED",
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "timeout_seconds": 900.0,
+  "returncode": 0,
+  "manifest_sha256": "d9502a90f709bf9864c386742de040ac1dd06f3af08c8f54e41e00be8e679e0a",
+  "started_utc": "2026-11-19T02:08:34.623806+00:00",
+  "output_sha256": "fd0fbaae975e6469e800bb4fd68b139d834b5a119cd6fb1a6829de4917752f0f",
+  "auxiliary_sha256": {
+    "budget.json": "c688cede5ce35895bbc9ca3ee98dc3f842da4e273f7a6e050d5ab8ddf731ede2",
+    "boundary_budget.json": "808a9ef2db32b837b691ae48b6584c2eda52bd29a0d6b2a1a2b933100a44391e",
+    "worker_metadata.json": "f6a443a26e9ecd19b7fcdb4506b9b8ef20a21b7618962dc5f7e7f923d2311224"
+  },
+  "wall_seconds": 316.86
+}

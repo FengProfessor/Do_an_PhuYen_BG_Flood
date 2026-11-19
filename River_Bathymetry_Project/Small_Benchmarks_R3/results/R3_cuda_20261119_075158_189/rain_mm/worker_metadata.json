@@ -1,0 +1,11 @@
+{
+  "runtime_driver": "D:\\VTP\\V48_runs\\20261118_runtime_fix_r3\\python\\run_bgflood.py",
+  "device": "cuda",
+  "python": "3.11.11 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:34:19) [MSC v.1929 64 bit (AMD64)]",
+  "grid_shape": [
+    32,
+    32
+  ],
+  "observer": "Existing read-only discrete budget observer",
+  "missing_observer_api": []
+}

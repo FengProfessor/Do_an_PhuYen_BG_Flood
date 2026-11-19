@@ -1,0 +1,42 @@
+{
+  "case": "lake",
+  "kind": "lake",
+  "status": "PASS",
+  "checks": {
+    "bed_preserved": true,
+    "h_zs_zb_identity": true,
+    "nonnegative_h": true,
+    "lake_level": true,
+    "lake_velocity": true,
+    "budget_complete": true,
+    "budget_residual": true,
+    "boundary_budget_complete": true,
+    "wall_mass_flux": true,
+    "internal_flux_cancellation": true,
+    "nc_matches_observed_volume": true
+  },
+  "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+  "device": "cuda",
+  "wall_seconds": 17.953,
+  "metrics": {
+    "final_time_s": 120.0,
+    "frames": 2,
+    "bed_max_error_m": 0.0,
+    "identity_max_error_m": 5.960464477539063e-08,
+    "min_h_m": 1.2001279592514038,
+    "final_volume_m3": 1382358.3249092102,
+    "theoretical_initial_volume_m3": 1382358.325767517,
+    "max_h_m": 1.7998719215393066,
+    "area_h_gt_0_3_m2": 921600.0,
+    "lake_max_zs_error_m": 0.0,
+    "lake_max_speed_m_s": 3.825956466609094e-15,
+    "budget_physical_residual_m3": -2.3283064365386963e-10,
+    "budget_relative_residual": 1.6843002239350275e-16,
+    "clamp_added_m3": 0.0,
+    "clamp_removed_m3": 0.0,
+    "wall_max_abs_m3_s": 0.0,
+    "internal_flux_mismatch_m3_s": 3.281661365719409e-28,
+    "closed_max_relative_drift": 3.368600447870055e-16,
+    "boundary_depth_change_max_m": 4.440892098500626e-16
+  }
+}

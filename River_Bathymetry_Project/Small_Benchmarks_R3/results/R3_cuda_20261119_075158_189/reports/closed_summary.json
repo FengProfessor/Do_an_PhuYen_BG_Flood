@@ -1,0 +1,91 @@
+{
+  "suite": "closed",
+  "status": "PASS",
+  "cases": {
+    "closed_one": {
+      "case": "closed_one",
+      "kind": "closed_dynamic",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true,
+        "boundary_budget_complete": true,
+        "wall_mass_flux": true,
+        "internal_flux_cancellation": true,
+        "nc_matches_observed_volume": true,
+        "closed_volume_drift": true,
+        "closed_no_clamp": true,
+        "boundary_exercised": true
+      },
+      "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+      "device": "cuda",
+      "wall_seconds": 40.359,
+      "metrics": {
+        "final_time_s": 300.0,
+        "frames": 30,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 0.0,
+        "min_h_m": 1.9869940280914307,
+        "final_volume_m3": 461927.6445508003,
+        "theoretical_initial_volume_m3": 461927.6443504275,
+        "max_h_m": 2.0277621746063232,
+        "area_h_gt_0_3_m2": 230400.0,
+        "budget_physical_residual_m3": -1.746241573458164e-10,
+        "budget_relative_residual": 3.7803357188413476e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0,
+        "wall_max_abs_m3_s": 0.0,
+        "internal_flux_mismatch_m3_s": 3.885780586188048e-15,
+        "closed_max_relative_drift": 5.040413720665733e-16,
+        "boundary_depth_change_max_m": 0.02894635077827301
+      }
+    },
+    "closed_multi": {
+      "case": "closed_multi",
+      "kind": "closed_dynamic",
+      "status": "PASS",
+      "checks": {
+        "bed_preserved": true,
+        "h_zs_zb_identity": true,
+        "nonnegative_h": true,
+        "budget_complete": true,
+        "budget_residual": true,
+        "boundary_budget_complete": true,
+        "wall_mass_flux": true,
+        "internal_flux_cancellation": true,
+        "nc_matches_observed_volume": true,
+        "closed_volume_drift": true,
+        "closed_no_clamp": true,
+        "boundary_exercised": true
+      },
+      "runtime_digest": "8e83d93cafa08dfd8583874483316a5b00e1f533de917f8394b0df04b8206ca2",
+      "device": "cuda",
+      "wall_seconds": 45.188,
+      "metrics": {
+        "final_time_s": 300.0,
+        "frames": 30,
+        "bed_max_error_m": 0.0,
+        "identity_max_error_m": 0.0,
+        "min_h_m": 1.9876266717910767,
+        "final_volume_m3": 1844330.9760689735,
+        "theoretical_initial_volume_m3": 1844330.9733464676,
+        "max_h_m": 2.0227606296539307,
+        "area_h_gt_0_3_m2": 921600.0,
+        "budget_physical_residual_m3": 4.6563556518401765e-10,
+        "budget_relative_residual": 2.5246854925346725e-16,
+        "clamp_added_m3": 0.0,
+        "clamp_removed_m3": 0.0,
+        "wall_max_abs_m3_s": 0.0,
+        "internal_flux_mismatch_m3_s": 7.105427357601002e-15,
+        "closed_max_relative_drift": 3.787237437617948e-16,
+        "boundary_depth_change_max_m": 0.0191526364837058
+      }
+    }
+  },
+  "comparisons": [],
+  "meaning_of_PASS": "Predeclared numerical/input checks passed; not proof that V49 is more accurate",
+  "interpretation": "Synthetic module/solver verification, not independent Phu Yen validation. Depth is supplied equally to SIMPLE and V49; DHG estimation is not tested. REF is same-solver reference, not an exact hydraulic solution. SIMPLE has the same width/depth but no taper/protection; volumes differ."
+}
